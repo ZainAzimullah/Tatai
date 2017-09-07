@@ -5,6 +5,7 @@ import javafx.stage.Stage;
 public class Game {
 	private static Game _game;
 	private final Stage _stage;
+	private SceneLoader _loader;
 	
 	private Game(Stage stage) {
 		_stage = stage;
@@ -31,6 +32,7 @@ public class Game {
 	}
 	
 	public void run() {
-		
+		_loader = new SceneLoader();
+		_loader.loadScene("ChooseLevel.fxml");
 	}
 }

@@ -15,6 +15,10 @@ public class SceneLoader {
 		_number = number;
 	}
 	
+	public SceneLoader() {
+		
+	}
+	
 	public void loadScene(String filename) {
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(this.getClass().getResource(filename));
