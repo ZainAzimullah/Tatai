@@ -15,6 +15,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage stage) throws IOException {
 		_stage = stage;
+		_stage.setResizable(false);
 		
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(this.getClass().getResource("MainMenu.fxml"));

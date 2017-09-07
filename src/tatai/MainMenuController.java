@@ -9,7 +9,7 @@ public class MainMenuController {
 	
 	@FXML
 	public void play() {
-		Game game = Game.getInstance(_stage);
+		Game game = Game.getInitialInstance(_stage);
 		game.run();
 	}
 	
