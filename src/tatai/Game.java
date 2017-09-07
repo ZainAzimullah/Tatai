@@ -44,7 +44,7 @@ public class Game {
 	}
 	
 	// Start the game
-	public void run() {
+	public void startGame() {
 		_loader = new SceneLoader();
 		_loader.loadScene("ChooseLevel.fxml");
 	}

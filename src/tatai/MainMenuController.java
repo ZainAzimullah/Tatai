@@ -16,7 +16,7 @@ public class MainMenuController {
 	@FXML
 	public void play() {
 		Game game = Game.getInitialInstance(_stage);
-		game.run();
+		game.startGame();
 	}
 	
 	// Quit the game
