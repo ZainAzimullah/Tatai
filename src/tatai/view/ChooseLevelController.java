@@ -2,7 +2,6 @@ package tatai.view;
 
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
 import tatai.Game;
 import tatai.Level;
 
