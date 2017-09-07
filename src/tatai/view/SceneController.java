@@ -1,4 +1,7 @@
-package tatai;
+package tatai.view;
+
+import tatai.Game;
+import tatai.Number;
 
 public abstract class SceneController {
 	protected Number _number;

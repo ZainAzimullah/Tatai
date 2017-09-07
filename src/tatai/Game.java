@@ -1,6 +1,7 @@
 package tatai;
 
 import javafx.stage.Stage;
+import tatai.view.SceneLoader;
 
 public class Game {
 	private static Game _game;
