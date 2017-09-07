@@ -7,7 +7,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import tatai.Game;
-import tatai.TataiException;
 
 public class SceneLoader {
 	private Stage _stage = Game.getInstance().getStage();
