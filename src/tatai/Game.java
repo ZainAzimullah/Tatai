@@ -49,6 +49,7 @@ public class Game {
 		return _stage;
 	}
 	
+	// Get the current number the user is being tested on
 	public MaoriNumber getNumber() {
 		return _currentNumber;
 	}
