@@ -29,4 +29,8 @@ public class Game {
 	public Stage getStage() {
 		return _stage;
 	}
+	
+	public void run() {
+		
+	}
 }

@@ -17,9 +17,11 @@ public class Main extends Application {
 		_stage = stage;
 		
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(this.getClass().getResource(""));
+		loader.setLocation(this.getClass().getResource("MainMenu.fxml"));
 		
 		Parent layout = loader.load();
+		((MainMenuController) loader.getController()).setStage(_stage);
+		
 		Scene scene = new Scene(layout);
 		
 		_stage.setScene(scene);
