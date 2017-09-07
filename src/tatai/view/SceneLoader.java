@@ -34,8 +34,8 @@ public class SceneLoader {
 			throw new TataiException(e.getMessage());
 		}
 		
-//		SceneController controller = loader.getController();
-//		controller.setNumber(_number);
+		SceneController controller = loader.getController();
+		controller.setNumber(_number);
 		
 		Scene scene = new Scene(layout);
 		_stage.setScene(scene);
