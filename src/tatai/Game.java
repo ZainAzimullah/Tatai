@@ -8,6 +8,7 @@ import tatai.view.SceneLoader;
  * which any scene is to appear in.  Any game flow/logic occurs in this class.
  */
 public class Game {
+	
 	private static Game _game;
 	private final Stage _stage;
 	private SceneLoader _loader;
