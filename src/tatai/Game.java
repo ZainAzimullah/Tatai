@@ -13,6 +13,8 @@ public class Game {
 	private final Stage _stage;
 	private SceneLoader _loader;
 	
+	//private NumberModel _numbers;
+	
 	// Set the stage of the game.
 	private Game(Stage stage) {
 		_stage = stage;
@@ -48,5 +50,26 @@ public class Game {
 	public void startGame() {
 		_loader = new SceneLoader();
 		_loader.loadScene("ChooseLevel.fxml");
+	}
+	
+	// Create the number list which user will be tested on.
+	// This method will be called once the user has clicked on a level.
+	public void createList(Level level) {
+		// todo
+		record();
+	}
+	
+	// Load the recording scene
+	public void record() {
+		
+	}
+	
+	// Load a scene for the user to rerecord, playback, or submit
+	public void finishedRecording() {
+		
+	}
+	
+	public void showResult() {
+		
 	}
 }

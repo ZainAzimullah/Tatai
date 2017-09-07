@@ -14,14 +14,14 @@ public class MainMenuController {
 
 	// Create game instance and start game
 	@FXML
-	public void play() {
+	private void play() {
 		Game game = Game.getInitialInstance(_stage);
 		game.startGame();
 	}
 	
 	// Quit the game
 	@FXML
-	public void quit() {
+	private void quit() {
 		_stage.close();
 	}
 }
