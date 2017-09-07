@@ -1,6 +1,7 @@
 package tatai;
 
 import javafx.stage.Stage;
+import tatai.model.MaoriNumber;
 import tatai.view.SceneLoader;
 
 /*
@@ -14,8 +15,8 @@ public class Game {
 	private SceneLoader _loader;
 	
 	//private NumberModel _numbers;
-	//private Number _currentNumber;
-	//private Number _userAttempt;
+	private MaoriNumber _currentNumber;
+	//private MaoriNumber _userAttempt;
 	
 	// Set the stage of the game.
 	private Game(Stage stage) {
@@ -46,6 +47,10 @@ public class Game {
 	// Get the stage of the game
 	public Stage getStage() {
 		return _stage;
+	}
+	
+	public MaoriNumber getNumber() {
+		return _currentNumber;
 	}
 	
 	// Start the game
