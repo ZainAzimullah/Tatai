@@ -11,20 +11,21 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	
 	private Stage _stage;
-
+	
 	@Override
 	public void start(Stage stage) throws IOException {
 		_stage = stage;
 		_stage.setResizable(false);
 		
+		// Load main menu
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(this.getClass().getResource("MainMenu.fxml"));
-		
 		Parent layout = loader.load();
+		
+		// Give stage to MainMenuController
 		((MainMenuController) loader.getController()).setStage(_stage);
 		
 		Scene scene = new Scene(layout);
-		
 		_stage.setScene(scene);
 		_stage.show();
 	}
