@@ -1,6 +1,5 @@
 package tatai.view;
 
-import tatai.Game;
 import tatai.Number;
 
 /*
