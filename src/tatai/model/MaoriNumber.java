@@ -7,12 +7,9 @@ public class MaoriNumber implements Comparable<MaoriNumber> {
 	private String _maoriName;
 	private Integer _number;
 	
-	public MaoriNumber(int number) {
-		_number = number;
-	}
-	
-	public MaoriNumber(String maoriName) {
+	public MaoriNumber(String maoriName, int number) {
 		_maoriName = maoriName;
+		_number = number;
 	}
 
 	@Override
