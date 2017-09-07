@@ -14,6 +14,8 @@ public class Game {
 	private SceneLoader _loader;
 	
 	//private NumberModel _numbers;
+	//private Number _currentNumber;
+	//private Number _userAttempt;
 	
 	// Set the stage of the game.
 	private Game(Stage stage) {
@@ -55,7 +57,8 @@ public class Game {
 	// Create the number list which user will be tested on.
 	// This method will be called once the user has clicked on a level.
 	public void createList(Level level) {
-		// todo
+		// _numbers = NumberModelFactory.getNumberModel(level);
+		// _currentNumber = _numbers.getCurrent();
 		record();
 	}
 	
@@ -70,6 +73,10 @@ public class Game {
 	}
 	
 	public void showResult() {
+		
+	}
+	
+	public void endOfLevel() {
 		
 	}
 }
