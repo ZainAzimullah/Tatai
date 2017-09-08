@@ -2,6 +2,8 @@ package tatai.bashTools;
 
 import java.io.InputStream;
 
+import tatai.Game;
+
 public class HTKConsumer extends Consumer {
 
 	public HTKConsumer(InputStream inputStream) {
@@ -10,7 +12,7 @@ public class HTKConsumer extends Consumer {
 	
 	@Override
 	protected void readOutput(String line) {
-		System.out.println(line);
+		
 	}
 
 }

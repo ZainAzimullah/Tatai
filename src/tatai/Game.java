@@ -19,7 +19,7 @@ public class Game {
 	
 	private MaoriNumberModel _numbers;
 	private MaoriNumber _currentNumber;
-	private MaoriNumber _userAttempt;
+	private String _userAttempt;
 	
 	// Set the stage of the game.
 	private Game(Stage stage) {
@@ -55,6 +55,10 @@ public class Game {
 	// Get the current number the user is being tested on
 	public MaoriNumber getNumber() {
 		return _currentNumber;
+	}
+	
+	public void storeAttempt(String attempt) {
+		_userAttempt = attempt;
 	}
 	
 	// Start the game
