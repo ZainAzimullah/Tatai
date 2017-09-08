@@ -20,7 +20,7 @@
          <children>
             <AnchorPane prefHeight="100.0" prefWidth="500.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="219.0" layoutY="60.0" mnemonicParsing="false" text="Easy mode" textAlignment="CENTER" textFill="#51a42b" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="10.0">
+                  <Button alignment="CENTER" contentDisplay="CENTER" layoutX="219.0" layoutY="60.0" mnemonicParsing="false" onAction="#chooseEasy" text="Easy mode" textAlignment="CENTER" textFill="#51a42b" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="10.0">
                      <font>
                         <Font name="Noto Sans CJK KR Black" size="22.0" />
                      </font>
@@ -37,7 +37,7 @@
                   <Insets />
                </opaqueInsets>
                <children>
-                  <Button layoutX="219.0" layoutY="14.0" mnemonicParsing="false" text="Hard Mode" textFill="#ff0909" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="10.0">
+                  <Button layoutX="219.0" layoutY="14.0" mnemonicParsing="false" onAction="#chooseHard" text="Hard Mode" textFill="#ff0909" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="10.0">
                      <font>
                         <Font name="Noto Sans CJK TC Black" size="22.0" />
                      </font>
