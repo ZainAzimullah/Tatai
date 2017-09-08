@@ -36,17 +36,15 @@ public class BashCommand {
 			ProcessBuilder processBuilder = new ProcessBuilder(commands);
 			Process process = processBuilder.start();
 			
+			(new Consumer(process.getInputStream())).start();
+			(new Consumer(process.getErrorStream())).start();
+			
 			int exitStatus = process.waitFor();
 			System.out.println("finished waiting");
+			
 			if (exitStatus != 0) {
-				return;
+				throw new Exception();
 			}
-			
-			BufferedReader stdOut = new BufferedReader(
-					new InputStreamReader(process.getInputStream()));
-			
-			// Call hook method
-			retrieveStdOut(stdOut);
 			
 			process.destroy();
 		} catch (Exception e) {
@@ -58,6 +56,4 @@ public class BashCommand {
 	public void givePermissions(String filename) {
 		runCommand("chmod +x " + filename);
 	}
-	
-	protected void retrieveStdOut(BufferedReader stdOut) {} // Optional hook
 }

@@ -28,7 +28,7 @@ public class Consumer extends Thread {
 				System.out.println(line);
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			
 		}
 	}
 }
