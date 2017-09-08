@@ -2,13 +2,15 @@ package tatai.model;
 
 import java.util.Random;
 
-public abstract class MaoriNumberModel {
+import tatai.TataiException;
 
+public abstract class MaoriNumberModel {
+	private final int LIST_SIZE = 10;
 	//variables used to keep track of what position we are in on the Maori number model
 	protected MaoriNumber _currentNumber;
 	private int _currentNumberPosition;
 	//field used for storing the MaoriNumberModel
-	protected MaoriNumber[] _numbers = new MaoriNumber[10];
+	protected MaoriNumber[] _numbers = new MaoriNumber[LIST_SIZE];
 	
 	//abstract constructor used by children to create an array of MaoriNumbers in a range
 	protected MaoriNumberModel(int maxValue, int minValue) {
@@ -33,6 +35,12 @@ public abstract class MaoriNumberModel {
 	//used to get to the next item in the array storing the randomly generated Maori number
 	public void advance() {
 		_currentNumberPosition++;
+		
+		// Check if advancing beyond list size
+		if (_currentNumberPosition == LIST_SIZE) {
+			throw new TataiException("Advancing too far in number list");
+		}
+		
 		_currentNumber = _numbers[_currentNumberPosition];
 	}
 	
