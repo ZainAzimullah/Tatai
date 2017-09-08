@@ -29,11 +29,6 @@ public class BashCommand {
 	 * downcalled.
 	 */
 	public final void runCommand(String command) {
-		/*
-		 * Make creations folder if it doesn't exist, and then
-		 * change into it and run the command given.
-		 */
-		command = "mkdir -p creations; cd creations; " + command;
 		commands.add(2, command);
 		
 		// Run BASH process
@@ -47,7 +42,7 @@ public class BashCommand {
 			}
 			
 			BufferedReader stdOut = new BufferedReader(
-					new InputStreamReader(process.getInputStream()));
+					new InputStreamReader(process.getErrorStream()));
 			
 			// Call hook method
 			retrieveStdOut(stdOut);
