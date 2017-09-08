@@ -1,5 +1,10 @@
 package tatai;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.List;
 
 import tatai.bashTools.BashCommand;
@@ -15,23 +20,32 @@ public class VoiceRecogniser {
 				+ "user/wordNetworkNum -o SWT -l '*' -i recout.mlf "
 				+ "-p 0.0 -s 5.0  user/dictionaryD user/tiedList " + filename);
 		bash.runCommand("rm -f " + filename);
-		bash.runCommand("cat recout.mlf");
+
+        File f = new File("recout.mlf");
+
+        BufferedReader b = null;
+		try {
+			b = new BufferedReader(new FileReader(f));
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		}
 		
-		List<String> output = bash.getLog();
-		
-		String speech = null;
+		String speech = null, line = null;
 		boolean readyToGet = false;
 		
-		for (String line: output) {
-//			if (readyToGet) {
-//				speech = line;
-//				break;
-//			}
-//			
-//			if (line.equals("sil")) {
-//				readyToGet = true;
-//			}
-			System.out.println("Observed: " + line);
+		try {
+			while ((line = b.readLine()) != null) {
+				if (readyToGet) {
+					speech = line;
+					break;
+				}
+				
+				if (line.equals("sil")) {
+					readyToGet = true;
+				}
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 		
 		if (speech == null) {

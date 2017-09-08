@@ -16,14 +16,11 @@ import tatai.exceptions.TataiException;
  */
 public class BashCommand {
 	private List<String> _commands;
-	private List<String> _log;
 	
 	public BashCommand() {
 		_commands = new ArrayList<>();
 		_commands.add("bash");
 		_commands.add("-c");
-		
-		_log = new ArrayList<>();
 	}
 	
 	public void runCommand(String command) {
@@ -61,10 +58,6 @@ public class BashCommand {
 		runCommand("chmod +x " + filename);
 	}
 	
-	public List<String> getLog() {
-		return _log;
-	}
-	
 	/*
 	 * This class consumes an input stream from a process so that the 
 	 * buffer does not get blocked (and thus resulting in a deadlock)
@@ -86,8 +79,7 @@ public class BashCommand {
 			String line;
 			try {
 				while (((line = bufferedReader.readLine()) != null) && (_alive)) {
-					_log.add(line);
-					System.out.println(line);
+					// System.out.println(line);
 				}
 			} catch (IOException e) {
 				
