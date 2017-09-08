@@ -21,11 +21,11 @@ public class VoiceRecogniser {
 				+ "-p 0.0 -s 5.0  user/dictionaryD user/tiedList " + filename);
 		bash.runCommand("rm -f " + filename);
 
-        File f = new File("recout.mlf");
-
-        BufferedReader b = null;
+        File file = new File("recout.mlf");
+        BufferedReader bufferedReader = null;
+        
 		try {
-			b = new BufferedReader(new FileReader(f));
+			bufferedReader = new BufferedReader(new FileReader(file));
 		} catch (FileNotFoundException e1) {
 			e1.printStackTrace();
 		}
@@ -34,7 +34,7 @@ public class VoiceRecogniser {
 		boolean readyToGet = false;
 		
 		try {
-			while ((line = b.readLine()) != null) {
+			while ((line = bufferedReader.readLine()) != null) {
 				if (readyToGet) {
 					speech = line;
 					break;
