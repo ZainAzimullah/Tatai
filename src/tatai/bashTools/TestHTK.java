@@ -3,11 +3,12 @@ package tatai.bashTools;
 public class TestHTK implements HTKRecipient {
 	public static void main(String[] args) {
 		new TestHTK();
+		System.out.println(System.getProperty("user.dir"));
 	}
 	
 	public TestHTK() {
 		HTKOutput bash = new HTKOutput(this);
-		bash.runCommand("~/HTK/MaoriNumbers/GoSpeech");
+		bash.runCommand("./GoSpeech");
 	}
 
 	@Override

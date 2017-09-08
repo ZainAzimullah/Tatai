@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JOptionPane;
+import tatai.exceptions.TataiException;
 
 /*
  * Any BASH command that needs to be run can be done by simply
@@ -42,15 +42,14 @@ public class BashCommand {
 			}
 			
 			BufferedReader stdOut = new BufferedReader(
-					new InputStreamReader(process.getErrorStream()));
+					new InputStreamReader(process.getInputStream()));
 			
 			// Call hook method
 			retrieveStdOut(stdOut);
 			
 			process.destroy();
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, "Processing error");
-			System.exit(0);
+			throw new TataiException("Error running BASH command");
 		}
 	}
 	
