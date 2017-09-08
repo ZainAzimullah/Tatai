@@ -35,17 +35,18 @@ public class BashCommand {
 		try {
 			ProcessBuilder processBuilder = new ProcessBuilder(commands);
 			Process process = processBuilder.start();
-			int exitStatus = process.waitFor();
 			
+			int exitStatus = process.waitFor();
+			System.out.println("finished waiting");
 			if (exitStatus != 0) {
 				return;
 			}
 			
-			BufferedReader stdOut = new BufferedReader(
-					new InputStreamReader(process.getInputStream()));
-			
-			// Call hook method
-			retrieveStdOut(stdOut);
+//			BufferedReader stdOut = new BufferedReader(
+//					new InputStreamReader(process.getInputStream()));
+//			
+//			// Call hook method
+//			retrieveStdOut(stdOut);
 			
 			process.destroy();
 		} catch (Exception e) {
