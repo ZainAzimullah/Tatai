@@ -8,10 +8,7 @@ public class TestHTK implements HTKRecipient {
 	
 	public TestHTK() {
 		BashCommand bash = new BashCommand();
-
-		bash.runCommand("./GoSpeech");
-//		bash = new HTKOutput(this);
-//		bash.runCommand("cat recout.mlf");
+		
 	}
 
 	@Override

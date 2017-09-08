@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+/*
+ * This class consumes an input stream from a process so that the 
+ * buffer does not get blocked (and thus resulting in a deadlock)
+ */
 public class Consumer extends Thread {
 	
 	private InputStream _inputStream;

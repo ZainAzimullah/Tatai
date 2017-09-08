@@ -35,11 +35,6 @@ public class BashCommand {
 		try {
 			ProcessBuilder processBuilder = new ProcessBuilder(commands);
 			Process process = processBuilder.start();
-			Consumer stdoutCons = new Consumer(process.getInputStream());
-			Consumer stderrCons = new Consumer(process.getErrorStream());
-			
-			stdoutCons.start();
-			stderrCons.start();
 			
 			int exitStatus = process.waitFor();
 			System.out.println("finished waiting");
@@ -47,11 +42,11 @@ public class BashCommand {
 				return;
 			}
 			
-//			BufferedReader stdOut = new BufferedReader(
-//					new InputStreamReader(process.getInputStream()));
-//			
-//			// Call hook method
-//			retrieveStdOut(stdOut);
+			BufferedReader stdOut = new BufferedReader(
+					new InputStreamReader(process.getInputStream()));
+			
+			// Call hook method
+			retrieveStdOut(stdOut);
 			
 			process.destroy();
 		} catch (Exception e) {
