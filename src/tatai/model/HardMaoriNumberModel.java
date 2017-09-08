@@ -1,6 +1,6 @@
 package tatai.model;
 
-public class HardMaoriNumberModel extends NumberModel {
+public class HardMaoriNumberModel extends MaoriNumberModel {
 
 	// private final variables that are used to store the maximum and minimum values
 	// the maori numbers can be for the hard mode of the game. (in the hard mode the

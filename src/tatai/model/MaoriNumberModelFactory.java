@@ -3,10 +3,10 @@ package tatai.model;
 import tatai.Level;
 import tatai.TataiException;
 
-public class MaoriNumberFactory {
+public class MaoriNumberModelFactory {
 	private static MaoriNumberModel _model;
 	
-	public static MaoriNumberModel getNumberModel(Level level) {
+	public static MaoriNumberModel getMaoriNumberModel(Level level) {
 		switch (level) {
 		
 		case EASY:

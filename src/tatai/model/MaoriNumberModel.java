@@ -4,12 +4,12 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
-public abstract class NumberModel {
+public abstract class MaoriNumberModel {
 
 	protected MaoriNumber _currentNumber;
 	protected List<MaoriNumber> _numbers = new LinkedList<MaoriNumber>();
 
-	protected NumberModel(int maxValue, int minValue) {
+	protected MaoriNumberModel(int maxValue, int minValue) {
 		Random rand = new Random();
 
 		for (int index = 0; index < 10; index++) {

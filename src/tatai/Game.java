@@ -2,6 +2,8 @@ package tatai;
 
 import javafx.stage.Stage;
 import tatai.model.MaoriNumber;
+import tatai.model.MaoriNumberModel;
+import tatai.model.MaoriNumberModelFactory;
 import tatai.view.SceneLoader;
 
 /*
@@ -14,9 +16,9 @@ public class Game {
 	private final Stage _stage;
 	private SceneLoader _loader;
 	
-	//private NumberModel _numbers;
+	private MaoriNumberModel _numbers;
 	private MaoriNumber _currentNumber;
-	//private MaoriNumber _userAttempt;
+	private MaoriNumber _userAttempt;
 	
 	// Set the stage of the game.
 	private Game(Stage stage) {
@@ -63,8 +65,8 @@ public class Game {
 	// Create the number list which user will be tested on.
 	// This method will be called once the user has clicked on a level.
 	public void createList(Level level) {
-		// _numbers = NumberModelFactory.getNumberModel(level);
-		// _currentNumber = _numbers.getCurrent();
+		_numbers = MaoriNumberModelFactory.getMaoriNumberModel(level);
+		_currentNumber = _numbers.getCurrentMaoriNumber();
 		record();
 	}
 	

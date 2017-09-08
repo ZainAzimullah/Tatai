@@ -1,6 +1,6 @@
 package tatai.model;
 
-public class EasyMaoriNumberModel extends NumberModel {
+public class EasyMaoriNumberModel extends MaoriNumberModel {
 
 	// private final variables that are used to store the maximum and minimum values
 	// the maori numbers
