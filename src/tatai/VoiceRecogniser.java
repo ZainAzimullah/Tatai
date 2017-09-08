@@ -15,6 +15,7 @@ public class VoiceRecogniser {
 				+ "user/wordNetworkNum -o SWT -l '*' -i recout.mlf "
 				+ "-p 0.0 -s 5.0  user/dictionaryD user/tiedList " + filename);
 		bash.runCommand("rm -f " + filename);
+		bash.runCommand("cat recout.mlf");
 		
 		List<String> output = bash.getLog();
 		
@@ -22,14 +23,15 @@ public class VoiceRecogniser {
 		boolean readyToGet = false;
 		
 		for (String line: output) {
-			if (readyToGet) {
-				speech = line;
-				break;
-			}
-			
-			if (line.equals("sil")) {
-				readyToGet = true;
-			}
+//			if (readyToGet) {
+//				speech = line;
+//				break;
+//			}
+//			
+//			if (line.equals("sil")) {
+//				readyToGet = true;
+//			}
+			System.out.println("Observed: " + line);
 		}
 		
 		if (speech == null) {

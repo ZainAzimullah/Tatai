@@ -29,13 +29,18 @@ public class BashCommand {
 	public void runCommand(String command) {
 		_commands.add(2, command);
 		
+		Consumer stdout, stderr = null;
+		
 		// Run BASH process
 		try {
 			ProcessBuilder processBuilder = new ProcessBuilder(_commands);
 			Process process = processBuilder.start();
 
-			(new Consumer(process.getInputStream())).start();
-			(new Consumer(process.getErrorStream())).start();
+			stdout = new Consumer(process.getInputStream());
+			stderr = new Consumer(process.getErrorStream());
+			
+			stdout.start();
+			stderr.start();
 
 			int exitStatus = process.waitFor();
 			if (exitStatus != 0) {
@@ -46,6 +51,9 @@ public class BashCommand {
 		} catch (Exception e) {
 			throw new TataiException("Error running BASH command");
 		}
+		
+		stdout.cancel();
+		stderr.cancel();
 	}
 	
 	
@@ -64,6 +72,7 @@ public class BashCommand {
 	private class Consumer extends Thread {
 		
 		private InputStream _inputStream;
+		private boolean _alive = true;
 		
 		public Consumer(InputStream inputStream) {
 			_inputStream = inputStream;
@@ -76,13 +85,17 @@ public class BashCommand {
 			
 			String line;
 			try {
-				while ((line = bufferedReader.readLine()) != null) {
+				while (((line = bufferedReader.readLine()) != null) && (_alive)) {
 					_log.add(line);
 					System.out.println(line);
 				}
 			} catch (IOException e) {
 				
 			}
+		}
+		
+		public void cancel() {
+			_alive = false;
 		}
 	}
 }

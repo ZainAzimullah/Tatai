@@ -2,6 +2,9 @@ package tatai.bashTools;
 
 import java.util.List;
 
+import tatai.VoiceRecogniser;
+import tatai.exceptions.SpeechNotFoundException;
+
 public class TestHTK {
 	public static void main(String[] args) {
 		BashCommand bash = new BashCommand();
@@ -9,18 +12,12 @@ public class TestHTK {
 		
 		bash.runCommand("ffplay -autoexit -nodisp foo.wav &> /dev/null");
 		
-		bash.runCommand("HVite -H HMMs/hmm15/macros -H "
-				+ "HMMs/hmm15/hmmdefs -C user/configLR  -w "
-				+ "user/wordNetworkNum -o SWT -l '*' -i recout.mlf "
-				+ "-p 0.0 -s 5.0  user/dictionaryD user/tiedList foo.wav");
+		VoiceRecogniser htk = new VoiceRecogniser();
 		
-		bash.runCommand("rm foo.wav");
-		bash.runCommand("cat recout.mlf");
-		
-		List<String> log = bash.getLog();
-		
-		for (String line: log) {
-			System.out.println(line);
+		try {
+			System.out.println(htk.getSpeech("foo.wav"));
+		} catch (SpeechNotFoundException e) {
+			System.out.println("You didn't say anything");
 		}
 	}
 }
