@@ -1,6 +1,8 @@
 package tatai.bashTools;
 
 import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,37 +15,28 @@ import tatai.exceptions.TataiException;
  * the command will be run in the newly generated creations directory.
  */
 public class BashCommand {
-	private List<String> commands;
+	private List<String> _commands;
+	private List<String> _log;
 	
 	public BashCommand() {
-		commands = new ArrayList<>();
-		commands.add("bash");
-		commands.add("-c");
+		_commands = new ArrayList<>();
+		_commands.add("bash");
+		_commands.add("-c");
+		
+		_log = new ArrayList<>();
 	}
 	
-	/*
-	 * This is a template method which runs the command.
-	 * If the stdout from BASH is required, this class can be extended
-	 * and the hook method getStdOut(:BufferedReader) can be overridden so that
-	 * the output can be collected in such a way desired when getStdOut() is 
-	 * downcalled.
-	 */
-	public void runCommand(String command, boolean outputNeeded) {
-		commands.add(2, command);
+	public void runCommand(String command) {
+		_commands.add(2, command);
 		
 		// Run BASH process
 		try {
-			ProcessBuilder processBuilder = new ProcessBuilder(commands);
+			ProcessBuilder processBuilder = new ProcessBuilder(_commands);
 			Process process = processBuilder.start();
-			
-			if (outputNeeded) {
-				(new HTKConsumer(process.getErrorStream())).start();
-				(new HTKConsumer(process.getInputStream())).start();
-			} else {
-				(new Consumer(process.getInputStream())).start();
-				(new Consumer(process.getErrorStream())).start();
-			}
-			
+
+			(new Consumer(process.getInputStream())).start();
+			(new Consumer(process.getErrorStream())).start();
+
 			int exitStatus = process.waitFor();
 			System.out.println("finished waiting");
 			
@@ -59,6 +52,35 @@ public class BashCommand {
 	
 	
 	public void givePermissions(String filename) {
-		runCommand("chmod +x " + filename, false);
+		runCommand("chmod +x " + filename);
+	}
+	
+	/*
+	 * This class consumes an input stream from a process so that the 
+	 * buffer does not get blocked (and thus resulting in a deadlock)
+	 */
+	private class Consumer extends Thread {
+		
+		private InputStream _inputStream;
+		
+		public Consumer(InputStream inputStream) {
+			_inputStream = inputStream;
+			
+		}
+		
+		public void run() {
+			InputStreamReader inputStreamReader = new InputStreamReader(_inputStream);
+			BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+			
+			String line;
+			try {
+				while ((line = bufferedReader.readLine()) != null) {
+					_log.add(line);
+					System.out.println(line);
+				}
+			} catch (IOException e) {
+				
+			}
+		}
 	}
 }
