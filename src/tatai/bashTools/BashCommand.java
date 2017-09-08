@@ -50,7 +50,7 @@ public class BashCommand {
 					new InputStreamReader(process.getInputStream()));
 			
 			// Call hook method
-			getStdOut(stdOut);
+			retrieveStdOut(stdOut);
 			
 			process.destroy();
 		} catch (Exception e) {
@@ -64,5 +64,5 @@ public class BashCommand {
 		runCommand("chmod +x " + filename);
 	}
 	
-	public void getStdOut(BufferedReader stdOut) {} // Optional hook
+	public void retrieveStdOut(BufferedReader stdOut) {} // Optional hook
 }
