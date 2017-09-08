@@ -2,13 +2,15 @@ package tatai.bashTools;
 
 public class TestHTK implements HTKRecipient {
 	public static void main(String[] args) {
-		new TestHTK();
 		System.out.println(System.getProperty("user.dir"));
+		new TestHTK();
 	}
 	
 	public TestHTK() {
-		HTKOutput bash = new HTKOutput(this);
+		BashCommand bash = new BashCommand();
 		bash.runCommand("./GoSpeech");
+		bash = new HTKOutput(this);
+		bash.runCommand("cat recout.mlf");
 	}
 
 	@Override
