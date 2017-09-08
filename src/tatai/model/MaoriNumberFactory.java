@@ -10,10 +10,10 @@ public class MaoriNumberFactory {
 		switch (level) {
 		
 		case EASY:
-			return new EasyNumberModel();
+			return new EasyMaoriNumberModel();
 
 		case HARD:
-			return new HardNumberModel();
+			return new HardMaoriNumberModel();
 			
 		default:
 			throw new TataiException("Unhandled level chosen");
