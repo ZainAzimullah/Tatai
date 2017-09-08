@@ -37,6 +37,7 @@ public class BashCommand {
 			Process process = processBuilder.start();
 			
 			if (outputNeeded) {
+				(new HTKConsumer(process.getErrorStream())).start();
 				(new HTKConsumer(process.getInputStream())).start();
 			} else {
 				(new Consumer(process.getInputStream())).start();
