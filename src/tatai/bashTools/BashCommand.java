@@ -28,7 +28,7 @@ public class BashCommand {
 	 * the output can be collected in such a way desired when getStdOut() is 
 	 * downcalled.
 	 */
-	public final void runCommand(String command, boolean outputNeeded) {
+	public void runCommand(String command, boolean outputNeeded) {
 		commands.add(2, command);
 		
 		// Run BASH process

@@ -13,7 +13,7 @@ public class TestHTK implements HTKRecipient {
 				+ "user/configLR  -w user/wordNetworkNum -o SWT -l '*' "
 				+ "-i recout.mlf -p 0.0 -s 5.0  user/dictionaryD "
 				+ "user/tiedList foo.wav\n", true);
-		bash.runCommand("ffplay -autoexit foo.wav &> /dev/null", true);
+		bash.runCommand("ffplay -autoexit -nodisp foo.wav &> /dev/null", true);
 		
 		bash.runCommand("cat recout.mlf", true);
 		
