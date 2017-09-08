@@ -1,5 +1,7 @@
 package tatai.bashTools;
 
+import java.util.List;
+
 public class TestHTK {
 	public static void main(String[] args) {
 		BashCommand bash = new BashCommand();
@@ -10,10 +12,12 @@ public class TestHTK {
 				+ "-p 0.0 -s 5.0  user/dictionaryD user/tiedList foo.wav");
 		bash.runCommand("ffplay -autoexit -nodisp foo.wav &> /dev/null");
 		bash.runCommand("rm foo.wav");
-		
-		bash = new BashCommand();
-//		bash.runCommand("more recout.mlf");
 		bash.runCommand("cat recout.mlf");
 		
+		List<String> log = bash.getLog();
+		
+		for (String line: log) {
+			System.out.println(line);
+		}
 	}
 }

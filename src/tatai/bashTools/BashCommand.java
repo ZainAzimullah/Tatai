@@ -38,8 +38,6 @@ public class BashCommand {
 			(new Consumer(process.getErrorStream())).start();
 
 			int exitStatus = process.waitFor();
-			System.out.println("finished waiting");
-			
 			if (exitStatus != 0) {
 				throw new Exception();
 			}
@@ -53,6 +51,10 @@ public class BashCommand {
 	
 	public void givePermissions(String filename) {
 		runCommand("chmod +x " + filename);
+	}
+	
+	public List<String> getLog() {
+		return _log;
 	}
 	
 	/*
