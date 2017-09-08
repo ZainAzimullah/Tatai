@@ -12,7 +12,7 @@ public class HTKConsumer extends Consumer {
 	
 	@Override
 	protected void readOutput(String line) {
-		
+		System.out.println(line);
 	}
 
 }
