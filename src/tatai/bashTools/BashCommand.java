@@ -28,7 +28,7 @@ public class BashCommand {
 	 * the output can be collected in such a way desired when getStdOut() is 
 	 * downcalled.
 	 */
-	public final void runCommand(String command, boolean outputNeeded) {
+	public final void runCommand(String command) {
 		commands.add(2, command);
 		
 		// Run BASH process
@@ -36,12 +36,8 @@ public class BashCommand {
 			ProcessBuilder processBuilder = new ProcessBuilder(commands);
 			Process process = processBuilder.start();
 			
-			if (outputNeeded) {
-				(new HTKConsumer(process.getInputStream())).start();
-			} else {
-				(new Consumer(process.getInputStream())).start();
-				(new Consumer(process.getErrorStream())).start();
-			}
+			(new Consumer(process.getInputStream())).start();
+			(new Consumer(process.getErrorStream())).start();
 			
 			int exitStatus = process.waitFor();
 			System.out.println("finished waiting");
@@ -58,6 +54,6 @@ public class BashCommand {
 	
 	
 	public void givePermissions(String filename) {
-		runCommand("chmod +x " + filename, false);
+		runCommand("chmod +x " + filename);
 	}
 }

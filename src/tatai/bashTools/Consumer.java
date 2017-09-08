@@ -25,12 +25,10 @@ public class Consumer extends Thread {
 		String line;
 		try {
 			while ((line = bufferedReader.readLine()) != null) {
-				readOutput(line);
+				System.out.println(line);
 			}
 		} catch (IOException e) {
 			
 		}
 	}
-	
-	protected void readOutput(String line) {}	// Optional hook
 }
