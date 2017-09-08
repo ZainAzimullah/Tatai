@@ -1,6 +1,7 @@
 package tatai;
 
 import javafx.stage.Stage;
+import tatai.exceptions.TataiException;
 import tatai.model.MaoriNumber;
 import tatai.model.MaoriNumberModel;
 import tatai.model.MaoriNumberModelFactory;

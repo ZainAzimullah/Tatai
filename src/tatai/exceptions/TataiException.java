@@ -1,4 +1,4 @@
-package tatai;
+package tatai.exceptions;
 
 // Wrapper class for known exceptions that could occur
 public class TataiException extends RuntimeException {

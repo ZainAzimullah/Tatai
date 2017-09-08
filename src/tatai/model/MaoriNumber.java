@@ -3,7 +3,7 @@ package tatai.model;
 import java.util.HashMap;
 import java.util.Map;
 
-import tatai.TataiException;
+import tatai.exceptions.TataiException;
 
 // This class represents a Maori number/English number pairing
 public class MaoriNumber implements Comparable<MaoriNumber> {

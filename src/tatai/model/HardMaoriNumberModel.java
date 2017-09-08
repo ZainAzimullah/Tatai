@@ -15,6 +15,5 @@ public class HardMaoriNumberModel extends MaoriNumberModel {
 	// that is used for in the hard mode of the tatai game
 	public HardMaoriNumberModel() {
 		super(_MAX_VALUE, _MIN_VALUE);
-		System.out.println(_currentNumber);
 	}
 }

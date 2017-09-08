@@ -2,7 +2,8 @@ package tatai.model;
 
 import java.util.Random;
 
-import tatai.TataiException;
+import tatai.exceptions.OutOfNumbersException;
+import tatai.exceptions.TataiException;
 
 public abstract class MaoriNumberModel {
 	private final int LIST_SIZE = 10;
@@ -33,12 +34,12 @@ public abstract class MaoriNumberModel {
 	}
 
 	//used to get to the next item in the array storing the randomly generated Maori number
-	public void advance() {
+	public void advance() throws OutOfNumbersException {
 		_currentNumberPosition++;
 		
 		// Check if advancing beyond list size
 		if (_currentNumberPosition == LIST_SIZE) {
-			throw new TataiException("Advancing too far in number list");
+			throw new OutOfNumbersException("Advanced too far in list");
 		}
 		
 		_currentNumber = _numbers[_currentNumberPosition];
