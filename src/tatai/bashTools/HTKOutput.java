@@ -5,10 +5,16 @@ import java.io.IOException;
 
 import tatai.exceptions.TataiException;
 
-public class HTKOutput extends BashCommand<String> {
+public class HTKOutput extends BashCommand {
+	
+	private HTKRecipient _recipient;
+	
+	public HTKOutput(HTKRecipient recipient) {
+		_recipient = recipient;
+	}
 	
 	@Override
-	public String retrieveStdOut(BufferedReader stdOut) {
+	protected void retrieveStdOut(BufferedReader stdOut) {
 		
 		String line;
 		boolean ready = false;
@@ -17,7 +23,8 @@ public class HTKOutput extends BashCommand<String> {
 			while ((line = stdOut.readLine()) != null) {
 				
 				if (ready) {
-					return line;
+					_recipient.receiveHTKguess(line);
+					return;
 				}
 				
 				if (line.equals("sil")) {
