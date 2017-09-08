@@ -1,10 +1,10 @@
-package tatai;
+package tatai.bashTools;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JOptionPane;
+import tatai.exceptions.TataiException;
 
 /*
  * Any BASH command that needs to be run can be done by simply
@@ -29,11 +29,6 @@ public class BashCommand {
 	 * downcalled.
 	 */
 	public final void runCommand(String command) {
-		/*
-		 * Make creations folder if it doesn't exist, and then
-		 * change into it and run the command given.
-		 */
-		command = "mkdir -p creations; cd creations; " + command;
 		commands.add(2, command);
 		
 		// Run BASH process
@@ -50,12 +45,11 @@ public class BashCommand {
 					new InputStreamReader(process.getInputStream()));
 			
 			// Call hook method
-			getStdOut(stdOut);
+			retrieveStdOut(stdOut);
 			
 			process.destroy();
 		} catch (Exception e) {
-			JOptionPane.showMessageDialog(null, "Processing error");
-			System.exit(0);
+			throw new TataiException("Error running BASH command");
 		}
 	}
 	
@@ -64,5 +58,5 @@ public class BashCommand {
 		runCommand("chmod +x " + filename);
 	}
 	
-	public void getStdOut(BufferedReader stdOut) {} // Optional hook
+	protected void retrieveStdOut(BufferedReader stdOut) {} // Optional hook
 }
