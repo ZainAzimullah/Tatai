@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  * bashCommand.runCommand(command :String).  It is assumed that
  * the command will be run in the newly generated creations directory.
  */
-public class BashCommand {
+public class BashCommand<T> {
 	private List<String> commands;
 	
 	public BashCommand() {
@@ -64,5 +64,5 @@ public class BashCommand {
 		runCommand("chmod +x " + filename);
 	}
 	
-	public void retrieveStdOut(BufferedReader stdOut) {} // Optional hook
+	public T retrieveStdOut(BufferedReader stdOut) {return null;} // Optional hook
 }
