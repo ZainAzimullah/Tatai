@@ -47,7 +47,7 @@ public class FinishedRecordingController extends SceneController {
 			e.printStackTrace();
 		}
 		
-		Game.getInstance().showResult();
+		Game.getInstance().checkAnswer();
 	}
 	
 	@FXML

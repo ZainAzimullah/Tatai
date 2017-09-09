@@ -90,7 +90,19 @@ public class Game {
 		_loader.loadScene("FinishedRecording.fxml");
 	}
 	
-	public void showResult() {
+	public void checkAnswer() {
+		
+	}
+	
+	private void showCorrect() {
+		
+	}
+	
+	private void showIncorrect() {
+		
+	}
+	
+	private void showFailed() {
 		
 	}
 	
