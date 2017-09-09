@@ -1,19 +1,17 @@
 package tatai.view;
 
-import java.io.File;
-
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
 import tatai.Countdown;
 import tatai.Game;
 import tatai.bashTools.BashCommand;
 
 public class RecordController extends SceneController {
+	
+	private final int RECORDING_TIME = 2;
 	
 	@FXML
 	private Label _label;
@@ -21,13 +19,21 @@ public class RecordController extends SceneController {
 	@FXML
 	private Button _button;
 	
+	// This method is invoked when the Record button is clicked
 	@FXML
 	private void record() {
-		Countdown cd = new Countdown(2);
-		cd.start();
+		// Begin countdown
+		Countdown countdown = new Countdown(RECORDING_TIME);
+		countdown.start();
+		
+		// Change UI
 		_button.setText("RECORDING");
 		_button.setDisable(true);
-		_label.textProperty().bind(cd.getMessageProperty());
+		
+		// Bind label to countdown messages
+		_label.textProperty().bind(countdown.getMessageProperty());
+		
+		// Start recording
 		new Thread(new Background()).start();
 	}
 	
@@ -35,7 +41,9 @@ public class RecordController extends SceneController {
 		
 		@Override
 		protected Void call() {
-			new BashCommand().runCommand("arecord -d 2 -r 22050 -c 1 -i -t wav -f s16_LE foo.wav");
+			// This command needs to be changed before submission!
+			new BashCommand().runCommand("arecord -d " + RECORDING_TIME + " -r 22050 -c 1 -i -t wav -f s16_LE foo.wav");
+			//new BashCommand().runCommand("ffmpeg -f alsa -i hw:0 -t " + RECORDING_TIME + " -acodec pcm_s16le -ar 22050 -ac 1 foo.wav");
 			
 			return null;
 		}
@@ -43,10 +51,14 @@ public class RecordController extends SceneController {
 		@Override
 		protected void done() {
 			Platform.runLater(() -> {
+				
+				// Update UI
 				_label.textProperty().unbind();
 				_label.setText("Finished recording");
 				_button.setText("Record");
 				_button.setDisable(false);
+				
+				// Proceed to Game class
 				Game.getInstance().finishedRecording();
 			});
 		}
