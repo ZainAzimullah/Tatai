@@ -82,7 +82,7 @@ public class Game {
 	
 	// Load the recording scene
 	public void record() {
-		
+		_loader.loadScene("Record.fxml");
 	}
 	
 	// Load a scene for the user to rerecord, playback, or submit
