@@ -16,26 +16,28 @@ import tatai.exceptions.TataiException;
  */
 public class BashCommand {
 	private List<String> _commands;
-	private List<String> _log;
 	
 	public BashCommand() {
 		_commands = new ArrayList<>();
 		_commands.add("bash");
 		_commands.add("-c");
-		
-		_log = new ArrayList<>();
 	}
 	
 	public void runCommand(String command) {
 		_commands.add(2, command);
+		
+		Consumer stdout, stderr = null;
 		
 		// Run BASH process
 		try {
 			ProcessBuilder processBuilder = new ProcessBuilder(_commands);
 			Process process = processBuilder.start();
 
-			(new Consumer(process.getInputStream())).start();
-			(new Consumer(process.getErrorStream())).start();
+			stdout = new Consumer(process.getInputStream());
+			stderr = new Consumer(process.getErrorStream());
+			
+			stdout.start();
+			stderr.start();
 
 			int exitStatus = process.waitFor();
 			if (exitStatus != 0) {
@@ -46,15 +48,14 @@ public class BashCommand {
 		} catch (Exception e) {
 			throw new TataiException("Error running BASH command");
 		}
+		
+		stdout.cancel();
+		stderr.cancel();
 	}
 	
 	
 	public void givePermissions(String filename) {
 		runCommand("chmod +x " + filename);
-	}
-	
-	public List<String> getLog() {
-		return _log;
 	}
 	
 	/*
@@ -64,6 +65,7 @@ public class BashCommand {
 	private class Consumer extends Thread {
 		
 		private InputStream _inputStream;
+		private boolean _alive = true;
 		
 		public Consumer(InputStream inputStream) {
 			_inputStream = inputStream;
@@ -76,13 +78,16 @@ public class BashCommand {
 			
 			String line;
 			try {
-				while ((line = bufferedReader.readLine()) != null) {
-					_log.add(line);
-					System.out.println(line);
+				while (((line = bufferedReader.readLine()) != null) && (_alive)) {
+					// System.out.println(line);
 				}
 			} catch (IOException e) {
 				
 			}
+		}
+		
+		public void cancel() {
+			_alive = false;
 		}
 	}
 }
