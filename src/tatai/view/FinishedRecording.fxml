@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.FinishedRecordingController">
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
@@ -17,24 +16,24 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <Label prefHeight="83.0" prefWidth="364.0" text="Click 'Play Black' to hear your recording, or 'Submit' to check your answer.  Otherwise, you may click 'Record Again' to redo your recording." textAlignment="CENTER" wrapText="true">
+            <Label fx:id="_message" prefHeight="83.0" prefWidth="364.0" text="Click 'Play Black' to hear your recording, or 'Submit' to check your answer.  Otherwise, you may click 'Record Again' to redo your recording." textAlignment="CENTER" wrapText="true">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
             <HBox alignment="CENTER" prefHeight="87.0" prefWidth="600.0" spacing="15.0">
                <children>
-                  <Button mnemonicParsing="false" text="Play Back">
+                  <Button fx:id="_play" mnemonicParsing="false" onAction="#playback" text="Play Back">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" text="Submit">
+                  <Button mnemonicParsing="false" onAction="#submit" text="Submit">
                      <font>
                         <Font size="20.0" />
                      </font>
                   </Button>
-                  <Button mnemonicParsing="false" text="Record Again">
+                  <Button mnemonicParsing="false" onAction="#redo" text="Record Again">
                      <font>
                         <Font size="20.0" />
                      </font>
