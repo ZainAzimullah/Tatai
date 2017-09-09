@@ -25,20 +25,24 @@ public class VoiceRecogniser {
         File file = new File("recout.mlf");
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
 		
-		String speech = null, line = null;
+		String speech = "", line = null;
 		boolean readyToGet = false;
 		
 		try {
 			// Iterate through the lines to find the one that says "sil",
 			// and then the next line will contain the word the user said
 			while ((line = bufferedReader.readLine()) != null) {
-				if (readyToGet) {
-					speech = line;
-					break;
+	
+				
+				if ((line.equals("sil")) && (!readyToGet)) {
+					readyToGet = true;
+					continue;
+				} else if ((line.equals("sil")) && (readyToGet)) {
+					readyToGet = false;
 				}
 				
-				if (line.equals("sil")) {
-					readyToGet = true;
+				if (readyToGet) {
+					speech = speech + " " + line;
 				}
 			}
 		} catch (IOException e) {
@@ -46,7 +50,7 @@ public class VoiceRecogniser {
 		}
 		
 		// If sil was never founded, then user never said anything
-		if (speech == null) {
+		if ((speech == null) || (speech.equals(""))) {
 			throw new SpeechNotFoundException("No voice observed");
 		}
 		
