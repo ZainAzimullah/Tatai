@@ -75,6 +75,11 @@ public class Game {
 		record();
 	}
 	
+	// Returns to the main menu
+	public void returnToMainMenu() {
+		_loader.loadScene("MainMenu.fxml");
+	}
+	
 	// Load the recording scene
 	public void record() {
 		

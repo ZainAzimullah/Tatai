@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import tatai.view.MainMenuController;
 
 public class Main extends Application {
 	
@@ -19,7 +20,7 @@ public class Main extends Application {
 		
 		// Load main menu
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(this.getClass().getResource("MainMenu.fxml"));
+		loader.setLocation(this.getClass().getResource("view/MainMenu.fxml"));
 		Parent layout = loader.load();
 		
 		// Give stage to MainMenuController

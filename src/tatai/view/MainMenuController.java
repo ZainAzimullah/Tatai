@@ -1,7 +1,8 @@
-package tatai;
+package tatai.view;
 
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
+import tatai.Game;
 
 public class MainMenuController {
 	
