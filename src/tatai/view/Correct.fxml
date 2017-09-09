@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="249.0" layoutY="56.0" text="Nice job!" textFill="#2ca114" AnchorPane.bottomAnchor="290.0" AnchorPane.leftAnchor="175.0" AnchorPane.rightAnchor="175.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Noto Sans CJK JP Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" layoutX="82.0" layoutY="101.0" text="you have said the number " AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="345.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font name="Noto Sans CJK SC Black" size="15.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="60.0" layoutX="169.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" width="50.0" AnchorPane.bottomAnchor="230.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="315.0" AnchorPane.topAnchor="85.0" />
+      <Label layoutX="300.0" layoutY="132.0" text="in Maori Correctly" AnchorPane.bottomAnchor="220.0" AnchorPane.leftAnchor="270.0" AnchorPane.rightAnchor="173.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font name="Noto Sans CJK SC Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+   </padding>
+</AnchorPane>
