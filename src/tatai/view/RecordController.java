@@ -17,7 +17,15 @@ public class RecordController extends SceneController {
 	private Label _recordMsg;
 	
 	@FXML
+	private Label _number;
+	
+	@FXML
 	private Button _button;
+	
+	@FXML
+	private void initialize() {
+		_number.setText("Say the Maori number for: " + Game.getInstance().getNumber().getDigit());
+	}
 	
 	// This method is invoked when the Record button is clicked
 	@FXML

@@ -30,6 +30,10 @@ public class MaoriNumber implements Comparable<MaoriNumber> {
 		// integer
 		setMaoriName(number);
 	}
+	
+	public int getDigit() {
+		return _number;
+	}
 
 	// method used to compare two MaoriNumber Objects, this is done by comparing the
 	// integer values they are representing
