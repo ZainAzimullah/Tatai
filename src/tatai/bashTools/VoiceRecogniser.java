@@ -19,7 +19,6 @@ public class VoiceRecogniser {
 				+ "HMMs/hmm15/hmmdefs -C user/configLR  -w "
 				+ "user/wordNetworkNum -o SWT -l '*' -i recout.mlf "
 				+ "-p 0.0 -s 5.0  user/dictionaryD user/tiedList " + filename);
-		bash.runCommand("rm -f " + filename);
 
         File file = new File("recout.mlf");
         BufferedReader bufferedReader = new BufferedReader(new FileReader(file));

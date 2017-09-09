@@ -1,13 +1,20 @@
 package tatai.view;
 
+import java.io.FileNotFoundException;
+
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.text.Text;
 import tatai.Countdown;
 import tatai.Game;
 import tatai.bashTools.BashCommand;
+import tatai.bashTools.VoiceRecogniser;
+import tatai.exceptions.SpeechNotFoundException;
 
 public class RecordController extends SceneController {
 	
@@ -59,6 +66,24 @@ public class RecordController extends SceneController {
 		@Override
 		protected void done() {
 			Platform.runLater(() -> {
+				
+				// Check if user said anything recognisable
+				try {
+					new VoiceRecogniser().getSpeech("foo.wav");
+					
+				} catch (SpeechNotFoundException e) {
+					Alert alert = new Alert(AlertType.WARNING);
+					Label label = new Label("You did not say any recognisable Maori numbers.\nPlease record again.");
+					label.setWrapText(true);
+					alert.setHeaderText("Record Again");
+					alert.getDialogPane().setContent(label);
+					alert.showAndWait();
+					Game.getInstance().record();
+					return;
+					
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				}
 				
 				// Proceed to Game class
 				Game.getInstance().finishedRecording();

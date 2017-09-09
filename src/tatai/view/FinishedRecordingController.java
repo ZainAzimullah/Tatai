@@ -1,6 +1,7 @@
 package tatai.view;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
@@ -9,6 +10,8 @@ import javafx.scene.control.Label;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import tatai.Game;
+import tatai.bashTools.VoiceRecogniser;
+import tatai.exceptions.SpeechNotFoundException;
 
 public class FinishedRecordingController extends SceneController {
 	
@@ -36,6 +39,14 @@ public class FinishedRecordingController extends SceneController {
 	
 	@FXML
 	private void submit() {
+		VoiceRecogniser htk = new VoiceRecogniser();
+		
+		try {
+			Game.getInstance().storeAttempt(htk.getSpeech("foo.wav"));
+		} catch (FileNotFoundException | SpeechNotFoundException e) {
+			e.printStackTrace();
+		}
+		
 		Game.getInstance().showResult();
 	}
 	
