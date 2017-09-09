@@ -1,7 +1,7 @@
 package tatai.model;
 
-import tatai.Level;
 import tatai.exceptions.TataiException;
+import tatai.util.Level;
 
 public class MaoriNumberModelFactory {
 	private static MaoriNumberModel _model;

@@ -10,11 +10,11 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.text.Text;
-import tatai.Countdown;
 import tatai.Game;
 import tatai.bashTools.BashCommand;
 import tatai.bashTools.VoiceRecogniser;
 import tatai.exceptions.SpeechNotFoundException;
+import tatai.util.Countdown;
 
 public class RecordController extends SceneController {
 	

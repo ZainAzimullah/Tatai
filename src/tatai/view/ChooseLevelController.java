@@ -3,7 +3,7 @@ package tatai.view;
 
 import javafx.fxml.FXML;
 import tatai.Game;
-import tatai.Level;
+import tatai.util.Level;
 
 /*
  * Controller for choosing the level the user wants to play

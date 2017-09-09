@@ -6,6 +6,7 @@ import tatai.exceptions.TataiException;
 import tatai.model.MaoriNumber;
 import tatai.model.MaoriNumberModel;
 import tatai.model.MaoriNumberModelFactory;
+import tatai.util.Level;
 import tatai.view.SceneLoader;
 
 /*

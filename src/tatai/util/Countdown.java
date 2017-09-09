@@ -1,4 +1,4 @@
-package tatai;
+package tatai.util;
 
 import javafx.beans.property.ReadOnlyStringProperty;
 import javafx.concurrent.Task;
