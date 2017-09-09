@@ -30,7 +30,8 @@ public class VoiceRecogniser {
 		
 		try {
 			// Iterate through the lines to find the one that says "sil",
-			// and then the next line will contain the word the user said
+			// and then the next lines will contain the word the user said
+			// until "sil" is seen again.
 			while ((line = bufferedReader.readLine()) != null) {
 	
 				
@@ -51,7 +52,7 @@ public class VoiceRecogniser {
 		
 		// If sil was never founded, then user never said anything
 		if ((speech == null) || (speech.equals(""))) {
-			throw new SpeechNotFoundException("No voice observed");
+			throw new SpeechNotFoundException("No Maori numbers observed");
 		}
 		
 		return speech;

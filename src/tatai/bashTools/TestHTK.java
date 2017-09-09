@@ -18,7 +18,7 @@ public class TestHTK {
 		try {
 			System.out.println(htk.getSpeech("foo.wav"));
 		} catch (SpeechNotFoundException e) {
-			System.out.println("You didn't say anything");
+			System.out.println("You didn't say anything recognisable");
 		} catch (FileNotFoundException e) {
 			System.out.println("Could not find file");
 		}
