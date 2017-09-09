@@ -102,14 +102,14 @@ public class MaoriNumber implements Comparable<MaoriNumber> {
 			// otherwise in the 10's digit is a "1" append the Maori word for the 1's digit
 			// to "tekau ma "
 			if (tens == 1) {
-				_maoriName = "tekau ma " + map.get(ones);
+				_maoriName = "tekau maa " + map.get(ones);
 				return;
 			}
 
 			// otherwise if none of the above apply to the integer in question then set the
 			// maori word for the integer as the maori word for the 10's digit followed by
 			// "tekau ma " then followed by the maori word for the 1's digit
-			_maoriName = map.get(tens) + " tekau ma ";
+			_maoriName = map.get(tens) + " tekau maa ";
 			_maoriName += map.get(ones);
 		}
 	}
