@@ -26,7 +26,7 @@ public class BashCommand {
 	public void runCommand(String command) {
 		_commands.add(2, command);
 		
-		Consumer stdout, stderr = null;
+		Consumer stdout = null, stderr = null;
 		
 		// Run BASH process
 		try {
