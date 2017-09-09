@@ -39,11 +39,7 @@ public class BashCommand {
 			stdout.start();
 			stderr.start();
 
-			int exitStatus = process.waitFor();
-			if (exitStatus != 0) {
-				throw new Exception();
-			}
-			
+			process.waitFor();
 			process.destroy();
 		} catch (Exception e) {
 			throw new TataiException("Error running BASH command");
