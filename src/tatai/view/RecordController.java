@@ -14,7 +14,7 @@ public class RecordController extends SceneController {
 	private final int RECORDING_TIME = 2;
 	
 	@FXML
-	private Label _label;
+	private Label _recordMsg;
 	
 	@FXML
 	private Button _button;
@@ -31,7 +31,7 @@ public class RecordController extends SceneController {
 		_button.setDisable(true);
 		
 		// Bind label to countdown messages
-		_label.textProperty().bind(countdown.getMessageProperty());
+		_recordMsg.textProperty().bind(countdown.getMessageProperty());
 		
 		// Start recording
 		new Thread(new Background()).start();
@@ -53,8 +53,8 @@ public class RecordController extends SceneController {
 			Platform.runLater(() -> {
 				
 				// Update UI
-				_label.textProperty().unbind();
-				_label.setText("Finished recording");
+				_recordMsg.textProperty().unbind();
+				_recordMsg.setText("Finished recording");
 				_button.setText("Record");
 				_button.setDisable(false);
 				
