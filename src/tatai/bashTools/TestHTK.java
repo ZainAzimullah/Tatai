@@ -3,7 +3,6 @@ package tatai.bashTools;
 import java.io.FileNotFoundException;
 import java.util.List;
 
-import tatai.VoiceRecogniser;
 import tatai.exceptions.SpeechNotFoundException;
 
 public class TestHTK {
