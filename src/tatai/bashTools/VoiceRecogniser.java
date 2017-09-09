@@ -54,6 +54,8 @@ public class VoiceRecogniser {
 			throw new SpeechNotFoundException("No Maori numbers observed");
 		}
 		
+		// Remove whitespace at front of word
+		speech = speech.trim();
 		return speech;
 	}
 }
