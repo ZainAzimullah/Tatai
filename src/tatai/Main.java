@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import tatai.bashTools.BashCommand;
 import tatai.view.MainMenuController;
 
 public class Main extends Application {
@@ -17,6 +18,8 @@ public class Main extends Application {
 	public void start(Stage stage) throws IOException {
 		_stage = stage;
 		_stage.setResizable(false);
+		_stage.setOnCloseRequest(e -> new BashCommand().runCommand(
+				"[[ -e foo.wav ]] && rm foo.wav"));
 		
 		// Load main menu
 		FXMLLoader loader = new FXMLLoader();
