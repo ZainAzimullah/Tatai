@@ -60,12 +60,6 @@ public class RecordController extends SceneController {
 		protected void done() {
 			Platform.runLater(() -> {
 				
-				// Update UI
-				_recordMsg.textProperty().unbind();
-				_recordMsg.setText("Finished recording");
-				_button.setText("Record");
-				_button.setDisable(false);
-				
 				// Proceed to Game class
 				Game.getInstance().finishedRecording();
 			});
