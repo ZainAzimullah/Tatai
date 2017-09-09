@@ -1,5 +1,6 @@
 package tatai.bashTools;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 import tatai.VoiceRecogniser;
@@ -18,6 +19,8 @@ public class TestHTK {
 			System.out.println(htk.getSpeech("foo.wav"));
 		} catch (SpeechNotFoundException e) {
 			System.out.println("You didn't say anything");
+		} catch (FileNotFoundException e) {
+			System.out.println("Could not find file");
 		}
 	}
 }

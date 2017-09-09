@@ -12,9 +12,10 @@ import tatai.exceptions.SpeechNotFoundException;
 
 public class VoiceRecogniser {
 	
-	public String getSpeech(String filename) throws SpeechNotFoundException {
-		BashCommand bash = new BashCommand();
+	public String getSpeech(String filename) throws SpeechNotFoundException, FileNotFoundException {
 		
+		// Run speech recognition commands
+		BashCommand bash = new BashCommand();
 		bash.runCommand("HVite -H HMMs/hmm15/macros -H "
 				+ "HMMs/hmm15/hmmdefs -C user/configLR  -w "
 				+ "user/wordNetworkNum -o SWT -l '*' -i recout.mlf "
@@ -22,18 +23,14 @@ public class VoiceRecogniser {
 		bash.runCommand("rm -f " + filename);
 
         File file = new File("recout.mlf");
-        BufferedReader bufferedReader = null;
-        
-		try {
-			bufferedReader = new BufferedReader(new FileReader(file));
-		} catch (FileNotFoundException e1) {
-			e1.printStackTrace();
-		}
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
 		
 		String speech = null, line = null;
 		boolean readyToGet = false;
 		
 		try {
+			// Iterate through the lines to find the one that says "sil",
+			// and then the next line will contain the word the user said
 			while ((line = bufferedReader.readLine()) != null) {
 				if (readyToGet) {
 					speech = line;
@@ -48,6 +45,7 @@ public class VoiceRecogniser {
 			e.printStackTrace();
 		}
 		
+		// If sil was never founded, then user never said anything
 		if (speech == null) {
 			throw new SpeechNotFoundException("No voice observed");
 		}
