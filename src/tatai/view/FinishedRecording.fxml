@@ -63,7 +63,7 @@
                   </Button>
                </children>
             </HBox>
-            <Button mnemonicParsing="false" text="Return to Main Menu">
+            <Button mnemonicParsing="false" onAction="#returnToMainMenu" text="Return to Main Menu">
                <font>
                   <Font name="Noto Sans CJK JP Bold" size="18.0" />
                </font>
