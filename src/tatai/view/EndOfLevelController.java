@@ -1,13 +1,13 @@
 package tatai.view;
 
 import javafx.fxml.FXML;
+import tatai.Game;
 
 public class EndOfLevelController extends SceneController {
 	
 	@FXML
 	@Override
 	protected void returnToMainMenu() {
-		// TODO Auto-generated method stub
-		
+		Game.getInstance().returnToMainMenu();
 	}
 }
