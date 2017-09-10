@@ -143,7 +143,7 @@ public class Game {
 	}
 	
 	private void showIncorrect() {
-		System.out.println("Load Incorrect.fxml");
+		_loader.loadScene("Incorrect.fxml");
 	}
 	
 	private void showFailed() {
