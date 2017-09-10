@@ -5,12 +5,15 @@ import java.util.Optional;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
+import tatai.Game;
 
 /*
  * This is the parent class of all controllers.
  */
 public abstract class SceneController {
 	
+	protected abstract void returnToMainMenu();
+
 	public static final int YES = 1;
 	public static final int NO = 0;
 	
@@ -34,6 +37,13 @@ public abstract class SceneController {
 		}
 	}
 	
-	protected abstract void returnToMainMenu();
-	
+	protected void showAlertAndReturn() {
+		int reply = showAlert();
+		
+		if (reply == NO) {
+			return;
+		}
+		
+		Game.getInstance().returnToMainMenu();
+	}
 }
