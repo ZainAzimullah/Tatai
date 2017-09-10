@@ -29,10 +29,11 @@ public class Game {
 	private MaoriNumber _currentNumber;
 	private String _userAttempt;
 	
+	private Level _level;
 	private int _lives = MAX_LIVES;
+	private int _questionNumber;
 	
 	private Score _score;
-	private int _questionNumber;
 	
 	// Set the stage of the game.
 	private Game(Stage stage) {
@@ -70,16 +71,24 @@ public class Game {
 		return _currentNumber;
 	}
 	
+	// Store the speech which the user said
 	public void storeAttempt(String attempt) {
 		_userAttempt = attempt;
 	}
 	
+	// Get the speech which the user said
 	public String getAttempt() {
 		return _userAttempt;
 	}
 	
+	// Get the question number which the user is currently on
 	public int getCurrentQuestionNumber() {
 		return _questionNumber;
+	}
+	
+	// Get the level which the user is currently on
+	public Level getLevel() {
+		return _level;
 	}
 	
 	// Start the game
@@ -93,6 +102,7 @@ public class Game {
 	// Create the number list which user will be tested on.
 	// This method will be called once the user has clicked on a level.
 	public void createList(Level level) {
+		_level = level;
 		_numbers = MaoriNumberModelFactory.getMaoriNumberModel(level);
 		record();
 	}

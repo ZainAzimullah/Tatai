@@ -21,6 +21,13 @@ public class TestScore {
 		System.out.println(score.getNumberOf(Result.FAILED));
 		
 		score.debug();
+		
+		System.out.println(score.getNumberOfAttempts(5));
+		System.out.println(score.getNumberOfAttempts(1));
+		System.out.println(score.getNumberOfAttempts(3));
+		
+		System.out.println();
+		System.out.println(score.getTotalNumberOfAttempts());
 
 	}
 	
