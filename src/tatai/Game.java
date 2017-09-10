@@ -105,8 +105,7 @@ public class Game {
 	
 	// Redo recording
 	public void rerecord() {
-		_currentNumber = _numbers.getCurrentMaoriNumber();
-		System.out.println(_currentNumber);
+		_currentNumber = _numbers.getCurrentMaoriNumber();;
 		_loader.loadScene("Record.fxml");
 	}
 	
