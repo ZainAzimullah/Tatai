@@ -91,6 +91,10 @@ public class Game {
 		return _level;
 	}
 	
+	public Score getScore() {
+		return _score;
+	}
+	
 	// Start the game
 	public void startGame() {
 		_lives = MAX_LIVES;
