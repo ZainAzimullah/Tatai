@@ -97,8 +97,6 @@ public class Game {
 	
 	// Start the game
 	public void startGame() {
-		_lives = MAX_LIVES;
-		_score = new Score(NUMBER_OF_QUESTIONS);
 		_loader = new SceneLoader();
 		_loader.loadScene("ChooseLevel.fxml");
 	}
@@ -106,6 +104,8 @@ public class Game {
 	// Create the number list which user will be tested on.
 	// This method will be called once the user has clicked on a level.
 	public void createList(Level level) {
+		_lives = MAX_LIVES;
+		_score = new Score(NUMBER_OF_QUESTIONS);
 		_level = level;
 		_numbers = MaoriNumberModelFactory.getMaoriNumberModel(level);
 		record();
@@ -119,7 +119,6 @@ public class Game {
 	
 	// Load the recording scene
 	public void record() {
-		_questionNumber = _score.getNextUnattemptedQuestionNumber();
 	
 		// Advance to the next number in the model, otherwise
 		// if this is not possible, proceed to the end of the level
@@ -131,6 +130,7 @@ public class Game {
 			return;
 		}
 		
+		_questionNumber = _score.getNextUnattemptedQuestionNumber();
 		_currentNumber = _numbers.getCurrentMaoriNumber();
 		_loader.loadScene("Record.fxml");
 	}
