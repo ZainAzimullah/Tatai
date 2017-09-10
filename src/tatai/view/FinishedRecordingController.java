@@ -52,7 +52,7 @@ public class FinishedRecordingController extends SceneController {
 	
 	@FXML
 	private void redo() {
-		Game.getInstance().record();
+		Game.getInstance().rerecord();
 	}
 	
 	@FXML
