@@ -54,4 +54,11 @@ public class FinishedRecordingController extends SceneController {
 	private void redo() {
 		Game.getInstance().record();
 	}
+	
+	@FXML
+	@Override
+	protected void returnToMainMenu() {
+		// TODO Auto-generated method stub
+		
+	}
 }

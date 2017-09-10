@@ -28,7 +28,9 @@ public class ChooseLevelController extends SceneController {
 	}
 	
 	@FXML
-	private void returnToMainMenu() {
+	@Override
+	protected void returnToMainMenu() {
 		Game.getInstance().returnToMainMenu();
 	}
+
 }

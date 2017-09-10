@@ -1,5 +1,13 @@
 package tatai.view;
 
-public class EndOfLevelController {
+import javafx.fxml.FXML;
 
+public class EndOfLevelController extends SceneController {
+	
+	@FXML
+	@Override
+	protected void returnToMainMenu() {
+		// TODO Auto-generated method stub
+		
+	}
 }
