@@ -69,6 +69,7 @@ public class Game {
 	
 	// Start the game
 	public void startGame() {
+		_lives = MAX_LIVES;
 		_loader = new SceneLoader();
 		_loader.loadScene("ChooseLevel.fxml");
 	}
