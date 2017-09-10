@@ -27,11 +27,15 @@ public class RecordController extends SceneController {
 	private Label _number;
 	
 	@FXML
+	private Label _questionNumber;
+	
+	@FXML
 	private Button _button;
 	
 	@FXML
 	private void initialize() {
 		_number.setText(Integer.toString(Game.getInstance().getNumber().getDigit()));
+		_questionNumber.setText(Integer.toString(Game.getInstance().getCurrentQuestionNumber()));
 	}
 	
 	// This method is invoked when the Record button is clicked

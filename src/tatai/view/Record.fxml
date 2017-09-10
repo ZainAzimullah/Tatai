@@ -15,7 +15,7 @@
          <children>
             <AnchorPane prefWidth="200.0">
                <children>
-                  <Label text="[Stage]" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="0.0">
+                  <Label fx:id="_questionNumber" text="[Stage]" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="0.0">
                      <font>
                         <Font name="Noto Sans CJK JP Bold" size="13.0" />
                      </font>
