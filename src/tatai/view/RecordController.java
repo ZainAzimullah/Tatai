@@ -78,7 +78,7 @@ public class RecordController extends SceneController {
 					alert.setHeaderText("Record Again");
 					alert.getDialogPane().setContent(label);
 					alert.showAndWait();
-					Game.getInstance().record();
+					Game.getInstance().rerecord();
 					return;
 					
 				} catch (FileNotFoundException e) {
