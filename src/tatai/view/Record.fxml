@@ -13,12 +13,34 @@
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
+            <AnchorPane prefWidth="200.0">
+               <children>
+                  <Label text="[Stage]" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Noto Sans CJK JP Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="97.0" layoutY="2.0" text=" of " textFill="#e80202" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Noto Sans CJK JP Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="118.0" layoutY="2.0" text="10" textFill="#797979" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Noto Sans CJK JP Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </AnchorPane>
             <Label text="Your number is:">
                <font>
                   <Font name="Noto Sans CJK JP Bold" size="15.0" />
                </font>
                <VBox.margin>
-                  <Insets bottom="15.0" top="35.0" />
+                  <Insets bottom="15.0" />
                </VBox.margin>
             </Label>
             <AnchorPane>
