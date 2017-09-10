@@ -5,40 +5,46 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Score {
-	private Map<Integer, Integer> _scoreMap;
+	
+	public enum Result {
+		CORRECT,
+		INCORRECT,
+		FAILED,
+		UNATTEMPTED;
+	}
+	
+	private Map<Integer, Result> _scoreMap;
+	
 	
 	public Score(int numOfQuestions) {
 		_scoreMap = new HashMap<>();
 		
 		for (int i = 1; i <= 10; i++) {
-			_scoreMap.put(i, 0);
+			_scoreMap.put(i, Result.UNATTEMPTED);
 		}
 	}
 	
-	public void updateIncorrectTally(int questionNumber) {
-		Integer tally = _scoreMap.get(questionNumber);
-		Integer newTally = tally.intValue() + 1;
-		_scoreMap.put(questionNumber, newTally);
+	public void update(int questionNumber, Result result) {
+		_scoreMap.put(questionNumber, result);
 	}
 	
-	public int getNumberOfCorrectOnFirstTry() {
-		return Collections.frequency(_scoreMap.values(), 0);
+	
+	public int getNumberOf(Result result) {
+		return Collections.frequency(_scoreMap.values(), result);
 	}
 	
-	public int getNumberOfCorrect() {
-		return (_scoreMap.size() - Collections.frequency(_scoreMap.values(), 2));
-	}
-	
-	public int getNumberOfIncorrect() {
-		return Collections.frequency(_scoreMap.values(), 2);
-	}
-	
-	public int getNumberOfIncorrectOnFirstTry() {
-		return (_scoreMap.size() - Collections.frequency(_scoreMap.values(), 0));
+	public int getNextUnattemptedQuestionNumber() {
+		int number = 1;
+		
+		while (_scoreMap.get(number) != Result.UNATTEMPTED) {
+			number++;
+		}
+		
+		return number;
 	}
 	
 	public void debug() {
-		for (Map.Entry<Integer, Integer> entry: _scoreMap.entrySet()) {
+		for (Map.Entry<Integer, Result> entry: _scoreMap.entrySet()) {
 			System.out.println("Key: " + entry.getKey() + "\tValue: " + entry.getValue());
 		}
 	}
