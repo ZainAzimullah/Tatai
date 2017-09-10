@@ -7,6 +7,8 @@ public class TestScore {
 	public static void main(String[] args) {
 		Score score = new Score(10);
 		
+		System.out.println(score.getNextUnattemptedQuestionNumber());
+		
 		score.update(1, Result.CORRECT);
 		score.update(2, Result.CORRECT);
 		score.update(3, Result.INCORRECT);

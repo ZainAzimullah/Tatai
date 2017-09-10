@@ -7,6 +7,8 @@ import tatai.model.MaoriNumber;
 import tatai.model.MaoriNumberModel;
 import tatai.model.MaoriNumberModelFactory;
 import tatai.util.Level;
+import tatai.util.Score;
+import tatai.util.Score.Result;
 import tatai.view.SceneLoader;
 
 /*
@@ -16,6 +18,7 @@ import tatai.view.SceneLoader;
 public class Game {
 	
 	public static final int MAX_LIVES = 2;
+	public static final int NUMBER_OF_QUESTIONS = 10;
 	
 	private static Game _game;
 	private final Stage _stage;
@@ -26,6 +29,9 @@ public class Game {
 	private String _userAttempt;
 	
 	private int _lives = MAX_LIVES;
+	
+	private Score _score;
+	private int _questionNumber;
 	
 	// Set the stage of the game.
 	private Game(Stage stage) {
@@ -74,6 +80,7 @@ public class Game {
 	// Start the game
 	public void startGame() {
 		_lives = MAX_LIVES;
+		_score = new Score(NUMBER_OF_QUESTIONS);
 		_loader = new SceneLoader();
 		_loader.loadScene("ChooseLevel.fxml");
 	}
@@ -92,7 +99,8 @@ public class Game {
 	
 	// Load the recording scene
 	public void record() {
-		
+		_questionNumber = _score.getNextUnattemptedQuestionNumber();
+	
 		// Advance to the next number in the model, otherwise
 		// if this is not possible, proceed to the end of the level
 		try {
@@ -124,15 +132,18 @@ public class Game {
 		if (_userAttempt.equals(_currentNumber.toString())) {
 			// Refresh lives and show correct scene
 			_lives = MAX_LIVES;
+			_score.update(_questionNumber, Result.CORRECT);
 			showCorrect();
 			
 		// Otherwise, the user got the word wrong:
 		} else if (_lives > 1) {
 			// Deduct a life and show the incorrect scene
 			_lives--;
+			_score.update(_questionNumber, Result.INCORRECT);
 			showIncorrect();
 		} else if (_lives == 1) {
 			// They have failed, so refresh the lives and show the Failed scene
+			_score.update(_questionNumber, Result.FAILED);
 			_lives = MAX_LIVES;
 			showFailed();
 		}
