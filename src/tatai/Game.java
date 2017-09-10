@@ -9,6 +9,7 @@ import tatai.model.MaoriNumberModelFactory;
 import tatai.util.Level;
 import tatai.util.Score;
 import tatai.util.Score.Result;
+import tatai.view.MainMenuLoader;
 import tatai.view.SceneLoader;
 
 /*
@@ -94,7 +95,8 @@ public class Game {
 	
 	// Returns to the main menu
 	public void returnToMainMenu() {
-		_loader.loadScene("MainMenu.fxml");
+		MainMenuLoader loader = new MainMenuLoader();
+		loader.loadScene("MainMenu.fxml");
 	}
 	
 	// Load the recording scene

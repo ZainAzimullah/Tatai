@@ -9,12 +9,7 @@ import javafx.stage.Stage;
 import tatai.Game;
 
 public class SceneLoader {
-	private Stage _stage = Game.getInstance().getStage();
-	
-	// Constructor for when scene doesn't need a number
-	public SceneLoader() {
-		
-	}
+	protected Stage _stage = Game.getInstance().getStage();
 	
 	// Load the scene
 	public void loadScene(String filename) {
@@ -25,6 +20,7 @@ public class SceneLoader {
 		
 		try {
 			layout = loader.load();
+			useController(loader.getController());
 		} catch (IOException e) {
 			e.printStackTrace();
 			System.exit(0);
@@ -33,4 +29,6 @@ public class SceneLoader {
 		Scene scene = new Scene(layout);
 		_stage.setScene(scene);
 	}
+	
+	protected void useController(SceneController controller) {}
 }

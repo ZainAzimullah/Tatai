@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import tatai.Game;
 
-public class MainMenuController {
+public class MainMenuController extends SceneController {
 	
 	private Stage _stage;
 	
@@ -25,4 +25,7 @@ public class MainMenuController {
 	private void quit() {
 		_stage.close();
 	}
+
+	@Override
+	protected void returnToMainMenu() {}
 }
