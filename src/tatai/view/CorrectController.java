@@ -27,7 +27,6 @@ public class CorrectController extends SceneController {
 	@FXML
 	@Override
 	protected void returnToMainMenu() {
-		
-		
+		showAlertAndReturn();
 	}
 }

@@ -58,7 +58,6 @@ public class FinishedRecordingController extends SceneController {
 	@FXML
 	@Override
 	protected void returnToMainMenu() {
-		// TODO Auto-generated method stub
-		
+		showAlertAndReturn();
 	}
 }
