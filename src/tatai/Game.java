@@ -78,6 +78,10 @@ public class Game {
 		return _userAttempt;
 	}
 	
+	public int getCurrentQuestionNumber() {
+		return _questionNumber;
+	}
+	
 	// Start the game
 	public void startGame() {
 		_lives = MAX_LIVES;
