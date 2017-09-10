@@ -2,6 +2,7 @@ package tatai.model;
 
 import java.util.Random;
 
+import tatai.exceptions.FirstNumberNotAdvancedToException;
 import tatai.exceptions.OutOfNumbersException;
 import tatai.exceptions.TataiException;
 
@@ -25,9 +26,7 @@ public abstract class MaoriNumberModel {
 			_numbers[index] =(new MaoriNumber(rand.nextInt(maxValue) + minValue));
 		}
 
-		// setting the very first number in the sequence of number to the variable
-		// assigned for keeping
-		// track of the current number being used in the game.
+		// initialised pointer to nothing (you must advance first).
 		_currentNumber = null;
 		_currentNumberPosition = -1;
 
@@ -47,6 +46,11 @@ public abstract class MaoriNumberModel {
 	
 	//getter for returning the current MaoriNumber Object we are pointing at
 	public MaoriNumber getCurrentMaoriNumber() {
+		if (_currentNumberPosition < 0) {
+			throw new FirstNumberNotAdvancedToException("You must first use advance() "
+					+ "before you try to get the first Maori Number");
+		}
+		
 		return _currentNumber;
 	}
 }
