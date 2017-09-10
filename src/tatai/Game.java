@@ -89,6 +89,24 @@ public class Game {
 	
 	// Load the recording scene
 	public void record() {
+		
+		// Advance to the next number in the model, otherwise
+		// if this is not possible, proceed to the end of the level
+		try {
+			_numbers.advance();
+		} catch (OutOfNumbersException e) {
+			// Show EndOfLevel scene if out of numbers
+			endOfLevel();
+			return;
+		}
+		
+		_currentNumber = _numbers.getCurrentMaoriNumber();
+		_loader.loadScene("Record.fxml");
+	}
+	
+	// Redo recording
+	public void rerecord() {
+		_currentNumber = _numbers.getCurrentMaoriNumber();
 		_loader.loadScene("Record.fxml");
 	}
 	
@@ -101,19 +119,9 @@ public class Game {
 		
 		// Check if user said correct word
 		if (_userAttempt.equals(_currentNumber.toString())) {
-			
-			// Show the Correct scene and refresh lives
-			showCorrect();
+			// Refresh lives and show correct scene
 			_lives = MAX_LIVES;
-			
-			// Advance to the next number in the model, otherwise
-			// if this is not possible, proceed to the end of the level
-			try {
-				_numbers.advance();
-				_currentNumber = _numbers.getCurrentMaoriNumber();
-			} catch (OutOfNumbersException e) {
-				endOfLevel();
-			}
+			showCorrect();
 			
 		// Otherwise, the user got the word wrong:
 		} else if (_lives > 1) {

@@ -28,8 +28,8 @@ public abstract class MaoriNumberModel {
 		// setting the very first number in the sequence of number to the variable
 		// assigned for keeping
 		// track of the current number being used in the game.
-		_currentNumber = _numbers[0];
-		_currentNumberPosition = 0;
+		_currentNumber = null;
+		_currentNumberPosition = -1;
 
 	}
 
