@@ -78,7 +78,6 @@ public class Game {
 	// This method will be called once the user has clicked on a level.
 	public void createList(Level level) {
 		_numbers = MaoriNumberModelFactory.getMaoriNumberModel(level);
-		_currentNumber = _numbers.getCurrentMaoriNumber();
 		record();
 	}
 	
