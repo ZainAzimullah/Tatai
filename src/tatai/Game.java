@@ -147,7 +147,7 @@ public class Game {
 	}
 	
 	private void showFailed() {
-		System.out.println("Load Failed.fxml");
+		_loader.loadScene("Failed.fxml");
 	}
 	
 	public void endOfLevel() {
