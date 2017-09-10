@@ -127,9 +127,7 @@ public class Game {
 	}
 	
 	private void showCorrect() {
-		
-		_loader.loadScene("correct.fxml");
-		System.out.println("Load Correct.fxml");
+		_loader.loadScene("Correct.fxml");
 	}
 	
 	private void showIncorrect() {
