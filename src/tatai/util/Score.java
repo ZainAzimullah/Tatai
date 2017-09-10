@@ -17,7 +17,8 @@ public class Score {
 	
 	public void updateIncorrectTally(int questionNumber) {
 		Integer tally = _scoreMap.get(questionNumber);
-		tally++;
+		Integer newTally = tally.intValue() + 1;
+		_scoreMap.put(questionNumber, newTally);
 	}
 	
 	public int getNumberOfCorrectOnFirstTry() {
@@ -32,4 +33,13 @@ public class Score {
 		return Collections.frequency(_scoreMap.values(), 2);
 	}
 	
+	public int getNumberOfIncorrectOnFirstTry() {
+		return (_scoreMap.size() - Collections.frequency(_scoreMap.values(), 0));
+	}
+	
+	public void debug() {
+		for (Map.Entry<Integer, Integer> entry: _scoreMap.entrySet()) {
+			System.out.println("Key: " + entry.getKey() + "\tValue: " + entry.getValue());
+		}
+	}
 }
