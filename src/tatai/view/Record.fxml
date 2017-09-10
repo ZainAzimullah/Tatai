@@ -24,7 +24,7 @@
             <AnchorPane>
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="60.0" layoutX="142.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="90.0" AnchorPane.leftAnchor="255.0" AnchorPane.topAnchor="0.0" />
-                  <Label fx:id="_number" alignment="TOP_CENTER" text="99" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="7.0">
+                  <Label fx:id="_number" alignment="TOP_CENTER" text="#" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="5.0">
                      <font>
                         <Font name="Noto Sans CJK JP Bold" size="30.0" />
                      </font>
@@ -63,18 +63,14 @@
                   <Font name="Noto Sans CJK JP Bold" size="15.0" />
                </font>
             </Label>
-            <AnchorPane>
-               <children>
-                  <Button fx:id="_button" mnemonicParsing="false" onAction="#record" text="Record" AnchorPane.leftAnchor="247.0">
-                     <font>
-                        <Font name="Noto Sans CJK JP Bold" size="22.0" />
-                     </font>
-                  </Button>
-               </children>
+            <Button fx:id="_button" mnemonicParsing="false" onAction="#record" text="Record">
+               <font>
+                  <Font name="Noto Sans CJK JP Bold" size="22.0" />
+               </font>
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>
-            </AnchorPane>
+            </Button>
             <Button mnemonicParsing="false" text="Return to Main Menu">
                <font>
                   <Font name="Noto Sans CJK JP Bold" size="18.0" />
