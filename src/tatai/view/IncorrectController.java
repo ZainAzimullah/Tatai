@@ -15,7 +15,7 @@ public class IncorrectController extends SceneController {
 	@FXML
 	private void initialize() {
 		_number.setText(Integer.toString(Game.getInstance().getNumber().getDigit()));
-		_maoriWord.setText(Game.getInstance().getNumber().toString());
+		_maoriWord.setText(Game.getInstance().getAttempt());
 	}
 	
 	@FXML

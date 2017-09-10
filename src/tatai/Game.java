@@ -67,6 +67,10 @@ public class Game {
 		_userAttempt = attempt;
 	}
 	
+	public String getAttempt() {
+		return _userAttempt;
+	}
+	
 	// Start the game
 	public void startGame() {
 		_lives = MAX_LIVES;
