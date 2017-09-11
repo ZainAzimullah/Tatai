@@ -15,7 +15,7 @@
          <children>
             <AnchorPane prefWidth="200.0">
                <children>
-                  <Label fx:id="_questionNumber" text="[Stage]" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="0.0">
+                  <Label fx:id="_questionNumber" layoutX="81.0" text="10" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="0.0">
                      <font>
                         <Font name="Noto Sans CJK JP Bold" size="13.0" />
                      </font>
@@ -53,7 +53,7 @@
                   </Label>
                </children>
             </AnchorPane>
-            <Label text="Once you press red record button you will have 2 seconds">
+            <Label text="Once you press the record button you will have 2 seconds">
                <font>
                   <Font name="Noto Sans CJK JP Bold" size="15.0" />
                </font>
