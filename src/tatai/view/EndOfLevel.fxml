@@ -48,7 +48,7 @@
             <Image url="@../../../RFImages/rsz_button-23948_640.png" />
          </image>
       </ImageView>
-      <Label layoutX="119.0" layoutY="147.0" text="Number of correct attempts" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="235.0">
+      <Label layoutX="119.0" layoutY="147.0" text="Number of correct questions" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="235.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="15.0" />
          </font>
@@ -58,7 +58,7 @@
             <Font name="Noto Sans CJK JP Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="128.0" layoutY="397.0" text="Number of incorrect attempts" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="362.5">
+      <Label layoutX="128.0" layoutY="397.0" text="Number of incorrect questions" AnchorPane.leftAnchor="105.0" AnchorPane.topAnchor="362.5">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="15.0" />
          </font>
