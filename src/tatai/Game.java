@@ -182,6 +182,6 @@ public class Game {
 	}
 	
 	public void endOfLevel() {
-		System.out.println("Load EndOfLevel.fxml");
+		_loader.loadScene("EndOfLevel.fxml");
 	}
 }

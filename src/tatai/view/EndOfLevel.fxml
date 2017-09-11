@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.EndOfLevelController">
    <children>
       <ImageView fitHeight="600.0" fitWidth="600.0">
          <image>
@@ -18,7 +18,7 @@
       </ImageView>
       <HBox alignment="TOP_CENTER" layoutX="169.0" layoutY="-10.0" prefWidth="200.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
          <children>
-            <Label text="[LEVEL TYPE]">
+            <Label fx:id="_level" text="[LEVEL TYPE]">
                <font>
                   <Font name="Noto Sans CJK JP Bold" size="25.0" />
                </font>
@@ -68,27 +68,27 @@
             <Font name="Noto Sans CJK JP Bold" size="15.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="482.0" layoutY="147.0" text="20" textFill="WHITE" AnchorPane.bottomAnchor="405.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="85.0">
+      <Label fx:id="_totalNumOfAttempts" alignment="CENTER" layoutX="482.0" layoutY="147.0" text="20" textFill="WHITE" AnchorPane.bottomAnchor="405.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="85.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="50.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="482.0" layoutY="270.0" text="20" textFill="WHITE" AnchorPane.bottomAnchor="280.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="210.0">
+      <Label fx:id="_numAchieved" alignment="CENTER" layoutX="482.0" layoutY="270.0" text="20" textFill="WHITE" AnchorPane.bottomAnchor="280.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="210.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="50.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="482.0" layoutY="397.0" text="20" textFill="WHITE" AnchorPane.bottomAnchor="155.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="335.0">
+      <Label fx:id="_numFailed" alignment="CENTER" layoutX="482.0" layoutY="397.0" text="20" textFill="WHITE" AnchorPane.bottomAnchor="155.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="140.0" AnchorPane.topAnchor="335.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="50.0" />
          </font>
       </Label>
-      <Button alignment="CENTER" layoutX="215.0" layoutY="492.0" mnemonicParsing="false" text="Replay/Play Hard Mode" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="155.0">
+      <Button fx:id="_next" alignment="CENTER" layoutX="215.0" layoutY="492.0" mnemonicParsing="false" onAction="#next" text="Replay/Play Hard Mode" AnchorPane.bottomAnchor="90.0" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="155.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="269.0" layoutY="528.0" mnemonicParsing="false" text="Return to Main Menu" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="213.0">
+      <Button layoutX="269.0" layoutY="528.0" mnemonicParsing="false" onAction="#returnToMainMenu" text="Return to Main Menu" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="213.0" AnchorPane.rightAnchor="213.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="15.0" />
          </font>
