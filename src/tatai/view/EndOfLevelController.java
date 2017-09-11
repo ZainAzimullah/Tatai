@@ -27,7 +27,12 @@ public class EndOfLevelController extends SceneController {
 	Label _totalNumOfAttempts;
 	
 	@FXML
+	Label _level;
+	
+	@FXML
 	private void initialize() {
+		_level.setText(Game.getInstance().getLevel().toString());
+		
 		Score score = Game.getInstance().getScore();
 		int numAchieved = score.getNumberOf(Result.CORRECT) + score.getNumberOf(Result.INCORRECT);
 		int numFailed = score.getNumberOf(Result.FAILED);
@@ -37,12 +42,11 @@ public class EndOfLevelController extends SceneController {
 		_numFailed.setText(Integer.toString(numFailed));
 		_totalNumOfAttempts.setText(Integer.toString(totalNumOfAttempts));
 		
-		if (numAchieved >= THRESHHOLD) {
+		if ((numAchieved >= THRESHHOLD) 
+				&& (Game.getInstance().getLevel() == Level.EASY)) {
 			_next.setText("Next Level");
-			_mustRetry = false;
 		} else {
 			_next.setText("Retry Level");
-			_mustRetry = true;
 		}
 	}
 	
