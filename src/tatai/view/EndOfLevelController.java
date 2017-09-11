@@ -54,9 +54,9 @@ public class EndOfLevelController extends SceneController {
 	@FXML
 	private void next() {
 		if (_mustRetry) {
-			Game.getInstance().createList(Level.HARD);
+			Game.getInstance().createList(Game.getInstance().getLevel());
 		} else {
-			Game.getInstance().createList(Level.EASY);
+			Game.getInstance().createList(Level.HARD);
 		}
 	}
 	
