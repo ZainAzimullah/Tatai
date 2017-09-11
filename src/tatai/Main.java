@@ -1,13 +1,12 @@
 package tatai;
 
+import java.io.File;
 import java.io.IOException;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import tatai.bashTools.BashCommand;
 import tatai.view.MainMenuController;
 
 public class Main extends Application {
@@ -18,8 +17,9 @@ public class Main extends Application {
 	public void start(Stage stage) throws IOException {
 		_stage = stage;
 		_stage.setResizable(false);
-		_stage.setOnCloseRequest(e -> new BashCommand().runCommand(
-				"[[ -e foo.wav ]] && rm foo.wav"));
+		_stage.setOnCloseRequest(e -> {
+			new File(System.getProperty("user.dir") + "/foo.wav").delete();
+		});
 		
 		// Load main menu
 		FXMLLoader loader = new FXMLLoader();

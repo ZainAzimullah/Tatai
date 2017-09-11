@@ -2,6 +2,7 @@ package tatai.view;
 
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import tatai.Game;
 
 public class MainMenuController extends SceneController {
@@ -23,7 +24,7 @@ public class MainMenuController extends SceneController {
 	// Quit the game
 	@FXML
 	private void quit() {
-		_stage.close();
+		_stage.fireEvent(new WindowEvent(_stage, WindowEvent.WINDOW_CLOSE_REQUEST));
 	}
 
 	@Override
