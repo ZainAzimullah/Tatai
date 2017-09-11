@@ -12,7 +12,7 @@ public class EndOfLevelController extends SceneController {
 	
 	public static final int THRESHHOLD = 8;
 	
-	private boolean _mustRetry = false;
+	private boolean _mustRetry = true;
 	
 	@FXML
 	Button _next;
@@ -45,6 +45,7 @@ public class EndOfLevelController extends SceneController {
 		if ((numAchieved >= THRESHHOLD) 
 				&& (Game.getInstance().getLevel() == Level.EASY)) {
 			_next.setText("Next Level");
+			_mustRetry = false;
 		} else {
 			_next.setText("Retry Level");
 		}
