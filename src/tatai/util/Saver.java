@@ -1,5 +1,6 @@
 package tatai.util;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileWriter;
@@ -10,15 +11,48 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Saver {
-	public void save(FinalScore finalScore) {
-		File file = new File("history.txt");
-		FileWriter writer;
+	
+	private FinalScore _finalScore;
+	
+	public Saver(FinalScore finalScore) {
+		_finalScore = finalScore;
+	}
+	
+	public void save(String filename) {
+		File file = new File(System.getProperty("user.dir") + "/" + filename);
+		System.out.println(file.getPath());
+		
+		FileWriter fileWriter = null;
+		BufferedWriter bufferedWriter = null;
 		
 		try {
-			writer = new FileWriter(file, true);
-			writer.append(finalScore.toString());
+			if (!file.exists()) {
+				file.createNewFile();
+			}
+			System.out.println(_finalScore);
+			fileWriter = new FileWriter(file.getAbsoluteFile(), true);
+			bufferedWriter = new BufferedWriter(fileWriter);
+			
+			bufferedWriter.write(_finalScore.toString() + "\n");
 		} catch (IOException e) {
 			e.printStackTrace();
+		} finally {
+			
+			if (bufferedWriter != null) {
+				try {
+					bufferedWriter.close();
+				} catch (IOException e) {
+					
+				}
+			}
+			
+			if (fileWriter != null) {
+				try {
+					fileWriter.close();
+				} catch (IOException e) {
+
+				}
+			}
 		}
 	}
 }
