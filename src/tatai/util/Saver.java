@@ -17,7 +17,7 @@ public class Saver {
 		ObjectOutputStream objOut = null;
 		
 		try {
-			fileOut = new FileOutputStream(System.getProperty("user.dir") + format.format(date));
+			fileOut = new FileOutputStream(System.getProperty("user.dir") + "\\" + format.format(date) + ".ser");
 			objOut = new ObjectOutputStream(fileOut);
 			objOut.writeObject(finalScore);
 		} catch (IOException e) {

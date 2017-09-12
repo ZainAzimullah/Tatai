@@ -25,6 +25,10 @@ public class TestScore {
 		FinalScore finalScore = new FinalScore(score, Level.EASY);
 		
 		System.out.println(finalScore.getNumberIncorrect().get());
+		
+		Saver saver = new Saver();
+		
+		saver.save(finalScore);
 	}
 	
 }
