@@ -6,9 +6,8 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import tatai.util.Score.Result;
 
-public class FinalScore implements Serializable {
+public class FinalScore {
 
-	private static final long serialVersionUID = 1L;
 	private StringProperty _numCorrect = new SimpleStringProperty();
 	private StringProperty _numIncorrect = new SimpleStringProperty();
 	private StringProperty _numAttempts = new SimpleStringProperty();
