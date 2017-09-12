@@ -21,6 +21,10 @@ public class TestScore {
 		System.out.println(score.getNumberOf(Result.FAILED));
 		
 		score.debug();
+		
+		FinalScore finalScore = new FinalScore(score, Level.EASY);
+		
+		System.out.println(finalScore.getNumberIncorrect().get());
 	}
 	
 }

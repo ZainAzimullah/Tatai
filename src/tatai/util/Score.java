@@ -33,7 +33,7 @@ public class Score {
 		_mistakesMap = new HashMap<>();
 		
 		// Initialise maps as unattempted
-		for (int i = 1; i <= 10; i++) {
+		for (int i = 1; i <= numOfQuestions; i++) {
 			update(i, Result.UNATTEMPTED);
 		}
 	}
