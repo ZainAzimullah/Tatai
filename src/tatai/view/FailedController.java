@@ -10,6 +10,9 @@ public class FailedController extends SceneController {
 	private Label _correctWord;
 	
 	@FXML
+	private Label _incorrectWord;
+	
+	@FXML
 	private Label _number;
 	
 	@FXML
@@ -20,6 +23,7 @@ public class FailedController extends SceneController {
 	@FXML
 	private void initialize() {
 		_correctWord.setText(Game.getInstance().getNumber().toString());
+		_incorrectWord.setText(Game.getInstance().getAttempt());
 		_number.setText(Integer.toString(Game.getInstance().getNumber().getDigit()));
 	}
 	
