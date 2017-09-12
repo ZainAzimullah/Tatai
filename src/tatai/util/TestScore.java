@@ -5,6 +5,7 @@ import tatai.util.Score.Result;
 public class TestScore {
 	
 	public static void main(String[] args) {
+		
 		Score score = new Score(10);
 		
 		System.out.println(score.getNextUnattemptedQuestionNumber());
@@ -25,10 +26,7 @@ public class TestScore {
 		FinalScore finalScore = new FinalScore(score, Level.EASY);
 		
 		System.out.println(finalScore.getNumberIncorrect().get());
-		
-		Saver saver = new Saver();
-		
-		saver.save(finalScore);
+		System.out.println(finalScore);
 	}
 	
 }
