@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.FailedController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.FailedController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="110.0" layoutX="114.0" layoutY="23.0" stroke="#797979" strokeType="INSIDE" width="110.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="2.5">
          <effect>
@@ -53,12 +53,12 @@
             <Font name="Noto Sans CJK JP Bold" size="22.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="60.0" layoutX="137.0" layoutY="123.0" stroke="BLACK" strokeType="INSIDE" width="500.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="200.0" />
-      <Label alignment="TOP_CENTER" layoutX="267.0" layoutY="192.0" text="The                               Maori number for" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="148.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="60.0" layoutX="137.0" layoutY="123.0" stroke="BLACK" strokeType="INSIDE" width="500.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="310.0" />
+      <Label alignment="TOP_CENTER" layoutX="267.0" layoutY="192.0" text="The                               Maori number for" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="253.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="15.0" />
          </font></Label>
-      <Label fx:id="_correctWord" alignment="TOP_CENTER" layoutX="300.0" layoutY="227.0" text="Maori#" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="206.0">
+      <Label fx:id="_correctWord" alignment="TOP_CENTER" layoutX="300.0" layoutY="227.0" text="Actual Maori#" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="316.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="30.0" />
          </font>
@@ -68,18 +68,18 @@
             <Font name="Noto Sans CJK JP Bold" size="15.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="60.0" layoutX="323.0" layoutY="188.0" stroke="BLACK" strokeType="INSIDE" width="80.0" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="130.0" />
-      <Label fx:id="_number" alignment="TOP_CENTER" layoutX="427.0" layoutY="267.0" text="#" AnchorPane.leftAnchor="355.0" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="136.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="60.0" layoutX="323.0" layoutY="188.0" stroke="BLACK" strokeType="INSIDE" width="80.0" AnchorPane.leftAnchor="350.0" AnchorPane.topAnchor="237.0" />
+      <Label fx:id="_number" alignment="TOP_CENTER" layoutX="427.0" layoutY="267.0" text="#" AnchorPane.leftAnchor="355.0" AnchorPane.rightAnchor="125.0" AnchorPane.topAnchor="243.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="30.0" />
          </font>
       </Label>
-      <Button layoutX="94.0" layoutY="330.0" mnemonicParsing="false" onAction="#next" text="Next Number" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="105.0">
+      <Button layoutX="94.0" layoutY="330.0" mnemonicParsing="false" onAction="#next" text="Next Number" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="105.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="294.0" layoutY="337.0" mnemonicParsing="false" onAction="#returnToMainMenu" text="Return to Main Menu" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="70.0">
+      <Button layoutX="294.0" layoutY="337.0" mnemonicParsing="false" onAction="#returnToMainMenu" text="Return to Main Menu" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="70.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="18.0" />
          </font>
@@ -89,14 +89,25 @@
             <Image url="@../../images/incorrect.png" />
          </image>
       </ImageView>
-      <Label layoutX="482.0" layoutY="178.0" text="Is" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="148.0">
+      <Label layoutX="482.0" layoutY="178.0" text="Is" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="253.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="157.0" layoutY="178.0" text="CORRECT" textFill="#fa4500" AnchorPane.leftAnchor="109.0" AnchorPane.topAnchor="142.5">
+      <Label layoutX="157.0" layoutY="178.0" text="CORRECT" textFill="#fa4500" AnchorPane.leftAnchor="109.0" AnchorPane.topAnchor="247.5">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="20.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="60.0" layoutX="172.0" layoutY="97.0" stroke="BLACK" strokeType="INSIDE" width="500.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="165.0" />
+      <Label fx:id="_correctWord1" alignment="TOP_CENTER" layoutX="258.0" layoutY="172.0" text="User Maori#" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="171.0">
+         <font>
+            <Font name="Noto Sans CJK JP Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" layoutX="300.0" layoutY="152.0" text="You said" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="135.0">
+         <font>
+            <Font name="Noto Sans CJK JP Bold" size="15.0" />
          </font>
       </Label>
    </children>
