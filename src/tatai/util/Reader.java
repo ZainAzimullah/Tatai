@@ -13,7 +13,7 @@ public class Reader {
 	private File _file;
 	
 	public Reader(String filename) {
-		_file = new File(filename);
+		_file = new File(System.getProperty("user.dir") + "/" + filename);
 	}
 	
 	public ObservableList<FinalScore> read() {

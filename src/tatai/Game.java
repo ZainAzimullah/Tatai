@@ -6,7 +6,9 @@ import tatai.exceptions.TataiException;
 import tatai.model.MaoriNumber;
 import tatai.model.MaoriNumberModel;
 import tatai.model.MaoriNumberModelFactory;
+import tatai.util.FinalScore;
 import tatai.util.Level;
+import tatai.util.Saver;
 import tatai.util.Score;
 import tatai.util.Score.Result;
 import tatai.view.MainMenuLoader;
@@ -182,6 +184,7 @@ public class Game {
 	}
 	
 	public void endOfLevel() {
+		new Saver(new FinalScore(_score, _level)).save("history.txt");
 		_loader.loadScene("EndOfLevel.fxml");
 	}
 }

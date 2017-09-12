@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import tatai.util.FinalScore;
+import tatai.util.Reader;
 
 public class StatsController extends SceneController {
 	
@@ -32,6 +33,8 @@ public class StatsController extends SceneController {
 		_numAttempts.setCellValueFactory(data -> data.getValue().getNumberOfAttempts());
 		_numMistakes.setCellValueFactory(data -> data.getValue().getNumberOfMistakes());
 		_level.setCellValueFactory(data -> data.getValue().getLevel());
+		
+		_table.setItems(new Reader("history.txt").read());
 	}
 	
 	@Override
