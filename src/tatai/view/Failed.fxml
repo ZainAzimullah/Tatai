@@ -100,7 +100,7 @@
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="60.0" layoutX="172.0" layoutY="97.0" stroke="BLACK" strokeType="INSIDE" width="500.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="165.0" />
-      <Label fx:id="_correctWord1" alignment="TOP_CENTER" layoutX="258.0" layoutY="172.0" text="User Maori#" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="171.0">
+      <Label fx:id="_incorrectWord" alignment="TOP_CENTER" layoutX="258.0" layoutY="172.0" text="User Maori#" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="171.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="30.0" />
          </font>
