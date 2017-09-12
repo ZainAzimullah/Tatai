@@ -159,7 +159,7 @@ public class Game {
 		} else if (_lives > 1) {
 			// Deduct a life and show the incorrect scene
 			_lives--;
-			_score.update(_questionNumber, Result.INCORRECT);
+			_score.update(_questionNumber, Result.INCORRECT_ONCE);
 			showIncorrect();
 		} else if (_lives == 1) {
 			// They have failed, so refresh the lives and show the Failed scene

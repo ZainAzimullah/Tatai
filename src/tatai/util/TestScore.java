@@ -11,23 +11,16 @@ public class TestScore {
 		
 		score.update(1, Result.CORRECT);
 		score.update(2, Result.CORRECT);
-		score.update(3, Result.INCORRECT);
+		score.update(3, Result.INCORRECT_ONCE);
 		score.update(4, Result.CORRECT);
 		score.update(5, Result.FAILED);
 		
 		System.out.println(score.getNextUnattemptedQuestionNumber());
 		System.out.println(score.getNumberOf(Result.CORRECT));
-		System.out.println(score.getNumberOf(Result.INCORRECT));
+		System.out.println(score.getNumberOf(Result.INCORRECT_ONCE));
 		System.out.println(score.getNumberOf(Result.FAILED));
 		
 		score.debug();
-		
-		System.out.println(score.getNumberOfAttempts(5));
-		System.out.println(score.getNumberOfAttempts(1));
-		System.out.println(score.getNumberOfAttempts(3));
-		
-		System.out.println();
-		System.out.println(score.getTotalNumberOfAttempts());
 	}
 	
 }

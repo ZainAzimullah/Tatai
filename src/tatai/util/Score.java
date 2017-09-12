@@ -1,60 +1,48 @@
 package tatai.util;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 
 public class Score {
 	
-	// Constants to represent indices of attempt types in array
-	public static final int ATTEMPT = 0;
-	public static final int CORRECT_ATTEMPT = 1;
-	public static final int INCORRECT_ATTEMPT = 2;
-	
 	// Result enum represents possible result types for each question.
 	public enum Result {
-		CORRECT(1, 1, 0),
-		INCORRECT(2, 1, 1),
-		FAILED(2, 0, 2),
-		UNATTEMPTED(0, 0, 0);
+		CORRECT(1, 0),
+		INCORRECT_ONCE(2, 1),
+		FAILED(2, 2),
+		UNATTEMPTED(0, 0);
 		
-		// The number of attempts, correct attempts and incorrect attempts
-		// will be stored in an array which will be mapped to each question number
-		private Integer[] _attempts = new Integer[3];
+		private int _attempts;
+		private int _mistakes;
 		
-		// Store the values in the array accordingly for whatever the result type
-		// is.
-		Result(int attempts, int correctAttempts, int incorrectAttempts) {
-			_attempts[ATTEMPT] = attempts;
-			_attempts[CORRECT_ATTEMPT] = correctAttempts;
-			_attempts[INCORRECT_ATTEMPT] = incorrectAttempts;
+		Result(int attempts, int mistakes) {
+			_attempts = attempts;
+			_mistakes = mistakes;
 		}
 	}
 	
-	// Maps to store result type and each attempt type
 	private Map<Integer, Result> _resultMap;
-	private Map<Integer, Integer[]> _attemptMap;
+	private Map<Integer, Integer> _attemptsMap;
+	private Map<Integer, Integer> _mistakesMap;
 	
 	// construct a score object for a given number of questions
 	public Score(int numOfQuestions) {
 		_resultMap = new HashMap<>();
-		_attemptMap = new HashMap<>();
+		_attemptsMap = new HashMap<>();
+		_mistakesMap = new HashMap<>();
 		
 		// Initialise maps as unattempted
 		for (int i = 1; i <= 10; i++) {
-			_resultMap.put(i, Result.UNATTEMPTED);
-			_attemptMap.put(i, Result.UNATTEMPTED._attempts);
+			update(i, Result.UNATTEMPTED);
 		}
 	}
 	
 	// Update maps given a particular result for one question
 	public void update(int questionNumber, Result result) {
 		_resultMap.put(questionNumber, result);
-		_attemptMap.put(questionNumber, result._attempts);
+		_attemptsMap.put(questionNumber, result._attempts);
+		_mistakesMap.put(questionNumber, result._mistakes);
 	}
 	
 	// Get the number of occurrences of a particular result
@@ -62,28 +50,23 @@ public class Score {
 		return Collections.frequency(_resultMap.values(), result);
 	}
 	
-	// Get the number of occurrences of a particular attempt type
-	public int getNumberOf(int attemptType) {
+	// Get number of attempts
+	public int getNumberOfAttempts() {
 		int sum = 0;
 		
-		for (Entry<Integer, Integer[]> entry: _attemptMap.entrySet()) {
-			sum += entry.getValue()[attemptType];
+		for (Integer value: _attemptsMap.values()) {
+			sum += value;
 		}
 		
 		return sum;
 	}
 	
-	// Get the number of attempts for a given question number
-	public int getNumberOfAttempts(int questionNumber) {
-		return _attemptMap.get(questionNumber)[ATTEMPT];
-	}
-	
-	// Get the total number of attempts
-	public int getTotalNumberOfAttempts() {
+	// Get number of mistakes
+	public int getNumberOfMistakes() {
 		int sum = 0;
 		
-		for (Entry<Integer, Integer[]> entry: _attemptMap.entrySet()) {
-			sum += entry.getValue()[ATTEMPT];
+		for (Integer value: _mistakesMap.values()) {
+			sum += value;
 		}
 		
 		return sum;
@@ -107,11 +90,5 @@ public class Score {
 			System.out.println("Key: " + entry.getKey() + "\tValue: " + entry.getValue());
 		}
 		
-		System.out.println();
-		System.out.println("Attempts:");
-		for (Map.Entry<Integer, Integer[]> entry: _attemptMap.entrySet()) {
-			System.out.println("Key: " + entry.getKey() + "\tValue: " 
-					+ Arrays.toString(entry.getValue()));
-		}
 	}
 }

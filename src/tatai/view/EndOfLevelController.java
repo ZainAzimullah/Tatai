@@ -34,9 +34,9 @@ public class EndOfLevelController extends SceneController {
 		_level.setText(Game.getInstance().getLevel().toString());
 		
 		Score score = Game.getInstance().getScore();
-		int numAchieved = score.getNumberOf(Result.CORRECT) + score.getNumberOf(Result.INCORRECT);
+		int numAchieved = score.getNumberOf(Result.CORRECT) + score.getNumberOf(Result.INCORRECT_ONCE);
 		int numFailed = score.getNumberOf(Result.FAILED);
-		int totalNumOfAttempts = score.getTotalNumberOfAttempts();
+		int totalNumOfAttempts = score.getNumberOfAttempts();
 		
 		_numAchieved.setText(Integer.toString(numAchieved));
 		_numFailed.setText(Integer.toString(numFailed));
