@@ -28,7 +28,6 @@ public class TestScore {
 		
 		System.out.println();
 		System.out.println(score.getTotalNumberOfAttempts());
-
 	}
 	
 }
