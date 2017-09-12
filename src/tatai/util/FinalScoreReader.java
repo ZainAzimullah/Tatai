@@ -8,11 +8,11 @@ import java.io.IOException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public class Reader {
+public class FinalScoreReader {
 	
 	private File _file;
 	
-	public Reader(String filename) {
+	public FinalScoreReader(String filename) {
 		_file = new File(System.getProperty("user.dir") + "/" + filename);
 	}
 	

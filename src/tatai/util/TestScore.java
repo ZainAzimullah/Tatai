@@ -28,7 +28,7 @@ public class TestScore {
 		System.out.println(finalScore.getNumberIncorrect().get());
 		System.out.println(finalScore);
 		
-		Saver saver = new Saver(finalScore);
+		FinalScoreSaver saver = new FinalScoreSaver(finalScore);
 		saver.save("history.txt");
 	}
 	

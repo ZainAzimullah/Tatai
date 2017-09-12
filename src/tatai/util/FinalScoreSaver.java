@@ -5,11 +5,11 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Saver {
+public class FinalScoreSaver {
 	
 	private FinalScore _finalScore;
 	
-	public Saver(FinalScore finalScore) {
+	public FinalScoreSaver(FinalScore finalScore) {
 		_finalScore = finalScore;
 	}
 	
