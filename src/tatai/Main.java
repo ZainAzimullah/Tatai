@@ -19,6 +19,7 @@ public class Main extends Application {
 		_stage.setResizable(false);
 		_stage.setOnCloseRequest(e -> {
 			new File(System.getProperty("user.dir") + "/foo.wav").delete();
+			new File(System.getProperty("user.dir") + "/history.txt").delete();
 		});
 		
 		// Load main menu
