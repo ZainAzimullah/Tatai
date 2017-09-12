@@ -2,13 +2,8 @@ package tatai.util;
 
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class Saver {
 	
@@ -19,25 +14,32 @@ public class Saver {
 	}
 	
 	public void save(String filename) {
+		
+		// Create file object of text file to save to
 		File file = new File(System.getProperty("user.dir") + "/" + filename);
-		System.out.println(file.getPath());
 		
 		FileWriter fileWriter = null;
 		BufferedWriter bufferedWriter = null;
 		
 		try {
+			// Check if file exists
 			if (!file.exists()) {
 				file.createNewFile();
 			}
-			System.out.println(_finalScore);
+			
+			// Create wrtiers
 			fileWriter = new FileWriter(file.getAbsoluteFile(), true);
 			bufferedWriter = new BufferedWriter(fileWriter);
 			
+			// Write to file
 			bufferedWriter.write(_finalScore.toString() + "\n");
+			
 		} catch (IOException e) {
 			e.printStackTrace();
+			
 		} finally {
 			
+			// Close buffered writer
 			if (bufferedWriter != null) {
 				try {
 					bufferedWriter.close();
@@ -46,6 +48,7 @@ public class Saver {
 				}
 			}
 			
+			// Close file writer
 			if (fileWriter != null) {
 				try {
 					fileWriter.close();
