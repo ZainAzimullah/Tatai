@@ -2,6 +2,7 @@ package tatai.util;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -30,6 +31,9 @@ public class FinalScoreReader {
 			while ((line = bufferedReader.readLine()) != null) {
 				output.add(new FinalScore(line));
 			}
+		
+		} catch (FileNotFoundException e) {
+			return output;
 			
 		} catch (IOException e) {
 			e.printStackTrace();
