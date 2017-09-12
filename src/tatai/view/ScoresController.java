@@ -6,7 +6,7 @@ import javafx.scene.control.TableView;
 import tatai.util.FinalScore;
 import tatai.util.FinalScoreReader;
 
-public class StatsController extends SceneController {
+public class ScoresController extends SceneController {
 	
 	@FXML
 	private TableView<FinalScore> _table;
