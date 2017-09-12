@@ -17,9 +17,13 @@ public class FinalScoreReader {
 		_file = new File(System.getProperty("user.dir") + "/" + filename);
 	}
 	
+	// Read score history from file and create list of FinalScores
 	public ObservableList<FinalScore> read() {
+		
+		// Create output list
 		ObservableList<FinalScore> output = FXCollections.observableArrayList();
 		
+		// Initialise readers
 		FileReader fileReader = null;
 		BufferedReader bufferedReader = null;
 		
@@ -27,17 +31,22 @@ public class FinalScoreReader {
 			fileReader = new FileReader(_file);
 			bufferedReader = new BufferedReader(fileReader);
 			
+			// Read each line from the file
 			String line;
 			while ((line = bufferedReader.readLine()) != null) {
+				// Create and add FinalScore object to output
 				output.add(new FinalScore(line));
 			}
 		
 		} catch (FileNotFoundException e) {
-			return output;
+			return output; // Return empty list if file not found
 			
 		} catch (IOException e) {
 			e.printStackTrace();
+			
 		} finally {
+			
+			// Close BufferedReader
 			if (bufferedReader != null) {
 				try {
 					bufferedReader.close();
@@ -46,6 +55,7 @@ public class FinalScoreReader {
 				}
 			}
 			
+			// Close FileReader
 			if (fileReader != null) {
 				try {
 					fileReader.close();
