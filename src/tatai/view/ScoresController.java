@@ -6,7 +6,7 @@ import javafx.scene.control.TableView;
 import tatai.util.FinalScore;
 import tatai.util.FinalScoreReader;
 
-public class ScoresController extends SceneController {
+public class ScoresController extends MainMenuController {
 	
 	@FXML
 	private TableView<FinalScore> _table;
@@ -42,7 +42,7 @@ public class ScoresController extends SceneController {
 	@FXML
 	@Override
 	protected void returnToMainMenu() {
-		MainMenuLoader loader = new MainMenuLoader();
+		MainMenuLoader loader = new MainMenuLoader(_stage);
 		loader.loadScene("MainMenu.fxml");
 	}
 

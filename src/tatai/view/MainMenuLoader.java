@@ -1,8 +1,15 @@
 package tatai.view;
 
+import javafx.stage.Stage;
 import tatai.exceptions.TataiException;
 
 public class MainMenuLoader extends SceneLoader {
+	
+	public MainMenuLoader(Stage stage) {
+		super(stage);
+	}
+	
+	public MainMenuLoader() {}
 	
 	@Override
 	protected void useController(SceneController controller) {

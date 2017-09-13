@@ -9,7 +9,15 @@ import javafx.stage.Stage;
 import tatai.Game;
 
 public class SceneLoader {
-	protected Stage _stage = Game.getInstance().getStage();
+	protected Stage _stage;
+	
+	public SceneLoader(Stage stage) {
+		_stage = stage;
+	}
+	
+	public SceneLoader() {
+		_stage = Game.getInstance().getStage();
+	}
 	
 	// Load the scene
 	public void loadScene(String filename) {

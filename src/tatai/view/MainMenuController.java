@@ -12,7 +12,7 @@ import tatai.Game;
 
 public class MainMenuController extends SceneController {
 	
-	private Stage _stage;
+	protected Stage _stage;
 	
 	// Set the stage
 	public void setStage(Stage stage) {
@@ -28,18 +28,8 @@ public class MainMenuController extends SceneController {
 	
 	@FXML
 	private void scores() {
-		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("Scores.fxml"));
-		
-		try {
-			Parent layout = loader.load();
-			Scene scene = new Scene(layout);
-			_stage.setScene(scene);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		
-		
+		MainMenuLoader loader = new MainMenuLoader(_stage);
+		loader.loadScene("Scores.fxml");
 	}
 	
 	// Quit the game
