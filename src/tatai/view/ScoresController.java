@@ -39,6 +39,7 @@ public class ScoresController extends SceneController {
 		_table.setItems(new FinalScoreReader("history.txt").read());
 	}
 	
+	@FXML
 	@Override
 	protected void returnToMainMenu() {
 		MainMenuLoader loader = new MainMenuLoader();
