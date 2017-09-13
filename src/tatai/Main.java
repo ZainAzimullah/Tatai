@@ -8,31 +8,21 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import tatai.view.MainMenuController;
+import tatai.view.MainMenuLoader;
 
 public class Main extends Application {
 	
-	private Stage _stage;
-	
 	@Override
 	public void start(Stage stage) throws IOException {
-		_stage = stage;
-		_stage.setResizable(false);
-		_stage.setOnCloseRequest(e -> {
+		stage.setResizable(false);
+		stage.setOnCloseRequest(e -> {
 			new File(System.getProperty("user.dir") + "/foo.wav").delete();
 			new File(System.getProperty("user.dir") + "/history.txt").delete();
 		});
 		
-		// Load main menu
-		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(this.getClass().getResource("view/MainMenu.fxml"));
-		Parent layout = loader.load();
-		
-		// Give stage to MainMenuController
-		((MainMenuController) loader.getController()).setStage(_stage);
-		
-		Scene scene = new Scene(layout);
-		_stage.setScene(scene);
-		_stage.show();
+		MainMenuLoader loader = new MainMenuLoader(stage);
+		loader.loadScene("MainMenu.fxml");
+		stage.show();
 	}
 
 	public static void main(String[] args) {
