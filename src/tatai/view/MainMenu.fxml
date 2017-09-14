@@ -41,7 +41,7 @@
                               <Font name="Noto Sans CJK JP Bold" size="15.0" />
                            </font>
                         </Button>
-                        <Button mnemonicParsing="false" text="How to Play">
+                        <Button mnemonicParsing="false" onAction="#howToPlay" text="How to Play">
                            <VBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </VBox.margin>
@@ -49,7 +49,7 @@
                               <Font name="Noto Sans CJK JP Bold" size="15.0" />
                            </font>
                         </Button>
-                        <Button mnemonicParsing="false" text="About Tatai">
+                        <Button mnemonicParsing="false" onAction="#about" text="About Tatai">
                            <VBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </VBox.margin>
