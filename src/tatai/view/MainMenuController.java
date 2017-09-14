@@ -32,6 +32,18 @@ public class MainMenuController extends SceneController {
 		loader.loadScene("Scores.fxml");
 	}
 	
+	@FXML
+	private void howToPlay() {
+		MainMenuLoader loader = new MainMenuLoader(_stage);
+		loader.loadScene("HowToPlay.fxml");
+	}
+	
+	@FXML
+	private void about() {
+		MainMenuLoader loader = new MainMenuLoader(_stage);
+		loader.loadScene("About.fxml");
+	}
+	
 	// Quit the game
 	@FXML
 	private void quit() {
