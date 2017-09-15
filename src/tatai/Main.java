@@ -7,8 +7,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import tatai.view.MainMenuController;
 import tatai.view.MainMenuLoader;
+import tatai.view.controllers.MainMenuController;
 
 public class Main extends Application {
 	

@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import tatai.Game;
+import tatai.view.controllers.SceneController;
 
 public class SceneLoader {
 	protected Stage _stage;

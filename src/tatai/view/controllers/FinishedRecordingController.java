@@ -1,4 +1,4 @@
-package tatai.view;
+package tatai.view.controllers;
 
 import java.io.File;
 import java.io.FileNotFoundException;

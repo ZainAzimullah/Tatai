@@ -1,4 +1,4 @@
-package tatai.view;
+package tatai.view.controllers;
 
 import java.io.IOException;
 
@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import tatai.Game;
+import tatai.view.MainMenuLoader;
 
 public class MainMenuController extends SceneController {
 	
