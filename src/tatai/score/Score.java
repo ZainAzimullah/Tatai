@@ -24,6 +24,7 @@ public class Score {
 		}
 	}
 	
+	// Maps for storing score information for each question
 	private Map<Integer, Result> _resultMap;
 	private Map<Integer, Integer> _attemptsMap;
 	private Map<Integer, Integer> _mistakesMap;
