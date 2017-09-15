@@ -6,11 +6,11 @@ import tatai.exceptions.TataiException;
 import tatai.model.MaoriNumber;
 import tatai.model.MaoriNumberModel;
 import tatai.model.MaoriNumberModelFactory;
-import tatai.util.FinalScore;
+import tatai.score.FinalScore;
+import tatai.score.FinalScoreSaver;
+import tatai.score.Score;
+import tatai.score.Score.Result;
 import tatai.util.Level;
-import tatai.util.FinalScoreSaver;
-import tatai.util.Score;
-import tatai.util.Score.Result;
 import tatai.view.MainMenuLoader;
 import tatai.view.SceneLoader;
 

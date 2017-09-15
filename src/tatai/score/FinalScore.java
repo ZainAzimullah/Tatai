@@ -1,4 +1,4 @@
-package tatai.util;
+package tatai.score;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -6,7 +6,8 @@ import java.util.Arrays;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import tatai.util.Score.Result;
+import tatai.score.Score.Result;
+import tatai.util.Level;
 
 public class FinalScore {
 	

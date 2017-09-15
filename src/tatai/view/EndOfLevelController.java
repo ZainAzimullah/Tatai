@@ -4,9 +4,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import tatai.Game;
+import tatai.score.Score;
+import tatai.score.Score.Result;
 import tatai.util.Level;
-import tatai.util.Score;
-import tatai.util.Score.Result;
 
 public class EndOfLevelController extends SceneController {
 	

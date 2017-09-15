@@ -1,4 +1,4 @@
-package tatai.util;
+package tatai.score;
 
 import java.util.Collections;
 import java.util.HashMap;

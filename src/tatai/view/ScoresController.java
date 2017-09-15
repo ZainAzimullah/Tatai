@@ -3,8 +3,8 @@ package tatai.view;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import tatai.util.FinalScore;
-import tatai.util.FinalScoreReader;
+import tatai.score.FinalScore;
+import tatai.score.FinalScoreReader;
 
 public class ScoresController extends MainMenuController {
 	

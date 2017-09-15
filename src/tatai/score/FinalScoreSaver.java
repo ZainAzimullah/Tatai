@@ -1,4 +1,4 @@
-package tatai.util;
+package tatai.score;
 
 import java.io.BufferedWriter;
 import java.io.File;
