@@ -12,11 +12,15 @@ import tatai.Game;
  */
 public abstract class SceneController {
 	
-	protected abstract void returnToMainMenu();
-
+	// Global yes/no values
 	public static final int YES = 1;
 	public static final int NO = 0;
 	
+	// Every scene controller must implement some way
+	// to get back to the main meu
+	protected abstract void returnToMainMenu();
+
+	// Show a confirmation dialog
 	protected int showAlert() {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Return to Main Menu");
@@ -26,7 +30,6 @@ public abstract class SceneController {
 		ButtonType yes = new ButtonType("Yes");
 		ButtonType no = new ButtonType("No");
 		
-
 		alert.getButtonTypes().setAll(yes, no);
 
 		Optional<ButtonType> result = alert.showAndWait();
@@ -37,6 +40,7 @@ public abstract class SceneController {
 		}
 	}
 	
+	// Show a confirmation dialog but do nothing if user clicks "No"
 	protected void showAlertAndReturn() {
 		int reply = showAlert();
 		
