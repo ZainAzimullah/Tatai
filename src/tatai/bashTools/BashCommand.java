@@ -18,6 +18,7 @@ public class BashCommand {
 	private List<String> _commands;
 	
 	public BashCommand() {
+		// Create list of commands for bash process
 		_commands = new ArrayList<>();
 		_commands.add("bash");
 		_commands.add("-c");
@@ -30,23 +31,36 @@ public class BashCommand {
 		
 		// Run BASH process
 		try {
+			// Build process
 			ProcessBuilder processBuilder = new ProcessBuilder(_commands);
 			Process process = processBuilder.start();
-
+			
+			// Create stream eaters so that buffer doesn't get blocked
 			stdout = new Consumer(process.getInputStream());
 			stderr = new Consumer(process.getErrorStream());
 			
+			// Start stream eaters
 			stdout.start();
 			stderr.start();
-
+			
+			// Wait for process to finish
 			process.waitFor();
+			
+			// Destroy process
 			process.destroy();
 		} catch (Exception e) {
 			throw new TataiException("Error running BASH command");
+			
+		} finally {
+			// Terminate stream eaters
+			if (stdout != null) {
+				stdout.cancel();
+			}
+			
+			if (stderr != null) {
+				stderr.cancel();
+			}	
 		}
-		
-		stdout.cancel();
-		stderr.cancel();
 	}
 	
 	
@@ -72,16 +86,18 @@ public class BashCommand {
 			InputStreamReader inputStreamReader = new InputStreamReader(_inputStream);
 			BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 			
+			@SuppressWarnings("unused")
 			String line;
+			
+			// Continuously read stream and do nothing with it
 			try {
-				while (((line = bufferedReader.readLine()) != null) && (_alive)) {
-					// System.out.println(line);
-				}
+				while (((line = bufferedReader.readLine()) != null) && (_alive)) {}
 			} catch (IOException e) {
 				
 			}
 		}
 		
+		// Make cancel request
 		public void cancel() {
 			_alive = false;
 		}
