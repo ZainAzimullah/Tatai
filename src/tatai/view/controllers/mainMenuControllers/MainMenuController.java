@@ -1,10 +1,11 @@
-package tatai.view.controllers;
+package tatai.view.controllers.mainMenuControllers;
 
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import tatai.Game;
 import tatai.view.MainMenuLoader;
+import tatai.view.controllers.SceneController;
 
 public class MainMenuController extends SceneController {
 	

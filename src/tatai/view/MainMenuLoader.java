@@ -2,8 +2,8 @@ package tatai.view;
 
 import javafx.stage.Stage;
 import tatai.exceptions.TataiException;
-import tatai.view.controllers.MainMenuController;
 import tatai.view.controllers.SceneController;
+import tatai.view.controllers.mainMenuControllers.MainMenuController;
 
 public class MainMenuLoader extends SceneLoader {
 	

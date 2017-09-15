@@ -1,4 +1,4 @@
-package tatai.view.controllers;
+package tatai.view.controllers.mainMenuControllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;

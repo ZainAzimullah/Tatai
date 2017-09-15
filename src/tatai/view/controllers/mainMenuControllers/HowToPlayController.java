@@ -1,10 +1,10 @@
-package tatai.view.controllers;
+package tatai.view.controllers.mainMenuControllers;
 
 import javafx.fxml.FXML;
 import tatai.view.MainMenuLoader;
 
-public class AboutController extends MainMenuController {
-	
+public class HowToPlayController extends MainMenuController {
+
 	@FXML
 	@Override
 	protected void returnToMainMenu() {
