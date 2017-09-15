@@ -1,4 +1,4 @@
-package tatai.bashTools;
+package tatai.util;
 
 import java.io.BufferedReader;
 import java.io.File;

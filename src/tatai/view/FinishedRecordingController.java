@@ -10,8 +10,8 @@ import javafx.scene.control.Label;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import tatai.Game;
-import tatai.bashTools.VoiceRecogniser;
 import tatai.exceptions.SpeechNotFoundException;
+import tatai.util.VoiceRecogniser;
 
 public class FinishedRecordingController extends SceneController {
 	
