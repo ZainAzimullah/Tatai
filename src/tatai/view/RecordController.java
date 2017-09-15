@@ -84,9 +84,6 @@ public class RecordController extends SceneController {
 					alert.showAndWait();
 					Game.getInstance().rerecord();
 					return;
-					
-				} catch (FileNotFoundException e) {
-					e.printStackTrace();
 				}
 				
 				// Proceed to Game class

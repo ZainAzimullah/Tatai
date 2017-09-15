@@ -11,7 +11,7 @@ import tatai.exceptions.SpeechNotFoundException;
 
 public class VoiceRecogniser {
 	
-	public String getSpeech(String filename) throws SpeechNotFoundException, FileNotFoundException {
+	public String getSpeech(String filename) throws SpeechNotFoundException {
 		
 		// Run speech recognition commands
 		BashCommand bash = new BashCommand();
@@ -21,7 +21,13 @@ public class VoiceRecogniser {
 				+ "-p 0.0 -s 5.0  user/dictionaryD user/tiedList " + filename);
 
         File file = new File("recout.mlf");
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+        BufferedReader bufferedReader = null;
+        
+		try {
+			bufferedReader = new BufferedReader(new FileReader(file));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		
 		String speech = "", line = null;
 		boolean readyToGet = false;
