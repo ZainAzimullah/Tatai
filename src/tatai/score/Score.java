@@ -6,7 +6,9 @@ import java.util.Map;
 
 public class Score {
 	
-	// Result enum represents possible result types for each question.
+	// Result enum represents possible result types for each question, as
+	// well as the number of attempts or mistakes that would be associated
+	// with that result type.
 	public enum Result {
 		CORRECT(1, 0),
 		INCORRECT_ONCE(2, 1),
