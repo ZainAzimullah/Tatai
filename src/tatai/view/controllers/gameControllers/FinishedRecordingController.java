@@ -22,15 +22,18 @@ public class FinishedRecordingController extends SceneController {
 	
 	@FXML
 	private void playback() {
+		// Tell user recording is playing back
 		_message.setText("Playing back recording...");
 		_message.setAlignment(Pos.CENTER);
 		_play.setDisable(true);
 		
+		// Play back the recording
 		Media media = new Media(new File("foo.wav").toURI().toString());
 		MediaPlayer player = new MediaPlayer(media);
 		
 		player.play();
 		player.setOnEndOfMedia(() -> {
+			// Reshow this scene once playback has finished
 			Game.getInstance().finishedRecording();
 		});
 		
@@ -38,11 +41,14 @@ public class FinishedRecordingController extends SceneController {
 	
 	@FXML
 	private void submit() {
+		// Try to interpret what they said
 		VoiceRecogniser htk = new VoiceRecogniser();
 		
 		try {
 			Game.getInstance().storeAttempt(htk.getSpeech("foo.wav"));
 		} catch (SpeechNotFoundException e) {
+			// We should have caught this earlier, so if this happened again
+			// then something went wrong
 			e.printStackTrace();
 		}
 		

@@ -18,11 +18,13 @@ public class FailedController extends SceneController {
 	
 	@FXML
 	private void next() {
+		// Show recording scene for the next question
 		Game.getInstance().record();
 	}
 	
 	@FXML
 	private void initialize() {
+		// Set labels
 		_correctWord.setText(Game.getInstance().getNumber().toString());
 		_incorrectWord.setText(Game.getInstance().getAttempt());
 		_number.setText(Integer.toString(Game.getInstance().getNumber().getDigit()));

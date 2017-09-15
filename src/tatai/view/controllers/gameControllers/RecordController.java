@@ -32,6 +32,7 @@ public class RecordController extends SceneController {
 	
 	@FXML
 	private void initialize() {
+		// Set labels
 		_number.setText(Integer.toString(Game.getInstance().getNumber().getDigit()));
 		_questionNumber.setText(Integer.toString(Game.getInstance().getCurrentQuestionNumber()));
 	}
@@ -74,6 +75,7 @@ public class RecordController extends SceneController {
 					new VoiceRecogniser().getSpeech("foo.wav");
 					
 				} catch (SpeechNotFoundException e) {
+					// Tell user to record again
 					Alert alert = new Alert(AlertType.WARNING);
 					Label label = new Label("You did not say any recognisable Maori numbers.\nPlease record again.");
 					label.setWrapText(true);
