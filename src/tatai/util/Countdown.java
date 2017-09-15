@@ -38,6 +38,7 @@ public class Countdown {
 		
 		@Override
 		protected Void call() throws Exception {
+			// Update message property with time remaining each second
 			for (int i = _number; i >= 0; i--) {
 				updateMessage("Time remaining: " + Integer.toString(i) + " seconds");
 				Thread.sleep(1000);
