@@ -43,7 +43,7 @@ public class FinishedRecordingController extends SceneController {
 		
 		try {
 			Game.getInstance().storeAttempt(htk.getSpeech("foo.wav"));
-		} catch (FileNotFoundException | SpeechNotFoundException e) {
+		} catch (SpeechNotFoundException e) {
 			e.printStackTrace();
 		}
 		
