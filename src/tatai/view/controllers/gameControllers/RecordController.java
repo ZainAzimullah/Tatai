@@ -1,4 +1,4 @@
-package tatai.view.controllers;
+package tatai.view.controllers.gameControllers;
 
 import javafx.application.Platform;
 import javafx.concurrent.Task;
@@ -12,6 +12,7 @@ import tatai.exceptions.SpeechNotFoundException;
 import tatai.util.BashCommand;
 import tatai.util.Countdown;
 import tatai.util.VoiceRecogniser;
+import tatai.view.controllers.SceneController;
 
 public class RecordController extends SceneController {
 	

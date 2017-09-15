@@ -1,10 +1,12 @@
-package tatai.view.controllers;
+package tatai.view.controllers.gameControllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import tatai.Game;
+import tatai.view.controllers.SceneController;
 
-public class IncorrectController extends SceneController {
+public class CorrectController extends SceneController {
+	
 	
 	@FXML
 	private Label _number;
@@ -15,18 +17,17 @@ public class IncorrectController extends SceneController {
 	@FXML
 	private void initialize() {
 		_number.setText(Integer.toString(Game.getInstance().getNumber().getDigit()));
-		_maoriWord.setText(Game.getInstance().getAttempt());
+		_maoriWord.setText(Game.getInstance().getNumber().toString());
 	}
 	
 	@FXML
-	private void tryAgain() {
-		Game.getInstance().rerecord();
+	private void next() {
+		Game.getInstance().record();
 	}
-
+	
 	@FXML
 	@Override
 	protected void returnToMainMenu() {
 		showAlertAndReturn();
 	}
-
 }

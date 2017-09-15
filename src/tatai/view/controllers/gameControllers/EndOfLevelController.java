@@ -1,4 +1,4 @@
-package tatai.view.controllers;
+package tatai.view.controllers.gameControllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -7,6 +7,7 @@ import tatai.Game;
 import tatai.score.Score;
 import tatai.score.Score.Result;
 import tatai.util.Level;
+import tatai.view.controllers.SceneController;
 
 public class EndOfLevelController extends SceneController {
 	

@@ -1,4 +1,4 @@
-package tatai.view.controllers;
+package tatai.view.controllers.gameControllers;
 
 import java.io.File;
 import javafx.fxml.FXML;
@@ -10,6 +10,7 @@ import javafx.scene.media.MediaPlayer;
 import tatai.Game;
 import tatai.exceptions.SpeechNotFoundException;
 import tatai.util.VoiceRecogniser;
+import tatai.view.controllers.SceneController;
 
 public class FinishedRecordingController extends SceneController {
 	

@@ -1,8 +1,9 @@
-package tatai.view.controllers;
+package tatai.view.controllers.gameControllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import tatai.Game;
+import tatai.view.controllers.SceneController;
 
 public class FailedController extends SceneController {
 	

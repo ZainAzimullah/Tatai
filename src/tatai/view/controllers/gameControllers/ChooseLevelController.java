@@ -1,9 +1,10 @@
-package tatai.view.controllers;
+package tatai.view.controllers.gameControllers;
 
 
 import javafx.fxml.FXML;
 import tatai.Game;
 import tatai.util.Level;
+import tatai.view.controllers.SceneController;
 
 /*
  * Controller for choosing the level the user wants to play
