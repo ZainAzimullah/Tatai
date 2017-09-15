@@ -20,21 +20,30 @@ import tatai.view.SceneLoader;
  */
 public class Game {
 	
+	// The actual Game instance
+	private static Game _game;
+	
+	// Some game constants
 	public static final int MAX_LIVES = 2;
 	public static final int NUMBER_OF_QUESTIONS = 10;
 	
-	private static Game _game;
+	// The stage for the game scenes which can only be set once
 	private final Stage _stage;
+	
+	// Reusable scene loader
 	private SceneLoader _loader;
 	
+	// A record of the questions and user's guess
 	private MaoriNumberModel _numbers;
 	private MaoriNumber _currentNumber;
 	private String _userAttempt;
 	
+	// A record of the level, amount of attempts left and current question number
 	private Level _level;
 	private int _lives = MAX_LIVES;
 	private int _questionNumber;
 	
+	// Current score
 	private Score _score;
 	
 	// Set the stage of the game.
@@ -93,6 +102,7 @@ public class Game {
 		return _level;
 	}
 	
+	// Get the current score
 	public Score getScore() {
 		return _score;
 	}
@@ -171,18 +181,22 @@ public class Game {
 		}
 	}
 	
+	// Load the Correct scene
 	private void showCorrect() {
 		_loader.loadScene("Correct.fxml");
 	}
 	
+	// Load the Incorrect scene
 	private void showIncorrect() {
 		_loader.loadScene("Incorrect.fxml");
 	}
 	
+	// Load the Failed scene
 	private void showFailed() {
 		_loader.loadScene("Failed.fxml");
 	}
 	
+	// Load the End Of Level scene
 	public void endOfLevel() {
 		// Save final score
 		new FinalScoreSaver(new FinalScore(_score, _level)).save("history.txt");
