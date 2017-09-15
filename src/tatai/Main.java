@@ -3,12 +3,8 @@ package tatai;
 import java.io.File;
 import java.io.IOException;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 import tatai.view.MainMenuLoader;
-import tatai.view.controllers.MainMenuController;
 
 public class Main extends Application {
 	

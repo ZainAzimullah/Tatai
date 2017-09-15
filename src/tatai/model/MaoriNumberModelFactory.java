@@ -6,8 +6,6 @@ import tatai.util.Level;
 // This class instantiates a MaoriNumberModel depending on a
 // given level.
 public class MaoriNumberModelFactory {
-	private static MaoriNumberModel _model;
-	
 	// Create a MaoriNumberModel for a given level.
 	public static MaoriNumberModel getMaoriNumberModel(Level level) {
 		switch (level) {

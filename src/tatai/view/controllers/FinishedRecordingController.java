@@ -1,8 +1,6 @@
 package tatai.view.controllers;
 
 import java.io.File;
-import java.io.FileNotFoundException;
-
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
