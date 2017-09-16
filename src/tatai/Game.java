@@ -160,18 +160,23 @@ public class Game {
 	
 	public void checkAnswer() {
 		
-		// Check if user said correct word
-		if (_userAttempt.equals(_currentNumber.toString())) {
+		// Check if user said correct word on first attempt
+		if ((_userAttempt.equals(_currentNumber.toString())) && (_lives == 2)) {
 			// Refresh lives and show correct scene
 			_lives = MAX_LIVES;
 			_score.update(_questionNumber, Result.CORRECT);
+			showCorrect();
+		
+		// Check if user said correct word on second attempt
+		} else if (( _userAttempt.equals(_currentNumber.toString()))) {
+			_lives = MAX_LIVES;
+			_score.update(_questionNumber, Result.INCORRECT_ONCE);
 			showCorrect();
 			
 		// Otherwise, the user got the word wrong:
 		} else if (_lives > 1) {
 			// Deduct a life and show the incorrect scene
 			_lives--;
-			_score.update(_questionNumber, Result.INCORRECT_ONCE);
 			showIncorrect();
 		} else if (_lives == 1) {
 			// They have failed, so refresh the lives and show the Failed scene
