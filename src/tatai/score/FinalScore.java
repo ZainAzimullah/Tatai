@@ -27,7 +27,8 @@ public class FinalScore {
 	public FinalScore(Score score, Level level) {
 		
 		// Set properties
-		_numCorrect.set(Integer.toString(score.getNumberOf(Result.CORRECT)));
+		_numCorrect.set(Integer.toString(score.getNumberOf(Result.CORRECT) +
+				score.getNumberOf(Result.INCORRECT_ONCE)));
 		_numIncorrect.set(Integer.toString(score.getNumberOf(Result.FAILED)));
 		_numAttempts.set(Integer.toString(score.getNumberOfAttempts()));
 		_numMistakes.set(Integer.toString(score.getNumberOfMistakes()));
