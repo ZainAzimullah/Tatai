@@ -34,7 +34,7 @@
             <Insets />
          </opaqueInsets>
       </TableView>
-      <Label alignment="TOP_CENTER" layoutX="197.0" layoutY="62.0" text="Highscore" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="30.0">
+      <Label alignment="TOP_CENTER" layoutX="197.0" layoutY="62.0" text="Scores" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="30.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="35.0" />
          </font>
