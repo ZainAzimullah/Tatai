@@ -59,7 +59,6 @@ public class RecordController extends SceneController {
 		
 		@Override
 		protected Void call() {
-			// This command needs to be changed before submission!
 			new BashCommand().runCommand("arecord -d " + RECORDING_TIME + " -r 22050 -c 1 -i -t wav -f s16_LE foo.wav");
 			//new BashCommand().runCommand("ffmpeg -f alsa -i hw:0 -t " + RECORDING_TIME + " -acodec pcm_s16le -ar 22050 -ac 1 foo.wav");
 			
