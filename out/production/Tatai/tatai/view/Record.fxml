@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.gameControllers.RecordController">
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane prefWidth="200.0">
+               <children>
+                  <Label fx:id="_questionNumber" layoutX="81.0" text="10" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Noto Sans CJK JP Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="97.0" layoutY="2.0" text=" of " textFill="#e80202" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Noto Sans CJK JP Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="118.0" layoutY="2.0" text="10" textFill="#797979" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Noto Sans CJK JP Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </AnchorPane>
+            <Label text="Your number is:">
+               <font>
+                  <Font name="Noto Sans CJK JP Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Label>
+            <AnchorPane>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="60.0" layoutX="142.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="90.0" AnchorPane.leftAnchor="255.0" AnchorPane.topAnchor="0.0" />
+                  <Label fx:id="_number" alignment="TOP_CENTER" text="#" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="5.0">
+                     <font>
+                        <Font name="Noto Sans CJK JP Bold" size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Label text="Once you press the record button you will have 2 seconds">
+               <font>
+                  <Font name="Noto Sans CJK JP Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Label>
+            <Label text=" to record yourself saying the number in Maori">
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Noto Sans CJK JP Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="_recordMsg" text="Please speak clearly into the microphone ">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <font>
+                  <Font name="Noto Sans CJK JP Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label text="you intend recording with">
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Noto Sans CJK JP Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="_button" mnemonicParsing="false" onAction="#record" text="Record">
+               <font>
+                  <Font name="Noto Sans CJK JP Bold" size="22.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#returnToMainMenu" text="Return to Main Menu">
+               <font>
+                  <Font name="Noto Sans CJK JP Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="25.0" />
+               </VBox.margin></Button>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
