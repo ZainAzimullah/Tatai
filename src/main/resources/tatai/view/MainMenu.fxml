@@ -16,7 +16,7 @@
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" opacity="0.77">
          <image>
-            <Image url="@/images/rsz_800px-tino_rangatiratanga_maori_sovereignty_movement_flagsvg.png" />
+            <Image url="@../../images/rsz_800px-tino_rangatiratanga_maori_sovereignty_movement_flagsvg.png" />
          </image>
       </ImageView>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
@@ -25,7 +25,15 @@
                <top>
                   <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#play" text="Play">
+                        <Button mnemonicParsing="false" text="Play">
+                           <font>
+                              <Font name="Noto Sans CJK JP Bold" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#play" text="Practice">
                            <VBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </VBox.margin>
@@ -34,14 +42,6 @@
                            </font>
                         </Button>
                         <Button mnemonicParsing="false" onAction="#scores" text="Scores">
-                           <VBox.margin>
-                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font name="Noto Sans CJK JP Bold" size="15.0" />
-                           </font>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#howToPlay" text="How to Play">
                            <VBox.margin>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </VBox.margin>

@@ -18,7 +18,7 @@
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" opacity="0.78">
          <image>
-            <Image url="@/images/rsz_new-zealand-maori-theme-nz-kiwi-backgrounds-objects-89883438.jpg" />
+            <Image url="@../../images/rsz_new-zealand-maori-theme-nz-kiwi-backgrounds-objects-89883438.jpg" />
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e0e0" height="210.0" layoutX="14.0" layoutY="-37.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" width="600.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="90.0" />

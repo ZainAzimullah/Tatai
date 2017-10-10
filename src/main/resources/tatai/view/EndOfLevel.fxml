@@ -13,7 +13,7 @@
    <children>
       <ImageView fitHeight="600.0" fitWidth="600.0">
          <image>
-            <Image url="@/images/maori-clipart-borders-5.png" />
+            <Image url="@../../images/maori-clipart-borders-5.png" />
          </image>
       </ImageView>
       <HBox alignment="TOP_CENTER" layoutX="169.0" layoutY="-10.0" prefWidth="200.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
@@ -35,17 +35,17 @@
       </HBox>
       <ImageView AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="200.0">
          <image>
-            <Image url="@/images/yellow_circle.png" />
+            <Image url="@../../images/yellow_circle.png" />
          </image>
       </ImageView>
       <ImageView AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="75.0">
          <image>
-            <Image url="@/images/blue_circle.png" />
+            <Image url="@../../images/blue_circle.png" />
          </image>
       </ImageView>
       <ImageView AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="325.0">
          <image>
-            <Image url="@/images/red_circle.png" />
+            <Image url="@../../images/red_circle.png" />
          </image>
       </ImageView>
       <Label layoutX="119.0" layoutY="147.0" text="Number of correct questions" AnchorPane.leftAnchor="115.0" AnchorPane.topAnchor="235.0">

@@ -40,7 +40,7 @@
       </Rectangle>
       <ImageView layoutX="258.0" layoutY="101.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="5.0">
          <image>
-            <Image url="@/images/incorrect.png" />
+            <Image url="@../../images/incorrect.png" />
          </image>
       </ImageView>
       <Label layoutX="382.0" layoutY="97.0" text="Incorrect!" textFill="#dd0b0b" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="8.0">
