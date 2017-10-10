@@ -1,0 +1,7 @@
+#Compiled files
+/out/
+#HTK files
+HMMs
+recout.mlf
+GoSpeech
+user
