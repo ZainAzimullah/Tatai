@@ -3,9 +3,9 @@ package tatai;
 import javafx.stage.Stage;
 import tatai.exceptions.OutOfNumbersException;
 import tatai.exceptions.TataiException;
-import tatai.model.MaoriNumber;
-import tatai.model.MaoriNumberModel;
-import tatai.model.MaoriNumberModelFactory;
+import tatai.numberModel.MaoriNumber;
+import tatai.numberModel.MaoriNumberModel;
+import tatai.numberModel.MaoriNumberModelFactory;
 import tatai.score.PracticeScore;
 import tatai.score.PracticeScore.Result;
 import tatai.util.Level;
@@ -130,7 +130,7 @@ public class Practice {
 	// Load the recording scene
 	public void record() {
 	
-		// Advance to the next number in the model, otherwise
+		// Advance to the next number in the numberModel, otherwise
 		// if this is not possible, proceed to the end of the level
 		try {
 			_numbers.advance();

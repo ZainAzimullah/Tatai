@@ -1,4 +1,4 @@
-package tatai.model;
+package tatai.numberModel;
 
 public class EasyMaoriNumberModel extends MaoriNumberModel {
 
@@ -10,7 +10,7 @@ public class EasyMaoriNumberModel extends MaoriNumberModel {
 	private static final int _MAX_VALUE = 9;
 	private static final int _MIN_VALUE = 1;
 
-	// public constructor used for creating a easy mode number model (1-9 in maori)
+	// public constructor used for creating a easy mode number numberModel (1-9 in maori)
 	// that is used for in the easy mode of the tatai game
 	public EasyMaoriNumberModel() {
 		super(_MAX_VALUE, _MIN_VALUE);

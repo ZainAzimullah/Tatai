@@ -2,7 +2,7 @@ package tatai.operandModel;
 
 import tatai.exceptions.ResultOutOfRangeException;
 import tatai.exceptions.TataiException;
-import tatai.model.MaoriNumber;
+import tatai.numberModel.MaoriNumber;
 
 public abstract class Operand {
 

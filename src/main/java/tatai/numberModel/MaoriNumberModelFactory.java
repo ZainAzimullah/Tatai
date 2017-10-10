@@ -1,4 +1,4 @@
-package tatai.model;
+package tatai.numberModel;
 
 import tatai.exceptions.TataiException;
 import tatai.util.Level;

@@ -1,7 +1,7 @@
 package tatai.operandModel;
 
 import tatai.exceptions.ResultOutOfRangeException;
-import tatai.model.MaoriNumber;
+import tatai.numberModel.MaoriNumber;
 
 public class ExpressionTester {
 	

@@ -1,4 +1,4 @@
-package tatai.model;
+package tatai.numberModel;
 
 import java.util.HashMap;
 import java.util.Map;

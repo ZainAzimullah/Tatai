@@ -1,4 +1,4 @@
-package tatai.model;
+package tatai.numberModel;
 
 import java.util.Random;
 
@@ -8,7 +8,7 @@ import tatai.exceptions.OutOfNumbersException;
 
 public abstract class MaoriNumberModel {
 	private final int LIST_SIZE = Practice.NUMBER_OF_QUESTIONS;
-	//variables used to keep track of what position we are in on the Maori number model
+	//variables used to keep track of what position we are in on the Maori number numberModel
 	protected MaoriNumber _currentNumber;
 	private int _currentNumberPosition;
 	//field used for storing the MaoriNumberModel
