@@ -44,7 +44,7 @@
          </font></Label>
       <ImageView AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="5.0">
          <image>
-            <Image url="@../../images/correct.png" />
+            <Image url="@/images/correct.png" />
          </image>
       </ImageView>
       <Button alignment="TOP_CENTER" layoutX="269.0" layoutY="360.0" mnemonicParsing="false" onAction="#returnToMainMenu" text="Return to Main Menu" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="188.0">

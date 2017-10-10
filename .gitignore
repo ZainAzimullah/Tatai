@@ -1,7 +1,10 @@
 #Compiled files
 /out/
+.idea/
+.gradle/
+*.iml
+
 #HTK files
-HMMs
+HMMs/
 recout.mlf
-GoSpeech
-user
+user/

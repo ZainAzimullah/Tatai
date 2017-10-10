@@ -1,0 +1,9 @@
+repositories {
+    jcenter()
+}
+
+apply plugin: "java"
+
+dependencies {
+    compile 'com.google.code.gson:gson:2.8.2'
+}
