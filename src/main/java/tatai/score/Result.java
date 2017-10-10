@@ -9,37 +9,29 @@ public class Result {
     }
 
 
-    private int _numAttempts;
-    private int _numMistakes;
+    private int _numAttempts = 0;
+    private int _numMistakes = 0;
     private State _state;
-
-    public Result(State state, int numAttempts) {
-        _state = state;
-        _numAttempts = numAttempts;
-        _numMistakes = numAttempts - 1;
-    }
 
     public Result() {
         _state = State.UNATTEMPTED;
-        _numAttempts = 0;
-        _numMistakes = 0;
     }
 
-
-    public int getNumAttempts() {
-        return _numAttempts;
+    public void addMistake() {
+        _numAttempts++;
+        _numMistakes++;
     }
 
-    public int getNumMistakes() {
+    public void addCorrect() {
+        _numAttempts++;
+        _state = State.CORRECT;
+    }
+
+    public void skip() {
+        _state = State.SKIPPED;
+    }
+
+    public int getErrorCount() {
         return _numMistakes;
-    }
-
-    public State getState() {
-        return _state;
-    }
-
-    @Override
-    public String toString() {
-        return _state.toString() + _numAttempts + _numMistakes;
     }
 }

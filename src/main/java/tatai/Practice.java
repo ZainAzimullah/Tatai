@@ -1,7 +1,7 @@
 package tatai;
 
 import javafx.stage.Stage;
-import tatai.exceptions.OutOfNumbersException;
+import tatai.exceptions.OutOfItemsException;
 import tatai.exceptions.TataiException;
 import tatai.numberModel.MaoriNumber;
 import tatai.numberModel.MaoriNumberModel;
@@ -134,7 +134,7 @@ public class Practice {
 		// if this is not possible, proceed to the end of the level
 		try {
 			_numbers.advance();
-		} catch (OutOfNumbersException e) {
+		} catch (OutOfItemsException e) {
 			// Show EndOfLevel scene if out of numbers
 			endOfLevel();
 			return;
