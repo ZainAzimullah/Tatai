@@ -1,4 +1,4 @@
-package tatai.operandModel;
+package tatai.expression;
 
 import tatai.exceptions.ResultOutOfRangeException;
 import tatai.numberModel.MaoriNumber;

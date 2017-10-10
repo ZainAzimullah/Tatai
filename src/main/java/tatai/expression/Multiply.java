@@ -1,4 +1,4 @@
-package tatai.operandModel;
+package tatai.expression;
 
 public class Multiply extends Operator {
 
