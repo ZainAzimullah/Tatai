@@ -24,7 +24,7 @@ public class ExpressionTester {
 		
 		try {
 		MaoriNumber result = operandSubstraction.getMaoriResult();
-		System.out.println(result.getDigit());
+		System.out.println(result.getDigits());
 		} catch (ResultOutOfRangeException tataie) {
 			System.out.println("0, #>99 or #<0 detected");
 			System.exit(1);

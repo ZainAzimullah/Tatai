@@ -32,7 +32,7 @@ public class MaoriNumber extends Operand implements Comparable<MaoriNumber> {
 		setMaoriName(number);
 	}
 	
-	public int getDigit() {
+	public int getDigits() {
 		return _number;
 	}
 

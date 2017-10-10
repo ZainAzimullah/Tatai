@@ -16,7 +16,7 @@ public class IncorrectController extends SceneController {
 	@FXML
 	private void initialize() {
 		// Set labels
-		_number.setText(Integer.toString(Practice.getInstance().getNumber().getDigit()));
+		_number.setText(Integer.toString(Practice.getInstance().getNumber().getDigits()));
 		_maoriWord.setText(Practice.getInstance().getAttempt());
 	}
 	

@@ -20,7 +20,7 @@ public abstract class Operand {
 		if (this instanceof MaoriNumber) {
 
 			// the return to the caller the integer value of the Maori number
-			return ((MaoriNumber) this).getDigit();
+			return ((MaoriNumber) this).getDigits();
 
 			// otherwise if the operand instance is an operator
 		} else if (this instanceof Operator) {

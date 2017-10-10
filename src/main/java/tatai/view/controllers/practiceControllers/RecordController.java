@@ -33,7 +33,7 @@ public class RecordController extends SceneController {
 	@FXML
 	private void initialize() {
 		// Set labels
-		_number.setText(Integer.toString(Practice.getInstance().getNumber().getDigit()));
+		_number.setText(Integer.toString(Practice.getInstance().getNumber().getDigits()));
 		_questionNumber.setText(Integer.toString(Practice.getInstance().getCurrentQuestionNumber()));
 	}
 	

@@ -3,13 +3,14 @@ package tatai.expression;
 import tatai.numberModel.MaoriNumber;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public abstract class Operator extends Operand {
 
 	/**
-	 * this class is responsible for containing all fields and methods anything that
+	 * This class is responsible for containing all fields and methods anything that
 	 * classifies as a operator should have in this implementation an operator is a
-	 * type of operand
+	 * type of operand.  Composite pattern has been used here.
 	 */
 
 	// a list of operands that the operator must perform actions on.
@@ -28,30 +29,40 @@ public abstract class Operator extends Operand {
 	public void addOperand(Operand operand) {
 		_operands.add(operand);
 	}
+	public void addAllOperands(Operand... operands) {
+		_operands.addAll(Arrays.asList(operands));
+	}
 
+
+	// Put the expression into String form (using template method)
 	@Override
 	public final String toString() {
-		String out = "(";
+		String out = "("; // Start with open bracket
 
+		// Iterate through each suboperand
 		for (Operand operand: _operands) {
 			out += " ";
+
+			// Get number if operand is a number, or get suboperand string
 			if (operand instanceof MaoriNumber) {
-				out += Integer.toString(((MaoriNumber) operand).getDigit());
+				out += Integer.toString(((MaoriNumber) operand).getDigits());
 			} else if (operand instanceof  Operator) {
 				out += ((Operator) operand).toString();
 			} else {
 				throw new RuntimeException();
 			}
 
+			// Include the operator in the String (hook call)
 			out += " " + operatorString();
 		}
 
+		// Trim off extra operand
 		out = out.substring(0, out.length() - 1);
-
 		out += ")";
 
 		return out;
 	}
 
+	// Hook method
 	protected abstract String operatorString();
 }

@@ -4,20 +4,20 @@ import tatai.numberModel.MaoriNumber;
 
 public class ToStringTester {
     public static void main(String[] args) {
-        Operator op1 = new Add();
+        Operator plus = new Add();
+        Operator minus = new Subtract();
+        Operator times = new Multiply();
 
-        MaoriNumber num1 = new MaoriNumber(1);
-        MaoriNumber num2 = new MaoriNumber(2);
+        MaoriNumber a = new MaoriNumber(1);
+        MaoriNumber b = new MaoriNumber(2);
+        MaoriNumber c = new MaoriNumber(3);
+        MaoriNumber d = new MaoriNumber(4);
 
-        op1.addOperand(num1);
-        op1.addOperand(num2);
+        plus.addAllOperands(a, b);
+        times.addAllOperands(plus, c);
+        minus.addAllOperands(times, d);
 
-        Operator op2 = new Multiply();
-
-        op2.addOperand(op1);
-        op2.addOperand(new MaoriNumber(3));
-
-        System.out.println(op2.toString());
-        System.out.println(op2.calculate());
+        System.out.println(minus);
+        System.out.println(minus.calculate());
     }
 }

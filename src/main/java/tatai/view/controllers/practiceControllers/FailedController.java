@@ -27,7 +27,7 @@ public class FailedController extends SceneController {
 		// Set labels
 		_correctWord.setText(Practice.getInstance().getNumber().toString());
 		_incorrectWord.setText(Practice.getInstance().getAttempt());
-		_number.setText(Integer.toString(Practice.getInstance().getNumber().getDigit()));
+		_number.setText(Integer.toString(Practice.getInstance().getNumber().getDigits()));
 	}
 	
 	@FXML
