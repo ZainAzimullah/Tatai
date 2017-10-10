@@ -15,8 +15,10 @@ public class ExpressionModelFactory {
         switch (difficulty) {
             case EASY:
                 return new EasyExpressionModel();
+
             case MEDIUM:
                 return new MediumExpressionModel();
+                
             case HARD:
                 return new HardExpressionModel();
 
