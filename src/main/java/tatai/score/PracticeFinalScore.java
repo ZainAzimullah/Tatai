@@ -8,7 +8,7 @@ import javafx.beans.property.StringProperty;
 import tatai.score.PracticeScore.Result;
 import tatai.util.Level;
 
-public class FinalPracticeScore {
+public class PracticeFinalScore {
 	
 	// Properties:
 	private StringProperty _numCorrect = new SimpleStringProperty();
@@ -23,8 +23,8 @@ public class FinalPracticeScore {
 	// String representatin of instance
 	private String _inText;
 	
-	// Create FinalPracticeScore object given a PracticeScore object
-	public FinalPracticeScore(PracticeScore score, Level level) {
+	// Create PracticeFinalScore object given a PracticeScore object
+	public PracticeFinalScore(PracticeScore score, Level level) {
 		
 		// Set properties
 		_numCorrect.set(Integer.toString(score.getNumberOf(Result.CORRECT) +
@@ -50,8 +50,8 @@ public class FinalPracticeScore {
 		_inText.substring(0, _inText.length()-1);
 	}
 	
-	// Create FinalPracticeScore object given a string
-	public FinalPracticeScore(String inText) {
+	// Create PracticeFinalScore object given a string
+	public PracticeFinalScore(String inText) {
 		
 		// Divide String into parts
 		String[] strings = inText.split("\\t");

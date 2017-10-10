@@ -3,28 +3,28 @@ package tatai.view.controllers.mainMenuControllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import tatai.score.FinalPracticeScore;
+import tatai.score.PracticeFinalScore;
 import tatai.view.MainMenuLoader;
 
 public class ScoresController extends MainMenuController {
 	
 	@FXML
-	private TableView<FinalPracticeScore> _table;
+	private TableView<PracticeFinalScore> _table;
 	
 	@FXML
-	private TableColumn<FinalPracticeScore, String> _numCorrect;
+	private TableColumn<PracticeFinalScore, String> _numCorrect;
 	
 	@FXML
-	private TableColumn<FinalPracticeScore, String> _numIncorrect;
+	private TableColumn<PracticeFinalScore, String> _numIncorrect;
 	
 	@FXML
-	private TableColumn<FinalPracticeScore, String> _numAttempts;
+	private TableColumn<PracticeFinalScore, String> _numAttempts;
 	
 	@FXML
-	private TableColumn<FinalPracticeScore, String> _numMistakes;
+	private TableColumn<PracticeFinalScore, String> _numMistakes;
 	
 	@FXML
-	private TableColumn<FinalPracticeScore, String> _level;
+	private TableColumn<PracticeFinalScore, String> _level;
 	
 	@FXML
 	private void initialize() {
