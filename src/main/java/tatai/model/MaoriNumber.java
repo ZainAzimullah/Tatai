@@ -3,8 +3,8 @@ package tatai.model;
 import java.util.HashMap;
 import java.util.Map;
 
-import operandStructure.Operand;
 import tatai.exceptions.TataiException;
+import tatai.operandModel.Operand;
 
 // This class represents a Maori number/English number pairing
 public class MaoriNumber extends Operand implements Comparable<MaoriNumber> {

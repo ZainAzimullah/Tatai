@@ -1,4 +1,4 @@
-package operandStructure;
+package tatai.operandModel;
 
 import tatai.exceptions.ResultOutOfRangeException;
 import tatai.model.MaoriNumber;
@@ -11,7 +11,7 @@ public class ExpressionTester {
 		
 		MaoriNumber num1, num2, num3;
 		
-		num1 = new MaoriNumber(54);
+		num1 = new MaoriNumber(25);
 		num2 = new MaoriNumber(2);
 		num3 = new MaoriNumber(3);
 		
