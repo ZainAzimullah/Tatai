@@ -1,5 +1,6 @@
 package operandStructure;
 
+import tatai.exceptions.ResultOutOfRangeException;
 import tatai.exceptions.TataiException;
 import tatai.model.MaoriNumber;
 
@@ -23,15 +24,19 @@ public abstract class Operand {
 
 	}
 
-	public final MaoriNumber getMaoriResult() {
+	public final MaoriNumber getMaoriResult() throws ResultOutOfRangeException {
 
 		if (this instanceof MaoriNumber) {
 			
 			return (MaoriNumber) this;
 			
 		} else if (this instanceof Operator) {
-						
+			
+			try {
 			return new MaoriNumber(((Operator) this).calculate());
+			} catch (TataiException tataie) {
+				throw new ResultOutOfRangeException();
+			}
 			
 		} else {
 

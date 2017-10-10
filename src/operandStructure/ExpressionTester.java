@@ -1,5 +1,6 @@
 package operandStructure;
 
+import tatai.exceptions.ResultOutOfRangeException;
 import tatai.model.MaoriNumber;
 
 public class ExpressionTester {
@@ -10,7 +11,7 @@ public class ExpressionTester {
 		
 		MaoriNumber num1, num2, num3;
 		
-		num1 = new MaoriNumber(25);
+		num1 = new MaoriNumber(54);
 		num2 = new MaoriNumber(2);
 		num3 = new MaoriNumber(3);
 		
@@ -20,9 +21,14 @@ public class ExpressionTester {
 		operandSubstraction.addOperand(operandMutiply);
 		operandSubstraction.addOperand(num3);
 		
-		MaoriNumber result = operandSubstraction.getMaoriResult();
 		
+		try {
+		MaoriNumber result = operandSubstraction.getMaoriResult();
 		System.out.println(result.getDigit());
+		} catch (ResultOutOfRangeException tataie) {
+			System.out.println("0, #>99 or #<0 detected");
+			System.exit(1);
+		}
 		
 	}
 
