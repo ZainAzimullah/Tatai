@@ -25,4 +25,9 @@ public class Add extends Operator {
 		
 	}
 
+	@Override
+	protected String operatorString() {
+		return "+";
+	}
+
 }

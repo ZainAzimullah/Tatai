@@ -31,4 +31,9 @@ public class Subtract extends Operator {
 
 	}
 
+	@Override
+	protected String operatorString() {
+		return "-";
+	}
+
 }

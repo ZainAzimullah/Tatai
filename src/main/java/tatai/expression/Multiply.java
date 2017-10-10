@@ -25,4 +25,9 @@ public class Multiply extends Operator {
 		
 	}
 
+	@Override
+	protected String operatorString() {
+		return "x";
+	}
+
 }

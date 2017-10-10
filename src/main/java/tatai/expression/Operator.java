@@ -1,5 +1,7 @@
 package tatai.expression;
 
+import tatai.numberModel.MaoriNumber;
+
 import java.util.ArrayList;
 
 public abstract class Operator extends Operand {
@@ -27,4 +29,29 @@ public abstract class Operator extends Operand {
 		_operands.add(operand);
 	}
 
+	@Override
+	public final String toString() {
+		String out = "(";
+
+		for (Operand operand: _operands) {
+			out += " ";
+			if (operand instanceof MaoriNumber) {
+				out += Integer.toString(((MaoriNumber) operand).getDigit());
+			} else if (operand instanceof  Operator) {
+				out += ((Operator) operand).toString();
+			} else {
+				throw new RuntimeException();
+			}
+
+			out += " " + operatorString();
+		}
+
+		out = out.substring(0, out.length() - 1);
+
+		out += ")";
+
+		return out;
+	}
+
+	protected abstract String operatorString();
 }
