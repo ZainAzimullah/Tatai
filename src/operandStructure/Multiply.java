@@ -5,13 +5,13 @@ public class Multiply extends Operator {
 	@Override
 	protected int calculate() {
 		
-		int result = 0;
+		int product = 1;
 		
 		for(Operand operand : _operands) {
-			result *= operand.getResult();
+			product *= operand.getResult();
 		}
 		
-		return result;
+		return product;
 		
 	}
 

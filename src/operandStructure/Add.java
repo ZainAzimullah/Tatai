@@ -5,13 +5,14 @@ public class Add extends Operator {
 	@Override
 	protected int calculate() {
 		
-		int result = 0;
+		int sum = 0;
 		
 		for(Operand operand : _operands) {
-			result += operand.getResult();
+			
+			sum += operand.getResult();
 		}
 		
-		return result;
+		return sum;
 		
 	}
 

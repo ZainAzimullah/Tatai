@@ -5,13 +5,14 @@ public class Subtract extends Operator {
 	@Override
 	protected int calculate() {
 		
-		int result = 0;
+		int sum = _operands.get(0).getResult();
+		_operands.remove(0);
 		
 		for(Operand operand : _operands) {
-			result -= operand.getResult();
+			sum -= operand.getResult();
 		}
 		
-		return result;
+		return sum;
 				
 	}
 
