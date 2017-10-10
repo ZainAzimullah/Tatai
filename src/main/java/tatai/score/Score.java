@@ -1,5 +1,6 @@
 package tatai.score;
 
+import tatai.expression.Operand;
 import tatai.numberModel.MaoriNumber;
 
 import java.util.HashMap;
@@ -8,6 +9,7 @@ import java.util.Map;
 public class Score {
 
     private HashMap<Integer, Result> _results;
+    private HashMap<Integer, Operand> _expressions;
 
     public Score(int numberOfQuestions) {
         _results = new HashMap<>();
