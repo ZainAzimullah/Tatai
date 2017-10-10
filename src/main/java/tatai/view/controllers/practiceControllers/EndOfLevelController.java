@@ -4,8 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import tatai.Practice;
-import tatai.score.PracticeScore;
-import tatai.score.PracticeScore.Result;
+import tatai.practiceScore.PracticeScore;
+import tatai.practiceScore.PracticeScore.Result;
 import tatai.util.Level;
 import tatai.view.controllers.SceneController;
 

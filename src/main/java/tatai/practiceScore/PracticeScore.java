@@ -1,4 +1,4 @@
-package tatai.score;
+package tatai.practiceScore;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -24,12 +24,12 @@ public class PracticeScore {
 		}
 	}
 	
-	// Maps for storing score information for each question
+	// Maps for storing practiceScore information for each question
 	private Map<Integer, Result> _resultMap;
 	private Map<Integer, Integer> _attemptsMap;
 	private Map<Integer, Integer> _mistakesMap;
 	
-	// construct a score object for a given number of questions
+	// construct a practiceScore object for a given number of questions
 	public PracticeScore(int numOfQuestions) {
 		_resultMap = new HashMap<>();
 		_attemptsMap = new HashMap<>();

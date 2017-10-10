@@ -6,8 +6,8 @@ import tatai.exceptions.TataiException;
 import tatai.numberModel.MaoriNumber;
 import tatai.numberModel.MaoriNumberModel;
 import tatai.numberModel.MaoriNumberModelFactory;
-import tatai.score.PracticeScore;
-import tatai.score.PracticeScore.Result;
+import tatai.practiceScore.PracticeScore;
+import tatai.practiceScore.PracticeScore.Result;
 import tatai.util.Level;
 import tatai.view.MainMenuLoader;
 import tatai.view.SceneLoader;
@@ -41,7 +41,7 @@ public class Practice {
 	private int _lives = MAX_LIVES;
 	private int _questionNumber;
 	
-	// Current score
+	// Current practiceScore
 	private PracticeScore _score;
 	
 	// Set the stage of the game.
@@ -100,7 +100,7 @@ public class Practice {
 		return _level;
 	}
 	
-	// Get the current score
+	// Get the current practiceScore
 	public PracticeScore getScore() {
 		return _score;
 	}

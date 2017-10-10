@@ -1,11 +1,11 @@
-package tatai.score;
+package tatai.practiceScore;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import tatai.score.PracticeScore.Result;
+import tatai.practiceScore.PracticeScore.Result;
 import tatai.util.Level;
 
 public class PracticeFinalScore {

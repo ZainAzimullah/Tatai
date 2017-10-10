@@ -3,7 +3,7 @@ package tatai.view.controllers.mainMenuControllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import tatai.score.PracticeFinalScore;
+import tatai.practiceScore.PracticeFinalScore;
 import tatai.view.MainMenuLoader;
 
 public class ScoresController extends MainMenuController {
