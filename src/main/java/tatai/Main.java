@@ -17,7 +17,6 @@ public class Main extends Application {
 		// Cleanup files on close
 		stage.setOnCloseRequest(e -> {
 			new File(System.getProperty("user.dir") + "/foo.wav").delete();
-			new File(System.getProperty("user.dir") + "/history.txt").delete();
 		});
 		
 		// Show the main menu
