@@ -7,7 +7,7 @@ import tatai.numberModel.MaoriNumber;
 import tatai.numberModel.MaoriNumberModel;
 import tatai.numberModel.MaoriNumberModelFactory;
 import tatai.practiceScore.PracticeScore;
-import tatai.practiceScore.PracticeScore.Result;
+import tatai.practiceScore.PracticeScore.PracticeResult;
 import tatai.util.Level;
 import tatai.view.MainMenuLoader;
 import tatai.view.SceneLoader;
@@ -162,13 +162,13 @@ public class Practice {
 		if ((_userAttempt.equals(_currentNumber.toString())) && (_lives == 2)) {
 			// Refresh lives and show correct scene
 			_lives = MAX_LIVES;
-			_score.update(_questionNumber, Result.CORRECT);
+			_score.update(_questionNumber, PracticeResult.CORRECT);
 			showCorrect();
 		
 		// Check if user said correct word on second attempt
 		} else if (( _userAttempt.equals(_currentNumber.toString()))) {
 			_lives = MAX_LIVES;
-			_score.update(_questionNumber, Result.INCORRECT_ONCE);
+			_score.update(_questionNumber, PracticeScore.PracticeResult.INCORRECT_ONCE);
 			showCorrect();
 			
 		// Otherwise, the user got the word wrong:
@@ -178,7 +178,7 @@ public class Practice {
 			showIncorrect();
 		} else if (_lives == 1) {
 			// They have failed, so refresh the lives and show the Failed scene
-			_score.update(_questionNumber, Result.FAILED);
+			_score.update(_questionNumber, PracticeResult.FAILED);
 			_lives = MAX_LIVES;
 			showFailed();
 		}

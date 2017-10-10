@@ -5,7 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import tatai.Practice;
 import tatai.practiceScore.PracticeScore;
-import tatai.practiceScore.PracticeScore.Result;
+import tatai.practiceScore.PracticeScore.PracticeResult;
 import tatai.util.Level;
 import tatai.view.controllers.SceneController;
 
@@ -40,8 +40,8 @@ public class EndOfLevelController extends SceneController {
 		
 		// Get the number of achieved, failed, and attempted questions
 		PracticeScore score = Practice.getInstance().getScore();
-		int numAchieved = score.getNumberOf(Result.CORRECT) + score.getNumberOf(Result.INCORRECT_ONCE);
-		int numFailed = score.getNumberOf(Result.FAILED);
+		int numAchieved = score.getNumberOf(PracticeScore.PracticeResult.CORRECT) + score.getNumberOf(PracticeResult.INCORRECT_ONCE);
+		int numFailed = score.getNumberOf(PracticeScore.PracticeResult.FAILED);
 		int totalNumOfAttempts = score.getNumberOfAttempts();
 		
 		// Set labels accordingly

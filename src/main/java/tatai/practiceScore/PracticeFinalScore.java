@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import tatai.practiceScore.PracticeScore.Result;
+import tatai.practiceScore.PracticeScore.PracticeResult;
 import tatai.util.Level;
 
 public class PracticeFinalScore {
@@ -27,9 +27,9 @@ public class PracticeFinalScore {
 	public PracticeFinalScore(PracticeScore score, Level level) {
 		
 		// Set properties
-		_numCorrect.set(Integer.toString(score.getNumberOf(Result.CORRECT) +
-				score.getNumberOf(Result.INCORRECT_ONCE)));
-		_numIncorrect.set(Integer.toString(score.getNumberOf(Result.FAILED)));
+		_numCorrect.set(Integer.toString(score.getNumberOf(PracticeResult.CORRECT) +
+				score.getNumberOf(PracticeResult.INCORRECT_ONCE)));
+		_numIncorrect.set(Integer.toString(score.getNumberOf(PracticeScore.PracticeResult.FAILED)));
 		_numAttempts.set(Integer.toString(score.getNumberOfAttempts()));
 		_numMistakes.set(Integer.toString(score.getNumberOfMistakes()));
 		_level.set(level.toString());
