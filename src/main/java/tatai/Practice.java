@@ -8,7 +8,7 @@ import tatai.numberModel.MaoriNumberModel;
 import tatai.numberModel.MaoriNumberModelFactory;
 import tatai.practiceScore.PracticeScore;
 import tatai.practiceScore.PracticeScore.PracticeResult;
-import tatai.util.Level;
+import tatai.util.PracticeLevel;
 import tatai.view.MainMenuLoader;
 import tatai.view.SceneLoader;
 
@@ -37,7 +37,7 @@ public class Practice {
 	private String _userAttempt;
 	
 	// A record of the level, amount of attempts left and current question number
-	private Level _level;
+	private PracticeLevel _level;
 	private int _lives = MAX_LIVES;
 	private int _questionNumber;
 	
@@ -96,7 +96,7 @@ public class Practice {
 	}
 	
 	// Get the level which the user is currently on
-	public Level getLevel() {
+	public PracticeLevel getLevel() {
 		return _level;
 	}
 	
@@ -113,7 +113,7 @@ public class Practice {
 	
 	// Create the number list which user will be tested on.
 	// This method will be called once the user has clicked on a level.
-	public void createList(Level level) {
+	public void createList(PracticeLevel level) {
 		_lives = MAX_LIVES;
 		_score = new PracticeScore(NUMBER_OF_QUESTIONS);
 		_level = level;
@@ -199,7 +199,7 @@ public class Practice {
 		_loader.loadScene("Failed.fxml");
 	}
 	
-	// Load the End Of Level scene
+	// Load the End Of PracticeLevel scene
 	public void endOfLevel() {
 		_loader.loadScene("EndOfLevel.fxml");
 	}

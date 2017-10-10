@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 import tatai.Practice;
 import tatai.practiceScore.PracticeScore;
 import tatai.practiceScore.PracticeScore.PracticeResult;
-import tatai.util.Level;
+import tatai.util.PracticeLevel;
 import tatai.view.controllers.SceneController;
 
 public class EndOfLevelController extends SceneController {
@@ -52,11 +52,11 @@ public class EndOfLevelController extends SceneController {
 		// Determine whether they are on the first level and have gotten over
 		// 8 to continue onto the second level.
 		if ((numAchieved >= THRESHHOLD) 
-				&& (Practice.getInstance().getLevel() == Level.EASY)) {
-			_next.setText("Next Level");
+				&& (Practice.getInstance().getLevel() == PracticeLevel.EASY)) {
+			_next.setText("Next PracticeLevel");
 			_mustRetry = false;
 		} else {
-			_next.setText("Retry Level");
+			_next.setText("Retry PracticeLevel");
 		}
 	}
 	
@@ -67,7 +67,7 @@ public class EndOfLevelController extends SceneController {
 		if (_mustRetry) {
 			Practice.getInstance().createList(Practice.getInstance().getLevel());
 		} else {
-			Practice.getInstance().createList(Level.HARD);
+			Practice.getInstance().createList(PracticeLevel.HARD);
 		}
 	}
 	
