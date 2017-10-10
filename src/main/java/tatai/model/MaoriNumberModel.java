@@ -2,12 +2,12 @@ package tatai.model;
 
 import java.util.Random;
 
-import tatai.Game;
+import tatai.Practice;
 import tatai.exceptions.FirstNumberNotAdvancedToException;
 import tatai.exceptions.OutOfNumbersException;
 
 public abstract class MaoriNumberModel {
-	private final int LIST_SIZE = Game.NUMBER_OF_QUESTIONS;
+	private final int LIST_SIZE = Practice.NUMBER_OF_QUESTIONS;
 	//variables used to keep track of what position we are in on the Maori number model
 	protected MaoriNumber _currentNumber;
 	private int _currentNumberPosition;

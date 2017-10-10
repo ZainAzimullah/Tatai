@@ -1,8 +1,8 @@
-package tatai.view.controllers.gameControllers;
+package tatai.view.controllers.practiceControllers;
 
 
 import javafx.fxml.FXML;
-import tatai.Game;
+import tatai.Practice;
 import tatai.util.Level;
 import tatai.view.controllers.SceneController;
 
@@ -14,13 +14,13 @@ public class ChooseLevelController extends SceneController {
 	// Handle the button for choosing easy level
 	@FXML
 	private void chooseEasy() {
-		Game.getInstance().createList(Level.EASY);
+		Practice.getInstance().createList(Level.EASY);
 	}
 	
 	// Handle the button for choosing the hard level
 	@FXML
 	private void chooseHard() {
-		Game.getInstance().createList(Level.HARD);
+		Practice.getInstance().createList(Level.HARD);
 	}
 	
 	@FXML
@@ -31,7 +31,7 @@ public class ChooseLevelController extends SceneController {
 	@FXML
 	@Override
 	protected void returnToMainMenu() {
-		Game.getInstance().returnToMainMenu();
+		Practice.getInstance().returnToMainMenu();
 	}
 
 }

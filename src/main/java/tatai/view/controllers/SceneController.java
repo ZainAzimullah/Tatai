@@ -5,7 +5,7 @@ import java.util.Optional;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
-import tatai.Game;
+import tatai.Practice;
 
 /*
  * This is the parent class of all controllers.
@@ -48,6 +48,6 @@ public abstract class SceneController {
 			return;
 		}
 		
-		Game.getInstance().returnToMainMenu();
+		Practice.getInstance().returnToMainMenu();
 	}
 }

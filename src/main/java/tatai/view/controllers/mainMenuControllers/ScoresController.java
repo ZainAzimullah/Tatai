@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import tatai.score.FinalScore;
-import tatai.score.FinalScoreReader;
 import tatai.view.MainMenuLoader;
 
 public class ScoresController extends MainMenuController {
@@ -29,15 +28,7 @@ public class ScoresController extends MainMenuController {
 	
 	@FXML
 	private void initialize() {
-		// Initialise table columns
-		_numCorrect.setCellValueFactory(data -> data.getValue().getNumberCorrect());
-		_numIncorrect.setCellValueFactory(data -> data.getValue().getNumberIncorrect());
-		_numAttempts.setCellValueFactory(data -> data.getValue().getNumberOfAttempts());
-		_numMistakes.setCellValueFactory(data -> data.getValue().getNumberOfMistakes());
-		_level.setCellValueFactory(data -> data.getValue().getLevel());
-		
-		// Initialise table
-		_table.setItems(new FinalScoreReader("history.txt").read());
+
 	}
 	
 	@FXML

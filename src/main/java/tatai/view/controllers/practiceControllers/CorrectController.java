@@ -1,8 +1,8 @@
-package tatai.view.controllers.gameControllers;
+package tatai.view.controllers.practiceControllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import tatai.Game;
+import tatai.Practice;
 import tatai.view.controllers.SceneController;
 
 public class CorrectController extends SceneController {
@@ -18,14 +18,14 @@ public class CorrectController extends SceneController {
 	// Set the labels
 	@FXML
 	private void initialize() {
-		_number.setText(Integer.toString(Game.getInstance().getNumber().getDigit()));
-		_maoriWord.setText(Game.getInstance().getNumber().toString());
+		_number.setText(Integer.toString(Practice.getInstance().getNumber().getDigit()));
+		_maoriWord.setText(Practice.getInstance().getNumber().toString());
 	}
 	
 	// Go to the next number
 	@FXML
 	private void next() {
-		Game.getInstance().record();
+		Practice.getInstance().record();
 	}
 	
 	@FXML

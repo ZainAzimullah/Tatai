@@ -1,4 +1,4 @@
-package tatai.view.controllers.gameControllers;
+package tatai.view.controllers.practiceControllers;
 
 import javafx.application.Platform;
 import javafx.concurrent.Task;
@@ -7,7 +7,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import tatai.Game;
+import tatai.Practice;
 import tatai.exceptions.SpeechNotFoundException;
 import tatai.util.BashCommand;
 import tatai.util.Countdown;
@@ -33,8 +33,8 @@ public class RecordController extends SceneController {
 	@FXML
 	private void initialize() {
 		// Set labels
-		_number.setText(Integer.toString(Game.getInstance().getNumber().getDigit()));
-		_questionNumber.setText(Integer.toString(Game.getInstance().getCurrentQuestionNumber()));
+		_number.setText(Integer.toString(Practice.getInstance().getNumber().getDigit()));
+		_questionNumber.setText(Integer.toString(Practice.getInstance().getCurrentQuestionNumber()));
 	}
 	
 	// This method is invoked when the Record button is clicked
@@ -81,12 +81,12 @@ public class RecordController extends SceneController {
 					alert.setHeaderText("Record Again");
 					alert.getDialogPane().setContent(label);
 					alert.showAndWait();
-					Game.getInstance().rerecord();
+					Practice.getInstance().rerecord();
 					return;
 				}
 				
-				// Proceed to Game class
-				Game.getInstance().finishedRecording();
+				// Proceed to Practice class
+				Practice.getInstance().finishedRecording();
 			});
 		}
 	}

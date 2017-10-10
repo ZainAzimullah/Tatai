@@ -6,10 +6,8 @@ import tatai.exceptions.TataiException;
 import tatai.model.MaoriNumber;
 import tatai.model.MaoriNumberModel;
 import tatai.model.MaoriNumberModelFactory;
-import tatai.score.FinalScore;
-import tatai.score.FinalScoreSaver;
-import tatai.score.Score;
-import tatai.score.Score.Result;
+import tatai.score.PracticeScore;
+import tatai.score.PracticeScore.Result;
 import tatai.util.Level;
 import tatai.view.MainMenuLoader;
 import tatai.view.SceneLoader;
@@ -18,10 +16,10 @@ import tatai.view.SceneLoader;
  * This is a singleton class which has ONE game.  There is also ONE stage
  * which any scene is to appear in.  Any game flow/logic occurs in this class.
  */
-public class Game {
+public class Practice {
 	
-	// The actual Game instance
-	private static Game _game;
+	// The actual Practice instance
+	private static Practice _practice;
 	
 	// Some game constants
 	public static final int MAX_LIVES = 2;
@@ -44,31 +42,31 @@ public class Game {
 	private int _questionNumber;
 	
 	// Current score
-	private Score _score;
+	private PracticeScore _score;
 	
 	// Set the stage of the game.
-	private Game(Stage stage) {
+	private Practice(Stage stage) {
 		_stage = stage;
 	}
 	
 	// Use this method when first initialising the game, as the stage
 	// needs to be set the first time.  If the stage has already been set
-	// and this method is used, then the current Game instance is returned.
-	public static Game getInitialInstance(Stage stage) {
-		if (_game == null) {
-			_game = new Game(stage);
+	// and this method is used, then the current Practice instance is returned.
+	public static Practice getInitialInstance(Stage stage) {
+		if (_practice == null) {
+			_practice = new Practice(stage);
 		}
 		
-		return _game;
+		return _practice;
 	}
 	
-	// Get the instance of Game.  If Game has not been initialised properly
+	// Get the instance of Practice.  If Practice has not been initialised properly
 	// using getInitialInstance(), then a TataiException is thrown.
-	public static Game getInstance() {
-		if (_game == null) {
-			throw new TataiException("Game not initialised");
+	public static Practice getInstance() {
+		if (_practice == null) {
+			throw new TataiException("Practice not initialised");
 		} else {
-			return _game;
+			return _practice;
 		}
 	}
 	
@@ -103,7 +101,7 @@ public class Game {
 	}
 	
 	// Get the current score
-	public Score getScore() {
+	public PracticeScore getScore() {
 		return _score;
 	}
 	
@@ -117,7 +115,7 @@ public class Game {
 	// This method will be called once the user has clicked on a level.
 	public void createList(Level level) {
 		_lives = MAX_LIVES;
-		_score = new Score(NUMBER_OF_QUESTIONS);
+		_score = new PracticeScore(NUMBER_OF_QUESTIONS);
 		_level = level;
 		_numbers = MaoriNumberModelFactory.getMaoriNumberModel(level);
 		record();
@@ -203,8 +201,6 @@ public class Game {
 	
 	// Load the End Of Level scene
 	public void endOfLevel() {
-		// Save final score
-		new FinalScoreSaver(new FinalScore(_score, _level)).save("history.txt");
 		_loader.loadScene("EndOfLevel.fxml");
 	}
 }

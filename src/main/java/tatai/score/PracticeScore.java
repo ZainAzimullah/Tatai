@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Score {
+public class PracticeScore {
 	
 	// Result enum represents possible result types for each question, as
 	// well as the number of attempts or mistakes that would be associated
@@ -30,7 +30,7 @@ public class Score {
 	private Map<Integer, Integer> _mistakesMap;
 	
 	// construct a score object for a given number of questions
-	public Score(int numOfQuestions) {
+	public PracticeScore(int numOfQuestions) {
 		_resultMap = new HashMap<>();
 		_attemptsMap = new HashMap<>();
 		_mistakesMap = new HashMap<>();

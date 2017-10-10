@@ -1,4 +1,4 @@
-package tatai.view.controllers.gameControllers;
+package tatai.view.controllers.practiceControllers;
 
 import java.io.File;
 import javafx.fxml.FXML;
@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import tatai.Game;
+import tatai.Practice;
 import tatai.exceptions.SpeechNotFoundException;
 import tatai.util.VoiceRecogniser;
 import tatai.view.controllers.SceneController;
@@ -34,7 +34,7 @@ public class FinishedRecordingController extends SceneController {
 		player.play();
 		player.setOnEndOfMedia(() -> {
 			// Reshow this scene once playback has finished
-			Game.getInstance().finishedRecording();
+			Practice.getInstance().finishedRecording();
 		});
 		
 	}
@@ -45,19 +45,19 @@ public class FinishedRecordingController extends SceneController {
 		VoiceRecogniser htk = new VoiceRecogniser();
 		
 		try {
-			Game.getInstance().storeAttempt(htk.getSpeech("foo.wav"));
+			Practice.getInstance().storeAttempt(htk.getSpeech("foo.wav"));
 		} catch (SpeechNotFoundException e) {
 			// We should have caught this earlier, so if this happened again
 			// then something went wrong
 			e.printStackTrace();
 		}
 		
-		Game.getInstance().checkAnswer();
+		Practice.getInstance().checkAnswer();
 	}
 	
 	@FXML
 	private void redo() {
-		Game.getInstance().rerecord();
+		Practice.getInstance().rerecord();
 	}
 	
 	@FXML

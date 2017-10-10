@@ -6,7 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import tatai.Game;
+import tatai.Practice;
 import tatai.view.controllers.SceneController;
 
 /*
@@ -22,10 +22,10 @@ public class SceneLoader {
 		_stage = stage;
 	}
 	
-	// Assume that the Game is being played if no stage
+	// Assume that the Practice is being played if no stage
 	// was given.
 	public SceneLoader() {
-		_stage = Game.getInstance().getStage();
+		_stage = Practice.getInstance().getStage();
 	}
 	
 	// Load the scene.  This is a template method.
