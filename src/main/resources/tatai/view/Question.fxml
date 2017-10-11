@@ -2,7 +2,6 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -46,7 +45,7 @@
                         <Font name="Noto Sans CJK JP Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Button layoutX="513.0" layoutY="14.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="❓" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="15.0" />
+                  <JFXButton style="-fx-background-color: white; -fx-background-radius: 30;" text="Help" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="15.0" />
                </children>
             </AnchorPane>
             <AnchorPane prefHeight="35.0" prefWidth="600.0">
@@ -74,18 +73,26 @@
             </AnchorPane>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="55.0">
                <children>
-                  <JFXButton buttonType="RAISED" style="-fx-background-color: white; -fx-background-radius: 10; -fx-min-width: 100; -fx-min-height: 40;" text="Record">
+                  <JFXButton buttonType="RAISED" style="-fx-background-color: white; -fx-background-radius: 30; -fx-min-width: 100; -fx-min-height: 40;" text="Record">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton style="-fx-background-color: white; -fx-background-radius: 10; -fx-min-width: 100; -fx-min-height: 40;" text="Skip">
+                  <JFXButton style="-fx-background-color: white; -fx-background-radius: 30; -fx-min-width: 100; -fx-min-height: 40;" text="Skip">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </JFXButton>
                </children>
             </HBox>
+            <JFXButton style="-fx-background-color: white; -fx-background-radius: 30;" text="Home">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </JFXButton>
          </children>
       </VBox>
    </children>
