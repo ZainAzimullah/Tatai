@@ -63,6 +63,6 @@ public class FinishedRecordingController extends SceneController {
 	@FXML
 	@Override
 	protected void returnToMainMenu() {
-		showAlertAndReturn();
+		showAlertAndReturnFromPractice();
 	}
 }

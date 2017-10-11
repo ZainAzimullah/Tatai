@@ -41,7 +41,7 @@ public abstract class SceneController {
 	}
 	
 	// Show a confirmation dialog but do nothing if user clicks "No"
-	protected void showAlertAndReturn() {
+	protected void showAlertAndReturnFromPractice() {
 		int reply = showAlert();
 		
 		if (reply == NO) {

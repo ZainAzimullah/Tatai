@@ -28,7 +28,7 @@ public class IncorrectController extends SceneController {
 	@FXML
 	@Override
 	protected void returnToMainMenu() {
-		showAlertAndReturn();
+		showAlertAndReturnFromPractice();
 	}
 
 }
