@@ -5,6 +5,7 @@ import java.util.Optional;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
+import tatai.Game;
 import tatai.Practice;
 
 /*
@@ -38,6 +39,17 @@ public abstract class SceneController {
 		} else {
 			return 0;
 		}
+	}
+
+	// Show a confirmation dialog but do nothing if user clicks "No"
+	protected void showAlertAndReturnFromGame() {
+		int reply = showAlert();
+
+		if (reply == NO) {
+			return;
+		}
+
+		Game.getInstance().returnToMainMenu();
 	}
 	
 	// Show a confirmation dialog but do nothing if user clicks "No"

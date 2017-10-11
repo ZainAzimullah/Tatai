@@ -1,6 +1,7 @@
 package tatai;
 
 import javafx.stage.Stage;
+import tatai.expression.Operand;
 import tatai.expressionModel.ExpressionModel;
 import tatai.expressionModel.ExpressionModelFactory;
 import tatai.util.Difficulty;
@@ -14,7 +15,15 @@ public class Game {
     private static Stage _stage;
 
     private SceneLoader _loader;
+
     private Difficulty _difficulty;
+
+    public Operand getCurrentQuestion() {
+        return _currentQuestion;
+    }
+
+    private Operand _currentQuestion;
+
     private ExpressionModel _model;
 
     private Game(Stage stage) {
