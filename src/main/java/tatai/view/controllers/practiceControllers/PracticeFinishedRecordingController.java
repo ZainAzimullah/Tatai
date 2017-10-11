@@ -12,7 +12,7 @@ import tatai.exceptions.SpeechNotFoundException;
 import tatai.util.VoiceRecogniser;
 import tatai.view.controllers.SceneController;
 
-public class FinishedRecordingController extends SceneController {
+public class PracticeFinishedRecordingController extends SceneController {
 	
 	@FXML
 	private Label _message;

@@ -153,7 +153,7 @@ public class Practice {
 	
 	// Load a scene for the user to rerecord, playback, or submit
 	public void finishedRecording() {
-		_loader.loadScene("FinishedRecording.fxml");
+		_loader.loadScene("PracticeFinishedRecording.fxml");
 	}
 	
 	public void checkAnswer() {

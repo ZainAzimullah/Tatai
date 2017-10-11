@@ -88,7 +88,7 @@ public class Game {
     }
 
     public void finishedRecording() {
-        _loader.loadScene("FinishedRecording.fxml");
+        _loader.loadScene("PracticeFinishedRecording.fxml");
     }
 
     public void endOfLevel() {
