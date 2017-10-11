@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -23,39 +22,33 @@
          <children>
             <BorderPane layoutX="100.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <top>
-                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" BorderPane.alignment="CENTER">
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#play" style="-fx-min-width: 150; -fx-background-radius: 30;" text="Play">
+                        <JFXButton buttonType="RAISED" onAction="#play" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Play">
                            <font>
-                              <Font name="Noto Sans CJK JP Bold" size="15.0" />
+                              <Font size="25.0" />
                            </font>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#practice" style="-fx-min-width: 150; -fx-background-radius: 30;" text="Practice">
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#practice" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Practice">
                            <font>
-                              <Font name="Noto Sans CJK JP Bold" size="15.0" />
+                              <Font size="25.0" />
                            </font>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#scores" style="-fx-min-width: 150; -fx-background-radius: 30;" text="Scores">
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#scores" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Scores">
                            <font>
-                              <Font name="Noto Sans CJK JP Bold" size="15.0" />
+                              <Font size="25.0" />
                            </font>
-                        </Button>
-                        <Button mnemonicParsing="false" onAction="#about" style="-fx-min-width: 150; -fx-background-radius: 30;" text="About">
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#about" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="About">
                            <font>
-                              <Font name="Noto Sans CJK JP Bold" size="15.0" />
+                              <Font size="25.0" />
                            </font>
-                        </Button>
-                        <Button alignment="TOP_CENTER" mnemonicParsing="false" onAction="#quit" style="-fx-min-width: 150; -fx-background-radius: 30;" text="Quit">
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#quit" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Quit">
                            <font>
-                              <Font name="Noto Sans CJK JP Bold" size="15.0" />
+                              <Font size="25.0" />
                            </font>
-                        </Button>
+                        </JFXButton>
                      </children>
                   </VBox>
                </top>
