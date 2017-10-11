@@ -1,6 +1,7 @@
 package tatai;
 
 import javafx.stage.Stage;
+import tatai.exceptions.OutOfItemsException;
 import tatai.expression.Operand;
 import tatai.expressionModel.ExpressionModel;
 import tatai.expressionModel.ExpressionModelFactory;
@@ -63,7 +64,18 @@ public class Game {
     }
 
     public void question() {
-        _model.debug();
+        try {
+            _currentQuestion = _model.getNext();
+            _loader.loadScene("Question.fxml");
+
+        } catch (OutOfItemsException e) {
+            endOfLevel();
+        }
+    }
+
+
+    public void endOfLevel() {
+        System.out.println("end of level");
     }
 
     public Stage getStage() {
