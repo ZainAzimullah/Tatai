@@ -1,5 +1,6 @@
 package tatai.expression;
 
+import tatai.exceptions.ResultOutOfRangeException;
 import tatai.numberModel.MaoriNumber;
 
 public class ToStringTester {
@@ -18,6 +19,10 @@ public class ToStringTester {
         minus.addAllOperands(times, d);
 
         System.out.println(minus);
-        System.out.println(minus.calculate());
+        try {
+            System.out.println(minus.calculate());
+        } catch (ResultOutOfRangeException e) {
+            e.printStackTrace();
+        }
     }
 }

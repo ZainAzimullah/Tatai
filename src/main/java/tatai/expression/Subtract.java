@@ -1,5 +1,7 @@
 package tatai.expression;
 
+import tatai.exceptions.ResultOutOfRangeException;
+
 public class Subtract extends Operator {
 
 	/**
@@ -9,7 +11,7 @@ public class Subtract extends Operator {
 
 	// protected method that calculates the sum of all the operands
 	@Override
-	protected int calculate() {
+	protected int calculate() throws ResultOutOfRangeException {
 
 		// initializes the variable to keep track of what the sum is, starting with the
 		// first element

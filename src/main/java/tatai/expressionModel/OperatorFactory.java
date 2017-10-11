@@ -17,6 +17,9 @@ public class OperatorFactory {
             case MULTIPLY:
                 _operator = new Multiply();
                 break;
+            case DIVIDE:
+                _operator = new Divide();
+                break;
             default:
                 throw new TataiException("Operation not supported");
         }

@@ -1,6 +1,7 @@
 package tatai.expressionModel;
 
 import tatai.exceptions.OutOfItemsException;
+import tatai.exceptions.ResultOutOfRangeException;
 import tatai.exceptions.TataiException;
 import tatai.expression.Operand;
 import tatai.numberModel.MaoriNumber;
@@ -32,7 +33,7 @@ public abstract class ExpressionModel {
     }
 
     protected Operation generateRandomOperation() {
-        int randomNumber = (int) (Math.random() * 3 + 1);
+        int randomNumber = (int) (Math.random() * 4 + 1);
 
         switch (randomNumber) {
             case 1:
@@ -41,6 +42,8 @@ public abstract class ExpressionModel {
                 return Operation.SUBTRACT;
             case 3:
                 return Operation.MULTIPLY;
+            case 4:
+                return Operation.DIVIDE;
 
             default:
                 throw new TataiException("Operation not supported");
@@ -54,7 +57,11 @@ public abstract class ExpressionModel {
     public void debug() {
         int i = 1;
         for (Operand operand: _expressions) {
-            System.out.println(i + ": " + operand);
+            try {
+                System.out.println(i + ": " + operand + " = " + operand.getMaoriResult().getDigits());
+            } catch (ResultOutOfRangeException e) {
+                e.printStackTrace();
+            }
             i++;
         }
     }

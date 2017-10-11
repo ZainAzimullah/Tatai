@@ -1,5 +1,6 @@
 package tatai.expression;
 
+import tatai.exceptions.ResultOutOfRangeException;
 import tatai.numberModel.MaoriNumber;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ public abstract class Operator extends Operand {
 
 	// all children must have a concrete method for performing calculations to a
 	// list of operands
-	protected abstract int calculate();
+	protected abstract int calculate() throws ResultOutOfRangeException;
 
 	// this method is used to put operands into the list of operands.
 	// this method was specifically implemented, as there is no reliable way to

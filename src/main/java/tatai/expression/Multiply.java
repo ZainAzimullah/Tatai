@@ -1,5 +1,7 @@
 package tatai.expression;
 
+import tatai.exceptions.ResultOutOfRangeException;
+
 public class Multiply extends Operator {
 
 	/**
@@ -8,7 +10,7 @@ public class Multiply extends Operator {
 
 	//protected method that calculates the product of all the operands
 	@Override
-	protected int calculate() {
+	protected int calculate() throws ResultOutOfRangeException {
 		
 		//Initializes the product variable so that it can used in the product calculations
 		int product = 1;

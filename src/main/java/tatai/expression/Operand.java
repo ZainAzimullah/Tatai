@@ -14,7 +14,7 @@ public abstract class Operand {
 
 	// protected method that cannot be changed for all subclasses to use to obtain
 	// the integer value for a particular operand
-	protected final int getResult() throws TataiException {
+	protected final int getResult() throws TataiException, ResultOutOfRangeException {
 
 		// if the operand instance is a MaoriNumber
 		if (this instanceof MaoriNumber) {
