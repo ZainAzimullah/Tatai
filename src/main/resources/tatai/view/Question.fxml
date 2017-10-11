@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="460.0" fitWidth="600.0">
          <image>
-            <Image url="@../../../../../../../Desktop/chalkboard.png" />
+            <Image url="@../../images/chalkboard.png" />
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00d4ff73" height="460.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
