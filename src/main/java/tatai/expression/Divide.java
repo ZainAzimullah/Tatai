@@ -31,6 +31,6 @@ public class Divide extends Operator {
 
     @Override
     protected String operatorString() {
-        return "/";
+        return "÷";
     }
 }

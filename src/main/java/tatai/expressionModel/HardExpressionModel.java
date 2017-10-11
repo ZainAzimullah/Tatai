@@ -15,25 +15,22 @@ public class HardExpressionModel extends ExpressionModel {
 
             op1 = new Multiply();
             op2 = OperatorFactory.getOperator(generateRandomOperation());
-            op3 = OperatorFactory.getOperator(generateRandomOperation());
 
             num1 = generateRandomMaoriNumber(99);
-            num2 = generateRandomMaoriNumber(99);
+            num2 = generateRandomMaoriNumber(10);
             num3 = generateRandomMaoriNumber(99);
-            num4 = generateRandomMaoriNumber(99);
 
             op1.addAllOperands(num1, num2);
             op2.addAllOperands(op1, num3);
-            op3.addAllOperands(op2, num4);
 
             try {
-                op3.getMaoriResult();
+                op2.getMaoriResult();
                 i++;
             } catch (ResultOutOfRangeException e) {
                 continue;
             }
 
-            _expressions.add(op3);
+            _expressions.add(op2);
         }
     }
 }
