@@ -9,7 +9,10 @@ public class EasyExpressionModel extends ExpressionModel {
 
 
     public EasyExpressionModel(int numberOfQuestions) {
-        for (int i = 0; i < numberOfQuestions; i++) {
+
+        int i = 0;
+
+        while (i < numberOfQuestions) {
             Operator operator = OperatorFactory.getOperator(generateRandomOperation());
             MaoriNumber num1, num2;
             num1 = generateRandomMaoriNumber(10);
@@ -19,6 +22,7 @@ public class EasyExpressionModel extends ExpressionModel {
 
             try {
                 operator.getMaoriResult();
+                i++;
             } catch (ResultOutOfRangeException e) {
                 continue;
             }

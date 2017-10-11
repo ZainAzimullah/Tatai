@@ -32,7 +32,7 @@ public abstract class ExpressionModel {
     }
 
     protected Operation generateRandomOperation() {
-        int randomNumber = (int) (Math.random() * 4 + 1);
+        int randomNumber = (int) (Math.random() * 3 + 1);
 
         switch (randomNumber) {
             case 1:
@@ -49,5 +49,11 @@ public abstract class ExpressionModel {
 
     protected MaoriNumber generateRandomMaoriNumber(int limit) {
         return new MaoriNumber((int) (Math.random() * limit + 1));
+    }
+
+    public void debug() {
+        for (Operand operand: _expressions) {
+            System.out.println(operand);
+        }
     }
 }

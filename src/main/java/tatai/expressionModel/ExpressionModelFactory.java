@@ -1,13 +1,9 @@
 package tatai.expressionModel;
 
 import tatai.exceptions.TataiException;
+import tatai.util.Difficulty;
 
 public class ExpressionModelFactory {
-    public enum Difficulty {
-        EASY,
-        MEDIUM,
-        HARD;
-    }
 
     private ExpressionModel _model;
 

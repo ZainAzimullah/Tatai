@@ -14,12 +14,13 @@ public class Subtract extends Operator {
 		// initializes the variable to keep track of what the sum is, starting with the
 		// first element
 		int sum = _operands.get(0).getResult();
-		// removes the first element of the operands after it has been initializes as
-		// the sum variable
-		_operands.remove(0);
-
+		boolean firstOperand = true;
 		// iterates through each operand to perform actions on it
 		for (Operand operand : _operands) {
+			if (firstOperand) {
+				firstOperand = false;
+				continue;
+			}
 
 			// subtracts each operand one after the other from the first operand element, so
 			// it can be returned as the sum
