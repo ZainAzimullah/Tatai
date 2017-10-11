@@ -3,6 +3,7 @@ package tatai.view.controllers.mainMenuControllers;
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
+import tatai.Game;
 import tatai.Practice;
 import tatai.view.MainMenuLoader;
 import tatai.view.controllers.SceneController;
@@ -16,9 +17,15 @@ public class MainMenuController extends SceneController {
 		_stage = stage;
 	}
 
-	// Create game instance and start game
 	@FXML
 	private void play() {
+		Game game = Game.getInitialInstance(_stage);
+		game.selectLevel();
+	}
+
+	// Create game instance and start game
+	@FXML
+	private void practice() {
 		Practice practice = Practice.getInitialInstance(_stage);
 		practice.startGame();
 	}
