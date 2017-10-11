@@ -5,6 +5,8 @@ import tatai.exceptions.OutOfItemsException;
 import tatai.expression.Operand;
 import tatai.expressionModel.ExpressionModel;
 import tatai.expressionModel.ExpressionModelFactory;
+import tatai.score.Result;
+import tatai.score.Score;
 import tatai.util.Difficulty;
 import tatai.view.MainMenuLoader;
 import tatai.view.SceneLoader;
@@ -18,6 +20,7 @@ public class Game {
     private SceneLoader _loader;
 
     private Difficulty _difficulty;
+    private Score _score;
 
     public Operand getCurrentQuestion() {
         return _currentQuestion;
@@ -61,6 +64,7 @@ public class Game {
     public void setDifficulty(Difficulty difficulty) {
         _difficulty = difficulty;
         _model = ExpressionModelFactory.getExpressionModel(difficulty, NUM_OF_QUESTIONS);
+        _score = new Score(_model);
     }
 
     public void question() {
@@ -73,6 +77,19 @@ public class Game {
         }
     }
 
+    public void skip() {
+        Result result = new Result();
+        result.skip();
+        _score.updateResult(_model.getCurrentQuestionNumber(), result);
+    }
+
+    public void recordAgain() {
+        _loader.loadScene("Question.fxml");
+    }
+
+    public void finishedRecording() {
+        _loader.loadScene("FinishedRecording.fxml");
+    }
 
     public void endOfLevel() {
         System.out.println("end of level");
