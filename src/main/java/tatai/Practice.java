@@ -108,7 +108,7 @@ public class Practice {
 	// Start the game
 	public void startGame() {
 		_loader = new SceneLoader(_stage);
-		_loader.loadScene("ChooseLevel.fxml");
+		_loader.loadScene("ChoosePracticeLevel.fxml");
 	}
 	
 	// Create the number list which user will be tested on.
@@ -142,13 +142,13 @@ public class Practice {
 		
 		_questionNumber = _score.getNextUnattemptedQuestionNumber();
 		_currentNumber = _numbers.getCurrentMaoriNumber();
-		_loader.loadScene("Record.fxml");
+		_loader.loadScene("PracticeRecord.fxml");
 	}
 	
 	// Redo recording
 	public void rerecord() {
 		_currentNumber = _numbers.getCurrentMaoriNumber();;
-		_loader.loadScene("Record.fxml");
+		_loader.loadScene("PracticeRecord.fxml");
 	}
 	
 	// Load a scene for the user to rerecord, playback, or submit
@@ -186,21 +186,21 @@ public class Practice {
 	
 	// Load the Correct scene
 	private void showCorrect() {
-		_loader.loadScene("Correct.fxml");
+		_loader.loadScene("PracticeCorrect.fxml");
 	}
 	
 	// Load the Incorrect scene
 	private void showIncorrect() {
-		_loader.loadScene("Incorrect.fxml");
+		_loader.loadScene("PracticeIncorrect.fxml");
 	}
 	
 	// Load the Failed scene
 	private void showFailed() {
-		_loader.loadScene("Failed.fxml");
+		_loader.loadScene("PracticeFailed.fxml");
 	}
 	
 	// Load the End Of PracticeLevel scene
 	public void endOfLevel() {
-		_loader.loadScene("EndOfLevel.fxml");
+		_loader.loadScene("PracticeEndOfLevel.fxml");
 	}
 }
