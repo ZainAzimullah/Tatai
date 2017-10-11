@@ -93,8 +93,15 @@ public class Game {
     }
 
     public void checkAnswer() {
+        // TESTING ONLY
         try {
-            if (_speech.equals(_currentQuestion.getMaoriResult())) {
+            _speech = _currentQuestion.getMaoriResult().toString();
+        } catch (ResultOutOfRangeException e) {
+            e.printStackTrace();
+        }
+
+        try {
+            if (_speech.equals(_currentQuestion.getMaoriResult().toString())) {
                 _result.addCorrect();
                 _score.updateResult(_model.getCurrentQuestionNumber(), _result);
                 _loader.loadScene("Correct.fxml");
