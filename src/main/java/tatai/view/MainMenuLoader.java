@@ -13,12 +13,10 @@ import tatai.view.controllers.mainMenuControllers.MainMenuController;
  * SceneLoader should be used.
  */
 public class MainMenuLoader extends SceneLoader {
-	
+
 	public MainMenuLoader(Stage stage) {
 		super(stage);
 	}
-	
-	public MainMenuLoader() {}
 	
 	/*
 	 * This is a hook method that will be called from SceneLoader

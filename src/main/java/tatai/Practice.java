@@ -107,7 +107,7 @@ public class Practice {
 	
 	// Start the game
 	public void startGame() {
-		_loader = new SceneLoader();
+		_loader = new SceneLoader(_stage);
 		_loader.loadScene("ChooseLevel.fxml");
 	}
 	
@@ -123,7 +123,7 @@ public class Practice {
 	
 	// Returns to the main menu
 	public void returnToMainMenu() {
-		MainMenuLoader loader = new MainMenuLoader();
+		MainMenuLoader loader = new MainMenuLoader(_stage);
 		loader.loadScene("MainMenu.fxml");
 	}
 	

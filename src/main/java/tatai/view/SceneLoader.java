@@ -22,12 +22,6 @@ public class SceneLoader {
 		_stage = stage;
 	}
 	
-	// Assume that the Practice is being played if no stage
-	// was given.
-	public SceneLoader() {
-		_stage = Practice.getInstance().getStage();
-	}
-	
 	// Load the scene.  This is a template method.
 	public final void loadScene(String filename) {
 		
