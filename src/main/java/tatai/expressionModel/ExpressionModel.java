@@ -28,6 +28,10 @@ public abstract class ExpressionModel {
         return _expressions.get(questionNumber);
     }
 
+    public void reset() {
+        questionNumber = -1;
+    }
+
     public int getCurrentQuestionNumber() {
         return questionNumber + 1;
     }

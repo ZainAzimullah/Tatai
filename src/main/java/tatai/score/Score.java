@@ -23,6 +23,8 @@ public class Score {
             } catch (OutOfItemsException e) {
                 e.printStackTrace();
             }
+
+            model.reset();
         }
     }
 
