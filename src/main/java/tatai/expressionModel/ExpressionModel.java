@@ -52,8 +52,10 @@ public abstract class ExpressionModel {
     }
 
     public void debug() {
+        int i = 1;
         for (Operand operand: _expressions) {
-            System.out.println(operand);
+            System.out.println(i + ": " + operand);
+            i++;
         }
     }
 }

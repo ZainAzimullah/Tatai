@@ -1,6 +1,7 @@
 package tatai.expressionModel;
 
 import tatai.exceptions.ResultOutOfRangeException;
+import tatai.expression.Multiply;
 import tatai.expression.Operator;
 import tatai.numberModel.MaoriNumber;
 
@@ -12,7 +13,7 @@ public class HardExpressionModel extends ExpressionModel {
             Operator op1, op2, op3;
             MaoriNumber num1, num2, num3, num4;
 
-            op1 = OperatorFactory.getOperator(generateRandomOperation());
+            op1 = new Multiply();
             op2 = OperatorFactory.getOperator(generateRandomOperation());
             op3 = OperatorFactory.getOperator(generateRandomOperation());
 
@@ -22,8 +23,8 @@ public class HardExpressionModel extends ExpressionModel {
             num4 = generateRandomMaoriNumber(99);
 
             op1.addAllOperands(num1, num2);
-            op2.addAllOperands(num3, num4);
-            op3.addAllOperands(op1, op2);
+            op2.addAllOperands(op1, num3);
+            op3.addAllOperands(op2, num4);
 
             try {
                 op3.getMaoriResult();
