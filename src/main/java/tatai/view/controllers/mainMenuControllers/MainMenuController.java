@@ -37,12 +37,6 @@ public class MainMenuController extends SceneController {
 	}
 	
 	@FXML
-	private void howToPlay() {
-		MainMenuLoader loader = new MainMenuLoader(_stage);
-		loader.loadScene("HowToPlay.fxml");
-	}
-	
-	@FXML
 	private void about() {
 		MainMenuLoader loader = new MainMenuLoader(_stage);
 		loader.loadScene("About.fxml");

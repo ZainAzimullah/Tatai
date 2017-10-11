@@ -1,8 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.gameControllers.SelectLevelController">
-
+<AnchorPane prefHeight="422.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.gameControllers.SelectLevelController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="413.0" prefWidth="600.0" spacing="20.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label style="-fx-text-fill: white;" text="Choose a Level">
+               <font>
+                  <Font name="FreeMono Bold" size="28.0" />
+               </font>
+            </Label>
+            <JFXButton onAction="#easy" style="-fx-background-color: cyan; -fx-background-radius: 30; -fx-min-width: 250;" text="Easy">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#medium" style="-fx-background-color: cyan; -fx-background-radius: 30; -fx-min-width: 250;" text="Medium">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#hard" style="-fx-background-color: cyan; -fx-background-radius: 30; -fx-min-width: 250;" text="Hard">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton style="-fx-background-color: cyan; -fx-background-radius: 30; -fx-min-width: 250;" text="Create Custom Level">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton style="-fx-background-color: cyan; -fx-background-radius: 30; -fx-min-width: 250;" text="Use Saved Level">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#returnToMainMenu" style="-fx-background-color: cyan; -fx-background-radius: 30; -fx-min-width: 250;" text="Return">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+   </children>
 </AnchorPane>
