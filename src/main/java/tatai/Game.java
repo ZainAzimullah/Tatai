@@ -21,6 +21,7 @@ public class Game {
 
     private Difficulty _difficulty;
     private Score _score;
+    private String _speech;
 
     public Operand getCurrentQuestion() {
         return _currentQuestion;
@@ -81,6 +82,14 @@ public class Game {
         Result result = new Result();
         result.skip();
         _score.updateResult(_model.getCurrentQuestionNumber(), result);
+    }
+
+    public void storeSpeech(String speech) {
+        _speech = speech;
+    }
+
+    public void checkAnswer() {
+
     }
 
     public void recordAgain() {
