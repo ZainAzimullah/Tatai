@@ -7,7 +7,6 @@ import javafx.scene.control.Label;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import tatai.Game;
-import tatai.Practice;
 import tatai.exceptions.SpeechNotFoundException;
 import tatai.util.VoiceRecogniser;
 import tatai.view.controllers.SceneController;

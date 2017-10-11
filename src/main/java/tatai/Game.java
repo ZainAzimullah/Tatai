@@ -2,6 +2,7 @@ package tatai;
 
 import javafx.stage.Stage;
 import tatai.exceptions.OutOfItemsException;
+import tatai.exceptions.ResultOutOfRangeException;
 import tatai.expression.Operand;
 import tatai.expressionModel.ExpressionModel;
 import tatai.expressionModel.ExpressionModelFactory;
@@ -22,6 +23,8 @@ public class Game {
     private Difficulty _difficulty;
     private Score _score;
     private String _speech;
+    private Result _result;
+
 
     public Operand getCurrentQuestion() {
         return _currentQuestion;
@@ -69,6 +72,7 @@ public class Game {
     }
 
     public void question() {
+        _result = new Result();
         try {
             _currentQuestion = _model.getNext();
             _loader.loadScene("Question.fxml");
@@ -79,9 +83,9 @@ public class Game {
     }
 
     public void skip() {
-        Result result = new Result();
-        result.skip();
-        _score.updateResult(_model.getCurrentQuestionNumber(), result);
+        _result.skip();
+        _score.updateResult(_model.getCurrentQuestionNumber(), _result);
+        question();
     }
 
     public void storeSpeech(String speech) {
@@ -89,7 +93,23 @@ public class Game {
     }
 
     public void checkAnswer() {
+        try {
+            if (_speech.equals(_currentQuestion.getMaoriResult())) {
+                _result.addCorrect();
+                _score.updateResult(_model.getCurrentQuestionNumber(), _result);
+                _loader.loadScene("Correct.fxml");
+            } else {
+                _result.addMistake();
+                _score.updateResult(_model.getCurrentQuestionNumber(), _result);
+                _loader.loadScene("Incorrect.fxml");
+            }
+        } catch (ResultOutOfRangeException e) {
+            e.printStackTrace();
+        }
+    }
 
+    public int getErrorCount() {
+        return _result.getErrorCount();
     }
 
     public void recordAgain() {

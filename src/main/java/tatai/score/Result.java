@@ -20,6 +20,7 @@ public class Result {
     public void addMistake() {
         _numAttempts++;
         _numMistakes++;
+        _state = State.INCORRECT;
     }
 
     public void addCorrect() {
