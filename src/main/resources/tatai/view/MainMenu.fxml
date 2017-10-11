@@ -24,27 +24,27 @@
                <top>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
                      <children>
-                        <JFXButton buttonType="RAISED" onAction="#play" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Play">
+                        <JFXButton buttonType="RAISED" onAction="#play" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Play" textFill="WHITE">
                            <font>
                               <Font size="25.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton buttonType="RAISED" onAction="#practice" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Practice">
+                        <JFXButton buttonType="RAISED" onAction="#practice" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Practice" textFill="WHITE">
                            <font>
                               <Font size="25.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton buttonType="RAISED" onAction="#scores" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Scores">
+                        <JFXButton buttonType="RAISED" onAction="#scores" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Scores" textFill="WHITE">
                            <font>
                               <Font size="25.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton buttonType="RAISED" onAction="#about" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="About">
+                        <JFXButton buttonType="RAISED" onAction="#about" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="About" textFill="WHITE">
                            <font>
                               <Font size="25.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton buttonType="RAISED" onAction="#quit" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Quit">
+                        <JFXButton buttonType="RAISED" onAction="#quit" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Quit" textFill="WHITE">
                            <font>
                               <Font size="25.0" />
                            </font>
