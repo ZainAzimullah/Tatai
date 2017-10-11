@@ -41,7 +41,6 @@ public abstract class Operator extends Operand {
 
 		// Iterate through each suboperand
 		for (Operand operand: _operands) {
-			out += " ";
 
 			// Get number if operand is a number, or get suboperand string
 			if (operand instanceof MaoriNumber) {
@@ -53,11 +52,11 @@ public abstract class Operator extends Operand {
 			}
 
 			// Include the operator in the String (hook call)
-			out += " " + operatorString();
+			out += " " + operatorString() + " ";
 		}
 
 		// Trim off extra operand
-		out = out.substring(0, out.length() - 1);
+		out = out.substring(0, out.length() - 3);
 		out += ")";
 
 		return out;
