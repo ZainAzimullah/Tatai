@@ -4,7 +4,7 @@ import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import tatai.expression.Operand;
 
-public class ResultWrapper {
+public class FinalResult {
 
     private StringProperty _state;
 
@@ -41,10 +41,10 @@ public class ResultWrapper {
     private StringProperty _expression;
 
 
-    public ResultWrapper(int questionNumber, Operand expression, Result result) {
+    public FinalResult(int questionNumber, Operand question, Result result) {
         _state = new SimpleStringProperty(result.getState().toString());
         _numMistakes = new SimpleStringProperty(Integer.toString(result.getErrorCount()));
         _questionNumber = new SimpleStringProperty(Integer.toString(questionNumber));
-        _expression = new SimpleStringProperty(expression.toString());
+        _expression = new SimpleStringProperty(question.toString());
     }
 }

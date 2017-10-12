@@ -7,6 +7,7 @@ import tatai.expression.Operand;
 import tatai.expressionModel.ExpressionModel;
 import tatai.expressionModel.ExpressionModelFactory;
 import tatai.score.Result;
+import tatai.score.FinalResult;
 import tatai.score.Score;
 import tatai.util.Difficulty;
 import tatai.view.MainMenuLoader;
@@ -137,8 +138,21 @@ public class Game {
     }
 
     public void endOfLevel() {
+        _model.reset();
 
-        System.out.println("end of level");
+        while (true) {
+            try {
+                Operand question = _model.getNext();
+                int questionNumber = _model.getCurrentQuestionNumber();
+                FinalResult result = new FinalResult(questionNumber, question,
+                        _score.getResultFor(questionNumber));
+
+                _score.addFinalResult(result);
+            } catch (OutOfItemsException e) {
+                break;
+            }
+
+        }
     }
 
     public Stage getStage() {
