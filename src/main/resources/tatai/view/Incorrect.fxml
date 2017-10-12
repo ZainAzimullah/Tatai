@@ -25,7 +25,7 @@
             <Font name="Noto Sans CJK JP Black" size="18.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="249.0" layoutY="299.0" text="Which is not the correct answer to :" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="232.5">
+      <Label fx:id="_message" alignment="TOP_CENTER" layoutX="249.0" layoutY="299.0" text="Which is not the correct answer to :" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="232.5">
          <font>
             <Font name="Noto Sans CJK JP Black" size="18.0" />
          </font>

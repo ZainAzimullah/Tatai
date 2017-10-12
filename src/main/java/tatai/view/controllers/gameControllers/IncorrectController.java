@@ -5,9 +5,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import tatai.Game;
+import tatai.exceptions.ResultOutOfRangeException;
 import tatai.view.controllers.SceneController;
 
 public class IncorrectController extends SceneController {
+
+    @FXML
+    private Label _message;
 
     @FXML
     private Label _speech;
@@ -50,6 +54,12 @@ public class IncorrectController extends SceneController {
         if (attemptsRemaining == 0) {
             _retryButton.setDisable(true);
             _skipButton.setText("Next");
+            _message.setText("The correct answer is:");
+            try {
+                _question.setText(Game.getInstance().getCurrentQuestion().getMaoriResult().toString());
+            } catch (ResultOutOfRangeException e) {
+                e.printStackTrace();
+            }
         }
     }
 
