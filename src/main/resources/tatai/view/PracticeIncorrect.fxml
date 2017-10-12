@@ -43,7 +43,7 @@
             <Image url="@../../images/incorrect.png" />
          </image>
       </ImageView>
-      <Label layoutX="382.0" layoutY="97.0" text="Incorrect!" textFill="#dd0b0b" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="8.0">
+      <Label alignment="CENTER" layoutX="382.0" layoutY="97.0" text="Almost!" textAlignment="CENTER" textFill="#dd0b0b" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="8.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="40.0" />
          </font>
@@ -63,7 +63,7 @@
             <Font name="Noto Sans CJK JP Bold" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="282.0" layoutY="300.0" text="This is                the Maori number for" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="242.5">
+      <Label layoutX="282.0" layoutY="300.0" text="This is                the Māori number for" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="242.5">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="15.0" />
          </font>
