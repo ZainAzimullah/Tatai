@@ -1,7 +1,7 @@
 package tatai.score;
 
 public class Result {
-    private enum State {
+    enum State {
         CORRECT,
         INCORRECT,
         UNATTEMPTED,
@@ -11,6 +11,11 @@ public class Result {
 
     private int _numAttempts = 0;
     private int _numMistakes = 0;
+
+    public State getState() {
+        return _state;
+    }
+
     private State _state;
 
     public Result() {

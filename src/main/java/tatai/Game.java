@@ -137,6 +137,7 @@ public class Game {
     }
 
     public void endOfLevel() {
+
         System.out.println("end of level");
     }
 
