@@ -31,7 +31,13 @@ public class IncorrectController extends SceneController {
 
     @FXML
     private void skip() {
-        Game.getInstance().skip();
+        int attemptsRemaining = Game.MAX_ATTEMPTS - Game.getInstance().getErrorCount();
+
+        if (attemptsRemaining == 0) {
+            Game.getInstance().newQuestion();
+        } else {
+            Game.getInstance().skip();
+        }
     }
 
     @FXML
