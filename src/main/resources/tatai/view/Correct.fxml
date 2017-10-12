@@ -30,16 +30,16 @@
             <Font name="Noto Sans CJK JP Black" size="18.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cccccc" height="60.0" layoutX="50.0" layoutY="230.0" stroke="BLACK" strokeType="INSIDE" width="500.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="220.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cccccc" height="60.0" layoutX="50.0" layoutY="310.0" stroke="BLACK" strokeType="INSIDE" width="500.0" />
-      <Label alignment="TOP_CENTER" layoutX="235.0" layoutY="235.0" text="Equation" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0">
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cccccc" height="60.0" layoutX="50.0" layoutY="230.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="500.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="220.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cccccc" height="60.0" layoutX="50.0" layoutY="310.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="500.0" AnchorPane.topAnchor="310.0" />
+      <Label alignment="CENTER" layoutX="235.0" layoutY="235.0" prefHeight="60.0" text="Equation" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="220.0">
          <font>
-            <Font size="20.0" />
+            <Font name="Noto Sans CJK JP Black" size="25.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="261.0" layoutY="325.0" text="Māori #" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0">
+      <Label alignment="CENTER" layoutX="261.0" layoutY="325.0" prefHeight="60.0" text="Māori #" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="310.0">
          <font>
-            <Font size="20.0" />
+            <Font name="Noto Sans CJK JP Black" size="25.0" />
          </font>
       </Label>
       <ImageView layoutX="250.0" layoutY="36.0" AnchorPane.topAnchor="28.5">

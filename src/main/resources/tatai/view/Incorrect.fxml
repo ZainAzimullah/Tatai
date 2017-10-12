@@ -32,17 +32,17 @@
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cccccc" height="60.0" layoutX="50.0" layoutY="230.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="500.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="170.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cccccc" height="60.0" layoutX="50.0" layoutY="295.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="500.0" AnchorPane.topAnchor="260.0" />
-      <Label alignment="TOP_CENTER" layoutX="55.0" layoutY="185.0" text="Māori #" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0">
+      <Label alignment="CENTER" layoutX="55.0" layoutY="185.0" prefHeight="60.0" text="Māori #" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="170.0">
          <font>
-            <Font size="20.0" />
+            <Font name="Noto Sans CJK JP Black" size="25.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="55.0" layoutY="275.0" text="Equation" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0">
+      <Label alignment="CENTER" layoutX="54.0" layoutY="276.0" prefHeight="60.0" text="Equation" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="56.0" AnchorPane.topAnchor="260.0">
          <font>
-            <Font size="20.0" />
+            <Font name="Noto Sans CJK JP Black" size="25.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="221.0" layoutY="98.0" prefHeight="64.0" prefWidth="334.0" text="But that was not the right answer in Māori" textAlignment="CENTER" wrapText="true" AnchorPane.topAnchor="70.0">
+      <Label alignment="TOP_CENTER" layoutX="221.0" layoutY="98.0" prefHeight="64.0" prefWidth="307.0" text="But that was not the right answer in Māori" textAlignment="CENTER" wrapText="true" AnchorPane.topAnchor="70.0">
          <font>
             <Font name="Noto Sans CJK JP Black" size="20.0" />
          </font>
@@ -54,7 +54,7 @@
       </Label>
       <ImageView layoutX="98.0" layoutY="23.0" AnchorPane.leftAnchor="100.5" AnchorPane.topAnchor="23.0">
          <image>
-            <Image url="@../../images/incorrect.png" />
+            <Image url="@../../images/Error.png" />
          </image>
       </ImageView>
       <Label alignment="CENTER" layoutX="336.0" layoutY="323.0" prefHeight="60.0" prefWidth="58.0" text="#" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="375.0" AnchorPane.topAnchor="325.0">
