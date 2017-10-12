@@ -25,7 +25,7 @@
             <AnchorPane prefHeight="250.0" prefWidth="600.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e0e0" height="60.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="420.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="105.0" />
-                  <Label fx:id="_equation" alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" text="Equation" textAlignment="CENTER" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="105.0">
+                  <Label fx:id="_equation" alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" text="Equation" textAlignment="CENTER" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="105.0">
                      <font>
                         <Font name="Noto Sans CJK JP Bold" size="30.0" />
                      </font>
