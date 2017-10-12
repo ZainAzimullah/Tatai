@@ -24,8 +24,8 @@
          <children>
             <AnchorPane prefHeight="250.0" prefWidth="600.0">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e0e0" height="60.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="550.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="105.0" />
-                  <Label fx:id="_equation" alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" text="Equation" textAlignment="CENTER" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="105.0">
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e0e0e0" height="60.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="420.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0" AnchorPane.topAnchor="105.0" />
+                  <Label fx:id="_equation" alignment="CENTER" contentDisplay="CENTER" prefHeight="60.0" text="Equation" textAlignment="CENTER" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="105.0">
                      <font>
                         <Font name="Noto Sans CJK JP Bold" size="30.0" />
                      </font>
@@ -46,6 +46,16 @@
                      </font>
                   </Label>
                   <JFXButton style="-fx-background-color: white; -fx-background-radius: 30;" text="Help" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="15.0" />
+                  <Label alignment="TOP_CENTER" layoutX="172.0" layoutY="14.0" text="Question          / 10" textFill="#d4cf3d" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font name="Noto Sans CJK JP Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" layoutX="316.0" layoutY="18.0" prefHeight="31.0" prefWidth="34.0" text="#" textFill="#d4cf3d" AnchorPane.rightAnchor="247.0" AnchorPane.topAnchor="15.0">
+                     <font>
+                        <Font name="Noto Sans CJK JP Bold" size="20.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
             <AnchorPane prefHeight="35.0" prefWidth="600.0">
