@@ -55,7 +55,7 @@
             </BorderPane>
          </children>
       </AnchorPane>
-      <Label alignment="TOP_CENTER" layoutX="252.0" layoutY="60.0" text="Welcome to Tatai!" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+      <Label alignment="TOP_CENTER" layoutX="252.0" layoutY="60.0" text="Welcome to Tātai!" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="50.0" />
          </font>
@@ -64,10 +64,9 @@
                <stops>
                   <Stop color="RED" />
                   <Stop color="RED" offset="0.3925925925925926" />
-                  <Stop color="WHITE" offset="0.503703703703704" />
-                  <Stop color="WHITE" offset="0.5892592592592591" />
-                  <Stop color="BLACK" offset="0.677777777777778" />
-                  <Stop color="BLACK" offset="1.0" />
+                  <Stop color="WHITE" offset="0.6333333333333336" />
+                  <Stop color="WHITE" offset="0.8374074074074073" />
+                  <Stop color="WHITE" offset="1.0" />
                </stops>
             </LinearGradient>
          </textFill>

@@ -27,7 +27,7 @@
             <Font name="Noto Sans CJK JP Bold" size="30.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="300.0" layoutY="132.0" text="in Maori" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="215.0">
+      <Label alignment="TOP_CENTER" layoutX="300.0" layoutY="132.0" text="in Māori" AnchorPane.rightAnchor="133.0" AnchorPane.topAnchor="215.0">
          <font>
             <Font name="Noto Sans CJK JP Black" size="15.0" />
          </font>

@@ -61,7 +61,7 @@
                   <Insets top="15.0" />
                </VBox.margin>
             </Label>
-            <Label text=" to record yourself saying the number in Maori">
+            <Label text=" to record yourself saying the number in Māori">
                <VBox.margin>
                   <Insets bottom="15.0" />
                </VBox.margin>
