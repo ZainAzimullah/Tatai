@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -20,20 +17,17 @@
       </ImageView>
       <Label alignment="TOP_CENTER" layoutX="186.0" layoutY="132.0" prefHeight="50.0" prefWidth="400.0" text="Correct!!" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="135.0">
          <font>
-            <Font name="Segoe UI Black" size="40.0" />
+            <Font name="Noto Sans CJK JP Black" size="40.0" />
          </font>
       </Label>
-      <Button layoutX="512.0" layoutY="26.0" mnemonicParsing="false" text="❓" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="10.0" />
-      <Button layoutX="325.0" layoutY="384.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="⏩" AnchorPane.leftAnchor="350.0" />
-      <Button layoutX="170.0" layoutY="384.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="130.0" text="Return to Main Menu" AnchorPane.leftAnchor="200.0" />
       <Label alignment="TOP_CENTER" layoutX="235.0" layoutY="200.0" text="The answer for :" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="190.0">
          <font>
-            <Font size="20.0" />
+            <Font name="Noto Sans CJK JP Black" size="18.0" />
          </font>
       </Label>
       <Label alignment="TOP_CENTER" layoutX="249.0" layoutY="299.0" text="In Māori is :" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="280.0">
          <font>
-            <Font size="20.0" />
+            <Font name="Noto Sans CJK JP Black" size="18.0" />
          </font>
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cccccc" height="60.0" layoutX="50.0" layoutY="230.0" stroke="BLACK" strokeType="INSIDE" width="500.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="220.0" />
@@ -48,22 +42,17 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="110.0" layoutX="238.0" layoutY="34.0" stroke="#797979" strokeType="INSIDE" width="110.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="25.0">
-         <effect>
-            <Lighting>
-               <bumpInput>
-                  <Shadow />
-               </bumpInput>
-               <light>
-                  <Light.Distant />
-               </light>
-            </Lighting>
-         </effect>
-      </Rectangle>
       <ImageView layoutX="250.0" layoutY="36.0" AnchorPane.topAnchor="28.5">
          <image>
             <Image url="@../../images/correct.png" />
          </image>
       </ImageView>
+      <JFXButton buttonType="RAISED" layoutX="234.0" layoutY="396.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Home" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="385.0">
+         <font>
+            <Font name="Noto Sans CJK JP Black" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="244.0" layoutY="406.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="⏩" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="385.0" />
+      <JFXButton buttonType="RAISED" layoutX="490.0" layoutY="15.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="❓" AnchorPane.leftAnchor="550.0" AnchorPane.topAnchor="15.0" />
    </children>
 </AnchorPane>
