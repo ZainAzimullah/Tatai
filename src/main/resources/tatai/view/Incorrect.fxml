@@ -67,12 +67,12 @@
             <Font name="Noto Sans CJK JP Black" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="_retryButton" alignment="CENTER" buttonType="RAISED" layoutX="221.0" layoutY="406.0" onAction="#retry" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="🔁" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="385.0">
+      <JFXButton fx:id="_retryButton" alignment="CENTER" buttonType="RAISED" layoutX="221.0" layoutY="406.0" onAction="#retry" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Retry" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="385.0">
          <font>
             <Font name="Noto Sans CJK JP Black" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="_skipButton" alignment="CENTER" buttonType="RAISED" layoutX="231.0" layoutY="416.0" onAction="#skip" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="⏩" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="385.0">
+      <JFXButton fx:id="_skipButton" alignment="CENTER" buttonType="RAISED" layoutX="231.0" layoutY="416.0" onAction="#skip" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Skip" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="385.0">
          <font>
             <Font name="Noto Sans CJK JP Black" size="15.0" />
          </font>

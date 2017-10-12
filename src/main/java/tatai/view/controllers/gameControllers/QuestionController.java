@@ -26,7 +26,11 @@ public class QuestionController extends SceneController {
     private JFXButton _button;
 
     @FXML
+    private Label _questionNumber;
+
+    @FXML
     private void initialize() {
+        _questionNumber.setText(Integer.toString(Game.getInstance().getCurrentQuestionNumber()));
         _equation.setText(Game.getInstance().getCurrentQuestion().toString() + " = ?");
     }
 

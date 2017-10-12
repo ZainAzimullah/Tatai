@@ -43,6 +43,11 @@ public class Game {
     }
 
     private Operand _currentQuestion;
+    private int _currentQuestionNumber;
+
+    public int getCurrentQuestionNumber() {
+        return _currentQuestionNumber;
+    }
 
     private ExpressionModel _model;
 
@@ -89,6 +94,7 @@ public class Game {
 
         try {
             _currentQuestion = _model.getNext();
+            _currentQuestionNumber = _model.getCurrentQuestionNumber();
             record();
 
         } catch (OutOfItemsException e) {

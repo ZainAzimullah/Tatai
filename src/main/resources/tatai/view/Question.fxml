@@ -30,7 +30,7 @@
                         <Font name="Noto Sans CJK JP Bold" size="30.0" />
                      </font>
                   </Label>
-                  <Label alignment="TOP_CENTER" layoutX="282.0" layoutY="32.0" text="What is the answer to" textFill="#e5e5e5" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="55.0">
+                  <Label alignment="TOP_CENTER" layoutX="282.0" layoutY="32.0" text="Say the answer to:" textFill="#e5e5e5" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="55.0">
                      <font>
                         <Font name="Noto Sans CJK JP Bold" size="20.0" />
                      </font>
@@ -51,7 +51,7 @@
                         <Font name="Noto Sans CJK JP Bold" size="20.0" />
                      </font>
                   </Label>
-                  <Label alignment="TOP_CENTER" layoutX="316.0" layoutY="18.0" prefHeight="31.0" prefWidth="34.0" text="#" textFill="#d4cf3d" AnchorPane.rightAnchor="247.0" AnchorPane.topAnchor="15.0">
+                  <Label fx:id="_questionNumber" alignment="TOP_CENTER" layoutX="316.0" layoutY="18.0" prefHeight="31.0" prefWidth="34.0" text="#" textFill="#d4cf3d" AnchorPane.rightAnchor="247.0" AnchorPane.topAnchor="15.0">
                      <font>
                         <Font name="Noto Sans CJK JP Bold" size="20.0" />
                      </font>
