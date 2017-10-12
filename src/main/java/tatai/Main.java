@@ -11,6 +11,12 @@ public class Main extends Application {
 	// Launch application
 	@Override
 	public void start(Stage stage) throws IOException {
+		File scores = new File(System.getProperty("user.dir") + "/.scores.txt");
+		File lists = new File(System.getProperty("user.dir") + "/.questionLists.txt");
+
+		scores.createNewFile();
+		lists.createNewFile();
+
 		// Set unresizable
 		stage.setResizable(false);
 		
