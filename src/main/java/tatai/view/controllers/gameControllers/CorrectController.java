@@ -8,7 +8,7 @@ public class CorrectController extends SceneController {
 
     @FXML
     private void next() {
-
+        Game.getInstance().question();
     }
 
     @FXML
