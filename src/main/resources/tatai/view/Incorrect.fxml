@@ -42,7 +42,7 @@
             <Font name="Noto Sans CJK JP Black" size="25.0" />
          </font>
       </Label>
-      <Label alignment="TOP_CENTER" layoutX="221.0" layoutY="98.0" prefHeight="64.0" prefWidth="307.0" text="But that was not the right answer in Māori" textAlignment="CENTER" wrapText="true" AnchorPane.topAnchor="70.0">
+      <Label alignment="CENTER" layoutX="221.0" layoutY="98.0" prefHeight="64.0" prefWidth="307.0" text="But that was not the right answer in Māori" textAlignment="CENTER" wrapText="true" AnchorPane.topAnchor="75.0">
          <font>
             <Font name="Noto Sans CJK JP Black" size="20.0" />
          </font>
