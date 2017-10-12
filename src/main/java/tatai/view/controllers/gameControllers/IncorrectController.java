@@ -39,7 +39,8 @@ public class IncorrectController extends SceneController {
         _question.setText(Game.getInstance().getCurrentQuestion().toString());
         _speech.setText(Game.getInstance().getSpeech());
         int attemptsRemaining = Game.MAX_ATTEMPTS - Game.getInstance().getErrorCount();
-
+        _attemptsRemaining.setText(Integer.toString(attemptsRemaining));
+        
         if (attemptsRemaining == 0) {
             _retryButton.setDisable(true);
             _skipButton.setText("Next");

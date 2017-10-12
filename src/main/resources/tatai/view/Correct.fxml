@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.gameControllers.CorrectController">
    <children>
       <ImageView blendMode="MULTIPLY" fitHeight="460.0" fitWidth="600.0">
          <image>
@@ -32,12 +32,12 @@
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cccccc" height="60.0" layoutX="50.0" layoutY="230.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="500.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="220.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cccccc" height="60.0" layoutX="50.0" layoutY="310.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="500.0" AnchorPane.topAnchor="310.0" />
-      <Label alignment="CENTER" layoutX="235.0" layoutY="235.0" prefHeight="60.0" text="Equation" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="220.0">
+      <Label fx:id="_question" alignment="CENTER" layoutX="235.0" layoutY="235.0" prefHeight="60.0" text="Equation" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="220.0">
          <font>
             <Font name="Noto Sans CJK JP Black" size="25.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="261.0" layoutY="325.0" prefHeight="60.0" text="Māori #" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="310.0">
+      <Label fx:id="_speech" alignment="CENTER" layoutX="261.0" layoutY="325.0" prefHeight="60.0" text="Māori #" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="310.0">
          <font>
             <Font name="Noto Sans CJK JP Black" size="25.0" />
          </font>
@@ -47,12 +47,12 @@
             <Image url="@../../images/correct.png" />
          </image>
       </ImageView>
-      <JFXButton buttonType="RAISED" layoutX="234.0" layoutY="396.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Home" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="385.0">
+      <JFXButton buttonType="RAISED" layoutX="234.0" layoutY="396.0" onAction="#returnToMainMenu" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Home" AnchorPane.leftAnchor="220.0" AnchorPane.topAnchor="385.0">
          <font>
             <Font name="Noto Sans CJK JP Black" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="244.0" layoutY="406.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="⏩" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="385.0" />
+      <JFXButton buttonType="RAISED" layoutX="244.0" layoutY="406.0" onAction="#next" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="⏩" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="385.0" />
       <JFXButton buttonType="RAISED" layoutX="490.0" layoutY="15.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="❓" AnchorPane.leftAnchor="550.0" AnchorPane.topAnchor="15.0" />
    </children>
 </AnchorPane>

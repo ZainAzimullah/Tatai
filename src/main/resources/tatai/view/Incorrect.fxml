@@ -8,7 +8,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.gameControllers.IncorrectController">
    <children>
       <ImageView blendMode="MULTIPLY" fitHeight="460.0" fitWidth="600.0">
          <image>
@@ -32,12 +32,12 @@
       </Label>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cccccc" height="60.0" layoutX="50.0" layoutY="230.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="500.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="170.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#cccccc" height="60.0" layoutX="50.0" layoutY="295.0" stroke="BLACK" strokeType="INSIDE" style="-fx-arc-height: 50; -fx-arc-width: 50;" width="500.0" AnchorPane.topAnchor="260.0" />
-      <Label alignment="CENTER" layoutX="55.0" layoutY="185.0" prefHeight="60.0" text="Māori #" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="170.0">
+      <Label fx:id="_speech" alignment="CENTER" layoutX="55.0" layoutY="185.0" prefHeight="60.0" text="Māori #" AnchorPane.leftAnchor="55.0" AnchorPane.rightAnchor="55.0" AnchorPane.topAnchor="170.0">
          <font>
             <Font name="Noto Sans CJK JP Black" size="25.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="54.0" layoutY="276.0" prefHeight="60.0" text="Equation" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="56.0" AnchorPane.topAnchor="260.0">
+      <Label fx:id="_question" alignment="CENTER" layoutX="54.0" layoutY="276.0" prefHeight="60.0" text="Equation" AnchorPane.leftAnchor="54.0" AnchorPane.rightAnchor="56.0" AnchorPane.topAnchor="260.0">
          <font>
             <Font name="Noto Sans CJK JP Black" size="25.0" />
          </font>
@@ -57,22 +57,22 @@
             <Image url="@../../images/Error.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="336.0" layoutY="323.0" prefHeight="60.0" prefWidth="58.0" text="#" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="375.0" AnchorPane.topAnchor="325.0">
+      <Label fx:id="_attemptsRemaining" alignment="CENTER" layoutX="336.0" layoutY="323.0" prefHeight="60.0" prefWidth="58.0" text="#" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="375.0" AnchorPane.topAnchor="325.0">
          <font>
             <Font name="System Bold" size="40.0" />
          </font>
       </Label>
-      <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="211.0" layoutY="396.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Home" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="385.0">
+      <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="211.0" layoutY="396.0" onAction="#returnToMainMenu" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Home" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="385.0">
          <font>
             <Font name="Noto Sans CJK JP Black" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="221.0" layoutY="406.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="🔁" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="385.0">
+      <JFXButton fx:id="_retryButton" alignment="CENTER" buttonType="RAISED" layoutX="221.0" layoutY="406.0" onAction="#retry" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="🔁" AnchorPane.leftAnchor="270.0" AnchorPane.topAnchor="385.0">
          <font>
             <Font name="Noto Sans CJK JP Black" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="231.0" layoutY="416.0" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="⏩" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="385.0">
+      <JFXButton fx:id="_skipButton" alignment="CENTER" buttonType="RAISED" layoutX="231.0" layoutY="416.0" onAction="#skip" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="⏩" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="385.0">
          <font>
             <Font name="Noto Sans CJK JP Black" size="15.0" />
          </font>
