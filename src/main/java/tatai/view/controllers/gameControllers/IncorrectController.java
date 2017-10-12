@@ -26,12 +26,12 @@ public class IncorrectController extends SceneController {
 
     @FXML
     private void retry() {
-
+        Game.getInstance().record();
     }
 
     @FXML
     private void skip() {
-
+        Game.getInstance().skip();
     }
 
     @FXML

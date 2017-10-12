@@ -77,8 +77,10 @@ public class Game {
         _score = new Score(_model);
     }
 
-    public void question() {
+    public void newQuestion() {
         _result = new Result();
+        _score.debug();
+
         try {
             _currentQuestion = _model.getNext();
             record();
@@ -92,12 +94,7 @@ public class Game {
         _result.skip();
         _score.updateResult(_model.getCurrentQuestionNumber(), _result);
 
-        try {
-            _currentQuestion = _model.getNext();
-        } catch (OutOfItemsException e) {
-            endOfLevel();
-        }
-        record();
+        newQuestion();
     }
 
     public void storeSpeech(String speech) {

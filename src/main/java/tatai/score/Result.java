@@ -35,4 +35,9 @@ public class Result {
     public int getErrorCount() {
         return _numMistakes;
     }
+
+    @Override
+    public String toString() {
+        return _state.toString() + " " + _numMistakes + _numAttempts;
+    }
 }
