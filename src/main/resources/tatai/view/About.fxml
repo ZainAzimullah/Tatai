@@ -43,7 +43,7 @@
       </VBox>
    </center>
    <bottom>
-      <JFXButton alignment="CENTER" buttonType="RAISED" prefHeight="40.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Return to Main Menu" textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
+      <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#returnToMainMenu" prefHeight="40.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Return to Main Menu" textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets bottom="50.0" />
          </BorderPane.margin>

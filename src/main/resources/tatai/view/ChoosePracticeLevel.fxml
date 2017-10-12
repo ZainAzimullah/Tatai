@@ -25,7 +25,7 @@
                         <Font name="Noto Sans CJK KR Black" size="22.0" />
                      </font>
                   </Button>
-                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="61.0" text="In easy mode only the Maori number for 1 to 9 will be tested" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="61.0" text="In easy mode only the Māori number for 1 to 9 will be tested" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
                      <font>
                         <Font name="Lato Heavy Italic" size="16.0" />
                      </font>
@@ -42,7 +42,7 @@
                         <Font name="Noto Sans CJK TC Black" size="22.0" />
                      </font>
                   </Button>
-                  <Label alignment="CENTER" contentDisplay="CENTER" text="In hard mode any Maori number from 1 to 99 can be tested" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="70.0" text="In hard mode any Māori number from 1 to 99 can be tested" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="70.0">
                      <font>
                         <Font name="Lato Heavy Italic" size="16.0" />
                      </font>
