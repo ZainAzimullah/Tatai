@@ -32,6 +32,14 @@ public class Score {
         _results.put(questionNumber, result);
     }
 
+    public Result getResultFor(int questionNumber) {
+        return _results.get(questionNumber);
+    }
+
+    public Operand getQuestionFor(int questionNumber) {
+        return _expressions.get(questionNumber);
+    }
+
     public void debug() {
         for (Map.Entry entry: _results.entrySet()) {
             System.out.println(entry.getValue());
