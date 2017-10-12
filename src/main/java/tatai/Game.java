@@ -14,6 +14,7 @@ import tatai.view.SceneLoader;
 
 public class Game {
     public static final int NUM_OF_QUESTIONS = 10;
+    public static final int MAX_ATTEMPTS = 3;
 
     private static Game _game;
     private static Stage _stage;
@@ -22,6 +23,11 @@ public class Game {
 
     private Difficulty _difficulty;
     private Score _score;
+
+    public String getSpeech() {
+        return _speech;
+    }
+
     private String _speech;
     private Result _result;
 
@@ -75,7 +81,7 @@ public class Game {
         _result = new Result();
         try {
             _currentQuestion = _model.getNext();
-            _loader.loadScene("Question.fxml");
+            record();
 
         } catch (OutOfItemsException e) {
             endOfLevel();
@@ -85,7 +91,13 @@ public class Game {
     public void skip() {
         _result.skip();
         _score.updateResult(_model.getCurrentQuestionNumber(), _result);
-        question();
+
+        try {
+            _currentQuestion = _model.getNext();
+        } catch (OutOfItemsException e) {
+            endOfLevel();
+        }
+        record();
     }
 
     public void storeSpeech(String speech) {
@@ -119,7 +131,7 @@ public class Game {
         return _result.getErrorCount();
     }
 
-    public void recordAgain() {
+    public void record() {
         _loader.loadScene("Question.fxml");
     }
 

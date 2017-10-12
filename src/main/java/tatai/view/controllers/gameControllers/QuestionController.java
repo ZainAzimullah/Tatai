@@ -85,7 +85,7 @@ public class QuestionController extends SceneController {
                     alert.setHeaderText("Record Again");
                     alert.getDialogPane().setContent(label);
                     alert.showAndWait();
-                    Game.getInstance().recordAgain();
+                    Game.getInstance().record();
                     return;
                 }
 
