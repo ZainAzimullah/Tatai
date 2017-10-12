@@ -23,6 +23,11 @@ public class Game {
     private SceneLoader _loader;
 
     private Difficulty _difficulty;
+
+    public Score getScore() {
+        return _score;
+    }
+
     private Score _score;
 
     public String getSpeech() {
