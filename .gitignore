@@ -6,6 +6,9 @@
 .gradle/
 *.iml
 
+#Log files
+*.txt
+
 #HTK files
 HMMs/
 recout.mlf
