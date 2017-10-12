@@ -55,7 +55,7 @@
             </BorderPane>
          </children>
       </AnchorPane>
-      <Label alignment="TOP_CENTER" layoutX="252.0" layoutY="60.0" text="Welcome to Tatai!" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+      <Label alignment="TOP_CENTER" layoutX="252.0" layoutY="60.0" text="Welcome to Tātai!" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="50.0" />
          </font>
