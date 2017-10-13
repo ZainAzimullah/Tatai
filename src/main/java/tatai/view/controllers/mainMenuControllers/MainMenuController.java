@@ -32,8 +32,7 @@ public class MainMenuController extends SceneController {
 	
 	@FXML
 	private void scores() {
-		MainMenuLoader loader = new MainMenuLoader(_stage);
-		loader.loadScene("Scores.fxml");
+
 	}
 	
 	@FXML
