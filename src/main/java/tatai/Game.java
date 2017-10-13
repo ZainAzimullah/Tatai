@@ -157,6 +157,7 @@ public class Game {
                 break;
             }
 
+            _loader.loadScene("EndOfLevel.fxml");
         }
     }
 

@@ -1,0 +1,9 @@
+.table-view .column-header
+{
+    -fx-background-color: #ff6c62;
+    -fx-font-size: 13px;
+}
+
+.table-view {
+    -fx-font-size: 18px;
+}
