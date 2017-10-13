@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 
 public class TestLoader extends Application {
 
-    private static final String FILENAME = "Question.fxml";
+    private static final String FILENAME = "EndOfLevel.fxml";
 
     @Override
     public void start(Stage primaryStage) throws Exception {

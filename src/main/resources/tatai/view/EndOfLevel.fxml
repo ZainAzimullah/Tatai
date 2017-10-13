@@ -21,7 +21,7 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2626264d" height="250.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0" />
-      <TableView layoutX="51.0" layoutY="113.0" prefHeight="200.0" style="-fx-background-color: u; -fx-background-radius: 30;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+      <TableView layoutX="51.0" layoutY="113.0" prefHeight="200.0" style="-fx-background-color: transparent; -fx-background-radius: 30;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
         <columns>
           <TableColumn prefWidth="159.0" text="Question Number" />
           <TableColumn minWidth="0.0" prefWidth="161.0" text="Number of mistakes" />
