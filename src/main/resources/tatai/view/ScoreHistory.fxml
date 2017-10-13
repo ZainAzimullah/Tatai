@@ -28,7 +28,7 @@
                   <Font name="Noto Sans CJK JP Black" size="45.0" />
                </font>
             </Label>
-            <TableView prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;">
+            <TableView prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" stylesheets="@ScoreHistoryTableStyle.css">
               <columns>
                 <TableColumn prefWidth="75.0" text="Date" />
                 <TableColumn prefWidth="75.0" text="Time" />
