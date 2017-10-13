@@ -1,14 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="tatai.view.EndOfLevel"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.mainMenuControllers.ScoresController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" opacity="0.78">
+         <image>
+            <Image url="@../../images/rsz_new-zealand-maori-theme-nz-kiwi-backgrounds-objects-89883438.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2626264d" height="250.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0" />
+      <TableView layoutX="51.0" layoutY="113.0" prefHeight="200.0" style="-fx-background-color: u; -fx-background-radius: 30;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+        <columns>
+          <TableColumn prefWidth="159.0" text="Question Number" />
+          <TableColumn minWidth="0.0" prefWidth="161.0" text="Number of mistakes" />
+            <TableColumn prefWidth="279.0" text="Equation" />
+        </columns>
+      </TableView>
+      <Label alignment="TOP_CENTER" layoutX="197.0" layoutY="62.0" text="Results" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="Noto Sans CJK JP Bold" size="35.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.5288461538461539" endY="1.0" startX="0.49999999999999994" startY="0.3317307692307692">
+               <stops>
+                  <Stop color="#ff0202" />
+                  <Stop color="#ff0202" offset="0.007407407407407408" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Line endX="597.0" layoutY="275.0" strokeWidth="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="275.0" />
+      <Label alignment="CENTER" layoutX="195.0" layoutY="292.0" text="Total Score :" AnchorPane.leftAnchor="160.0" AnchorPane.topAnchor="270.0">
+         <font>
+            <Font name="Noto Sans CJK JP Black" size="40.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2626264d" height="50.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="175.0" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="275.0" />
+      <Label alignment="CENTER" layoutX="426.0" layoutY="302.0" prefHeight="64.0" prefWidth="174.0" text="#" AnchorPane.leftAnchor="426.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="270.0">
+         <font>
+            <Font name="Noto Sans CJK JP Black" size="40.0" />
+         </font>
+      </Label>
+      <Line endX="125.0" layoutX="466.0" layoutY="321.0" strokeWidth="3.0" AnchorPane.bottomAnchor="77.0" AnchorPane.rightAnchor="22.0" />
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="0.0" layoutX="293.0" layoutY="345.0" onAction="#returnToMainMenu" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Home" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="337.0">
+         <font>
+            <Font name="Noto Sans CJK JP Black" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="0.0" layoutX="303.0" layoutY="355.0" onAction="#returnToMainMenu" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Save Scores" AnchorPane.leftAnchor="300.0" AnchorPane.topAnchor="337.0">
+         <font>
+            <Font name="Noto Sans CJK JP Black" size="18.0" />
+         </font>
+      </JFXButton>
+   </children>
 </AnchorPane>
