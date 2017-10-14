@@ -7,6 +7,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import tatai.Game;
 import tatai.score.FinalResult;
+import tatai.score.FinalResultProperties;
 import tatai.score.Score;
 import tatai.view.controllers.SceneController;
 
@@ -14,19 +15,19 @@ import tatai.view.controllers.SceneController;
 public class EndOfLevelController extends SceneController {
 
     @FXML
-    private TableView<FinalResult> _tableView;
+    private TableView<FinalResultProperties> _tableView;
 
     @FXML
-    private TableColumn<FinalResult, String> _questionNumber;
+    private TableColumn<FinalResultProperties, String> _questionNumber;
 
     @FXML
-    private TableColumn<FinalResult, String> _expression;
+    private TableColumn<FinalResultProperties, String> _expression;
 
     @FXML
-    private TableColumn<FinalResult, String> _result;
+    private TableColumn<FinalResultProperties, String> _result;
 
     @FXML
-    private TableColumn<FinalResult, String> _numMistakes;
+    private TableColumn<FinalResultProperties, String> _numMistakes;
 
     @FXML
     private Label _total;
@@ -38,7 +39,7 @@ public class EndOfLevelController extends SceneController {
         _result.setCellValueFactory(data -> data.getValue().stateProperty());
         _numMistakes.setCellValueFactory(data -> data.getValue().numMistakesProperty());
 
-        _tableView.setItems(Game.getInstance().getScore().getFinalResults());
+        _tableView.setItems(FinalResultProperties.getObservableList(Game.getInstance().getScore()));
 
         _total.setText(Integer.toString(Game.getInstance().getScore().getTotal()));
     }

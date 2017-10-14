@@ -6,6 +6,7 @@ import tatai.exceptions.OutOfItemsException;
 import tatai.expression.Operand;
 import tatai.expressionModel.ExpressionModel;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,10 +15,10 @@ public class Score {
     private HashMap<Integer, Result> _results;
     private HashMap<Integer, Operand> _expressions;
 
-    private ObservableList<FinalResult> _finalResults;
+    private ArrayList<FinalResult> _finalResults;
 
     public Score(ExpressionModel model) {
-        _finalResults = FXCollections.observableArrayList();
+        _finalResults = new ArrayList<>();
 
         _results = new HashMap<>();
         _expressions = new HashMap<>();
@@ -46,7 +47,7 @@ public class Score {
         _finalResults.add(finalResult);
     }
 
-    public ObservableList<FinalResult> getFinalResults() {
+    public ArrayList<FinalResult> getFinalResults() {
         return _finalResults;
     }
 

@@ -6,45 +6,30 @@ import tatai.expression.Operand;
 
 public class FinalResult {
 
-    private StringProperty _state;
+    private String _expression;
+    private int _numMistakes, _questionNumber;
+    private Result.State _state;
 
-    public String getState() {
-        return _state.get();
-    }
-
-    public StringProperty stateProperty() {
-        return _state;
-    }
-
-    public String getNumMistakes() {
-        return _numMistakes.get();
-    }
-
-    public StringProperty numMistakesProperty() {
-        return _numMistakes;
-    }
-
-    public String getQuestionNumber() {
-        return _questionNumber.get();
-    }
-
-    public StringProperty questionNumberProperty() {
-        return _questionNumber;
-    }
-
-    public StringProperty expressionProperty() {
+    public String getExpression() {
         return _expression;
     }
 
-    private StringProperty _numMistakes;
-    private StringProperty _questionNumber;
-    private StringProperty _expression;
+    public int getNumMistakes() {
+        return _numMistakes;
+    }
 
+    public int getQuestionNumber() {
+        return _questionNumber;
+    }
+
+    public Result.State getState() {
+        return _state;
+    }
 
     public FinalResult(int questionNumber, Operand question, Result result) {
-        _state = new SimpleStringProperty(result.getState().toString());
-        _numMistakes = new SimpleStringProperty(Integer.toString(result.getErrorCount()));
-        _questionNumber = new SimpleStringProperty(Integer.toString(questionNumber));
-        _expression = new SimpleStringProperty(question.toString());
+        _state = result.getState();
+        _numMistakes = result.getErrorCount();
+        _questionNumber = questionNumber;
+        _expression = question.toString();
     }
 }
