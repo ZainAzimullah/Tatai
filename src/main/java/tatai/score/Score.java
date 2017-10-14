@@ -65,6 +65,10 @@ public class Score {
         return sum;
     }
 
+    public void save() {
+
+    }
+
     public void debug() {
         for (Map.Entry entry: _results.entrySet()) {
             System.out.println(entry.getValue());

@@ -4,7 +4,7 @@ import tatai.exceptions.ResultOutOfRangeException;
 import tatai.exceptions.TataiException;
 import tatai.numberModel.MaoriNumber;
 
-public class Operand {
+public abstract class Operand {
 
 	/**
 	 * this class is responsible for containing methods that all operands should
