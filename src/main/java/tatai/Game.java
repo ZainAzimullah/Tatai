@@ -12,6 +12,7 @@ import tatai.score.Score;
 import tatai.util.Difficulty;
 import tatai.view.MainMenuLoader;
 import tatai.view.SceneLoader;
+import tatai.view.ScoresLoader;
 
 public class Game {
     public static final int NUM_OF_QUESTIONS = 10;
@@ -157,7 +158,8 @@ public class Game {
                 break;
             }
 
-            _loader.loadScene("EndOfLevel.fxml");
+            ScoresLoader loader = new ScoresLoader(_stage, _score);
+            loader.loadScene("EndOfLevel.fxml");
         }
     }
 
