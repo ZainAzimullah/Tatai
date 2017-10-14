@@ -38,12 +38,7 @@ public class EndOfLevelController extends SceneController {
         _result.setCellValueFactory(data -> data.getValue().stateProperty());
         _numMistakes.setCellValueFactory(data -> data.getValue().numMistakesProperty());
 
-        Game game = Game.getInstance();
-        Score score = game.getScore();
-        ObservableList<FinalResult> res = score.getFinalResults();
-        _tableView.setItems(res);
-
-//        _tableView.setItems(Game.getInstance().getScore().getFinalResults());
+        _tableView.setItems(Game.getInstance().getScore().getFinalResults());
 
         _total.setText(Integer.toString(Game.getInstance().getScore().getTotal()));
     }
