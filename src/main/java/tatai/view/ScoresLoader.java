@@ -18,6 +18,7 @@ public class ScoresLoader extends SceneLoader {
     protected void useController(SceneController controller) {
         if (controller instanceof EndOfLevelController) {
             ((EndOfLevelController) controller).setScore(_score);
+            ((EndOfLevelController) controller).setStage(_stage);
         } else {
             throw new RuntimeException();
         }

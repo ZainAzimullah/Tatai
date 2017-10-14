@@ -5,10 +5,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.stage.Stage;
 import tatai.Game;
 import tatai.score.FinalResult;
 import tatai.score.FinalResultProperties;
 import tatai.score.Score;
+import tatai.view.MainMenuLoader;
 import tatai.view.controllers.SceneController;
 
 
@@ -32,6 +34,8 @@ public class EndOfLevelController extends SceneController {
     @FXML
     private Label _total;
 
+    private Stage _stage;
+
     @FXML
     private void initialize() {
         _questionNumber.setCellValueFactory(data -> data.getValue().questionNumberProperty());
@@ -45,9 +49,14 @@ public class EndOfLevelController extends SceneController {
         _total.setText(Integer.toString(score.getTotal()));
     }
 
+    public void setStage(Stage stage) {
+        _stage = stage;
+    }
+
     @FXML
     @Override
     protected void returnToMainMenu() {
-        Game.getInstance().returnToMainMenu();
+        MainMenuLoader loader = new MainMenuLoader(_stage);
+        loader.loadScene("MainMenu.fxml");
     }
 }
