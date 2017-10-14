@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.mainMenuControllers.ScoresController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" style="visibility: 50;">
          <image>
@@ -28,12 +28,12 @@
                   <Font name="Noto Sans CJK JP Black" size="45.0" />
                </font>
             </Label>
-            <TableView prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" stylesheets="@ScoreHistoryTableStyle.css">
+            <TableView fx:id="_table" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" stylesheets="@ScoreHistoryTableStyle.css">
               <columns>
-                <TableColumn prefWidth="75.0" text="Date" />
-                <TableColumn prefWidth="75.0" text="Level" />
-                  <TableColumn prefWidth="75.0" text="Total" />
-                  <TableColumn prefWidth="75.0" text="Mistakes" />
+                <TableColumn fx:id="_date" prefWidth="75.0" text="Date" />
+                <TableColumn fx:id="_level" prefWidth="75.0" text="Level" />
+                  <TableColumn fx:id="_total" prefWidth="75.0" text="Total" />
+                  <TableColumn fx:id="_numMistakes" prefWidth="75.0" text="Mistakes" />
               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

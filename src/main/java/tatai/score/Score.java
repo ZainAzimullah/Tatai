@@ -92,11 +92,13 @@ public class Score {
     }
 
     public void save() throws IOException {
-        DateFormat dateFormatForUser = new SimpleDateFormat("HH/mm dd/MM");
+        DateFormat dateFormatForUser = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         DateFormat dateFormatForFile = new SimpleDateFormat("HH-mm_dd-MM");
         Date date = new Date();
 
         _time = dateFormatForUser.format(date);
+        System.out.println(_time);
+
         String filename = dateFormatForFile.format(date);
 
         File file = new File(Main.SCORES_FOLDER + "/" + filename);

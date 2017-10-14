@@ -159,15 +159,15 @@ public class Game {
             } catch (OutOfItemsException e) {
                 break;
             }
+        }
 
-            ScoresLoader loader = new ScoresLoader(_stage, _score);
-            loader.loadScene("EndOfLevel.fxml");
+        ScoresLoader loader = new ScoresLoader(_stage, _score);
+        loader.loadScene("EndOfLevel.fxml");
 
-            try {
-                _score.save();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        try {
+            _score.save();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
