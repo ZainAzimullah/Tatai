@@ -25,8 +25,7 @@ public class Score {
 
         for (int i = 0; i < model.getSize(); i++) {
             try {
-                System.out.println(model.getNext().toString());
-//                _expressions.put(i + 1, model.getNext().toString());
+                _expressions.put(i + 1, model.getNext().toString());
                 _results.put(i + 1, new Result());
             } catch (OutOfItemsException e) {
                 e.printStackTrace();
