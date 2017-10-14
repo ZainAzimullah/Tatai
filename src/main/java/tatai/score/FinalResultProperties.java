@@ -45,7 +45,7 @@ public class FinalResultProperties {
 
     public FinalResultProperties(FinalResult result) {
         _expression = new SimpleStringProperty(result.getExpression());
-        _numMistakes = new SimpleStringProperty(Integer.toString(result.getQuestionNumber()));
+        _numMistakes = new SimpleStringProperty(Integer.toString(result.getNumMistakes()));
         _questionNumber = new SimpleStringProperty(Integer.toString(result.getQuestionNumber()));
         _state = new SimpleStringProperty(result.getState().toString());
     }

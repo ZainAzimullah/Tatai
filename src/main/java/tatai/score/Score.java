@@ -13,7 +13,7 @@ import java.util.Map;
 public class Score {
 
     private HashMap<Integer, Result> _results;
-    private HashMap<Integer, Operand> _expressions;
+    private HashMap<Integer, String> _expressions;
 
     private ArrayList<FinalResult> _finalResults;
 
@@ -25,14 +25,15 @@ public class Score {
 
         for (int i = 0; i < model.getSize(); i++) {
             try {
-                _expressions.put(i + 1, model.getNext());
+                System.out.println(model.getNext().toString());
+//                _expressions.put(i + 1, model.getNext().toString());
                 _results.put(i + 1, new Result());
             } catch (OutOfItemsException e) {
                 e.printStackTrace();
             }
-
-            model.reset();
         }
+
+        model.reset();
     }
 
     public void updateResult(int questionNumber, Result result) {
@@ -67,6 +68,10 @@ public class Score {
     public void debug() {
         for (Map.Entry entry: _results.entrySet()) {
             System.out.println(entry.getValue());
+        }
+
+        for (Map.Entry entry: _expressions.entrySet()) {
+            System.out.println(entry.getValue().toString());
         }
     }
 }
