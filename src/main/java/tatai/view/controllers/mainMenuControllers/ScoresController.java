@@ -5,9 +5,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import tatai.practiceScore.PracticeFinalScore;
+import tatai.score.Score;
 import tatai.score.ScoreHistory;
 import tatai.score.ScoreProperties;
 import tatai.view.MainMenuLoader;
+import tatai.view.ScoresLoader;
 
 public class ScoresController extends MainMenuController {
 	
@@ -25,6 +27,8 @@ public class ScoresController extends MainMenuController {
 	
 	@FXML
 	private TableColumn<ScoreProperties, String> _level;
+
+	private Score _scoreSelected;
 	
 	@FXML
 	private void initialize() {
@@ -36,6 +40,16 @@ public class ScoresController extends MainMenuController {
 		ScoreHistory history = new ScoreHistory();
 		ObservableList<ScoreProperties> data = history.getObservableList();
 		_table.setItems(data);
+
+		_table.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+			_scoreSelected = newValue.getScore();
+		});
+	}
+
+	@FXML
+	private void showDetails() {
+		ScoresLoader loader = new ScoresLoader(_stage, _scoreSelected);
+		loader.loadScene("EndOfLevel.fxml");
 	}
 	
 	@FXML
