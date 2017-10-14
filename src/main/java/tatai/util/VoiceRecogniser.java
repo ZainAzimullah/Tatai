@@ -19,7 +19,12 @@ public class VoiceRecogniser {
 				+ "-p 0.0 -s 5.0  user/dictionaryD user/tiedList " + filename);
 
         File file = new File("recout.mlf");
-        BufferedReader bufferedReader = null;
+		try {
+			file.createNewFile();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		BufferedReader bufferedReader = null;
         
 		try {
 			bufferedReader = new BufferedReader(new FileReader(file));
