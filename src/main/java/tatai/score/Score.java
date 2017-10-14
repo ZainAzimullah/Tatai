@@ -21,6 +21,11 @@ public class Score {
 
     private HashMap<Integer, Result> _results;
     private HashMap<Integer, String> _expressions;
+
+    public Difficulty getDifficulty() {
+        return _difficulty;
+    }
+
     private Difficulty _difficulty;
     private ArrayList<FinalResult> _finalResults;
 
@@ -56,6 +61,15 @@ public class Score {
         _finalResults.add(finalResult);
     }
 
+    public int getNumMistakes() {
+        int numMistakes = 0;
+        for (Result result: _results.values()) {
+            numMistakes += result.getErrorCount();
+        }
+
+        return numMistakes;
+    }
+
     public ArrayList<FinalResult> getFinalResults() {
         return _finalResults;
     }
@@ -73,9 +87,11 @@ public class Score {
         return sum;
     }
 
+    public String getTime() {
+        return _time;
+    }
+
     public void save() throws IOException {
-
-
         DateFormat dateFormatForUser = new SimpleDateFormat("HH/mm dd/MM");
         DateFormat dateFormatForFile = new SimpleDateFormat("HH-mm_dd-MM");
         Date date = new Date();
