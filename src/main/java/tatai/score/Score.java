@@ -1,12 +1,19 @@
 package tatai.score;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import com.google.gson.Gson;
+import tatai.Main;
 import tatai.exceptions.OutOfItemsException;
-import tatai.expression.Operand;
 import tatai.expressionModel.ExpressionModel;
+import tatai.util.Difficulty;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,12 +21,14 @@ public class Score {
 
     private HashMap<Integer, Result> _results;
     private HashMap<Integer, String> _expressions;
-
+    private Difficulty _difficulty;
     private ArrayList<FinalResult> _finalResults;
 
-    public Score(ExpressionModel model) {
-        _finalResults = new ArrayList<>();
+    private String _time;
 
+    public Score(ExpressionModel model, Difficulty difficulty) {
+        _difficulty = difficulty;
+        _finalResults = new ArrayList<>();
         _results = new HashMap<>();
         _expressions = new HashMap<>();
 
@@ -64,8 +73,27 @@ public class Score {
         return sum;
     }
 
-    public void save() {
+    public void save() throws IOException {
 
+
+        DateFormat dateFormatForUser = new SimpleDateFormat("HH/mm dd/MM");
+        DateFormat dateFormatForFile = new SimpleDateFormat("HH-mm_dd-MM");
+        Date date = new Date();
+
+        _time = dateFormatForUser.format(date);
+        String filename = dateFormatForFile.format(date);
+
+        File file = new File(Main.SCORES_FOLDER + "/" + filename);
+        file.createNewFile();
+
+        FileWriter fileWriter = new FileWriter(file);
+        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+
+        Gson gson = new Gson();
+        String serialized = gson.toJson(this);
+
+        bufferedWriter.append(serialized);
+        bufferedWriter.close();
     }
 
     public void debug() {

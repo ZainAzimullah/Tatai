@@ -8,6 +8,8 @@
 
 #Log files
 *.txt
+.scores/
+.questionLists/
 
 #HTK files
 HMMs/

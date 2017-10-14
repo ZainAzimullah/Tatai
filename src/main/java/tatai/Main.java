@@ -7,15 +7,17 @@ import javafx.stage.Stage;
 import tatai.view.MainMenuLoader;
 
 public class Main extends Application {
+	public static final String SCORES_FOLDER = System.getProperty("user.dir") + "/.scores";
+	public static final String QUESTIONS_FOLDER = System.getProperty("user.dir") + "/.questionLists";
 	
 	// Launch application
 	@Override
 	public void start(Stage stage) throws IOException {
-		File scores = new File(System.getProperty("user.dir") + "/.scores.txt");
-		File lists = new File(System.getProperty("user.dir") + "/.questionLists.txt");
+		File scores = new File(SCORES_FOLDER);
+		File lists = new File(QUESTIONS_FOLDER);
 
-		scores.createNewFile();
-		lists.createNewFile();
+		scores.mkdir();
+		lists.mkdir();
 
 		// Set unresizable
 		stage.setResizable(false);

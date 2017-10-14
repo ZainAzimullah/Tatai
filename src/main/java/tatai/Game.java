@@ -14,6 +14,8 @@ import tatai.view.MainMenuLoader;
 import tatai.view.SceneLoader;
 import tatai.view.ScoresLoader;
 
+import java.io.IOException;
+
 public class Game {
     public static final int NUM_OF_QUESTIONS = 10;
     public static final int MAX_ATTEMPTS = 3;
@@ -86,7 +88,7 @@ public class Game {
     public void setDifficulty(Difficulty difficulty) {
         _difficulty = difficulty;
         _model = ExpressionModelFactory.getExpressionModel(difficulty, NUM_OF_QUESTIONS);
-        _score = new Score(_model);
+        _score = new Score(_model, difficulty);
     }
 
     public void newQuestion() {
@@ -160,6 +162,12 @@ public class Game {
 
             ScoresLoader loader = new ScoresLoader(_stage, _score);
             loader.loadScene("EndOfLevel.fxml");
+
+            try {
+                _score.save();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
