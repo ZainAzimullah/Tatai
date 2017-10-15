@@ -1,5 +1,6 @@
 package tatai.view.controllers.mainMenuControllers;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -27,10 +28,15 @@ public class ScoresController extends MainMenuController {
 	@FXML
 	private TableColumn<ScoreProperties, String> _level;
 
+	@FXML
+	private JFXButton _sessionDetailsButton;
+
 	private Score _scoreSelected;
 	
 	@FXML
 	private void initialize() {
+		_sessionDetailsButton.setDisable(true);
+
 		_date.setCellValueFactory(data -> data.getValue().dateProperty());
 		_total.setCellValueFactory(data -> data.getValue().totalProperty());
 		_numMistakes.setCellValueFactory(data -> data.getValue().numMistakesProperty());
@@ -42,6 +48,7 @@ public class ScoresController extends MainMenuController {
 
 		_table.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
 			_scoreSelected = newValue.getScore();
+			_sessionDetailsButton.setDisable(false);
 		});
 	}
 

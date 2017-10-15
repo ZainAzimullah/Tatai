@@ -15,9 +15,9 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.gameControllers.SessionDetailsController">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0" opacity="0.78">
+      <ImageView fitHeight="400.0" fitWidth="600.0" opacity="0.52">
          <image>
-            <Image url="@../../images/rsz_new-zealand-maori-theme-nz-kiwi-backgrounds-objects-89883438.jpg" />
+            <Image url="@../../images/Reef.jpg" />
          </image>
       </ImageView>
       <TableView fx:id="_tableView" layoutX="51.0" layoutY="113.0" prefHeight="200.0" style="-fx-background-color: transparent; -fx-background-radius: 30;" stylesheets="@EndOfLevelTableStyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">

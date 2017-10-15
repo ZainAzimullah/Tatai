@@ -41,7 +41,7 @@
             </TableView>
             <HBox alignment="CENTER" spacing="50.0">
                <children>
-                  <JFXButton buttonType="RAISED" onAction="#showDetails" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Open Session">
+                  <JFXButton fx:id="_sessionDetailsButton" buttonType="RAISED" onAction="#showDetails" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Open Session">
                      <font>
                         <Font name="Noto Sans CJK JP Black" size="18.0" />
                      </font>
