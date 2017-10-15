@@ -97,6 +97,7 @@ public class Score {
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
         // Serialize the score and save to file
+        // Gson library taken from:  https://github.com/google/gson
         Gson gson = new Gson();
         String serialized = gson.toJson(this);
         bufferedWriter.append(serialized);

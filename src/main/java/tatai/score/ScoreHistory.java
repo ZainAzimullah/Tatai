@@ -81,6 +81,7 @@ public class ScoreHistory {
 
     // This method deserializes a saved Score
     private Score deserializeScore(String serialized) {
+        // Gson library taken from:  https://github.com/google/gson
         Gson gson = new Gson();
         return gson.fromJson(serialized, Score.class);
     }
