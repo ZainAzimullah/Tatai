@@ -21,14 +21,8 @@ public class Score {
 
     private HashMap<Integer, Result> _results;
     private HashMap<Integer, String> _expressions;
-
-    public Difficulty getDifficulty() {
-        return _difficulty;
-    }
-
-    private Difficulty _difficulty;
     private ArrayList<FinalResult> _finalResults;
-
+    private Difficulty _difficulty;
     private String _time;
 
     public Score(ExpressionModel model, Difficulty difficulty) {
@@ -37,6 +31,7 @@ public class Score {
         _results = new HashMap<>();
         _expressions = new HashMap<>();
 
+        // Initialise the expressions and set the results to unattempted
         for (int i = 0; i < model.getSize(); i++) {
             try {
                 _expressions.put(i + 1, model.getNext().toString());
@@ -49,18 +44,17 @@ public class Score {
         model.reset();
     }
 
+    // Add a new result
     public void updateResult(int questionNumber, Result result) {
         _results.put(questionNumber, result);
     }
 
-    public Result getResultFor(int questionNumber) {
-        return _results.get(questionNumber);
-    }
-
+    // Add a FinalResult (which contains more information than a Result)
     public void addFinalResult(FinalResult finalResult) {
         _finalResults.add(finalResult);
     }
 
+    // Get the total number of mistakes the user made in the level
     public int getNumMistakes() {
         int numMistakes = 0;
         for (Result result: _results.values()) {
@@ -70,14 +64,9 @@ public class Score {
         return numMistakes;
     }
 
-    public ArrayList<FinalResult> getFinalResults() {
-        return _finalResults;
-    }
-
+    // Get the total number of questions the user got correct in the level
     public int getTotal() {
-
         int sum = 0;
-
         for (Result result: _results.values()) {
             if (result.getState() == Result.State.CORRECT) {
                 sum++;
@@ -87,31 +76,50 @@ public class Score {
         return sum;
     }
 
-    public String getTime() {
-        return _time;
-    }
-
+    // Save the score to a new file, with the filename as the current time and date.
     public void save() throws IOException {
+        // Set a nice date format to show the user, but a file-friendly format for saving
         DateFormat dateFormatForUser = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         DateFormat dateFormatForFile = new SimpleDateFormat("HH-mm_dd-MM");
         Date date = new Date();
 
+        // Store the time the score was logged
         _time = dateFormatForUser.format(date);
-        System.out.println(_time);
 
         String filename = dateFormatForFile.format(date);
 
+        // Create the new file
         File file = new File(Main.SCORES_FOLDER + "/" + filename);
         file.createNewFile();
 
+        // Create writers
         FileWriter fileWriter = new FileWriter(file);
         BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
+        // Serialize the score and save to file
         Gson gson = new Gson();
         String serialized = gson.toJson(this);
-
         bufferedWriter.append(serialized);
+
+        // Close writers
         bufferedWriter.close();
+        fileWriter.close();
+    }
+
+    public Result getResultFor(int questionNumber) {
+        return _results.get(questionNumber);
+    }
+
+    public Difficulty getDifficulty() {
+        return _difficulty;
+    }
+
+    public String getTime() {
+        return _time;
+    }
+
+    public ArrayList<FinalResult> getFinalResults() {
+        return _finalResults;
     }
 
     public void debug() {

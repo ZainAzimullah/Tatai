@@ -1,5 +1,9 @@
 package tatai.score;
 
+/**
+ * A Result object stores the result only for a given question.
+ * It is not concerned with the question number, or the question itself.
+ */
 public class Result {
     enum State {
         CORRECT,
@@ -11,15 +15,14 @@ public class Result {
 
     private int _numAttempts = 0;
     private int _numMistakes = 0;
-
-    public State getState() {
-        return _state;
-    }
-
     private State _state;
 
     public Result() {
         _state = State.UNATTEMPTED;
+    }
+
+    public State getState() {
+        return _state;
     }
 
     public void addMistake() {
@@ -43,6 +46,6 @@ public class Result {
 
     @Override
     public String toString() {
-        return _state.toString() + " " + _numMistakes + _numAttempts;
+        return "Result: " + _state.toString() + " #Mistakes: " + _numMistakes + " #Attempts: " + _numAttempts;
     }
 }

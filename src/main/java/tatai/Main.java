@@ -7,6 +7,7 @@ import javafx.stage.Stage;
 import tatai.view.MainMenuLoader;
 
 public class Main extends Application {
+	// Set universal hidden folder names for storing scores and question lists
 	public static final String SCORES_FOLDER = System.getProperty("user.dir") + "/.scores";
 	public static final String QUESTIONS_FOLDER = System.getProperty("user.dir") + "/.questionLists";
 	
@@ -16,6 +17,7 @@ public class Main extends Application {
 		File scores = new File(SCORES_FOLDER);
 		File lists = new File(QUESTIONS_FOLDER);
 
+		// Make new directories if they don't already exist
 		scores.mkdir();
 		lists.mkdir();
 

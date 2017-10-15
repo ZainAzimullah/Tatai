@@ -7,6 +7,10 @@ import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
 
+/**
+ * This class is equivalent to a FinalResult object, however it also contains
+ * StringProperties for each field, to allow JavaFX to display these in a table.
+ */
 public class FinalResultProperties {
 
     public String getExpression() {
@@ -43,13 +47,14 @@ public class FinalResultProperties {
 
     private StringProperty _expression, _numMistakes, _questionNumber, _state;
 
-    public FinalResultProperties(FinalResult result) {
+    private FinalResultProperties(FinalResult result) {
         _expression = new SimpleStringProperty(result.getExpression());
         _numMistakes = new SimpleStringProperty(Integer.toString(result.getNumMistakes()));
         _questionNumber = new SimpleStringProperty(Integer.toString(result.getQuestionNumber()));
         _state = new SimpleStringProperty(result.getState().toString());
     }
 
+    // Get an ObservableList of FinalResultProperties objects for a given Score object
     public static ObservableList<FinalResultProperties> getObservableList(Score score) {
         ArrayList<FinalResult> results = score.getFinalResults();
         ObservableList<FinalResultProperties> out = FXCollections.observableArrayList();
