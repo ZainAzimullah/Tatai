@@ -20,6 +20,20 @@ public class ScoreHistory {
         return out;
     }
 
+    public int getHighScore() {
+        ArrayList<Score> scores = getScores();
+
+        int highScore = 0;
+
+        for (Score score: scores) {
+            if (score.getTotal() > highScore) {
+                highScore = score.getTotal();
+            }
+        }
+
+        return highScore;
+    }
+
     private ArrayList<Score> getScores() {
         File scoresFolder = new File(Main.SCORES_FOLDER);
         File[] scores = scoresFolder.listFiles();

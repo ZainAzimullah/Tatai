@@ -3,6 +3,7 @@ package tatai.view.controllers.mainMenuControllers;
 import com.jfoenix.controls.JFXButton;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import tatai.score.Score;
@@ -11,7 +12,7 @@ import tatai.score.ScoreProperties;
 import tatai.view.MainMenuLoader;
 import tatai.view.SessionDetailsLoader;
 
-public class ScoresController extends MainMenuController {
+public class ScoreHistoryController extends MainMenuController {
 	
 	@FXML
 	private TableView<ScoreProperties> _table;
@@ -27,6 +28,9 @@ public class ScoresController extends MainMenuController {
 	
 	@FXML
 	private TableColumn<ScoreProperties, String> _level;
+
+	@FXML
+	private Label _highScore;
 
 	@FXML
 	private JFXButton _sessionDetailsButton;
@@ -45,6 +49,7 @@ public class ScoresController extends MainMenuController {
 		ScoreHistory history = new ScoreHistory();
 		ObservableList<ScoreProperties> data = history.getObservableList();
 		_table.setItems(data);
+		_highScore.setText(Integer.toString(history.getHighScore()));
 
 		_table.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
 			_scoreSelected = newValue.getScore();
