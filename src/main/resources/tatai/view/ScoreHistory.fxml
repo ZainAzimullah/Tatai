@@ -39,7 +39,7 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <HBox alignment="CENTER" spacing="50.0">
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="510.0" spacing="20.0">
                <children>
                   <JFXButton fx:id="_sessionDetailsButton" buttonType="RAISED" onAction="#showDetails" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Open Session">
                      <font>
@@ -51,7 +51,20 @@
                         <Font name="Noto Sans CJK JP Black" size="18.0" />
                      </font>
                   </JFXButton>
+                  <Label text="High Score:" textFill="#230043">
+                     <font>
+                        <Font name="Ubuntu Mono Bold" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="_highScore" text="##" textFill="#230043">
+                     <font>
+                        <Font name="Ubuntu Mono Bold" size="28.0" />
+                     </font>
+                  </Label>
                </children>
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
             </HBox>
          </children>
          <padding>
