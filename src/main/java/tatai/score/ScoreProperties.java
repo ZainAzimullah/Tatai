@@ -5,6 +5,18 @@ import javafx.beans.property.StringProperty;
 
 public class ScoreProperties {
 
+    private StringProperty _date, _difficulty, _total, _numMistakes;
+
+    private Score _score;
+
+    public ScoreProperties(Score score) {
+        _score = score;
+        _date = new SimpleStringProperty(score.getTime());
+        _difficulty = new SimpleStringProperty(score.getDifficulty().toString());
+        _total = new SimpleStringProperty(Integer.toString(score.getTotal()));
+        _numMistakes = new SimpleStringProperty(Integer.toString(score.getNumMistakes()));
+    }
+
     public String getDate() {
         return _date.get();
     }
@@ -35,18 +47,6 @@ public class ScoreProperties {
 
     public StringProperty numMistakesProperty() {
         return _numMistakes;
-    }
-
-    private StringProperty _date, _difficulty, _total, _numMistakes;
-
-    private Score _score;
-
-    public ScoreProperties(Score score) {
-        _score = score;
-        _date = new SimpleStringProperty(score.getTime());
-        _difficulty = new SimpleStringProperty(score.getDifficulty().toString());
-        _total = new SimpleStringProperty(Integer.toString(score.getTotal()));
-        _numMistakes = new SimpleStringProperty(Integer.toString(score.getNumMistakes()));
     }
 
     public Score getScore() {

@@ -8,8 +8,13 @@ import tatai.Main;
 import java.io.*;
 import java.util.ArrayList;
 
+/**
+ * This class is used to get past Score objects that have been serialized and
+ * saved to file.
+ */
 public class ScoreHistory {
 
+    // Get the Score objects and create ScoreProperties objects from them
     public ObservableList<ScoreProperties> getObservableList() {
         ObservableList<ScoreProperties> out = FXCollections.observableArrayList();
 
@@ -20,6 +25,7 @@ public class ScoreHistory {
         return out;
     }
 
+    // Get the highest score
     public int getHighScore() {
         ArrayList<Score> scores = getScores();
 
@@ -34,12 +40,15 @@ public class ScoreHistory {
         return highScore;
     }
 
+    // Get an ArrayList of Score objects by reading all the Scores from
+    // file and putting them into an ArrayList
     private ArrayList<Score> getScores() {
         File scoresFolder = new File(Main.SCORES_FOLDER);
-        File[] scores = scoresFolder.listFiles();
+        File[] scores = scoresFolder.listFiles();  // Get all Score files in the folder
 
         ArrayList<Score> scoresList = new ArrayList<>();
 
+        // Iterate through each Score file in the folder
         for (File score: scores) {
             String serialized = "";
             FileReader fileReader = null;
@@ -48,13 +57,14 @@ public class ScoreHistory {
                 fileReader = new FileReader(score);
                 BufferedReader bufferedReader = new BufferedReader(fileReader);
 
+                // Read the file into one string
                 String line;
-
                 while ((line = bufferedReader.readLine()) != null) {
                     serialized += line;
                 }
 
-                scoresList.add(getSerializedScore(serialized));
+                // Deserialize the Scores and add to list
+                scoresList.add(deserializeScore(serialized));
 
                 fileReader.close();
                 bufferedReader.close();
@@ -69,7 +79,8 @@ public class ScoreHistory {
         return scoresList;
     }
 
-    private Score getSerializedScore(String serialized) {
+    // This method deserializes a saved Score
+    private Score deserializeScore(String serialized) {
         Gson gson = new Gson();
         return gson.fromJson(serialized, Score.class);
     }

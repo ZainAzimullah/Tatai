@@ -13,6 +13,15 @@ import java.util.ArrayList;
  */
 public class FinalResultProperties {
 
+    private StringProperty _expression, _numMistakes, _questionNumber, _state;
+
+    private FinalResultProperties(FinalResult result) {
+        _expression = new SimpleStringProperty(result.getExpression());
+        _numMistakes = new SimpleStringProperty(Integer.toString(result.getNumMistakes()));
+        _questionNumber = new SimpleStringProperty(Integer.toString(result.getQuestionNumber()));
+        _state = new SimpleStringProperty(result.getState().toString());
+    }
+
     public String getExpression() {
         return _expression.get();
     }
@@ -43,15 +52,6 @@ public class FinalResultProperties {
 
     public StringProperty stateProperty() {
         return _state;
-    }
-
-    private StringProperty _expression, _numMistakes, _questionNumber, _state;
-
-    private FinalResultProperties(FinalResult result) {
-        _expression = new SimpleStringProperty(result.getExpression());
-        _numMistakes = new SimpleStringProperty(Integer.toString(result.getNumMistakes()));
-        _questionNumber = new SimpleStringProperty(Integer.toString(result.getQuestionNumber()));
-        _state = new SimpleStringProperty(result.getState().toString());
     }
 
     // Get an ObservableList of FinalResultProperties objects for a given Score object
