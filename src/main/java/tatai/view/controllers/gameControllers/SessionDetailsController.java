@@ -10,12 +10,13 @@ import javafx.stage.Stage;
 import tatai.Game;
 import tatai.score.FinalResultProperties;
 import tatai.score.Score;
+import tatai.view.MainMenuLoader;
 import tatai.view.controllers.SceneController;
 
 import java.io.IOException;
 
 
-public class EndOfLevelController extends SceneController {
+public class SessionDetailsController extends SceneController {
 
     @FXML
     private TableView<FinalResultProperties> _tableView;
@@ -78,6 +79,12 @@ public class EndOfLevelController extends SceneController {
 
         _saveButton.setDisable(true);
         _saved = true;
+    }
+
+    @FXML
+    private void back() {
+        MainMenuLoader loader = new MainMenuLoader(_stage);
+        loader.loadScene("ScoreHistory.fxml");
     }
 
     public void setScore (Score score) {

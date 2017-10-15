@@ -4,12 +4,11 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import tatai.practiceScore.PracticeFinalScore;
 import tatai.score.Score;
 import tatai.score.ScoreHistory;
 import tatai.score.ScoreProperties;
 import tatai.view.MainMenuLoader;
-import tatai.view.ScoresLoader;
+import tatai.view.SessionDetailsLoader;
 
 public class ScoresController extends MainMenuController {
 	
@@ -48,8 +47,8 @@ public class ScoresController extends MainMenuController {
 
 	@FXML
 	private void showDetails() {
-		ScoresLoader loader = new ScoresLoader(_stage, _scoreSelected);
-		loader.loadScene("EndOfLevel.fxml");
+		SessionDetailsLoader loader = new SessionDetailsLoader(_stage, _scoreSelected);
+		loader.loadScene("SessionDetails.fxml");
 	}
 	
 	@FXML

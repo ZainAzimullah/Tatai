@@ -12,9 +12,7 @@ import tatai.score.Score;
 import tatai.util.Difficulty;
 import tatai.view.MainMenuLoader;
 import tatai.view.SceneLoader;
-import tatai.view.ScoresLoader;
-
-import java.io.IOException;
+import tatai.view.SessionDetailsLoader;
 
 public class Game {
     public static final int NUM_OF_QUESTIONS = 10;
@@ -165,7 +163,7 @@ public class Game {
             }
         }
 
-        ScoresLoader loader = new ScoresLoader(_stage, _score);
+        SessionDetailsLoader loader = new SessionDetailsLoader(_stage, _score);
         loader.loadScene("EndOfLevel.fxml");
     }
 

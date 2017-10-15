@@ -57,19 +57,9 @@
          </font>
       </Label>
       <Line endX="125.0" layoutX="466.0" layoutY="321.0" strokeWidth="3.0" AnchorPane.bottomAnchor="77.0" AnchorPane.rightAnchor="22.0" />
-      <HBox alignment="CENTER" layoutX="125.0" layoutY="340.0" spacing="20.0" AnchorPane.leftAnchor="125.0">
+      <HBox alignment="CENTER" layoutX="326.0" layoutY="331.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="260.0">
          <children>
-            <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="0.0" onAction="#replay" style="-fx-background-color: white; -fx-background-radius: 30; -fx-min-width: 100;" text="Replay">
-               <font>
-                  <Font name="Noto Sans CJK JP Black" size="19.0" />
-               </font>
-            </JFXButton>
-            <JFXButton fx:id="_saveButton" alignment="CENTER" buttonType="RAISED" graphicTextGap="0.0" onAction="#save" style="-fx-background-color: white; -fx-background-radius: 30; -fx-min-width: 100;" text="Save">
-               <font>
-                  <Font name="Noto Sans CJK JP Black" size="19.0" />
-               </font>
-            </JFXButton>
-            <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="0.0" onAction="#returnToMainMenu" style="-fx-background-color: white; -fx-background-radius: 30; -fx-min-width: 100;" text="Home">
+            <JFXButton alignment="CENTER" buttonType="RAISED" graphicTextGap="0.0" onAction="#back" style="-fx-background-color: white; -fx-background-radius: 30; -fx-min-width: 100;" text="Back">
                <font>
                   <Font name="Noto Sans CJK JP Black" size="19.0" />
                </font>
