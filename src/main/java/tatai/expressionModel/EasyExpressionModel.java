@@ -7,7 +7,8 @@ import tatai.numberModel.MaoriNumber;
 
 public class EasyExpressionModel extends ExpressionModel {
 
-
+    // Randomly generate a collection of easy Operator objects, such that
+    // each Operator object just consists of two MaoriNumbers between 1 and 10
     public EasyExpressionModel(int numberOfQuestions) {
 
         int i = 0;
@@ -20,6 +21,7 @@ public class EasyExpressionModel extends ExpressionModel {
 
             operator.addAllOperands(num1, num2);
 
+            // Check the answer to ensure the expression is OK for the game
             try {
                 operator.getMaoriResult();
                 i++;

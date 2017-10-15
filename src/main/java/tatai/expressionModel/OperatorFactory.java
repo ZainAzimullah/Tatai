@@ -3,6 +3,9 @@ package tatai.expressionModel;
 import tatai.exceptions.TataiException;
 import tatai.expression.*;
 
+/**
+ * This factory delivers an Operator object based on the specified Operation
+ */
 public class OperatorFactory {
     private static Operator _operator;
 

@@ -6,6 +6,10 @@ import tatai.expression.Operator;
 import tatai.numberModel.MaoriNumber;
 
 public class HardExpressionModel extends ExpressionModel {
+
+    // Randomly generate a collection of Operator objects such that
+    // Each one also has a suboperator, and, atwo of the MaoriNumbers are
+    // between 1 and 99 and 1 of them is between 1 and 10.
     public HardExpressionModel(int numOfQuestions) {
         int i = 0;
 
@@ -23,6 +27,7 @@ public class HardExpressionModel extends ExpressionModel {
             op1.addAllOperands(num1, num2);
             op2.addAllOperands(op1, num3);
 
+            // Check the answer to ensure the expression is OK for the game
             try {
                 op2.getMaoriResult();
                 i++;

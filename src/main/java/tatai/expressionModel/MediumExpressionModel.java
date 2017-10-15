@@ -5,6 +5,10 @@ import tatai.expression.Operator;
 import tatai.numberModel.MaoriNumber;
 
 public class MediumExpressionModel extends ExpressionModel {
+
+    // Randomly generate a collection of Operator objects such that
+    // each Operator has a sub Operator as well, there fore there are
+    // three numbers in the equation (however all are between 1 and 10)
     public MediumExpressionModel(int numOfQuestions) {
 
         int i = 0;
@@ -19,6 +23,7 @@ public class MediumExpressionModel extends ExpressionModel {
             op1.addAllOperands(num1, num2);
             op2.addAllOperands(op1, num3);
 
+            // Check the answer to ensure the expression is OK for the game
             try {
                 op2.getMaoriResult();
                 i++;

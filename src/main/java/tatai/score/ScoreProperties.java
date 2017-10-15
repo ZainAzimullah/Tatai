@@ -3,6 +3,11 @@ package tatai.score;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
+/**
+ * This is a wrapper class which converts a Score object into its
+ * equivalent object with properties.  The raw Score object can still
+ * be retrieved from a ScoreProperties object by invoking getScore()
+ */
 public class ScoreProperties {
 
     private StringProperty _date, _difficulty, _total, _numMistakes;

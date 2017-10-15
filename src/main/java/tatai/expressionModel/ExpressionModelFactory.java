@@ -3,10 +3,15 @@ package tatai.expressionModel;
 import tatai.exceptions.TataiException;
 import tatai.util.Difficulty;
 
+/**
+ * This factory will generate an appropriate concrete ExpressionModel implementation
+ * given a certain Difficulty.
+ */
 public class ExpressionModelFactory {
 
     private ExpressionModel _model;
 
+    // Instantiate _model based on the Difficulty
     public static ExpressionModel getExpressionModel(Difficulty difficulty, int numQuestions) {
         switch (difficulty) {
             case EASY:

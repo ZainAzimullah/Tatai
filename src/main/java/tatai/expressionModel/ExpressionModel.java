@@ -9,18 +9,18 @@ import tatai.numberModel.MaoriNumber;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Any ExpressionModel contains a collection of Operands (expressions) and should
+ * extend this class to inherit the List/
+ */
 public abstract class ExpressionModel {
 
-    private int questionNumber = -1;
+    private int questionNumber = -1;  // Invoking getNext() moves this to 0 (first queston)
     protected List<Operand> _expressions = new ArrayList<>();
 
-    public int getSize() {
-        return _expressions.size();
-    }
-
+    // Get the next question
     public Operand getNext() throws OutOfItemsException {
         questionNumber++;
-
         if (questionNumber >= _expressions.size()) {
             throw new OutOfItemsException("No more expressions left in list");
         }
@@ -28,14 +28,22 @@ public abstract class ExpressionModel {
         return _expressions.get(questionNumber);
     }
 
+    // Get the size of the model
+    public int getSize() {
+        return _expressions.size();
+    }
+
+    // Reset the pointer to negative 1
     public void reset() {
         questionNumber = -1;
     }
 
+    // Get the question number, adjusted to start from 1 for user
     public int getCurrentQuestionNumber() {
         return questionNumber + 1;
     }
 
+    // Utility method for subclasses to be able to pick an Operation at random
     protected Operation generateRandomOperation() {
         int randomNumber = (int) (Math.random() * 4 + 1);
 
@@ -54,10 +62,12 @@ public abstract class ExpressionModel {
         }
     }
 
+    // Utility method for subclasses to get a random MaoriNumber
     protected MaoriNumber generateRandomMaoriNumber(int limit) {
         return new MaoriNumber((int) (Math.random() * limit + 1));
     }
 
+    // Prints out information
     public void debug() {
         int i = 1;
         for (Operand operand: _expressions) {
