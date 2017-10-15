@@ -1,17 +1,18 @@
 package tatai.view.controllers.gameControllers;
 
-import javafx.collections.ObservableList;
+import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 import tatai.Game;
-import tatai.score.FinalResult;
 import tatai.score.FinalResultProperties;
 import tatai.score.Score;
-import tatai.view.MainMenuLoader;
 import tatai.view.controllers.SceneController;
+
+import java.io.IOException;
 
 
 public class EndOfLevelController extends SceneController {
@@ -34,7 +35,12 @@ public class EndOfLevelController extends SceneController {
     @FXML
     private Label _total;
 
+    @FXML
+    private JFXButton _saveButton;
+
     private Stage _stage;
+    private Score _score;
+    private Boolean _saved = false;
 
     @FXML
     private void initialize() {
@@ -44,7 +50,38 @@ public class EndOfLevelController extends SceneController {
         _numMistakes.setCellValueFactory(data -> data.getValue().numMistakesProperty());
     }
 
+    @FXML
+    private void replay() {
+        if (!_saved) {
+            int reply = showAlert();
+
+            if (reply == SceneController.NO) {
+                return;
+            }
+        }
+
+        Game.getInstance().configureLevel(Game.getInstance().getDifficulty());
+        Game.getInstance().newQuestion();
+    }
+
+    @FXML
+    private void save() {
+        try {
+            _score.save();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText("Scores saved");
+        alert.showAndWait();
+
+        _saveButton.setDisable(true);
+        _saved = true;
+    }
+
     public void setScore (Score score) {
+        _score = score;
         _tableView.setItems(FinalResultProperties.getObservableList(score));
         _total.setText(Integer.toString(score.getTotal()));
     }
@@ -56,7 +93,6 @@ public class EndOfLevelController extends SceneController {
     @FXML
     @Override
     protected void returnToMainMenu() {
-        MainMenuLoader loader = new MainMenuLoader(_stage);
-        loader.loadScene("MainMenu.fxml");
+        showAlertAndReturnFromGame();
     }
 }

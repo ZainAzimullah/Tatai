@@ -24,7 +24,7 @@ public abstract class SceneController {
 	// Show a confirmation dialog
 	protected int showAlert() {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
-		alert.setTitle("Return to Main Menu");
+		alert.setTitle("Notice");
 		alert.setHeaderText("Please Confirm");
 		alert.setContentText("Are you sure?");
 

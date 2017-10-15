@@ -9,19 +9,19 @@ public class SelectLevelController extends SceneController {
 
     @FXML
     private void easy() {
-        Game.getInstance().setDifficulty(Difficulty.EASY);
+        Game.getInstance().configureLevel(Difficulty.EASY);
         Game.getInstance().newQuestion();
     }
 
     @FXML
     private void medium() {
-        Game.getInstance().setDifficulty(Difficulty.MEDIUM);
+        Game.getInstance().configureLevel(Difficulty.MEDIUM);
         Game.getInstance().newQuestion();
     }
 
     @FXML
     private void hard() {
-        Game.getInstance().setDifficulty(Difficulty.HARD);
+        Game.getInstance().configureLevel(Difficulty.HARD);
         Game.getInstance().newQuestion();
     }
 

@@ -25,6 +25,10 @@ public class Game {
 
     private SceneLoader _loader;
 
+    public Difficulty getDifficulty() {
+        return _difficulty;
+    }
+
     private Difficulty _difficulty;
 
     public Score getScore() {
@@ -85,7 +89,7 @@ public class Game {
 
 
 
-    public void setDifficulty(Difficulty difficulty) {
+    public void configureLevel(Difficulty difficulty) {
         _difficulty = difficulty;
         _model = ExpressionModelFactory.getExpressionModel(difficulty, NUM_OF_QUESTIONS);
         _score = new Score(_model, difficulty);
@@ -163,12 +167,6 @@ public class Game {
 
         ScoresLoader loader = new ScoresLoader(_stage, _score);
         loader.loadScene("EndOfLevel.fxml");
-
-        try {
-            _score.save();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public Stage getStage() {
