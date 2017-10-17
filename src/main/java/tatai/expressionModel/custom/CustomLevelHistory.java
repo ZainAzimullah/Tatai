@@ -40,7 +40,7 @@ public class CustomLevelHistory {
                     serialized += line;
                 }
 
-                // Deserialize the Scores and add to list
+                // Deserialize the levels and add to list
                 levelsList.add(deserializeLevel(serialized));
 
                 fileReader.close();
