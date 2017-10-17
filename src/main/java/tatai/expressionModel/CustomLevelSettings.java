@@ -2,6 +2,7 @@ package tatai.expressionModel;
 
 import com.google.gson.Gson;
 import tatai.Main;
+import tatai.util.Saveable;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -11,7 +12,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class CustomLevelSettings {
+public class CustomLevelSettings extends Saveable {
     private int _max;
     private String _dateCreated;
     private boolean _addition, _subtraction, _multiplication, _division;
@@ -34,25 +35,8 @@ public class CustomLevelSettings {
         // Store the time the score was logged
         _dateCreated = dateFormatForUser.format(date);
 
-        String filename = dateFormatForFile.format(date);
-
-        // Create the new file
-        File file = new File(Main.QUESTIONS_FOLDER + "/" + filename);
-        file.createNewFile();
-
-        // Create writers
-        FileWriter fileWriter = new FileWriter(file);
-        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-
-        // Serialize the score and save to file
-        // Gson library taken from:  https://github.com/google/gson
-        Gson gson = new Gson();
-        String serialized = gson.toJson(this);
-        bufferedWriter.append(serialized);
-
-        // Close writers
-        bufferedWriter.close();
-        fileWriter.close();
+        String filename = Main.QUESTIONS_FOLDER + "/" + dateFormatForFile.format(date);
+        save(filename);
     }
 
     public String getDateCreated() {

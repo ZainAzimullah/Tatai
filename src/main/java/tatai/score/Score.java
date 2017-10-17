@@ -5,6 +5,7 @@ import tatai.Main;
 import tatai.exceptions.OutOfItemsException;
 import tatai.expressionModel.ExpressionModel;
 import tatai.util.Difficulty;
+import tatai.util.Saveable;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -17,7 +18,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Score {
+public class Score extends Saveable {
 
     private HashMap<Integer, Result> _results;
     private HashMap<Integer, String> _expressions;
@@ -86,25 +87,9 @@ public class Score {
         // Store the time the score was logged
         _time = dateFormatForUser.format(date);
 
-        String filename = dateFormatForFile.format(date);
+        String filename = Main.SCORES_FOLDER + "/" + dateFormatForFile.format(date);
 
-        // Create the new file
-        File file = new File(Main.SCORES_FOLDER + "/" + filename);
-        file.createNewFile();
-
-        // Create writers
-        FileWriter fileWriter = new FileWriter(file);
-        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-
-        // Serialize the score and save to file
-        // Gson library taken from:  https://github.com/google/gson
-        Gson gson = new Gson();
-        String serialized = gson.toJson(this);
-        bufferedWriter.append(serialized);
-
-        // Close writers
-        bufferedWriter.close();
-        fileWriter.close();
+        save(filename);
     }
 
     public Result getResultFor(int questionNumber) {
