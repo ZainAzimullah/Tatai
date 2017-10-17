@@ -1,8 +1,7 @@
 package tatai.expressionModel;
 
+import tatai.expressionModel.custom.CustomLevelSettings;
 import tatai.util.Difficulty;
-
-import java.io.IOException;
 
 public class TestExpressionModel {
     public static void main(String[] args) {

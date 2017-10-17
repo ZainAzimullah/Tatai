@@ -2,7 +2,7 @@ package tatai.view.controllers.gameControllers;
 
 import javafx.fxml.FXML;
 import tatai.Game;
-import tatai.expressionModel.CustomLevelSettings;
+import tatai.expressionModel.custom.CustomLevelSettings;
 import tatai.view.controllers.SceneController;
 
 import java.io.IOException;

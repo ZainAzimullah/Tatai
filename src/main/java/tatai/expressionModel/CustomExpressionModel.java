@@ -4,6 +4,7 @@ import tatai.Game;
 import tatai.exceptions.ResultOutOfRangeException;
 import tatai.exceptions.TataiException;
 import tatai.expression.Operator;
+import tatai.expressionModel.custom.CustomLevelSettings;
 import tatai.numberModel.MaoriNumber;
 
 public class CustomExpressionModel extends ExpressionModel {
