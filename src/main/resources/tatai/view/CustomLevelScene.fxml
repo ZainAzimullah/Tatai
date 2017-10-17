@@ -14,7 +14,7 @@
    <children>
       <Label text="Custom Level Creator">
          <font>
-            <Font name="Noto Sans CJK JP Black" size="25.0" />
+            <Font name="Noto Sans CJK JP Black" size="30.0" />
          </font>
          <VBox.margin>
             <Insets top="25.0" />
@@ -22,7 +22,7 @@
       </Label>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
          <children>
-            <Label text="Custom Level Name">
+            <Label text="Level Name">
                <font>
                   <Font name="Noto Sans CJK JP Black" size="25.0" />
                </font>
@@ -65,9 +65,6 @@
                </font>
             </JFXButton>
          </children>
-         <padding>
-            <Insets top="25.0" />
-         </padding>
       </HBox>
    </children>
 </VBox>
