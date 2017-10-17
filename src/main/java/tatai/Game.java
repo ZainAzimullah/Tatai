@@ -22,10 +22,13 @@ public class Game {
 
     // The Game singleton and its stage
     private static Game _game;
+
     private static Stage _stage;
+
 
     // Game data
     private Difficulty _difficulty;
+
     private Score _score;
     private SceneLoader _loader;
     private String _speech;
@@ -33,15 +36,15 @@ public class Game {
     private ExpressionModel _model;
     private Operand _currentQuestion;
     private int _currentQuestionNumber;
-
     private Game(Stage stage) {
         _stage = stage;
     }
-
     private Game() {} // Singleton
+
 
     // When the singleton is created for the first time, the stage
     // needs to be passed
+
     public static Game getInitialInstance(Stage stage) {
         if (_game == null) {
             _game = new Game(stage);
@@ -49,7 +52,6 @@ public class Game {
 
         return _game;
     }
-
     // Get the game singleton
     public static Game getInstance() {
         if (_game == null) {
@@ -67,13 +69,20 @@ public class Game {
 
     // Once the level is chosen, this method is called.  This
     // will then create an ExpressionModel and Score object accordingly.
+
     public void configureLevel(Difficulty difficulty) {
         _difficulty = difficulty;
         _model = ExpressionModelFactory.getExpressionModel(difficulty, NUM_OF_QUESTIONS);
         _score = new Score(_model, difficulty);
     }
+    public void assignCustomLevel(ExpressionModel model) {
+        _model = model;
+        _difficulty = Difficulty.CUSTOM;
+        _score = new Score(_model, _difficulty);
+    }
 
     // Get the next question
+
     public void newQuestion() {
         _result = new Result();
 
@@ -86,7 +95,6 @@ public class Game {
             endOfLevel();
         }
     }
-
     // Load the recording scene
     public void record() {
         _loader.loadScene("Question.fxml");
@@ -94,13 +102,13 @@ public class Game {
 
     // Skip the current question, by notifying the result, updating the score and
     // getting the next question by calling newQuestion()
+
     public void skip() {
         _result.skip();
         _score.updateResult(_model.getCurrentQuestionNumber(), _result);
 
         newQuestion();
     }
-
     // Store what the user spoke into their microphone
     public void storeSpeech(String speech) {
         _speech = speech;
@@ -162,7 +170,6 @@ public class Game {
     public Difficulty getDifficulty() {
         return _difficulty;
     }
-
     public Score getScore() {
         return _score;
     }
@@ -181,5 +188,9 @@ public class Game {
 
     public int getErrorCount() {
         return _result.getErrorCount();
+    }
+
+    public static Stage getStage() {
+        return _stage;
     }
 }
