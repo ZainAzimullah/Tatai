@@ -5,6 +5,7 @@ import tatai.exceptions.OutOfItemsException;
 import tatai.exceptions.ResultOutOfRangeException;
 import tatai.exceptions.TataiException;
 import tatai.expression.Operand;
+import tatai.expressionModel.CustomExpressionModel;
 import tatai.expressionModel.ExpressionModel;
 import tatai.expressionModel.ExpressionModelFactory;
 import tatai.score.Result;
@@ -75,7 +76,7 @@ public class Game {
         _model = ExpressionModelFactory.getExpressionModel(difficulty, NUM_OF_QUESTIONS);
         _score = new Score(_model, difficulty);
     }
-    public void assignCustomLevel(ExpressionModel model) {
+    public void setCustomLevel(CustomExpressionModel model) {
         _model = model;
         _difficulty = Difficulty.CUSTOM;
         _score = new Score(_model, _difficulty);
