@@ -10,15 +10,16 @@ import java.util.Date;
 
 public class CustomLevelSettings extends Saveable {
     private int _max;
-    private String _dateCreated;
+    private String _dateCreated, _name;
     private boolean _addition, _subtraction, _multiplication, _division;
 
-    public CustomLevelSettings(int max, boolean addition, boolean subtraction, boolean multiplication, boolean division) {
+    public CustomLevelSettings(String name, int max, boolean addition, boolean subtraction, boolean multiplication, boolean division) {
         _max = max;
         _addition = addition;
         _subtraction = subtraction;
         _multiplication = multiplication;
         _division = division;
+        _name = name;
     }
 
     public void save() throws IOException {
@@ -32,6 +33,10 @@ public class CustomLevelSettings extends Saveable {
 
         String filename = Main.QUESTIONS_FOLDER + "/" + dateFormatForFile.format(date);
         save(filename);
+    }
+
+    public String getName() {
+        return _name;
     }
 
     public String getDateCreated() {

@@ -17,7 +17,8 @@ public class CreateLevelController extends SceneController{
         // into the CustomLevelSettings constructor
 
         try {
-            new CustomLevelSettings(0,
+            new CustomLevelSettings(null,
+                    0,
                     false,
                     false,
                     false,
