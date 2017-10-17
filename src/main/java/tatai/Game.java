@@ -40,8 +40,6 @@ public class Game {
     private Game(Stage stage) {
         _stage = stage;
     }
-    private Game() {} // Singleton
-
 
     // When the singleton is created for the first time, the stage
     // needs to be passed
