@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label text="Custom Level Creator">
@@ -56,12 +55,12 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="365.0" spacing="50.0">
          <children>
-            <JFXButton buttonType="RAISED" style="-fx-background-radius: 30;" text="Save">
+            <JFXButton buttonType="RAISED" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="Save">
                <font>
                   <Font name="Noto Sans CJK JP Black" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" style="-fx-background-radius: 30;" text="Cancel">
+            <JFXButton buttonType="RAISED" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="Cancel">
                <font>
                   <Font name="Noto Sans CJK JP Black" size="18.0" />
                </font>
