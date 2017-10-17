@@ -17,8 +17,7 @@ public class CustomLevelSettings extends Saveable {
     private String _dateCreated;
     private boolean _addition, _subtraction, _multiplication, _division;
 
-    public CustomLevelSettings(String dateCreated, int max, boolean addition, boolean subtraction, boolean multiplication, boolean division) {
-        _dateCreated = dateCreated;
+    public CustomLevelSettings(int max, boolean addition, boolean subtraction, boolean multiplication, boolean division) {
         _max = max;
         _addition = addition;
         _subtraction = subtraction;
