@@ -18,12 +18,6 @@ public class TestExpressionModel {
         CustomLevelSettings settings = new CustomLevelSettings(30, true, false, false, true);
         model = new CustomExpressionModel(settings);
 
-        try {
-            settings.save();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
         model.debug();
     }
 }
