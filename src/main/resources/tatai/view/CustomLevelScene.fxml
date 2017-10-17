@@ -10,8 +10,16 @@
 <?import javafx.scene.text.Font?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <Label text="Custom Level Creator">
+         <font>
+            <Font name="Noto Sans CJK JP Black" size="25.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="25.0" />
+         </VBox.margin>
+      </Label>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
          <children>
             <Label text="Custom Level Name">
@@ -26,7 +34,7 @@
             </JFXTextField>
          </children>
          <VBox.margin>
-            <Insets top="50.0" />
+            <Insets />
          </VBox.margin>
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0">
