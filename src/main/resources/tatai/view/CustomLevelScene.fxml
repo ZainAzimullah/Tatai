@@ -1,19 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXCheckBox?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.CustomLevelScene">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <VBox alignment="CENTER_LEFT" layoutX="66.0" layoutY="113.0" prefHeight="150.0" prefWidth="256.0" spacing="25.0" AnchorPane.leftAnchor="80.0">
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
          <children>
-            <JFXCheckBox text="Add" />
-            <JFXCheckBox checkedColor="#10559c" text="Subtract" />
-            <JFXCheckBox checkedColor="#9c1010" text="Mutiply" />
-            <JFXCheckBox checkedColor="#9c9b10" text="Specify Range" />
+            <Label text="Custom Level Name">
+               <font>
+                  <Font name="Noto Sans CJK JP Black" size="25.0" />
+               </font>
+            </Label>
+            <JFXTextField>
+               <font>
+                  <Font name="Noto Sans CJK JP Black" size="20.0" />
+               </font>
+            </JFXTextField>
          </children>
-      </VBox>
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <VBox alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="256.0" spacing="25.0">
+               <children>
+                  <JFXCheckBox text="Add" />
+                  <JFXCheckBox checkedColor="#1a35c7" text="Subtract" />
+                  <JFXCheckBox checkedColor="#ff0101" text="Mutiply" />
+                  <JFXCheckBox checkedColor="#e4e129" text="Specify Range" />
+               </children>
+               <padding>
+                  <Insets left="100.0" />
+               </padding>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="365.0" spacing="50.0">
+         <children>
+            <JFXButton buttonType="RAISED" style="-fx-background-radius: 30;" text="Save">
+               <font>
+                  <Font name="Noto Sans CJK JP Black" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" style="-fx-background-radius: 30;" text="Cancel">
+               <font>
+                  <Font name="Noto Sans CJK JP Black" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+         <padding>
+            <Insets top="25.0" />
+         </padding>
+      </HBox>
    </children>
-</AnchorPane>
+</VBox>
