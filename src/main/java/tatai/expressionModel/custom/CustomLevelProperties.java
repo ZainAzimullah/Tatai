@@ -14,6 +14,10 @@ public class CustomLevelProperties {
         _dateCreated = new SimpleStringProperty(settings.getDateCreated());
     }
 
+    public CustomLevelSettings getSettings() {
+        return _settings;
+    }
+
     public String getDateCreated() {
         return _dateCreated.get();
     }
