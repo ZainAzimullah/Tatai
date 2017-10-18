@@ -30,6 +30,8 @@ public class CreateLevelController extends SceneController {
     @FXML
     private Label _valid, _operationValid;
 
+    private boolean _nameOK = false, _maxOK = true, _checkBoxesOK = true;
+
     @FXML
     private void save() {
 
@@ -53,8 +55,11 @@ public class CreateLevelController extends SceneController {
 
     @FXML
     private void initialize() {
+        _save.setDisable(true);
+
         // Error handling for checkboxes
         _addition.setSelected(true);
+        _operationValid.setVisible(false);
 
         _addition.selectedProperty().addListener((observable, oldValue, newValue) -> {
             checkOperations();
@@ -80,8 +85,10 @@ public class CreateLevelController extends SceneController {
         _name.focusedProperty().addListener((observable, oldValue, newValue) -> {
             if ((newValue) && (_name.getText().equals(defaultName))) {
                 _name.setText("");
+                _nameOK = false;
             } else if (_name.getText().trim().equals("")) {
                 _name.setText(defaultName);
+                _nameOK = true;
             }
         });
 
@@ -99,22 +106,33 @@ public class CreateLevelController extends SceneController {
             if (matcher.matches()) {
                 int number = Integer.parseInt(input);
                 if ((number >= 1) && (number <= 99)) {
+                    _maxOK = true;
                     _valid.setVisible(false);
-                    _save.setDisable(false);
+                    checkEnableSaveButton();
                     return;
                 }
             }
+
+            _maxOK = false;
             _valid.setVisible(true);
             _valid.setText(maxMessage);
             _save.setDisable(true);
         });
     }
 
+    private void checkEnableSaveButton() {
+        if (_checkBoxesOK && _nameOK && _maxOK) {
+            _save.setDisable(false);
+        }
+    }
+
     private void checkOperations() {
         if (checkBoxesOK()) {
-            _save.setDisable(false);
+            _checkBoxesOK = true;
+            checkEnableSaveButton();
             _operationValid.setVisible(false);
         } else {
+            _checkBoxesOK = false;
             _save.setDisable(true);
             _operationValid.setVisible(true);
             _operationValid.setText("Select at least one operation.");
