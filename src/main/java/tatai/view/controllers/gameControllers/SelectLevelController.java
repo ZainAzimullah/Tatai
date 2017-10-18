@@ -3,6 +3,7 @@ package tatai.view.controllers.gameControllers;
 import javafx.fxml.FXML;
 import tatai.Game;
 import tatai.util.Difficulty;
+import tatai.view.SceneLoader;
 import tatai.view.controllers.SceneController;
 
 public class SelectLevelController extends SceneController {
@@ -27,7 +28,8 @@ public class SelectLevelController extends SceneController {
 
     @FXML
     private void create() {
-
+        SceneLoader loader = new SceneLoader(Game.getInstance().getStage());
+        loader.loadScene("CustomLevelScene.fxml");
     }
 
     @FXML

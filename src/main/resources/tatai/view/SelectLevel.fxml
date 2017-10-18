@@ -30,7 +30,7 @@
                   <Font size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" style="-fx-background-color: orange; -fx-background-radius: 30; -fx-min-width: 200;" text="Create Level">
+            <JFXButton buttonType="RAISED" onAction="#create" style="-fx-background-color: orange; -fx-background-radius: 30; -fx-min-width: 200;" text="Create Level">
                <font>
                   <Font size="18.0" />
                </font>

@@ -24,7 +24,7 @@ public class Game {
     // The Game singleton and its stage
     private static Game _game;
 
-    private static Stage _stage;
+    private Stage _stage;
 
 
     // Game data
@@ -189,7 +189,7 @@ public class Game {
         return _result.getErrorCount();
     }
 
-    public static Stage getStage() {
+    public Stage getStage() {
         return _stage;
     }
 }
