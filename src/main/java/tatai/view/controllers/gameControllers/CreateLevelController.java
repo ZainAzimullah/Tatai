@@ -53,6 +53,8 @@ public class CreateLevelController extends SceneController {
 
     @FXML
     private void initialize() {
+        _operationValid.setVisible(false);
+
         // Error handling for checkboxes
         _addition.setSelected(true);
 
@@ -80,9 +82,22 @@ public class CreateLevelController extends SceneController {
         _name.focusedProperty().addListener((observable, oldValue, newValue) -> {
             if ((newValue) && (_name.getText().equals(defaultName))) {
                 _name.setText("");
+                _save.setDisable(true);
+                return;
             } else if (_name.getText().trim().equals("")) {
                 _name.setText(defaultName);
             }
+
+            enableSaveButton();
+        });
+
+        _name.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (_name.getText().equals("")) {
+                _save.setDisable(true);
+                return;
+            }
+
+            enableSaveButton();
         });
 
         // Error handling for max number
@@ -96,13 +111,10 @@ public class CreateLevelController extends SceneController {
             Pattern pattern = Pattern.compile("\\d+");
             Matcher matcher = pattern.matcher(newValue.toString());
 
-            if (matcher.matches()) {
-                int number = Integer.parseInt(input);
-                if ((number >= 1) && (number <= 99)) {
-                    _valid.setVisible(false);
-                    _save.setDisable(false);
-                    return;
-                }
+            if (maxOK()) {
+                _valid.setVisible(false);
+                enableSaveButton();
+                return;
             }
             _valid.setVisible(true);
             _valid.setText(maxMessage);
@@ -112,13 +124,42 @@ public class CreateLevelController extends SceneController {
 
     private void checkOperations() {
         if (checkBoxesOK()) {
-            _save.setDisable(false);
+            enableSaveButton();
             _operationValid.setVisible(false);
         } else {
             _save.setDisable(true);
             _operationValid.setVisible(true);
             _operationValid.setText("Select at least one operation.");
         }
+    }
+
+    private void enableSaveButton() {
+        if (nameOK() && maxOK() && checkBoxesOK()) {
+            _save.setDisable(false);
+        }
+    }
+
+    private boolean nameOK() {
+        if (_name.getText().trim().equals("")) {
+            return false;
+        }
+
+        return true;
+    }
+
+    private boolean maxOK() {
+        String input = _max.getText();
+        Pattern pattern = Pattern.compile("\\d+");
+        Matcher matcher = pattern.matcher(_max.getText());
+
+        if (matcher.matches()) {
+            int number = Integer.parseInt(input);
+            if ((number >= 1) && (number <= 99)) {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private boolean checkBoxesOK() {
