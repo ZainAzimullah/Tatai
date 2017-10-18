@@ -98,7 +98,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="365.0" spacing="50.0">
                <children>
-                  <JFXButton fx:id="_save" buttonType="RAISED" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="Save">
+                  <JFXButton fx:id="_save" buttonType="RAISED" onAction="#save" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="Save">
                      <font>
                         <Font name="Noto Sans CJK JP Black" size="18.0" />
                      </font>

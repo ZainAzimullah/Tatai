@@ -33,17 +33,13 @@ public class CreateLevelController extends SceneController {
     @FXML
     private void save() {
 
-        // TODO
-        // Read what the user has selected and enter the values
-        // into the CustomLevelSettings constructor
-
         try {
-            new CustomLevelSettings(null,
-                    0,
-                    false,
-                    false,
-                    false,
-                    false).save();
+            new CustomLevelSettings(_name.getText(),
+                    Integer.parseInt(_max.getText()),
+                    _addition.isSelected(),
+                    _subtraction.isSelected(),
+                    _multiplication.isSelected(),
+                    _division.isSelected()).save();
         } catch (IOException e) {
             e.printStackTrace();
         }
