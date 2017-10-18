@@ -77,7 +77,7 @@
                               <Insets top="25.0" />
                            </VBox.margin>
                         </Label>
-                        <Spinner disable="true" />
+                        <Spinner />
                      </children>
                   </VBox>
                </children>
