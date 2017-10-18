@@ -10,6 +10,7 @@ import javafx.stage.Stage;
 import tatai.Game;
 import tatai.score.FinalResultProperties;
 import tatai.score.Score;
+import tatai.util.Difficulty;
 import tatai.view.MainMenuLoader;
 import tatai.view.controllers.SceneController;
 
@@ -61,8 +62,13 @@ public class SessionDetailsController extends SceneController {
             }
         }
 
-        Game.getInstance().configureLevel(Game.getInstance().getDifficulty());
-        Game.getInstance().newQuestion();
+        if (Game.getInstance().getDifficulty().equals(Difficulty.CUSTOM)) {
+            Game.getInstance().generateCustomLevel();
+            Game.getInstance().newQuestion();
+        } else {
+            Game.getInstance().configureLevel(Game.getInstance().getDifficulty());
+            Game.getInstance().newQuestion();
+        }
     }
 
     @FXML

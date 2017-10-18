@@ -44,8 +44,7 @@ public class LoadLevelController extends SceneController {
 
     @FXML
     private void play() {
-        CustomExpressionModel model = new CustomExpressionModel(_levelSelected.getSettings());
-        Game.getInstance().setCustomLevel(model);
+        Game.getInstance().setCustomSettings(_levelSelected.getSettings());
         Game.getInstance().newQuestion();
     }
 

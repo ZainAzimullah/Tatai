@@ -8,6 +8,7 @@ import tatai.expression.Operand;
 import tatai.expressionModel.CustomExpressionModel;
 import tatai.expressionModel.ExpressionModel;
 import tatai.expressionModel.ExpressionModelFactory;
+import tatai.expressionModel.custom.CustomLevelSettings;
 import tatai.score.Result;
 import tatai.score.FinalResult;
 import tatai.score.Score;
@@ -37,6 +38,8 @@ public class Game {
     private ExpressionModel _model;
     private Operand _currentQuestion;
     private int _currentQuestionNumber;
+    private CustomLevelSettings _settings;
+
     private Game(Stage stage) {
         _stage = stage;
     }
@@ -74,8 +77,14 @@ public class Game {
         _model = ExpressionModelFactory.getExpressionModel(difficulty, NUM_OF_QUESTIONS);
         _score = new Score(_model, difficulty);
     }
-    public void setCustomLevel(CustomExpressionModel model) {
-        _model = model;
+
+    public void setCustomSettings(CustomLevelSettings settings) {
+        _settings = settings;
+        generateCustomLevel();
+    }
+
+    public void generateCustomLevel() {
+        _model = new CustomExpressionModel(_settings);
         _difficulty = Difficulty.CUSTOM;
         _score = new Score(_model, _difficulty);
     }
