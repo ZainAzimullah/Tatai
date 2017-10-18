@@ -53,6 +53,16 @@ public class CreateLevelController extends SceneController {
 
     @FXML
     private void initialize() {
+
+        // Error handling for name
+        _name.setText("Untitled");
+        _name.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (_name.getText().equals("")) {
+                _name.setText("Untitled");
+            }
+        });
+
+        // Error handling for max number
         final String message = "You must enter a number between 1 and 99";
 
         _valid.setVisible(false);
