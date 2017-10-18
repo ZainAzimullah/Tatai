@@ -1,5 +1,6 @@
 package tatai.view.controllers.gameControllers;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.beans.property.StringProperty;
@@ -15,7 +16,10 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class CreateLevelController extends SceneController{
+public class CreateLevelController extends SceneController {
+
+    @FXML
+    private JFXButton _save, _cancel;
 
     @FXML
     private JFXCheckBox _addition, _subtraction, _multiplication, _division;
@@ -49,6 +53,8 @@ public class CreateLevelController extends SceneController{
 
     @FXML
     private void initialize() {
+        final String message = "You must enter a number between 1 and 99";
+
         _valid.setVisible(false);
         _max.setText("10");
 
@@ -58,13 +64,19 @@ public class CreateLevelController extends SceneController{
             Matcher matcher = pattern.matcher(newValue.toString());
 
             if (matcher.matches()) {
-                _valid.setVisible(false);
-            } else {
-                _valid.setVisible(true);
-                _valid.setText("You must enter a number between 1 and 99");
+                int number = Integer.parseInt(input);
+                if ((number >= 1) || (number <= 99)) {
+                    _valid.setVisible(false);
+                    _save.setDisable(false);
+                    return;
+                }
             }
+            _valid.setVisible(true);
+            _valid.setText(message);
+            _save.setDisable(true);
         });
     }
+
     // Cancel button
     @FXML
     @Override
