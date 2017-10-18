@@ -38,7 +38,7 @@
                         <Font name="Noto Sans CJK JP Black" size="25.0" />
                      </font>
                   </Label>
-                  <JFXTextField alignment="CENTER">
+                  <JFXTextField fx:id="_name" alignment="CENTER">
                      <font>
                         <Font name="Noto Sans CJK JP Black" size="20.0" />
                      </font>
@@ -98,7 +98,7 @@
                         <Font name="Noto Sans CJK JP Black" size="18.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton buttonType="RAISED" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="Cancel">
+                  <JFXButton buttonType="RAISED" onAction="#returnToMainMenu" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="Cancel">
                      <font>
                         <Font name="Noto Sans CJK JP Black" size="18.0" />
                      </font>
