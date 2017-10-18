@@ -63,10 +63,11 @@
             <LinearGradient endX="1.0" endY="1.0">
                <stops>
                   <Stop color="RED" />
-                  <Stop color="RED" offset="0.3925925925925926" />
-                  <Stop color="WHITE" offset="0.6333333333333336" />
-                  <Stop color="WHITE" offset="0.8374074074074073" />
-                  <Stop color="WHITE" offset="1.0" />
+                  <Stop color="RED" offset="0.3629629629629631" />
+                  <Stop color="WHITE" offset="0.5074074074074078" />
+                  <Stop color="WHITE" offset="0.5966666666666666" />
+                  <Stop color="#1b1b1b" offset="0.7018518518518518" />
+                  <Stop color="BLACK" offset="1.0" />
                </stops>
             </LinearGradient>
          </textFill>
