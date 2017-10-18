@@ -53,17 +53,20 @@ public class CreateLevelController extends SceneController {
 
     @FXML
     private void initialize() {
+        String defaultName = "Untitled";
 
         // Error handling for name
-        _name.setText("Untitled");
-        _name.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (_name.getText().equals("")) {
-                _name.setText("Untitled");
+        _name.setText(defaultName);
+        _name.focusedProperty().addListener((observable, oldValue, newValue) -> {
+            if ((newValue) && (_name.getText().equals(defaultName))) {
+                _name.setText("");
+            } else if (_name.getText().trim().equals("")) {
+                _name.setText(defaultName);
             }
         });
 
         // Error handling for max number
-        final String message = "You must enter a number between 1 and 99";
+        final String maxMessage = "You must enter a number between 1 and 99";
 
         _valid.setVisible(false);
         _max.setText("10");
@@ -75,14 +78,14 @@ public class CreateLevelController extends SceneController {
 
             if (matcher.matches()) {
                 int number = Integer.parseInt(input);
-                if ((number >= 1) || (number <= 99)) {
+                if ((number >= 1) && (number <= 99)) {
                     _valid.setVisible(false);
                     _save.setDisable(false);
                     return;
                 }
             }
             _valid.setVisible(true);
-            _valid.setText(message);
+            _valid.setText(maxMessage);
             _save.setDisable(true);
         });
     }
