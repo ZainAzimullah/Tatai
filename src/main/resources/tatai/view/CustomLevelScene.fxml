@@ -54,7 +54,7 @@
                      <children>
                         <JFXCheckBox fx:id="_addition" text="Addition" />
                         <JFXCheckBox fx:id="_subtraction" checkedColor="#1a35c7" text="Subtraction" />
-                        <JFXCheckBox fx:id="_mutiplication" checkedColor="#ff0101" text="Mutiplication" />
+                        <JFXCheckBox fx:id="_multiplication" checkedColor="#ff0101" text="Mutiplication" />
                         <JFXCheckBox fx:id="_division" checkedColor="#e4e129" text="Division" />
                      </children>
                      <padding>
