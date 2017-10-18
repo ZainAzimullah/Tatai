@@ -76,7 +76,7 @@ public class CreateLevelController extends SceneController {
 
 
         // Error handling for name
-        String defaultName = "Untitled";
+        final String defaultName = "Untitled";
 
         _name.setText(defaultName);
         _name.focusedProperty().addListener((observable, oldValue, newValue) -> {
@@ -101,7 +101,7 @@ public class CreateLevelController extends SceneController {
         });
 
         // Error handling for max number
-        final String maxMessage = "You must enter a number between 1 and 99";
+        final String maxMessage = "You must enter a number between 10 and 99";
 
         _valid.setVisible(false);
         _max.setText("10");
@@ -154,7 +154,7 @@ public class CreateLevelController extends SceneController {
 
         if (matcher.matches()) {
             int number = Integer.parseInt(input);
-            if ((number >= 1) && (number <= 99)) {
+            if ((number >= 10) && (number <= 99)) {
                 return true;
             }
         }
