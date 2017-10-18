@@ -1,6 +1,9 @@
 package tatai.view.controllers.gameControllers;
 
+import com.jfoenix.controls.JFXCheckBox;
+import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
+import javafx.scene.control.Spinner;
 import tatai.Game;
 import tatai.expressionModel.custom.CustomLevelSettings;
 import tatai.view.controllers.SceneController;
@@ -8,6 +11,15 @@ import tatai.view.controllers.SceneController;
 import java.io.IOException;
 
 public class CreateLevelController extends SceneController{
+
+    @FXML
+    private JFXCheckBox _addition, _subtraction, _multiplication, _division;
+
+    @FXML
+    private Spinner<Integer> _max;
+
+    @FXML
+    private JFXTextField _name;
 
     @FXML
     private void save() {
