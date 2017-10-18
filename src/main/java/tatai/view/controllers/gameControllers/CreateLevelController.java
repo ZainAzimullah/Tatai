@@ -50,6 +50,7 @@ public class CreateLevelController extends SceneController{
     @FXML
     private void initialize() {
         _valid.setVisible(false);
+        _max.setText("10");
 
         _max.textProperty().addListener((observable, oldValue, newValue) -> {
             String input = newValue.toString();
