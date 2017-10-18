@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../images/BasketWeave.jpg" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff99" height="400.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Label text="Custom Level Creator">
+               <font>
+                  <Font name="Noto Sans CJK JP Black" size="30.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="60.0">
+               <children>
+                  <Label text="Level Name">
+                     <font>
+                        <Font name="Noto Sans CJK JP Black" size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField>
+                     <font>
+                        <Font name="Noto Sans CJK JP Black" size="20.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="150.0" prefWidth="256.0" spacing="25.0">
+                     <children>
+                        <JFXCheckBox text="Addition" />
+                        <JFXCheckBox checkedColor="#1a35c7" text="Subtraction" />
+                        <JFXCheckBox checkedColor="#ff0101" text="Mutiplication" />
+                        <JFXCheckBox checkedColor="#e4e129" text="Division" />
+                     </children>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </VBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label text="Maximum Value">
+                           <font>
+                              <Font name="Noto Sans CJK JP Black" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label text="X≤ ">
+                           <font>
+                              <Font name="Noto Sans CJK JP Black" size="25.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="25.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Spinner />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="365.0" spacing="50.0">
+               <children>
+                  <JFXButton buttonType="RAISED" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="Save">
+                     <font>
+                        <Font name="Noto Sans CJK JP Black" size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="Cancel">
+                     <font>
+                        <Font name="Noto Sans CJK JP Black" size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
