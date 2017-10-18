@@ -42,6 +42,11 @@ public class CreateLevelController extends SceneController{
         Game.getInstance().selectLevel();
     }
 
+    @FXML
+    private void initialize() {
+        _max.setValueFactory(data -);
+    }
+
     // Cancel button
     @FXML
     @Override
