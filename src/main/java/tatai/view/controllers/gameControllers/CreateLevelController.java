@@ -28,7 +28,7 @@ public class CreateLevelController extends SceneController {
     private JFXTextField _name, _max;
 
     @FXML
-    private Label _valid;
+    private Label _valid, _operationValid;
 
     @FXML
     private void save() {
@@ -53,9 +53,29 @@ public class CreateLevelController extends SceneController {
 
     @FXML
     private void initialize() {
-        String defaultName = "Untitled";
+        // Error handling for checkboxes
+        _addition.setSelected(true);
+
+        _addition.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            checkOperations();
+        });
+
+        _subtraction.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            checkOperations();
+        });
+
+        _multiplication.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            checkOperations();
+        });
+
+        _division.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            checkOperations();
+        });
+
 
         // Error handling for name
+        String defaultName = "Untitled";
+
         _name.setText(defaultName);
         _name.focusedProperty().addListener((observable, oldValue, newValue) -> {
             if ((newValue) && (_name.getText().equals(defaultName))) {
@@ -88,6 +108,28 @@ public class CreateLevelController extends SceneController {
             _valid.setText(maxMessage);
             _save.setDisable(true);
         });
+    }
+
+    private void checkOperations() {
+        if (checkBoxesOK()) {
+            _save.setDisable(false);
+            _operationValid.setVisible(false);
+        } else {
+            _save.setDisable(true);
+            _operationValid.setVisible(true);
+            _operationValid.setText("Select at least one operation.");
+        }
+    }
+
+    private boolean checkBoxesOK() {
+        if (_addition.isSelected()
+                || _subtraction.isSelected()
+                || _multiplication.isSelected()
+                || _division.isSelected()) {
+            return true;
+        }
+
+        return false;
     }
 
     // Cancel button
