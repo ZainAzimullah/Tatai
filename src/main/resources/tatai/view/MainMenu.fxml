@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" opacity="0.77">
          <image>
-            <Image url="@../../images/rsz_800px-tino_rangatiratanga_maori_sovereignty_movement_flagsvg.png" />
+            <Image url="@../../images/TitleScreenbackdrop.jpg" />
          </image>
       </ImageView>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
