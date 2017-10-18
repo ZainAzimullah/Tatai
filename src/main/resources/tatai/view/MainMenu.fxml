@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0" opacity="0.77">
          <image>
-            <Image url="@../../images/TitleScreenbackdrop.jpg" />
+            <Image url="@../../images/rsz_800px-tino_rangatiratanga_maori_sovereignty_movement_flagsvg.png" />
          </image>
       </ImageView>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
@@ -64,10 +64,8 @@
                <stops>
                   <Stop color="RED" />
                   <Stop color="RED" offset="0.3629629629629631" />
-                  <Stop color="WHITE" offset="0.5074074074074078" />
-                  <Stop color="WHITE" offset="0.5966666666666666" />
-                  <Stop color="#1b1b1b" offset="0.7018518518518518" />
-                  <Stop color="BLACK" offset="1.0" />
+                  <Stop color="WHITE" offset="0.670370370370371" />
+                  <Stop color="WHITE" offset="1.0" />
                </stops>
             </LinearGradient>
          </textFill>
