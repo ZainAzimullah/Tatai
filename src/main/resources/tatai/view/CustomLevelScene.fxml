@@ -75,7 +75,7 @@
                                     <Font name="Noto Sans CJK JP Black" size="25.0" />
                                  </font>
                               </Label>
-                              <JFXTextField alignment="CENTER" prefHeight="45.0" prefWidth="64.0">
+                              <JFXTextField fx:id="_max" alignment="CENTER" prefHeight="45.0" prefWidth="64.0">
                                  <font>
                                     <Font name="Noto Sans CJK JP Black" size="20.0" />
                                  </font>
