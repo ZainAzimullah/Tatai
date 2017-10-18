@@ -7,6 +7,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 
 <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="40.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
@@ -15,6 +16,9 @@
          <VBox.margin>
             <Insets top="25.0" />
          </VBox.margin>
+         <font>
+            <Font name="Noto Sans CJK JP Black" size="25.0" />
+         </font>
       </Label>
       <TableView prefHeight="200.0" prefWidth="200.0">
         <columns>
@@ -28,10 +32,18 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
          <children>
-            <JFXButton />
-            <JFXButton />
+            <JFXButton buttonType="RAISED" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;">
+               <font>
+                  <Font name="Noto Sans CJK JP Black" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Button">
+               <font>
+                  <Font name="Noto Sans CJK JP Black" size="18.0" />
+               </font>
+            </JFXButton>
          </children>
       </HBox>
    </children>
