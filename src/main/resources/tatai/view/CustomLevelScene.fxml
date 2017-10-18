@@ -52,10 +52,10 @@
                <children>
                   <VBox alignment="CENTER_LEFT" prefHeight="147.0" prefWidth="169.0" spacing="25.0">
                      <children>
-                        <JFXCheckBox text="Addition" />
-                        <JFXCheckBox checkedColor="#1a35c7" text="Subtraction" />
-                        <JFXCheckBox checkedColor="#ff0101" text="Mutiplication" />
-                        <JFXCheckBox checkedColor="#e4e129" text="Division" />
+                        <JFXCheckBox fx:id="_addition" text="Addition" />
+                        <JFXCheckBox fx:id="_subtraction" checkedColor="#1a35c7" text="Subtraction" />
+                        <JFXCheckBox fx:id="_mutiplication" checkedColor="#ff0101" text="Mutiplication" />
+                        <JFXCheckBox fx:id="_division" checkedColor="#e4e129" text="Division" />
                      </children>
                      <padding>
                         <Insets left="50.0" />
@@ -98,7 +98,7 @@
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="365.0" spacing="50.0">
                <children>
-                  <JFXButton buttonType="RAISED" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="Save">
+                  <JFXButton fx:id="_save" buttonType="RAISED" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="Save">
                      <font>
                         <Font name="Noto Sans CJK JP Black" size="18.0" />
                      </font>
