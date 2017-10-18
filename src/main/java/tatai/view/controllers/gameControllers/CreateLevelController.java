@@ -4,6 +4,7 @@ import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.fxml.FXML;
 import javafx.scene.control.Spinner;
+import javafx.scene.control.SpinnerValueFactory;
 import tatai.Game;
 import tatai.expressionModel.custom.CustomLevelSettings;
 import tatai.view.controllers.SceneController;
@@ -16,10 +17,7 @@ public class CreateLevelController extends SceneController{
     private JFXCheckBox _addition, _subtraction, _multiplication, _division;
 
     @FXML
-    private Spinner<Integer> _max;
-
-    @FXML
-    private JFXTextField _name;
+    private JFXTextField _name, _max;
 
     @FXML
     private void save() {
@@ -44,9 +42,8 @@ public class CreateLevelController extends SceneController{
 
     @FXML
     private void initialize() {
-        _max.setValueFactory(data -);
-    }
 
+    }
     // Cancel button
     @FXML
     @Override

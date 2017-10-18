@@ -15,11 +15,9 @@ public class TestLoader extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource(FILENAME));
-        Parent layout = loader.load();
-        Scene scene = new Scene(layout);
-        primaryStage.setScene(scene);
+        SceneLoader loader = new SceneLoader(primaryStage);
+
+        loader.loadScene("CustomLevelScene.fxml");
         primaryStage.show();
     }
 

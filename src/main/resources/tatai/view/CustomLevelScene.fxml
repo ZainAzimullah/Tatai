@@ -5,7 +5,6 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -14,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.gameControllers.CreateLevelController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0">
          <image>
@@ -39,7 +38,7 @@
                         <Font name="Noto Sans CJK JP Black" size="25.0" />
                      </font>
                   </Label>
-                  <JFXTextField>
+                  <JFXTextField alignment="CENTER">
                      <font>
                         <Font name="Noto Sans CJK JP Black" size="20.0" />
                      </font>
@@ -69,15 +68,20 @@
                               <Font name="Noto Sans CJK JP Black" size="15.0" />
                            </font>
                         </Label>
-                        <Label text="X≤ ">
-                           <font>
-                              <Font name="Noto Sans CJK JP Black" size="25.0" />
-                           </font>
-                           <VBox.margin>
-                              <Insets top="25.0" />
-                           </VBox.margin>
-                        </Label>
-                        <Spinner editable="true" />
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Label text="X ≤ ">
+                                 <font>
+                                    <Font name="Noto Sans CJK JP Black" size="25.0" />
+                                 </font>
+                              </Label>
+                              <JFXTextField alignment="CENTER" prefHeight="45.0" prefWidth="64.0">
+                                 <font>
+                                    <Font name="Noto Sans CJK JP Black" size="20.0" />
+                                 </font>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
                      </children>
                   </VBox>
                </children>
