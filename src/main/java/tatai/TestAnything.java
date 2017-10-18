@@ -1,7 +1,9 @@
 package tatai;
 
 import javafx.beans.property.StringProperty;
+import tatai.expressionModel.custom.CustomLevelSettings;
 
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
@@ -13,8 +15,10 @@ import java.util.Date;
  */
 public class TestAnything {
     public static void main(String[] args) {
-        DateFormat dateFormat = new SimpleDateFormat("HH:mm dd/MM");
-        Date date = new Date();
-        System.out.println(dateFormat.format(date));
+        try {
+            new CustomLevelSettings("Test", 25,true,false,false,true).save();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
