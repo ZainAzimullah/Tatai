@@ -82,7 +82,7 @@
                               </JFXTextField>
                            </children>
                         </HBox>
-                        <Label fx:id="_valid" alignment="CENTER_RIGHT" prefHeight="29.0" prefWidth="164.0" text="Integers from 1-99 only" textAlignment="CENTER" textFill="RED" wrapText="true">
+                        <Label fx:id="_valid" alignment="CENTER_RIGHT" prefHeight="86.0" prefWidth="227.0" text="Integers from 1-99 only" textAlignment="CENTER" textFill="RED" wrapText="true">
                            <font>
                               <Font name="Noto Sans CJK JP Black" size="13.0" />
                            </font>
