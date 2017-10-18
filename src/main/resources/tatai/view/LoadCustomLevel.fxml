@@ -21,7 +21,7 @@
             <Image url="@../../images/Statue.jpg" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#80808080" height="400.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#b2b2b2bf" height="400.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
       <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="40.0">
          <children>
             <Label text="Load Custom Level">
