@@ -5,6 +5,7 @@ import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
 import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
@@ -19,7 +20,7 @@ import java.util.regex.Pattern;
 public class CreateLevelController extends SceneController {
 
     @FXML
-    private JFXButton _save, _cancel;
+    private JFXButton _save;
 
     @FXML
     private JFXCheckBox _addition, _subtraction, _multiplication, _division;
@@ -40,6 +41,9 @@ public class CreateLevelController extends SceneController {
                     _subtraction.isSelected(),
                     _multiplication.isSelected(),
                     _division.isSelected()).save();
+
+            showSavedMessage("Custom level");
+
         } catch (IOException e) {
             e.printStackTrace();
         }

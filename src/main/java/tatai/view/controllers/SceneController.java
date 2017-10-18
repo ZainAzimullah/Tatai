@@ -62,4 +62,10 @@ public abstract class SceneController {
 		
 		Practice.getInstance().returnToMainMenu();
 	}
+
+	protected void showSavedMessage(String whatWasSaved) {
+		Alert alert = new Alert(Alert.AlertType.INFORMATION);
+		alert.setContentText(whatWasSaved + " saved");
+		alert.showAndWait();
+	}
 }

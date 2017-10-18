@@ -73,10 +73,7 @@ public class SessionDetailsController extends SceneController {
             e.printStackTrace();
         }
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setContentText("Scores saved");
-        alert.showAndWait();
-
+        showSavedMessage("Scores");
         _saveButton.setDisable(true);
         _saved = true;
     }
