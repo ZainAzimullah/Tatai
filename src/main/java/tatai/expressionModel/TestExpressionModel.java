@@ -14,7 +14,7 @@ public class TestExpressionModel {
         model = ExpressionModelFactory.getExpressionModel(Difficulty.HARD, 10);
         model.debug();
 
-        CustomLevelSettings settings = new CustomLevelSettings(30, true, false, false, true);
+        CustomLevelSettings settings = new CustomLevelSettings("name", 30, true, false, false, true);
         model = new CustomExpressionModel(settings);
 
         model.debug();
