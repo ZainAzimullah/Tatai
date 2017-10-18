@@ -22,7 +22,7 @@
          </image>
       </ImageView>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bdbdbdb2" height="400.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
-      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="40.0">
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="30.0">
          <children>
             <Label text="Load Custom Level">
                <VBox.margin>
@@ -44,7 +44,7 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+            <HBox alignment="TOP_CENTER" spacing="50.0">
                <children>
                   <JFXButton buttonType="RAISED" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Play Level">
                      <font>
