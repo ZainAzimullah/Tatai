@@ -45,7 +45,7 @@
             </TableView>
             <HBox alignment="TOP_CENTER" spacing="50.0">
                <children>
-                  <JFXButton buttonType="RAISED" onAction="#play" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Play Level">
+                  <JFXButton fx:id="_playButton" buttonType="RAISED" onAction="#play" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Play Level">
                      <font>
                         <Font name="Noto Sans CJK JP Black" size="18.0" />
                      </font>

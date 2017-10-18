@@ -1,5 +1,6 @@
 package tatai.view.controllers.gameControllers;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -21,10 +22,15 @@ public class LoadLevelController extends SceneController {
     @FXML
     private TableColumn<CustomLevelProperties, String> _name;
 
+    @FXML
+    private JFXButton _playButton;
+
     private CustomLevelProperties _levelSelected;
 
     @FXML
     private void initialize() {
+        _playButton.setDisable(true);
+
         _dateCreated.setCellValueFactory(data -> data.getValue().dateCreatedProperty());
         _name.setCellValueFactory(data -> data.getValue().nameProperty());
 
@@ -32,6 +38,7 @@ public class LoadLevelController extends SceneController {
         _table.setItems(history.getObservableList());
         _table.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
             _levelSelected = newValue;
+            _playButton.setDisable(false);
         }));
     }
 
