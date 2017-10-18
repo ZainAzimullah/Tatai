@@ -43,7 +43,7 @@
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
                </columnResizePolicy>
             </TableView>
-            <HBox alignment="TOP_CENTER" spacing="50.0">
+            <HBox alignment="TOP_CENTER" spacing="25.0">
                <children>
                   <JFXButton fx:id="_playButton" buttonType="RAISED" onAction="#play" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Play Level">
                      <font>
