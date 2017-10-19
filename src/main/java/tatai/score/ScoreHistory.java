@@ -43,7 +43,7 @@ public class ScoreHistory {
 
     // Get an ArrayList of Score objects by reading all the Scores from
     // file and putting them into an ArrayList
-    private ArrayList<Score> getScores() {
+    public ArrayList<Score> getScores() {
         File scoresFolder = new File(Main.SCORES_FOLDER);
         File[] scores = scoresFolder.listFiles();  // Get all Score files in the folder
 

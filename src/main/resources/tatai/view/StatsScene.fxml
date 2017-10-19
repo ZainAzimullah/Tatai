@@ -14,7 +14,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.mainMenuControllers.StatsSceneController">
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0">
          <image>
@@ -24,7 +24,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfbfbfa6" height="400.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <center>
-            <AreaChart legendSide="TOP" title="History" BorderPane.alignment="CENTER">
+            <AreaChart fx:id="_chart" legendSide="TOP" title="History" BorderPane.alignment="CENTER">
                <xAxis>
                   <CategoryAxis side="BOTTOM" />
                </xAxis>
@@ -39,12 +39,7 @@
          <bottom>
             <HBox alignment="CENTER" spacing="50.0" BorderPane.alignment="CENTER">
                <children>
-                  <JFXButton alignment="CENTER" buttonType="RAISED" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="Clear">
-                     <font>
-                        <Font name="Noto Sans CJK JP Black" size="18.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXButton alignment="CENTER" buttonType="RAISED" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="Home">
+                  <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#back" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="Home">
                      <font>
                         <Font name="Noto Sans CJK JP Black" size="18.0" />
                      </font>
