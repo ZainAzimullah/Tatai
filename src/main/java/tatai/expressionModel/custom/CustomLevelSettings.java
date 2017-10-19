@@ -12,6 +12,7 @@ public class CustomLevelSettings extends Saveable {
     private int _max;
     private String _dateCreated, _name;
     private boolean _addition, _subtraction, _multiplication, _division;
+    private String _filename;
 
     public CustomLevelSettings(String name, int max, boolean addition, boolean subtraction, boolean multiplication, boolean division) {
         _max = max;
@@ -20,9 +21,7 @@ public class CustomLevelSettings extends Saveable {
         _multiplication = multiplication;
         _division = division;
         _name = name;
-    }
 
-    public void save() throws IOException {
         // Set a nice date format to show the user, but a file-friendly format for saving
         DateFormat dateFormatForUser = new SimpleDateFormat("dd/MM/yyyy HH:mm");
         DateFormat dateFormatForFile = new SimpleDateFormat("HH-mm_dd-MM");
@@ -32,7 +31,11 @@ public class CustomLevelSettings extends Saveable {
         _dateCreated = dateFormatForUser.format(date);
 
         String filename = Main.QUESTIONS_FOLDER + "/" + dateFormatForFile.format(date);
-        save(filename);
+        _filename = filename;
+    }
+
+    public void save() throws IOException {
+        save(_filename);
     }
 
     public String getName() {
@@ -41,6 +44,10 @@ public class CustomLevelSettings extends Saveable {
 
     public String getDateCreated() {
         return _dateCreated;
+    }
+
+    public String getFilename() {
+        return _filename;
     }
 
     public int getMax() {
