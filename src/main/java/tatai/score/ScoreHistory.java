@@ -7,6 +7,7 @@ import tatai.Main;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * This class is used to get past Score objects that have been serialized and
@@ -76,6 +77,8 @@ public class ScoreHistory {
             }
         }
 
+        Collections.sort(scoresList);
+        Collections.reverse(scoresList);
         return scoresList;
     }
 

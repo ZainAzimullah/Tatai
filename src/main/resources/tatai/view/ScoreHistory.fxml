@@ -30,10 +30,10 @@
             </Label>
             <TableView fx:id="_table" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" stylesheets="@ScoreHistoryTableStyle.css">
               <columns>
-                <TableColumn fx:id="_date" prefWidth="75.0" text="Date" />
+                <TableColumn fx:id="_date" maxWidth="7000.0" prefWidth="75.0" text="Date" />
                 <TableColumn fx:id="_level" prefWidth="75.0" text="Level" />
-                  <TableColumn fx:id="_total" prefWidth="75.0" text="Total" />
-                  <TableColumn fx:id="_numMistakes" prefWidth="75.0" text="Mistakes" />
+                  <TableColumn fx:id="_total" maxWidth="3000.0" prefWidth="75.0" text="Total" />
+                  <TableColumn fx:id="_numMistakes" maxWidth="3000.0" prefWidth="75.0" text="Mistakes" />
               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

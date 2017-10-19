@@ -18,13 +18,14 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Score extends Saveable {
+public class Score extends Saveable implements Comparable<Score> {
 
     private HashMap<Integer, Result> _results;
     private HashMap<Integer, String> _expressions;
     private ArrayList<FinalResult> _finalResults;
     private Difficulty _difficulty;
     private String _time;
+    private long _unixTime;
 
     public Score(ExpressionModel model, Difficulty difficulty) {
         _difficulty = difficulty;
@@ -80,12 +81,13 @@ public class Score extends Saveable {
     // Save the score to a new file, with the filename as the current time and date.
     public void save() throws IOException {
         // Set a nice date format to show the user, but a file-friendly format for saving
-        DateFormat dateFormatForUser = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-        DateFormat dateFormatForFile = new SimpleDateFormat("HH-mm_dd-MM");
+        DateFormat dateFormatForUser = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        DateFormat dateFormatForFile = new SimpleDateFormat("HH-mm_dd-MM-ss");
         Date date = new Date();
 
         // Store the time the score was logged
         _time = dateFormatForUser.format(date);
+        _unixTime = date.getTime();
 
         String filename = Main.SCORES_FOLDER + "/" + dateFormatForFile.format(date);
 
@@ -108,6 +110,10 @@ public class Score extends Saveable {
         return _finalResults;
     }
 
+    public long getUnixTime() {
+        return _unixTime;
+    }
+
     public void debug() {
         for (Map.Entry entry: _results.entrySet()) {
             System.out.println(entry.getValue());
@@ -115,6 +121,17 @@ public class Score extends Saveable {
 
         for (Map.Entry entry: _expressions.entrySet()) {
             System.out.println(entry.getValue().toString());
+        }
+    }
+
+    @Override
+    public int compareTo(Score otherScore) {
+        if (otherScore.getUnixTime() < this.getUnixTime()) {
+            return 1;
+        } else if (otherScore.getUnixTime() > this.getUnixTime()) {
+            return -1;
+        } else {
+            return 0;
         }
     }
 }
