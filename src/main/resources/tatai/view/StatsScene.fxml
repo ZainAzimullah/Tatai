@@ -17,7 +17,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="133.0" fitWidth="200.0">
+      <ImageView fitHeight="400.0" fitWidth="600.0">
          <image>
             <Image url="@../../images/Highscorebackground.png" />
          </image>
