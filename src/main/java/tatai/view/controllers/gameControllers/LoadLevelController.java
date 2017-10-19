@@ -58,7 +58,15 @@ public class LoadLevelController extends SceneController {
     @FXML
     private void delete() {
         File file = new File(_levelSelected.getSettings().getFilename());
+
+        int reply = showAlert();
+
+        if (reply == SceneController.NO) {
+            return;
+        }
+
         file.delete();
+        _table.getItems().remove(_levelSelected);
     }
 
     @FXML
