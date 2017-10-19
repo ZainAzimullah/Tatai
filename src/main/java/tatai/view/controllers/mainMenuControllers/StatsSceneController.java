@@ -17,23 +17,16 @@ public class StatsSceneController extends MainMenuController {
 
     @FXML
     private void initialize() {
+
         ScoreHistory history = new ScoreHistory();
 
-        NumberAxis yAxis = new NumberAxis();
-        CategoryAxis xAxis = new CategoryAxis();
-
-        _chart.setTitle("");
-        _chart.legendVisibleProperty().setValue(false);
-
-        Axis theXAxis, theYAxis;
-        theXAxis = _chart.getXAxis();
-        theYAxis = _chart.getYAxis();
-
-        theXAxis = xAxis;
-        theYAxis = yAxis;
-
         _chart.getXAxis().setTickLabelsVisible(false);
-        _chart.getYAxis().setTickLength(1);
+        _chart.legendVisibleProperty().setValue(false);
+        ((NumberAxis) _chart.getYAxis()).setLowerBound(0);
+        ((NumberAxis) _chart.getYAxis()).setUpperBound(10);
+        ((NumberAxis) _chart.getYAxis()).setTickUnit(1);
+        _chart.getYAxis().setAutoRanging(false);
+
 
         XYChart.Series series = new XYChart.Series();
 
