@@ -19,10 +19,21 @@ public class StatsSceneController extends MainMenuController {
     private void initialize() {
         ScoreHistory history = new ScoreHistory();
 
-        NumberAxis yAxis = new NumberAxis(0, 10, 1);
+        NumberAxis yAxis = new NumberAxis();
         CategoryAxis xAxis = new CategoryAxis();
 
-        AreaChart<String, Number> chart = new AreaChart(xAxis, yAxis);
+        _chart.setTitle("");
+        _chart.legendVisibleProperty().setValue(false);
+
+        Axis theXAxis, theYAxis;
+        theXAxis = _chart.getXAxis();
+        theYAxis = _chart.getYAxis();
+
+        theXAxis = xAxis;
+        theYAxis = yAxis;
+
+        _chart.getXAxis().setTickLabelsVisible(false);
+        _chart.getYAxis().setTickLength(1);
 
         XYChart.Series series = new XYChart.Series();
 
@@ -30,11 +41,11 @@ public class StatsSceneController extends MainMenuController {
         Collections.reverse(scores);
 
         for (Score score: scores) {
+            System.out.println(score.getTotal());
             series.getData().add(new XYChart.Data(score.getTime(), score.getTotal()));
         }
 
-        chart.getData().add(series);
-        _chart = chart;
+        _chart.getData().add(series);
     }
 
     @FXML

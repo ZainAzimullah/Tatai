@@ -15,9 +15,9 @@ public class TestLoader extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        SceneLoader loader = new SceneLoader(primaryStage);
+        MainMenuLoader loader = new MainMenuLoader(primaryStage);
 
-        loader.loadScene("CustomLevelScene.fxml");
+        loader.loadScene("StatsScene.fxml");
         primaryStage.show();
     }
 
