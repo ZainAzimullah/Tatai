@@ -5,70 +5,66 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.mainMenuControllers.MainMenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.mainMenuControllers.MainMenuController">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="600.0" opacity="0.77">
+      <ImageView fitHeight="450.0" fitWidth="600.0" opacity="0.77">
          <image>
             <Image url="@../../images/rsz_800px-tino_rangatiratanga_maori_sovereignty_movement_flagsvg.png" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="100.0">
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" spacing="10.0" AnchorPane.leftAnchor="77.0">
          <children>
-            <BorderPane layoutX="100.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <top>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
-                     <children>
-                        <JFXButton buttonType="RAISED" onAction="#play" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Play" textFill="WHITE">
-                           <font>
-                              <Font size="25.0" />
-                           </font>
-                        </JFXButton>
-                        <JFXButton buttonType="RAISED" onAction="#practice" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Practice" textFill="WHITE">
-                           <font>
-                              <Font size="25.0" />
-                           </font>
-                        </JFXButton>
-                        <JFXButton buttonType="RAISED" onAction="#scores" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Scores" textFill="WHITE">
-                           <font>
-                              <Font size="25.0" />
-                           </font>
-                        </JFXButton>
-                        <JFXButton buttonType="RAISED" onAction="#about" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="About" textFill="WHITE">
-                           <font>
-                              <Font size="25.0" />
-                           </font>
-                        </JFXButton>
-                        <JFXButton buttonType="RAISED" onAction="#quit" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Quit" textFill="WHITE">
-                           <font>
-                              <Font size="25.0" />
-                           </font>
-                        </JFXButton>
-                     </children>
-                  </VBox>
-               </top>
-            </BorderPane>
+            <Label alignment="TOP_CENTER" text="Welcome to Tātai!">
+               <font>
+                  <Font name="Noto Sans CJK JP Bold" size="50.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="RED" />
+                        <Stop color="RED" offset="0.3629629629629631" />
+                        <Stop color="WHITE" offset="0.670370370370371" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <JFXButton buttonType="RAISED" onAction="#play" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Play" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#practice" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Practice" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#scores" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Score History" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#scores" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="High Score" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#about" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="About" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#quit" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Quit" textFill="WHITE">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </JFXButton>
          </children>
-      </AnchorPane>
-      <Label alignment="TOP_CENTER" layoutX="252.0" layoutY="60.0" text="Welcome to Tātai!" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
-         <font>
-            <Font name="Noto Sans CJK JP Bold" size="50.0" />
-         </font>
-         <textFill>
-            <LinearGradient endX="1.0" endY="1.0">
-               <stops>
-                  <Stop color="RED" />
-                  <Stop color="RED" offset="0.3629629629629631" />
-                  <Stop color="WHITE" offset="0.670370370370371" />
-                  <Stop color="WHITE" offset="1.0" />
-               </stops>
-            </LinearGradient>
-         </textFill>
-      </Label>
+      </VBox>
    </children>
 </AnchorPane>
