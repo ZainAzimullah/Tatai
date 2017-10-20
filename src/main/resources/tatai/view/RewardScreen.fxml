@@ -33,7 +33,7 @@
                   <Font name="Noto Sans CJK JP Black" size="14.0" />
                </font>
             </Label>
-            <JFXTextArea prefHeight="85.0" prefWidth="350.0" unFocusColor="#47474700">
+            <JFXTextArea focusColor="#ffffff00" prefHeight="85.0" prefWidth="350.0" unFocusColor="#47474700" wrapText="true">
                <font>
                   <Font name="Noto Sans CJK JP Black" size="12.0" />
                </font>
