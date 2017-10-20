@@ -10,7 +10,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.gameControllers.CorrectController">
    <children>
-      <ImageView blendMode="MULTIPLY" fitHeight="460.0" fitWidth="600.0">
+      <ImageView blendMode="MULTIPLY" fitHeight="4th="600.0">
          <image>
             <Image url="@../../images/CorrectBackdrop.png" />
          </image>
