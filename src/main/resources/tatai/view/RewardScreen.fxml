@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="285.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="250.0" fitWidth="450.0">
+      <ImageView fitHeight="285.0" fitWidth="450.0">
          <image>
             <Image url="@../../images/MaoriStrip.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#c4c4c499" height="75.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="350.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="100.0" />
-      <VBox alignment="TOP_CENTER" prefHeight="250.0" prefWidth="450.0">
+      <VBox alignment="TOP_CENTER" prefHeight="285.0" prefWidth="450.0">
          <children>
             <Label alignment="TOP_CENTER" text="Congratulations!!" wrapText="true">
                <font>
                   <Font name="Noto Sans CJK JP Black" size="22.0" />
                </font>
                <VBox.margin>
-                  <Insets top="35.0" />
+                  <Insets top="40.0" />
                </VBox.margin>
             </Label>
             <Label alignment="TOP_CENTER" text="You got 8 or more questions correct" wrapText="true">
@@ -34,17 +33,14 @@
                   <Font name="Noto Sans CJK JP Black" size="14.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="75.0" prefWidth="350.0" text="&quot;Quote&quot;" wrapText="true">
+            <JFXTextArea prefHeight="85.0" prefWidth="350.0" unFocusColor="#47474700">
                <font>
                   <Font name="Noto Sans CJK JP Black" size="12.0" />
                </font>
+            </JFXTextArea>
+            <JFXButton buttonType="RAISED" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="OK">
                <VBox.margin>
-                  <Insets top="10.0" />
-               </VBox.margin>
-            </Label>
-            <JFXButton buttonType="RAISED" text="Ok">
-               <VBox.margin>
-                  <Insets />
+                  <Insets top="12.5" />
                </VBox.margin>
                <font>
                   <Font name="Noto Sans CJK JP Black" size="15.0" />
