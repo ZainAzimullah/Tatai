@@ -67,6 +67,11 @@ public class LoadLevelController extends SceneController {
 
         file.delete();
         _table.getItems().remove(_levelSelected);
+
+        if (_table.getItems().size() == 0) {
+            _playButton.setDisable(true);
+            _deleteButton.setDisable(true);
+        }
     }
 
     @FXML

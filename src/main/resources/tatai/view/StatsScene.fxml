@@ -51,7 +51,7 @@
             </HBox>
          </bottom>
          <top>
-            <Label text="Highscores" BorderPane.alignment="CENTER">
+            <Label text="Progress" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets top="20.0" />
                </BorderPane.margin>
