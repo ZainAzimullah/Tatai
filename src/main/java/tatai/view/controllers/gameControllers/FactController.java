@@ -13,7 +13,7 @@ import java.io.FileReader;
 import java.net.URISyntaxException;
 import java.net.URL;
 
-public class FactController {
+public class FactController extends SceneController {
 
     private Stage _stage;
 
@@ -63,4 +63,7 @@ public class FactController {
 
         _stage.close();
     }
+
+    @Override
+    protected void returnToMainMenu() {}
 }
