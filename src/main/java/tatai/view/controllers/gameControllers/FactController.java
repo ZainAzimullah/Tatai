@@ -21,9 +21,6 @@ public class FactController {
     private JFXTextArea _text;
 
     @FXML
-    private JFXButton _ok;
-
-    @FXML
     private void initialize() {
         _text.setEditable(false);
 
@@ -39,10 +36,13 @@ public class FactController {
             FileReader fileReader = new FileReader(fact);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
+            String info = "";
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                _text.appendText(line);
+                info += line;
             }
+
+            _text.setText(info);
 
         } catch (URISyntaxException e) {
             e.printStackTrace();

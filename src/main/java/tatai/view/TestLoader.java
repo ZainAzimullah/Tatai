@@ -8,6 +8,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import tatai.expressionModel.EasyExpressionModel;
 import tatai.score.Score;
+import tatai.view.controllers.gameControllers.FactController;
 
 public class TestLoader extends Application {
 
@@ -15,9 +16,19 @@ public class TestLoader extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        MainMenuLoader loader = new MainMenuLoader(primaryStage);
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(this.getClass().getResource("RewardScreen.fxml"));
+        if (loader == null) {
+            System.out.println("loader is null");
+        }
 
-        loader.loadScene("StatsScene.fxml");
+        Parent layout = loader.load();
+
+        FactController controller = loader.getController();
+        controller.setStage(primaryStage);
+
+        Scene scene = new Scene(layout);
+        primaryStage.setScene(scene);
         primaryStage.show();
     }
 

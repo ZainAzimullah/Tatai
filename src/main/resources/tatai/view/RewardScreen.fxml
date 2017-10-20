@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="285.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="285.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.gameControllers.FactController">
    <children>
       <ImageView fitHeight="285.0" fitWidth="450.0">
          <image>
@@ -33,12 +32,12 @@
                   <Font name="Noto Sans CJK JP Black" size="14.0" />
                </font>
             </Label>
-            <JFXTextArea focusColor="#ffffff00" prefHeight="85.0" prefWidth="350.0" unFocusColor="#47474700" wrapText="true">
+            <JFXTextArea fx:id="_text" focusColor="#ffffff00" prefHeight="85.0" prefWidth="350.0" unFocusColor="#47474700" wrapText="true">
                <font>
                   <Font name="Noto Sans CJK JP Black" size="12.0" />
                </font>
             </JFXTextArea>
-            <JFXButton buttonType="RAISED" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="OK">
+            <JFXButton buttonType="RAISED" onAction="#ok" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="OK">
                <VBox.margin>
                   <Insets top="12.5" />
                </VBox.margin>
