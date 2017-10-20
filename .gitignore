@@ -6,8 +6,7 @@
 .gradle/
 *.iml
 
-#Log files
-*.txt
+#Saved Scores and Levels
 .scores/
 .questionLists/
 
