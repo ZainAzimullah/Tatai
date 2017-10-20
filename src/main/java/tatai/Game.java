@@ -13,6 +13,7 @@ import tatai.score.Result;
 import tatai.score.FinalResult;
 import tatai.score.Score;
 import tatai.util.Difficulty;
+import tatai.view.FactLoader;
 import tatai.view.MainMenuLoader;
 import tatai.view.SceneLoader;
 import tatai.view.SessionDetailsLoader;
@@ -126,7 +127,7 @@ public class Game {
     public void checkAnswer() {
 
         try {
-            if (_speech.equals(_currentQuestion.getMaoriResult().toString())) {
+            if (_speech.contains(_currentQuestion.getMaoriResult().toString())) {
                 _result.addCorrect();
                 _score.updateResult(_model.getCurrentQuestionNumber(), _result);
                 _loader.loadScene("Correct.fxml");
@@ -167,6 +168,13 @@ public class Game {
         // Load the details for this session in an EndOfLevel scene
         SessionDetailsLoader loader = new SessionDetailsLoader(_stage, _score);
         loader.loadScene("EndOfLevel.fxml");
+
+        if (_score.getTotal() >= 8) {
+            Stage stage = new Stage();
+            FactLoader fact = new FactLoader(stage);
+            fact.loadScene("RewardScreen.fxml");
+            stage.show();
+        }
     }
 
     // Return to the main menu from current screen
