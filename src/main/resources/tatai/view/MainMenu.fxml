@@ -49,7 +49,7 @@
                   <Font size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#stats" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Progress" textFill="WHITE">
+            <JFXButton buttonType="RAISED" onAction="#stats" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Statistics" textFill="WHITE">
                <font>
                   <Font size="25.0" />
                </font>

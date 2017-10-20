@@ -82,6 +82,19 @@ public class ScoreHistory {
         return scoresList;
     }
 
+    public double getMean() {
+        ArrayList<Score> scores = getScores();
+
+        double sum = 0;
+        for (Score score: getScores()) {
+            sum += score.getTotal();
+        }
+
+        sum /= scores.size();
+
+        return sum;
+    }
+
     // This method deserializes a saved Score
     private Score deserializeScore(String serialized) {
         // Gson library taken from:  https://github.com/google/gson
