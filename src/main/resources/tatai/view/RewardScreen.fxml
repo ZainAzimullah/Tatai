@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="285.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.gameControllers.FactController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.gameControllers.FactController">
    <children>
-      <ImageView fitHeight="285.0" fitWidth="450.0">
+      <ImageView fitHeight="325.0" fitWidth="450.0">
          <image>
             <Image url="@../../images/MaoriStrip.png" />
          </image>
@@ -24,7 +24,7 @@
                   <Font name="Noto Sans CJK JP Black" size="22.0" />
                </font>
                <VBox.margin>
-                  <Insets top="40.0" />
+                  <Insets top="45.0" />
                </VBox.margin>
             </Label>
             <Label alignment="TOP_CENTER" text="You got 8 or more questions correct" wrapText="true">
@@ -32,12 +32,12 @@
                   <Font name="Noto Sans CJK JP Black" size="14.0" />
                </font>
             </Label>
-            <AnchorPane prefHeight="85.0" prefWidth="200.0">
+            <AnchorPane prefHeight="120.0">
                <VBox.margin>
                   <Insets left="40.0" right="40.0" />
                </VBox.margin>
                <children>
-                  <JFXTextArea fx:id="_text" focusColor="#405aa800" unFocusColor="#4d4d4d00" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <JFXTextArea fx:id="_text" focusColor="#405aa800" style="-fx-background-color: Lightgrey;" unFocusColor="#4d4d4d00" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
                         <Font name="Noto Sans CJK JP Black" size="12.0" />
                      </font>
@@ -46,7 +46,7 @@
             </AnchorPane>
             <JFXButton buttonType="RAISED" onAction="#ok" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="OK">
                <VBox.margin>
-                  <Insets top="12.5" />
+                  <Insets top="7.5" />
                </VBox.margin>
                <font>
                   <Font name="Noto Sans CJK JP Black" size="15.0" />
