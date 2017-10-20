@@ -10,9 +10,9 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.mainMenuControllers.MainMenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.mainMenuControllers.MainMenuController">
    <children>
-      <ImageView fitHeight="450.0" fitWidth="600.0" opacity="0.77">
+      <ImageView fitHeight="425.0" fitWidth="600.0" opacity="0.77">
          <image>
             <Image url="@../../images/TitleScreenbackdrop.jpg" />
          </image>
@@ -36,34 +36,34 @@
                   </LinearGradient>
                </textFill>
             </Label>
-            <JFXButton buttonType="RAISED" onAction="#play" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Play" textFill="#ffd400">
+            <JFXButton buttonType="RAISED" onAction="#play" style="-fx-background-color: Lightblue; -fx-background-radius: 30; -fx-min-width: 200;" text="Play">
                <font>
-                  <Font size="25.0" />
+                  <Font name="Noto Sans CJK JP Black" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#practice" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Practice" textFill="#ffd400">
+            <JFXButton buttonType="RAISED" onAction="#practice" style="-fx-background-color: Lightblue; -fx-background-radius: 30; -fx-min-width: 200;" text="Practice">
                <font>
-                  <Font size="25.0" />
+                  <Font name="Noto Sans CJK JP Black" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#scores" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Scores" textFill="#ffd400">
+            <JFXButton buttonType="RAISED" onAction="#scores" style="-fx-background-color: Lightblue; -fx-background-radius: 30; -fx-min-width: 200;" text="Scores">
                <font>
-                  <Font size="25.0" />
+                  <Font name="Noto Sans CJK JP Black" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#stats" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Statistics" textFill="#ffd400">
+            <JFXButton buttonType="RAISED" onAction="#stats" style="-fx-background-color: Lightblue; -fx-background-radius: 30; -fx-min-width: 200;" text="Statistics">
                <font>
-                  <Font size="25.0" />
+                  <Font name="Noto Sans CJK JP Black" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#about" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="About" textFill="#ffd400">
+            <JFXButton buttonType="RAISED" onAction="#about" style="-fx-background-color: Lightblue; -fx-background-radius: 30; -fx-min-width: 200;" text="About">
                <font>
-                  <Font size="25.0" />
+                  <Font name="Noto Sans CJK JP Black" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#quit" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Quit" textFill="#ffd400">
+            <JFXButton buttonType="RAISED" onAction="#quit" style="-fx-background-color: Lightblue; -fx-background-radius: 30; -fx-min-width: 200;" text="Quit">
                <font>
-                  <Font size="25.0" />
+                  <Font name="Noto Sans CJK JP Black" size="18.0" />
                </font>
             </JFXButton>
          </children>
