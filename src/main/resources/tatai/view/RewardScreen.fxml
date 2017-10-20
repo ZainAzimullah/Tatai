@@ -32,11 +32,18 @@
                   <Font name="Noto Sans CJK JP Black" size="14.0" />
                </font>
             </Label>
-            <JFXTextArea fx:id="_text" focusColor="#ffffff00" prefHeight="85.0" prefWidth="350.0" unFocusColor="#47474700" wrapText="true">
-               <font>
-                  <Font name="Noto Sans CJK JP Black" size="12.0" />
-               </font>
-            </JFXTextArea>
+            <AnchorPane prefHeight="85.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" />
+               </VBox.margin>
+               <children>
+                  <JFXTextArea fx:id="_text" focusColor="#405aa800" unFocusColor="#4d4d4d00" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Noto Sans CJK JP Black" size="12.0" />
+                     </font>
+                  </JFXTextArea>
+               </children>
+            </AnchorPane>
             <JFXButton buttonType="RAISED" onAction="#ok" style="-fx-background-radius: 30; -fx-background-color: Lightgrey;" text="OK">
                <VBox.margin>
                   <Insets top="12.5" />
