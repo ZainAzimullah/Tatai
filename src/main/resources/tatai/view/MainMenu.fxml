@@ -12,9 +12,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.mainMenuControllers.MainMenuController">
    <children>
-      <ImageView fitHeight="450.0" fitWidth="810.0" opacity="0.77">
+      <ImageView fitHeight="450.0" fitWidth="600.0" opacity="0.77">
          <image>
-            <Image url="@../../images/MaoriFlag.png" />
+            <Image url="@../../images/TitleScreenbackdrop.jpg" />
          </image>
       </ImageView>
       <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" spacing="10.0" AnchorPane.leftAnchor="77.0">
@@ -27,39 +27,41 @@
                   <LinearGradient endX="1.0" endY="1.0">
                      <stops>
                         <Stop color="RED" />
-                        <Stop color="RED" offset="0.3629629629629631" />
-                        <Stop color="WHITE" offset="0.670370370370371" />
-                        <Stop color="WHITE" offset="1.0" />
+                        <Stop color="RED" offset="0.477777777777778" />
+                        <Stop color="WHITE" offset="0.5296296296296302" />
+                        <Stop color="WHITE" offset="0.6407407407407407" />
+                        <Stop color="BLACK" offset="0.6962962962962963" />
+                        <Stop color="BLACK" offset="1.0" />
                      </stops>
                   </LinearGradient>
                </textFill>
             </Label>
-            <JFXButton buttonType="RAISED" onAction="#play" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Play" textFill="WHITE">
+            <JFXButton buttonType="RAISED" onAction="#play" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Play" textFill="#ffd400">
                <font>
                   <Font size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#practice" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Practice" textFill="WHITE">
+            <JFXButton buttonType="RAISED" onAction="#practice" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Practice" textFill="#ffd400">
                <font>
                   <Font size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#scores" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Scores" textFill="WHITE">
+            <JFXButton buttonType="RAISED" onAction="#scores" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Scores" textFill="#ffd400">
                <font>
                   <Font size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#stats" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Statistics" textFill="WHITE">
+            <JFXButton buttonType="RAISED" onAction="#stats" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Statistics" textFill="#ffd400">
                <font>
                   <Font size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#about" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="About" textFill="WHITE">
+            <JFXButton buttonType="RAISED" onAction="#about" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="About" textFill="#ffd400">
                <font>
                   <Font size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#quit" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Quit" textFill="WHITE">
+            <JFXButton buttonType="RAISED" onAction="#quit" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Quit" textFill="#ffd400">
                <font>
                   <Font size="25.0" />
                </font>
