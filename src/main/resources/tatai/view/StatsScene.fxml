@@ -24,7 +24,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfbfbfa6" height="400.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <center>
-            <AreaChart fx:id="_chart" legendSide="TOP" stylesheets="@StatsScene.css" title="History" BorderPane.alignment="CENTER">
+            <AreaChart fx:id="_chart" legendSide="TOP" BorderPane.alignment="CENTER">
                <xAxis>
                   <CategoryAxis side="BOTTOM" />
                </xAxis>

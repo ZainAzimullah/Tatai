@@ -6,6 +6,7 @@ import javafx.scene.control.Label;
 import tatai.score.Score;
 import tatai.score.ScoreHistory;
 import tatai.score.ScoreProperties;
+import tatai.util.Difficulty;
 import tatai.view.MainMenuLoader;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,17 +35,16 @@ public class StatsSceneController extends MainMenuController {
         _chart.getYAxis().setAutoRanging(false);
         _chart.getYAxis().setLabel("Score");
 
-
         XYChart.Series series = new XYChart.Series();
+        populateSeries(series, history.getScores());
 
-        ArrayList<Score> scores = history.getScores();
-        Collections.reverse(scores);
+        _chart.getData().add(series);
+    }
 
+    private void populateSeries(XYChart.Series series, ArrayList<Score> scores) {
         for (Score score: scores) {
             series.getData().add(new XYChart.Data(score.getTime(), score.getTotal()));
         }
-
-        _chart.getData().add(series);
     }
 
     @FXML

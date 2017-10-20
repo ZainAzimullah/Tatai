@@ -12,6 +12,8 @@ import tatai.score.ScoreProperties;
 import tatai.view.MainMenuLoader;
 import tatai.view.SessionDetailsLoader;
 
+import java.util.Collections;
+
 public class ScoreHistoryController extends MainMenuController {
 	
 	@FXML
@@ -48,6 +50,7 @@ public class ScoreHistoryController extends MainMenuController {
 
 		ScoreHistory history = new ScoreHistory();
 		ObservableList<ScoreProperties> data = history.getObservableList();
+		Collections.reverse(data);
 		_table.setItems(data);
 		_highScore.setText(Integer.toString(history.getHighScore()));
 
