@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.chart.AreaChart?>
 <?import javafx.scene.chart.CategoryAxis?>
@@ -11,6 +12,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
@@ -32,7 +34,7 @@
                   <NumberAxis side="LEFT" />
                </yAxis>
                <BorderPane.margin>
-                  <Insets left="50.0" right="50.0" />
+                  <Insets left="15.0" />
                </BorderPane.margin>
             </AreaChart>
          </center>
@@ -80,6 +82,55 @@
                </font>
             </Label>
          </top>
+         <right>
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER_LEFT">
+               <children>
+                  <JFXRadioButton fx:id="_all" alignment="CENTER_LEFT" text="All">
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="Noto Sans CJK JP Black" size="15.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="_easy" alignment="CENTER_LEFT" text="Easy">
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="Noto Sans CJK JP Black" size="15.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="_medium" alignment="CENTER_LEFT" text="Medium">
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="Noto Sans CJK JP Black" size="15.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="_hard" alignment="CENTER_LEFT" text="Hard">
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="Noto Sans CJK JP Black" size="15.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="_custom" alignment="CENTER_LEFT" text="Custom">
+                     <padding>
+                        <Insets right="20.0" />
+                     </padding>
+                     <font>
+                        <Font name="Noto Sans CJK JP Black" size="15.0" />
+                     </font>
+                  </JFXRadioButton>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </right>
       </BorderPane>
    </children>
 </AnchorPane>
