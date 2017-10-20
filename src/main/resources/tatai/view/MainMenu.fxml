@@ -12,9 +12,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.mainMenuControllers.MainMenuController">
    <children>
-      <ImageView fitHeight="450.0" fitWidth="600.0" opacity="0.77">
+      <ImageView fitHeight="450.0" fitWidth="810.0" opacity="0.77">
          <image>
-            <Image url="@../../images/rsz_800px-tino_rangatiratanga_maori_sovereignty_movement_flagsvg.png" />
+            <Image url="@../../images/MaoriFlag.png" />
          </image>
       </ImageView>
       <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" spacing="10.0" AnchorPane.leftAnchor="77.0">
