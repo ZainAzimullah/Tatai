@@ -39,7 +39,7 @@ public class FactController {
             String info = "";
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-                info += line;
+                info += line + "\n";
             }
 
             _text.setText(info);
