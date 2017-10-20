@@ -85,6 +85,10 @@ public class ScoreHistory {
     public double getMean() {
         ArrayList<Score> scores = getScores();
 
+        if (scores.size() == 0) {
+            return 0;
+        }
+
         double sum = 0;
         for (Score score: getScores()) {
             sum += score.getTotal();
