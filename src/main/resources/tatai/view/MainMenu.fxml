@@ -44,12 +44,12 @@
                   <Font size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#scores" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Score History" textFill="WHITE">
+            <JFXButton buttonType="RAISED" onAction="#scores" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Scores" textFill="WHITE">
                <font>
                   <Font size="25.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#scores" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="High Score" textFill="WHITE">
+            <JFXButton buttonType="RAISED" onAction="#stats" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Progress" textFill="WHITE">
                <font>
                   <Font size="25.0" />
                </font>
