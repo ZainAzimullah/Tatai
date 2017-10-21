@@ -3,6 +3,7 @@ package tatai.view.controllers.gameControllers;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import tatai.Game;
+import tatai.exceptions.ResultOutOfRangeException;
 import tatai.view.controllers.SceneController;
 
 public class CorrectController extends SceneController {
@@ -20,7 +21,11 @@ public class CorrectController extends SceneController {
 
     @FXML
     private void initialize() {
-        _speech.setText(Game.getInstance().getSpeech());
+        try {
+            _speech.setText(Game.getInstance().getCurrentQuestion().getMaoriResult().toString());
+        } catch (ResultOutOfRangeException e) {
+            e.printStackTrace();
+        }
         _question.setText(Game.getInstance().getCurrentQuestion().toString());
     }
 
