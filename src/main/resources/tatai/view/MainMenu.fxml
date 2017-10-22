@@ -36,32 +36,32 @@
                   </LinearGradient>
                </textFill>
             </Label>
-            <JFXButton buttonType="RAISED" onAction="#play" style="-fx-background-color: Lightblue; -fx-background-radius: 30; -fx-min-width: 200;" text="Play">
+            <JFXButton buttonType="RAISED" onAction="#play" style="-fx-background-color: black; -fx-background-radius: 30; -fx-min-width: 200;" text="Play" textFill="WHITE">
                <font>
                   <Font name="Noto Sans CJK JP Black" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#practice" style="-fx-background-color: Lightblue; -fx-background-radius: 30; -fx-min-width: 200;" text="Practice">
+            <JFXButton buttonType="RAISED" onAction="#practice" style="-fx-background-color: black; -fx-background-radius: 30; -fx-min-width: 200;" text="Practice" textFill="WHITE">
                <font>
                   <Font name="Noto Sans CJK JP Black" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#scores" style="-fx-background-color: Lightblue; -fx-background-radius: 30; -fx-min-width: 200;" text="Scores">
+            <JFXButton buttonType="RAISED" onAction="#scores" style="-fx-background-color: black; -fx-background-radius: 30; -fx-min-width: 200;" text="Scores" textFill="WHITE">
                <font>
                   <Font name="Noto Sans CJK JP Black" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#stats" style="-fx-background-color: Lightblue; -fx-background-radius: 30; -fx-min-width: 200;" text="Statistics">
+            <JFXButton buttonType="RAISED" onAction="#stats" style="-fx-background-color: black; -fx-background-radius: 30; -fx-min-width: 200;" text="Statistics" textFill="WHITE">
                <font>
                   <Font name="Noto Sans CJK JP Black" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#about" style="-fx-background-color: Lightblue; -fx-background-radius: 30; -fx-min-width: 200;" text="About">
+            <JFXButton buttonType="RAISED" onAction="#about" style="-fx-background-color: black; -fx-background-radius: 30; -fx-min-width: 200;" text="About" textFill="WHITE">
                <font>
                   <Font name="Noto Sans CJK JP Black" size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#quit" style="-fx-background-color: Lightblue; -fx-background-radius: 30; -fx-min-width: 200;" text="Quit">
+            <JFXButton buttonType="RAISED" onAction="#quit" style="-fx-background-color: black; -fx-background-radius: 30; -fx-min-width: 200;" text="Quit" textFill="WHITE">
                <font>
                   <Font name="Noto Sans CJK JP Black" size="18.0" />
                </font>
