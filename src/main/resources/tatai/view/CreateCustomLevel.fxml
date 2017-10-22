@@ -52,10 +52,10 @@
                <children>
                   <VBox alignment="CENTER_LEFT" prefHeight="147.0" prefWidth="169.0" spacing="25.0">
                      <children>
-                        <JFXCheckBox fx:id="_addition" text="Addition" />
-                        <JFXCheckBox fx:id="_subtraction" checkedColor="#1a35c7" text="Subtraction" />
-                        <JFXCheckBox fx:id="_multiplication" checkedColor="#ff0101" text="Mutiplication" />
-                        <JFXCheckBox fx:id="_division" checkedColor="#e4e129" text="Division" />
+                        <JFXCheckBox fx:id="_addition" stylesheets="@CheckBoxStyle.css" text="Addition" />
+                        <JFXCheckBox fx:id="_subtraction" checkedColor="#1a35c7" stylesheets="@CheckBoxStyle.css" text="Subtraction" />
+                        <JFXCheckBox fx:id="_multiplication" checkedColor="#ff0101" stylesheets="@CheckBoxStyle.css" text="Mutiplication" />
+                        <JFXCheckBox fx:id="_division" checkedColor="#e4e129" stylesheets="@CheckBoxStyle.css" text="Division" />
                      </children>
                      <padding>
                         <Insets left="50.0" />
