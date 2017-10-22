@@ -20,7 +20,7 @@
             <Image url="@../../images/Reef.jpg" />
          </image>
       </ImageView>
-      <TableView fx:id="_tableView" layoutX="51.0" layoutY="113.0" prefHeight="200.0" style="-fx-background-color: transparent; -fx-background-radius: 30;" stylesheets="@EndOfLevelTableStyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+      <TableView fx:id="_tableView" layoutX="51.0" layoutY="113.0" prefHeight="200.0" style="-fx-background-color: transparent; -fx-background-radius: 30;" stylesheets="@TableStyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
         <columns>
           <TableColumn fx:id="_questionNumber" maxWidth="2000.0" prefWidth="93.0" text="Question" />
             <TableColumn fx:id="_expression" prefWidth="215.0" text="Equation" />
