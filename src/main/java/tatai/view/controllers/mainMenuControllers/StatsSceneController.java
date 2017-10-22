@@ -51,22 +51,32 @@ public class StatsSceneController extends MainMenuController {
 
         _all.selectedProperty().addListener((observable, oldValue, newValue) -> {
             generateChart(history.getScores());
+            _average.setText(Double.toString(history.getMean()));
+            _best.setText(Integer.toString(history.getHighScore()));
         });
 
         _easy.selectedProperty().addListener((observable, oldValue, newValue) -> {
             generateChart(history.getScores(Difficulty.EASY));
+            _average.setText(Double.toString(history.getMean(Difficulty.EASY)));
+            _best.setText(Integer.toString(history.getHighScore(Difficulty.EASY)));
         });
 
         _medium.selectedProperty().addListener((observable, oldValue, newValue) -> {
             generateChart(history.getScores(Difficulty.MEDIUM));
+            _average.setText(Double.toString(history.getMean(Difficulty.MEDIUM)));
+            _best.setText(Integer.toString(history.getHighScore(Difficulty.MEDIUM)));
         });
 
         _hard.selectedProperty().addListener((observable, oldValue, newValue) -> {
             generateChart(history.getScores(Difficulty.HARD));
+            _average.setText(Double.toString(history.getMean(Difficulty.HARD)));
+            _best.setText(Integer.toString(history.getHighScore(Difficulty.HARD)));
         });
 
         _custom.selectedProperty().addListener((observable, oldValue, newValue) -> {
             generateChart(history.getScores(Difficulty.CUSTOM));
+            _average.setText(Double.toString(history.getMean(Difficulty.CUSTOM)));
+            _best.setText(Integer.toString(history.getHighScore(Difficulty.CUSTOM)));
         });
 
         _all.selectedProperty().setValue(true);

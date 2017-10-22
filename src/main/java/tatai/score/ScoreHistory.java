@@ -29,7 +29,17 @@ public class ScoreHistory {
 
     // Get the highest score
     public int getHighScore() {
-        ArrayList<Score> scores = getScores();
+        return getHighScore(null);
+    }
+
+    public int getHighScore(Difficulty difficulty) {
+        ArrayList<Score> scores;
+
+        if (difficulty == null) {
+            scores = getScores();
+        } else {
+            scores = getScores(difficulty);
+        }
 
         int highScore = 0;
 
@@ -124,7 +134,17 @@ public class ScoreHistory {
     }
 
     public double getMean() {
-        ArrayList<Score> scores = getScores();
+        return getMean(null);
+    }
+
+    public double getMean(Difficulty difficulty) {
+        ArrayList<Score> scores;
+
+        if (difficulty == null) {
+            scores = getScores();
+        } else {
+            scores = getScores(difficulty);
+        }
 
         if (scores.size() == 0) {
             return 0;
