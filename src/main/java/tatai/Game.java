@@ -13,6 +13,8 @@ import tatai.score.Result;
 import tatai.score.FinalResult;
 import tatai.score.Score;
 import tatai.util.Difficulty;
+import tatai.util.Verifier;
+import tatai.util.VoiceRecogniser;
 import tatai.view.FactLoader;
 import tatai.view.MainMenuLoader;
 import tatai.view.SceneLoader;
@@ -125,9 +127,9 @@ public class Game {
 
     // Check the correctness of the answer
     public void checkAnswer() {
-
         try {
-            if (_speech.contains(_currentQuestion.getMaoriResult().toString())) {
+            Verifier verifier = new Verifier(_speech, _currentQuestion.getMaoriResult().toString());
+            if (verifier.isCorrect()) {
                 _result.addCorrect();
                 _score.updateResult(_model.getCurrentQuestionNumber(), _result);
                 _loader.loadScene("Correct.fxml");
