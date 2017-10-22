@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
@@ -9,6 +9,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
@@ -79,16 +80,20 @@
             <Font name="Noto Sans CJK JP Bold" size="20.0" />
          </font>
       </Label>
-      <Button layoutX="94.0" layoutY="330.0" mnemonicParsing="false" onAction="#tryAgain" text="Try again" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="125.0">
-         <font>
-            <Font name="Noto Sans CJK JP Bold" size="18.0" />
-         </font>
-      </Button>
-      <Button layoutX="294.0" layoutY="337.0" mnemonicParsing="false" onAction="#returnToMainMenu" text="Return to Main Menu" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="75.0">
-         <font>
-            <Font name="Noto Sans CJK JP Bold" size="18.0" />
-         </font>
-      </Button>
+      <HBox alignment="CENTER" layoutX="25.0" layoutY="113.0" spacing="20.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="124.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#tryAgain" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Try again">
+               <font>
+                  <Font name="Noto Sans CJK JP Black" size="18.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#returnToMainMenu" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Return To Main Menu">
+               <font>
+                  <Font name="Noto Sans CJK JP Black" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
    </children>
    <opaqueInsets>
       <Insets />
