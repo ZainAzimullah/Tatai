@@ -20,7 +20,7 @@ public class EndOfLevelController extends SceneController {
 	private boolean _mustRetry = true;
 	
 	@FXML
-	Button _next;
+	JFXButton _next;
 	
 	@FXML
 	Label _numAchieved;
