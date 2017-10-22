@@ -45,12 +45,12 @@
       </ImageView>
       <VBox alignment="CENTER" layoutX="108.0" layoutY="183.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0">
          <children>
-            <JFXButton buttonType="RAISED" onAction="#next" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Next Number!">
+            <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#next" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Next Number!">
                <font>
                   <Font name="Noto Sans CJK JP Black" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#returnToMainMenu" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Return to Main Menu">
+            <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#returnToMainMenu" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Return to Main Menu">
                <font>
                   <Font name="Noto Sans CJK JP Black" size="15.0" />
                </font>
