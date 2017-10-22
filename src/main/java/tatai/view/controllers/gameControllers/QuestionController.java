@@ -30,8 +30,11 @@ public class QuestionController extends SceneController {
 
     @FXML
     private void initialize() {
+        String question = Game.getInstance().getCurrentQuestion().toString();
         _questionNumber.setText(Integer.toString(Game.getInstance().getCurrentQuestionNumber()));
-        _equation.setText(Game.getInstance().getCurrentQuestion().toString() + " = ?");
+
+        // Remove extra brackets
+        _equation.setText(question.substring(1,question.length() - 1) + " = ?");
     }
 
     // This method is invoked when the Record button is clicked
