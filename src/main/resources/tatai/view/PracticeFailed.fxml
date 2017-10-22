@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.Light.Distant?>
 <?import javafx.scene.effect.Lighting?>
@@ -74,16 +74,6 @@
             <Font name="Noto Sans CJK JP Bold" size="30.0" />
          </font>
       </Label>
-      <Button layoutX="94.0" layoutY="330.0" mnemonicParsing="false" onAction="#next" text="Next Number" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="105.0">
-         <font>
-            <Font name="Noto Sans CJK JP Bold" size="18.0" />
-         </font>
-      </Button>
-      <Button layoutX="294.0" layoutY="337.0" mnemonicParsing="false" onAction="#returnToMainMenu" text="Return to Main Menu" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="70.0">
-         <font>
-            <Font name="Noto Sans CJK JP Bold" size="18.0" />
-         </font>
-      </Button>
       <ImageView layoutX="268.0" layoutY="111.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="5.0">
          <image>
             <Image url="@../../images/incorrect.png" />
@@ -110,6 +100,16 @@
             <Font name="Noto Sans CJK JP Bold" size="15.0" />
          </font>
       </Label>
+      <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="134.0" layoutY="309.0" onAction="#next" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Next Number" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="105.0">
+         <font>
+            <Font name="Noto Sans CJK JP Black" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="144.0" layoutY="319.0" onAction="#returnToMainMenu" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Return to Main Menu" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="70.0">
+         <font>
+            <Font name="Noto Sans CJK JP Black" size="18.0" />
+         </font>
+      </JFXButton>
    </children>
    <opaqueInsets>
       <Insets />
