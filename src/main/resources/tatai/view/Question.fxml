@@ -45,7 +45,6 @@
                         <Font name="Noto Sans CJK JP Bold" size="20.0" />
                      </font>
                   </Label>
-                  <JFXButton style="-fx-background-color: white; -fx-background-radius: 30;" text="Help" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="15.0" />
                   <Label alignment="TOP_CENTER" layoutX="172.0" layoutY="14.0" text="Question          / 10" textFill="#d4cf3d" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="15.0">
                      <font>
                         <Font name="Noto Sans CJK JP Bold" size="20.0" />
