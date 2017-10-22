@@ -3,106 +3,120 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.practiceControllers.RecordController">
-   <center>
-      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-         <children>
-            <AnchorPane prefWidth="200.0">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="426.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../images/Target.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0000001a" height="426.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#030303cc" height="426.0" layoutX="75.0" stroke="BLACK" strokeType="INSIDE" width="450.0" />
+      <BorderPane prefHeight="400.0" prefWidth="600.0">
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label fx:id="_questionNumber" layoutX="81.0" text="10" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane prefWidth="200.0">
+                     <children>
+                        <Label fx:id="_questionNumber" layoutX="81.0" text="10" textFill="WHITE" AnchorPane.leftAnchor="81.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="Noto Sans CJK JP Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="97.0" layoutY="2.0" text=" of " textFill="#e80202" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="Noto Sans CJK JP Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="118.0" layoutY="2.0" text="10" textFill="#797979" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="Noto Sans CJK JP Bold" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <Label text="Your number is:" textFill="WHITE">
                      <font>
-                        <Font name="Noto Sans CJK JP Bold" size="13.0" />
+                        <Font name="Noto Sans CJK JP Bold" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <AnchorPane>
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="60.0" layoutX="142.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="90.0" AnchorPane.leftAnchor="255.0" AnchorPane.topAnchor="0.0" />
+                        <Label fx:id="_number" alignment="TOP_CENTER" text="#" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="5.0">
+                           <font>
+                              <Font name="Noto Sans CJK JP Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label text="Once you press the record button you will have 2 seconds" textFill="WHITE">
+                     <font>
+                        <Font name="Noto Sans CJK JP Bold" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label text=" to record yourself saying the number in Māori" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Noto Sans CJK JP Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="97.0" layoutY="2.0" text=" of " textFill="#e80202" AnchorPane.topAnchor="0.0">
+                  <Label fx:id="_recordMsg" text="Please speak clearly into the microphone " textFill="WHITE">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
                      <font>
-                        <Font name="Noto Sans CJK JP Bold" size="13.0" />
+                        <Font name="Noto Sans CJK JP Bold" size="15.0" />
                      </font>
                   </Label>
-                  <Label layoutX="118.0" layoutY="2.0" text="10" textFill="#797979" AnchorPane.topAnchor="0.0">
+                  <Label text="you intend recording with" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets bottom="30.0" />
+                     </VBox.margin>
                      <font>
-                        <Font name="Noto Sans CJK JP Bold" size="13.0" />
+                        <Font name="Noto Sans CJK JP Bold" size="15.0" />
                      </font>
                   </Label>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                     <children>
+                        <JFXButton fx:id="_button" alignment="CENTER" buttonType="RAISED" onAction="#record" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Record">
+                           <font>
+                              <Font name="Noto Sans CJK JP Black" size="22.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#returnToMainMenu" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Return to main menu">
+                           <font>
+                              <Font name="Noto Sans CJK JP Black" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="25.0" />
+                     </VBox.margin>
+                  </VBox>
                </children>
-               <VBox.margin>
-                  <Insets top="15.0" />
-               </VBox.margin>
-            </AnchorPane>
-            <Label text="Your number is:">
-               <font>
-                  <Font name="Noto Sans CJK JP Bold" size="15.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="15.0" />
-               </VBox.margin>
-            </Label>
-            <AnchorPane>
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d9d9d9" height="60.0" layoutX="142.0" layoutY="-87.0" stroke="BLACK" strokeType="INSIDE" width="90.0" AnchorPane.leftAnchor="255.0" AnchorPane.topAnchor="0.0" />
-                  <Label fx:id="_number" alignment="TOP_CENTER" text="#" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="260.0" AnchorPane.rightAnchor="260.0" AnchorPane.topAnchor="5.0">
-                     <font>
-                        <Font name="Noto Sans CJK JP Bold" size="30.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-            <Label text="Once you press the record button you will have 2 seconds">
-               <font>
-                  <Font name="Noto Sans CJK JP Bold" size="15.0" />
-               </font>
-               <VBox.margin>
-                  <Insets top="15.0" />
-               </VBox.margin>
-            </Label>
-            <Label text=" to record yourself saying the number in Māori">
-               <VBox.margin>
-                  <Insets bottom="15.0" />
-               </VBox.margin>
-               <font>
-                  <Font name="Noto Sans CJK JP Bold" size="15.0" />
-               </font>
-            </Label>
-            <Label fx:id="_recordMsg" text="Please speak clearly into the microphone ">
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-               <font>
-                  <Font name="Noto Sans CJK JP Bold" size="15.0" />
-               </font>
-            </Label>
-            <Label text="you intend recording with">
-               <VBox.margin>
-                  <Insets bottom="30.0" />
-               </VBox.margin>
-               <font>
-                  <Font name="Noto Sans CJK JP Bold" size="15.0" />
-               </font>
-            </Label>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
-               <children>
-                  <JFXButton fx:id="_button" alignment="CENTER" buttonType="RAISED" onAction="#record" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Record">
-                     <font>
-                        <Font name="Noto Sans CJK JP Black" size="22.0" />
-                     </font>
-                  </JFXButton>
-                  <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#returnToMainMenu" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Return to main menu">
-                     <font>
-                        <Font name="Noto Sans CJK JP Black" size="18.0" />
-                     </font>
-                  </JFXButton>
-               </children>
-               <VBox.margin>
-                  <Insets bottom="25.0" />
-               </VBox.margin>
             </VBox>
-         </children>
-      </VBox>
-   </center>
-</BorderPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
