@@ -14,24 +14,26 @@
    <children>
       <ImageView fitHeight="425.0" fitWidth="600.0" opacity="0.77">
          <image>
-            <Image url="@../../images/TitleScreenbackdrop.jpg" />
+            <Image url="@../../images/Statue.jpg" />
          </image>
       </ImageView>
-      <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" spacing="10.0" AnchorPane.leftAnchor="77.0">
+      <VBox alignment="CENTER" layoutX="61.0" layoutY="15.0" spacing="10.0">
          <children>
-            <Label alignment="TOP_CENTER" text="Welcome to Tātai!">
+            <Label alignment="TOP_LEFT" text="Welcome to Tātai!">
                <font>
-                  <Font name="Noto Sans CJK JP Bold" size="50.0" />
+                  <Font name="Noto Sans CJK SC Bold" size="55.0" />
                </font>
                <textFill>
-                  <LinearGradient endX="1.0" endY="1.0">
+                  <LinearGradient endX="0.6971153846153846" endY="1.0" startX="0.6971153846153846">
                      <stops>
-                        <Stop color="RED" />
-                        <Stop color="RED" offset="0.477777777777778" />
-                        <Stop color="WHITE" offset="0.5296296296296302" />
-                        <Stop color="WHITE" offset="0.6407407407407407" />
-                        <Stop color="BLACK" offset="0.6962962962962963" />
-                        <Stop color="BLACK" offset="1.0" />
+                        <Stop color="BLACK" />
+                        <Stop color="#860000" offset="0.17777777777777778" />
+                        <Stop color="#c30202" offset="0.32592592592592623" />
+                        <Stop color="#f80606" offset="0.5148148148148155" />
+                        <Stop color="#b20000" offset="0.6777777777777779" />
+                        <Stop color="#860000" offset="0.818518518518519" />
+                        <Stop color="#4d0101" offset="0.9962962962962963" />
+                        <Stop color="#4d0101" offset="1.0" />
                      </stops>
                   </LinearGradient>
                </textFill>
