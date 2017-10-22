@@ -23,8 +23,8 @@ public class CustomLevelSettings extends Saveable {
         _name = name;
 
         // Set a nice date format to show the user, but a file-friendly format for saving
-        DateFormat dateFormatForUser = new SimpleDateFormat("dd/MM/yyyy HH:mm");
-        DateFormat dateFormatForFile = new SimpleDateFormat("HH-mm_dd-MM");
+        DateFormat dateFormatForUser = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+        DateFormat dateFormatForFile = new SimpleDateFormat("HH-mm_dd-MM-ss");
         Date date = new Date();
 
         // Store the time the score was logged

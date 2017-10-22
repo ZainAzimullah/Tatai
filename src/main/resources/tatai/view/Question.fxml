@@ -65,12 +65,12 @@
             </AnchorPane>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="55.0">
                <children>
-                  <JFXButton fx:id="_button" buttonType="RAISED" onAction="#record" style="-fx-background-color: white; -fx-background-radius: 30; -fx-min-width: 100; -fx-min-height: 40;" text="Record">
+                  <JFXButton onAction="#skip" style="-fx-background-color: white; -fx-background-radius: 30; -fx-min-width: 100; -fx-min-height: 40;" text="Skip">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton onAction="#skip" style="-fx-background-color: white; -fx-background-radius: 30; -fx-min-width: 100; -fx-min-height: 40;" text="Skip">
+                  <JFXButton fx:id="_button" buttonType="RAISED" onAction="#record" style="-fx-background-color: white; -fx-background-radius: 30; -fx-min-width: 100; -fx-min-height: 40;" text="Record">
                      <font>
                         <Font size="18.0" />
                      </font>
