@@ -9,6 +9,7 @@ import tatai.numberModel.MaoriNumberModelFactory;
 import tatai.practiceScore.PracticeScore;
 import tatai.practiceScore.PracticeScore.PracticeResult;
 import tatai.util.PracticeLevel;
+import tatai.util.Verifier;
 import tatai.view.MainMenuLoader;
 import tatai.view.SceneLoader;
 
@@ -157,16 +158,17 @@ public class Practice {
 	}
 	
 	public void checkAnswer() {
+		Verifier verifier = new Verifier(_userAttempt,_currentNumber.toString());
 		
 		// Check if user said correct word on first attempt
-		if ((_userAttempt.equals(_currentNumber.toString())) && (_lives == 2)) {
+		if ((verifier.isCorrect()) && (_lives == 2)) {
 			// Refresh lives and show correct scene
 			_lives = MAX_LIVES;
 			_score.update(_questionNumber, PracticeResult.CORRECT);
 			showCorrect();
 		
 		// Check if user said correct word on second attempt
-		} else if (( _userAttempt.equals(_currentNumber.toString()))) {
+		} else if (verifier.isCorrect()) {
 			_lives = MAX_LIVES;
 			_score.update(_questionNumber, PracticeScore.PracticeResult.INCORRECT_ONCE);
 			showCorrect();

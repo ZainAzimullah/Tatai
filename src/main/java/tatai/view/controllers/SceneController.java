@@ -26,7 +26,7 @@ public abstract class SceneController {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Notice");
 		alert.setHeaderText("Please Confirm");
-		alert.setContentText("Are you sure?");
+		alert.setContentText("Are you sure? Progress will be lost.");
 
 		ButtonType yes = new ButtonType("Yes");
 		ButtonType no = new ButtonType("No");
