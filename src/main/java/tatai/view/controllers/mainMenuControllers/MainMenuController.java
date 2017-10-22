@@ -1,6 +1,8 @@
 package tatai.view.controllers.mainMenuControllers;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
+import javafx.scene.layout.BackgroundFill;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import tatai.Game;
@@ -11,6 +13,9 @@ import tatai.view.controllers.SceneController;
 public class MainMenuController extends SceneController {
 	
 	protected Stage _stage;
+
+	@FXML
+	private JFXButton _play, _practice, _scores, _stats, _about, _quit;
 	
 	// Set the stage
 	public void setStage(Stage stage) {
@@ -19,6 +24,13 @@ public class MainMenuController extends SceneController {
 
 	@FXML
 	private void play() {
+		setPopOver(_play, "Play the game");
+		setPopOver(_practice, "Practice pronouncing your Maori numbers");
+		setPopOver(_scores, "View scores for previously attempted levels");
+		setPopOver(_stats, "Monitor your progress over time");
+		setPopOver(_about, "About Tatai!");
+		setPopOver(_quit, "Quit the game");
+
 		Game game = Game.getInitialInstance(_stage);
 		game.selectLevel();
 	}

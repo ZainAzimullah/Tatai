@@ -75,7 +75,7 @@ public abstract class SceneController {
 	protected void setPopOver(Node node, String message) {
 		PopOver popOver = new PopOver();
 		Label label = new Label(message);
-		popOver.setArrowLocation(PopOver.ArrowLocation.TOP_LEFT);
+		popOver.setArrowLocation(PopOver.ArrowLocation.LEFT_CENTER);
 		popOver.setContentNode(label);
 
 		node.setOnMouseEntered(event -> popOver.show(node));
