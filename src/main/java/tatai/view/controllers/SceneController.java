@@ -2,9 +2,12 @@ package tatai.view.controllers;
 
 import java.util.Optional;
 
+import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
+import org.controlsfx.control.PopOver;
 import tatai.Game;
 import tatai.Practice;
 
@@ -67,5 +70,19 @@ public abstract class SceneController {
 		Alert alert = new Alert(Alert.AlertType.INFORMATION);
 		alert.setContentText(whatWasSaved + " saved");
 		alert.showAndWait();
+	}
+
+	protected void setPopOver(Node node, String message) {
+		PopOver popOver = new PopOver();
+		Label label = new Label(message);
+		popOver.setArrowLocation(PopOver.ArrowLocation.TOP_LEFT);
+		popOver.setContentNode(label);
+
+		node.setOnMouseEntered(event -> popOver.show(node));
+		node.setOnMouseExited(event -> popOver.hide());
+	}
+
+	protected void disablePopOver(Node node) {
+		node.setOnMouseEntered(event -> {});
 	}
 }
