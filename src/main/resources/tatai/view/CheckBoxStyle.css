@@ -1,0 +1,15 @@
+#_addition .box {
+    -fx-border-color: #0f9d58
+}
+
+#_subtraction .box {
+    -fx-border-color: #1a35c7
+}
+
+#_multiplication .box {
+    -fx-border-color: #ff0101
+}
+
+#_division .box {
+    -fx-border-color: #e4e129
+}
