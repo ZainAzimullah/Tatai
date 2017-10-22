@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -85,21 +85,23 @@
                   <Font name="Noto Sans CJK JP Bold" size="15.0" />
                </font>
             </Label>
-            <Button fx:id="_button" mnemonicParsing="false" onAction="#record" text="Record">
-               <font>
-                  <Font name="Noto Sans CJK JP Bold" size="22.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="10.0" />
-               </VBox.margin>
-            </Button>
-            <Button mnemonicParsing="false" onAction="#returnToMainMenu" text="Return to Main Menu">
-               <font>
-                  <Font name="Noto Sans CJK JP Bold" size="18.0" />
-               </font>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+               <children>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#record" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Record">
+                     <font>
+                        <Font name="Noto Sans CJK JP Black" size="22.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#returnToMainMenu" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Return to main menu">
+                     <font>
+                        <Font name="Noto Sans CJK JP Black" size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
                <VBox.margin>
                   <Insets bottom="25.0" />
-               </VBox.margin></Button>
+               </VBox.margin>
+            </VBox>
          </children>
       </VBox>
    </center>
