@@ -77,10 +77,5 @@
             <Font name="Noto Sans CJK JP Black" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="553.0" layoutY="12.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 15;" text="?">
-         <font>
-            <Font name="Noto Sans CJK JP Black" size="15.0" />
-         </font>
-      </JFXButton>
    </children>
 </AnchorPane>
