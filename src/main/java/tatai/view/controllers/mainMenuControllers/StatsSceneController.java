@@ -40,6 +40,7 @@ public class StatsSceneController extends MainMenuController {
         ((NumberAxis) _chart.getYAxis()).setTickUnit(1);
         _chart.getYAxis().setAutoRanging(false);
         _chart.getYAxis().setLabel("Score");
+        _chart.getXAxis().setLabel("Time");
 
         ToggleGroup group = new ToggleGroup();
         _easy.setToggleGroup(group);

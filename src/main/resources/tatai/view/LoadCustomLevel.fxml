@@ -31,7 +31,7 @@
                   <Font name="Noto Sans CJK JP Black" size="25.0" />
                </font>
             </Label>
-            <TableView fx:id="_table" prefHeight="200.0" prefWidth="200.0">
+            <TableView fx:id="_table" prefHeight="200.0" prefWidth="200.0" stylesheets="@ScoreHistoryTableStyle.css">
                <columns>
                   <TableColumn fx:id="_name" prefWidth="75.0" text="Name" />
                   <TableColumn fx:id="_dateCreated" prefWidth="75.0" text="Date Created" />
