@@ -15,6 +15,13 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.practiceControllers.IncorrectController">
    <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../images/Target.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0000001a" height="400.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#030303cc" height="400.0" layoutX="50.0" stroke="BLACK" strokeType="INSIDE" width="500.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="110.0" layoutX="114.0" layoutY="23.0" stroke="#797979" strokeType="INSIDE" width="110.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="2.5">
          <effect>
             <Lighting>
@@ -64,7 +71,7 @@
             <Font name="Noto Sans CJK JP Bold" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="282.0" layoutY="300.0" text="This is                the Māori number for" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="242.5">
+      <Label layoutX="282.0" layoutY="300.0" text="This is                the Māori number for" textFill="WHITE" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="242.5">
          <font>
             <Font name="Noto Sans CJK JP Bold" size="15.0" />
          </font>
