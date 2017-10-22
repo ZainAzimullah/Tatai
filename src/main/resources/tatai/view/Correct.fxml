@@ -52,7 +52,9 @@
             <Font name="Noto Sans CJK JP Black" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="244.0" layoutY="406.0" onAction="#next" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="⏩" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="385.0" />
-      <JFXButton buttonType="RAISED" layoutX="490.0" layoutY="15.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="❓" AnchorPane.leftAnchor="550.0" AnchorPane.topAnchor="15.0" />
+      <JFXButton buttonType="RAISED" layoutX="244.0" layoutY="406.0" onAction="#next" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Next" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="385.0">
+         <font>
+            <Font name="Noto Sans CJK JP Black" size="15.0" />
+         </font></JFXButton>
    </children>
 </AnchorPane>
