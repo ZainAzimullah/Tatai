@@ -20,7 +20,6 @@
             <Image url="@../../images/Target.png" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0000001a" height="400.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#030303cc" height="400.0" layoutX="50.0" stroke="BLACK" strokeType="INSIDE" width="500.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="110.0" layoutX="114.0" layoutY="23.0" stroke="#797979" strokeType="INSIDE" width="110.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="2.5">
          <effect>
