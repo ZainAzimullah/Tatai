@@ -6,9 +6,13 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import tatai.Game;
 import tatai.exceptions.ResultOutOfRangeException;
+import tatai.util.Difficulty;
 import tatai.view.controllers.SceneController;
 
 public class IncorrectController extends SceneController {
+
+    private final int HARD_ATTEMPTS = 2;
+    private int _lives;
 
     @FXML
     private Label _message;
@@ -35,9 +39,7 @@ public class IncorrectController extends SceneController {
 
     @FXML
     private void skip() {
-        int attemptsRemaining = Game.MAX_ATTEMPTS - Game.getInstance().getErrorCount();
-
-        if (attemptsRemaining == 0) {
+        if (_lives == 0) {
             Game.getInstance().newQuestion();
         } else {
             Game.getInstance().skip();
@@ -48,10 +50,17 @@ public class IncorrectController extends SceneController {
     private void initialize() {
         _question.setText(Game.getInstance().getCurrentQuestion().toString());
         _speech.setText(Game.getInstance().getSpeech());
-        int attemptsRemaining = Game.MAX_ATTEMPTS - Game.getInstance().getErrorCount();
-        _attemptsRemaining.setText(Integer.toString(attemptsRemaining));
+
+        if (Game.getInstance().getDifficulty().equals(Difficulty.HARD)) {
+            _lives = HARD_ATTEMPTS - Game.getInstance().getErrorCount();
+
+        } else {
+            _lives =Game.MAX_ATTEMPTS - Game.getInstance().getErrorCount();
+        }
+
+        _attemptsRemaining.setText(Integer.toString(_lives));
         
-        if (attemptsRemaining == 0) {
+        if (_lives == 0) {
             _retryButton.setDisable(true);
             _skipButton.setText("Next");
             _message.setText("The correct answer is:");

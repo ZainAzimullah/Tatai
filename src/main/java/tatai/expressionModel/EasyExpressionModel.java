@@ -24,6 +24,9 @@ public class EasyExpressionModel extends ExpressionModel {
             // Check the answer to ensure the expression is OK for the game
             try {
                 operator.getMaoriResult();
+                if (operator.getMaoriResult().getDigits() > 10) {
+                    throw new ResultOutOfRangeException();
+                }
                 i++;
             } catch (ResultOutOfRangeException e) {
                 continue;

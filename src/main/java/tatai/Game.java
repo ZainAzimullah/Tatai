@@ -23,7 +23,7 @@ import tatai.view.SessionDetailsLoader;
 public class Game {
     // Game settings
     public static final int NUM_OF_QUESTIONS = 10;
-    public static final int MAX_ATTEMPTS = 3;
+    public static final int MAX_ATTEMPTS = 4;
 
     // The Game singleton and its stage
     private static Game _game;
@@ -177,7 +177,7 @@ public class Game {
             fact.loadScene("Reward.fxml");
             stage.setResizable(false);
             stage.setTitle("Reward");
-            stage.show();
+            stage.showAndWait();
         }
     }
 
