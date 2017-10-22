@@ -42,7 +42,7 @@ public class SessionDetailsController extends SceneController {
 
     private Stage _stage;
     private Score _score;
-    private Boolean _saved = false;
+    private boolean _saved = false;
 
     @FXML
     private void initialize() {
@@ -103,6 +103,11 @@ public class SessionDetailsController extends SceneController {
     @FXML
     @Override
     protected void returnToMainMenu() {
-        showAlertAndReturnFromGame();
+        if (!_saved) {
+            showAlertAndReturnFromGame();
+        } else {
+            MainMenuLoader loader = new MainMenuLoader(_stage);
+            loader.loadScene("MainMenu.fxml");
+        }
     }
 }
