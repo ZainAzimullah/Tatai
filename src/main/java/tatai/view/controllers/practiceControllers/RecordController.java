@@ -1,5 +1,6 @@
 package tatai.view.controllers.practiceControllers;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
@@ -28,7 +29,7 @@ public class RecordController extends SceneController {
 	private Label _questionNumber;
 	
 	@FXML
-	private Button _button;
+	private JFXButton _button;
 	
 	@FXML
 	private void initialize() {
