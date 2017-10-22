@@ -17,7 +17,7 @@ public class TestLoader extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(this.getClass().getResource("RewardScreen.fxml"));
+        loader.setLocation(this.getClass().getResource("Reward.fxml"));
         if (loader == null) {
             System.out.println("loader is null");
         }

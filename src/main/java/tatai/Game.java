@@ -174,7 +174,7 @@ public class Game {
         if (_score.getTotal() >= 8) {
             Stage stage = new Stage();
             FactLoader fact = new FactLoader(stage);
-            fact.loadScene("RewardScreen.fxml");
+            fact.loadScene("Reward.fxml");
             stage.show();
         }
     }

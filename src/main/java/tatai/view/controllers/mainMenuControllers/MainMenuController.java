@@ -39,7 +39,7 @@ public class MainMenuController extends SceneController {
 	@FXML
 	private void stats() {
 		MainMenuLoader loader = new MainMenuLoader(_stage);
-		loader.loadScene("StatsScene.fxml");
+		loader.loadScene("Statistics.fxml");
 	}
 	
 	@FXML

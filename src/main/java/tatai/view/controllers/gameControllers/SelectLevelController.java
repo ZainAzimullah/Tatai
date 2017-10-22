@@ -29,7 +29,7 @@ public class SelectLevelController extends SceneController {
     @FXML
     private void create() {
         SceneLoader loader = new SceneLoader(Game.getInstance().getStage());
-        loader.loadScene("CustomLevelScene.fxml");
+        loader.loadScene("CreateCustomLevel.fxml");
     }
 
     @FXML
