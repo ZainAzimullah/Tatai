@@ -175,6 +175,8 @@ public class Game {
             Stage stage = new Stage();
             FactLoader fact = new FactLoader(stage);
             fact.loadScene("Reward.fxml");
+            stage.setResizable(false);
+            stage.setTitle("Reward");
             stage.show();
         }
     }

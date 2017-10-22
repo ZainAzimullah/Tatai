@@ -29,6 +29,8 @@ public class TestLoader extends Application {
 
         Scene scene = new Scene(layout);
         primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
+        primaryStage.setTitle("Reward");
         primaryStage.show();
     }
 
