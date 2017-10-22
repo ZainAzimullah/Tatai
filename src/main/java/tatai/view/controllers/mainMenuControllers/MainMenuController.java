@@ -23,14 +23,17 @@ public class MainMenuController extends SceneController {
 	}
 
 	@FXML
-	private void play() {
+	private void initialize() {
 		setPopOver(_play, "Play the game");
 		setPopOver(_practice, "Practice pronouncing your Maori numbers");
 		setPopOver(_scores, "View scores for previously attempted levels");
 		setPopOver(_stats, "Monitor your progress over time");
 		setPopOver(_about, "About Tatai!");
 		setPopOver(_quit, "Quit the game");
+	}
 
+	@FXML
+	private void play() {
 		Game game = Game.getInitialInstance(_stage);
 		game.selectLevel();
 	}

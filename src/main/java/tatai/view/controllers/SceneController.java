@@ -2,11 +2,14 @@ package tatai.view.controllers;
 
 import java.util.Optional;
 
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.text.TextAlignment;
 import org.controlsfx.control.PopOver;
 import tatai.Game;
 import tatai.Practice;
@@ -75,6 +78,13 @@ public abstract class SceneController {
 	protected void setPopOver(Node node, String message) {
 		PopOver popOver = new PopOver();
 		Label label = new Label(message);
+		label.setPrefWidth(200);
+
+		label.setTextAlignment(TextAlignment.CENTER);
+		label.setAlignment(Pos.CENTER);
+		label.setWrapText(true);
+		label.setPadding(new Insets(5,5,5,5));
+
 		popOver.setArrowLocation(PopOver.ArrowLocation.LEFT_CENTER);
 		popOver.setContentNode(label);
 
