@@ -20,10 +20,10 @@
    <children>
       <ImageView fitHeight="400.0" fitWidth="600.0">
          <image>
-            <Image url="@../../images/Highscorebackground.png" />
+            <Image url="@../../images/Statue.jpg" />
          </image>
       </ImageView>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#bfbfbfa6" height="400.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#999999b2" height="400.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
       <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <center>
             <AreaChart fx:id="_chart" legendSide="TOP" BorderPane.alignment="CENTER">
@@ -46,22 +46,22 @@
                         <Font name="Noto Sans CJK JP Black" size="18.0" />
                      </font>
                   </JFXButton>
-                  <Label text="Average:">
+                  <Label text="Average:" textFill="#230043">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label fx:id="_average" text="#">
+                  <Label fx:id="_average" text="#" textFill="#230043">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label text="Best:">
+                  <Label text="Best:" textFill="#230043">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label fx:id="_best" text="#">
+                  <Label fx:id="_best" text="#" textFill="#230043">
                      <font>
                         <Font size="24.0" />
                      </font>
