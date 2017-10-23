@@ -2,31 +2,35 @@ package tatai.expression;
 
 import tatai.exceptions.ResultOutOfRangeException;
 
+/**
+ * The Divide class is an internal node which can
+ * recursively divide other Additions or MaoriNumbers
+ */
 public class Divide extends Operator {
+
+
     @Override
     protected int calculate() throws ResultOutOfRangeException {
-        // initializes the variable to keep track of what the sum is, starting with the
-        // first element
-        double sum = _operands.get(0).getResult();
+        double result = _operands.get(0).getResult();
         boolean firstOperand = true;
-        // iterates through each operand to perform actions on it
+
         for (Operand operand : _operands) {
+            // Ignore first operand
             if (firstOperand) {
                 firstOperand = false;
                 continue;
             }
 
-            // subtracts each operand one after the other from the first operand element, so
-            // it can be returned as the sum
-            sum /= operand.getResult();
+            // Keep dividing each operand
+            result /= operand.getResult();
         }
 
-        if (!(sum % 1 == 0)) {
+        // Check if result is whole number
+        if (!(result % 1 == 0)) {
             throw new ResultOutOfRangeException();
         }
 
-        // returns the subtraction result to the caller
-        return (int) sum;
+        return (int) result;
     }
 
     @Override
