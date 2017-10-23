@@ -10,6 +10,10 @@ import tatai.Practice;
 import tatai.view.MainMenuLoader;
 import tatai.view.controllers.SceneController;
 
+/**
+ * This is the controller for the main menu.  Each handler method
+ * will open a new scene accordingly.
+ */
 public class MainMenuController extends SceneController {
 	
 	protected Stage _stage;
@@ -24,6 +28,7 @@ public class MainMenuController extends SceneController {
 
 	@FXML
 	private void initialize() {
+		// Set PopOvers for each button
 		setPopOver(_play, "Play the game");
 		setPopOver(_practice, "Practice pronouncing your Maori numbers");
 		setPopOver(_scores, "View scores for previously attempted levels");

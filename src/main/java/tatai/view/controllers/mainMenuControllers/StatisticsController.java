@@ -12,7 +12,10 @@ import tatai.util.Difficulty;
 import tatai.view.MainMenuLoader;
 import java.util.ArrayList;
 
-public class StatsSceneController extends MainMenuController {
+/**
+ * This is the controller the statistics scene
+ */
+public class StatisticsController extends MainMenuController {
 
     @FXML
     private AreaChart<String, Number> _chart;
