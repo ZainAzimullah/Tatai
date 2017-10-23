@@ -14,6 +14,12 @@ import tatai.view.controllers.SceneController;
 
 import java.io.File;
 
+/**
+ * this class is responsible for the logic behind what happens when the user has finished
+ * recording their answer. from here they can replay what they said, re-record their
+ * answer or submit their answer to the speech recogniser.
+ */
+
 public class FinishedRecordingController extends SceneController {
 
     @FXML
@@ -22,6 +28,7 @@ public class FinishedRecordingController extends SceneController {
     @FXML
     private JFXButton _play;
 
+    //sets up the audio file of what the user said to be played back and plays it back
     @FXML
     private void playback() {
         // Tell user recording is playing back
@@ -41,6 +48,8 @@ public class FinishedRecordingController extends SceneController {
 
     }
 
+    //submits the audio file of what the user said to the speech recogoniser. to
+    //decipher what has been said.
     @FXML
     private void submit() {
         // Try to interpret what they said
@@ -57,6 +66,7 @@ public class FinishedRecordingController extends SceneController {
         Game.getInstance().checkAnswer();
     }
 
+    //reset the audio file to be re-recorded
     @FXML
     private void redo() {
         Game.getInstance().record();

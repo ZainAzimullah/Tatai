@@ -16,6 +16,12 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+/**
+ * Controller for scene which loads a level which the
+ * user can select from a table.  This table lists
+ * customised levels the user has configured
+ * and saved in the past.
+ */
 public class LoadLevelController extends SceneController {
 
     @FXML

@@ -13,17 +13,25 @@ import java.io.FileReader;
 import java.net.URISyntaxException;
 import java.net.URL;
 
+/**
+ * this class is responsible to displaying a Maori fact, and all the logic behind it
+ * if the user achieves a score of 8 or higher during the game session.
+ */
 public class FactController extends SceneController {
 
+    //the stage that the fact will be displayed on
     private Stage _stage;
 
+    //where the fact will be contained/displayed
     @FXML
     private JFXTextArea _text;
 
+    //setting up the fact to be displayed to the audiance
     @FXML
     private void initialize() {
         _text.setEditable(false);
 
+        //attempting to load the scene into the stage
         try {
             URL folderURL = this.getClass().getResource("facts");
             File folder = new File(folderURL.toURI());
@@ -36,6 +44,7 @@ public class FactController extends SceneController {
             FileReader fileReader = new FileReader(fact);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
 
+            //loading the fact from a .txt file into the space to be displayed to the user
             String info = "";
             String line;
             while ((line = bufferedReader.readLine()) != null) {
@@ -55,6 +64,7 @@ public class FactController extends SceneController {
         _stage = stage;
     }
 
+    //once the user has read the face they can close the stage by clicking ok
     @FXML
     private void ok() {
         if (_stage == null) {

@@ -13,6 +13,10 @@ import tatai.util.Countdown;
 import tatai.util.VoiceRecogniser;
 import tatai.view.controllers.SceneController;
 
+/**
+ * Controller for scene which prompts user with the question
+ * and asks them to record.
+ */
 public class QuestionController extends SceneController {
     public static final int RECORDING_TIME = 2;
 
@@ -69,11 +73,13 @@ public class QuestionController extends SceneController {
         showAlertAndReturnFromGame();
     }
 
+    // Multithreading:
     private class Background extends Task<Void> {
 
         @Override
         protected Void call() {
             new BashCommand().runCommand("arecord -d " + RECORDING_TIME + " -r 22050 -c 1 -i -t wav -f s16_LE foo.wav");
+            // Alternative bash command:
             //new BashCommand().runCommand("ffmpeg -f alsa -i hw:0 -t " + RECORDING_TIME + " -acodec pcm_s16le -ar 22050 -ac 1 foo.wav");
 
             return null;

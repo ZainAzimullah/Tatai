@@ -9,6 +9,11 @@ import tatai.exceptions.ResultOutOfRangeException;
 import tatai.util.Difficulty;
 import tatai.view.controllers.SceneController;
 
+/**
+ * this class is responsible for the logic behind what happens when the user
+ * get the question asked to them incorrect.
+ */
+
 public class IncorrectController extends SceneController {
 
     private final int HARD_ATTEMPTS = 2;
@@ -32,11 +37,15 @@ public class IncorrectController extends SceneController {
     @FXML
     private Label _attemptsRemaining;
 
+    //if the user has gotten it wrong they are given the chance to retry the question
+    //by calling this method
     @FXML
     private void retry() {
         Game.getInstance().record();
     }
 
+    //if the user does not wish to retry the level they may skip the current question
+    //this will be noted in the level statistics as "skipped"
     @FXML
     private void skip() {
         if (_lives == 0) {
@@ -46,6 +55,8 @@ public class IncorrectController extends SceneController {
         }
     }
 
+    //setting up the scene by loading in the question asked, what the program thinks
+    //the user has said and the number of attempts remaining
     @FXML
     private void initialize() {
         _question.setText(Game.getInstance().getCurrentQuestion().toString());
