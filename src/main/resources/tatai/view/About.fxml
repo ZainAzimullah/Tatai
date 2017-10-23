@@ -3,53 +3,66 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.mainMenuControllers.AboutController">
-   <center>
-      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-         <children>
-            <VBox alignment="CENTER">
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/aboutBackground.png" />
+         </image>
+      </ImageView>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <center>
+            <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label text="About Tātai">
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label text="About Tātai">
+                           <font>
+                              <Font name="Noto Sans CJK JP Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <Label alignment="CENTER_RIGHT" text="Ths Tātai application was created by Zain Azimullah and Samuel Zheng for the purposes of the third 2017 Software Engineering 206 assignment" textAlignment="CENTER" wrapText="true">
                      <font>
-                        <Font name="Noto Sans CJK JP Bold" size="40.0" />
+                        <Font name="Noto Sans CJK JP Bold" size="15.0" />
                      </font>
+                     <VBox.margin>
+                        <Insets left="100.0" right="100.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="University of Auckland 2017">
+                     <font>
+                        <Font name="Padauk Book Bold" size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="50.0" />
+                     </VBox.margin>
                   </Label>
                </children>
+               <BorderPane.margin>
+                  <Insets top="100.0" />
+               </BorderPane.margin>
             </VBox>
-            <Label alignment="CENTER_RIGHT" text="Ths Tātai application was created by Zain Azimullah and Samuel Zheng for the purposes of the third 2017 Software Engineering 206 assignment" textAlignment="CENTER" wrapText="true">
+         </center>
+         <bottom>
+            <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#returnToMainMenu" prefHeight="40.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Return to Main Menu" textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="50.0" />
+               </BorderPane.margin>
                <font>
-                  <Font name="Noto Sans CJK JP Bold" size="15.0" />
+                  <Font name="Noto Sans CJK JP Black" size="15.0" />
                </font>
-               <VBox.margin>
-                  <Insets left="100.0" right="100.0" />
-               </VBox.margin>
-            </Label>
-            <Label alignment="CENTER" contentDisplay="CENTER" text="University of Auckland 2017">
-               <font>
-                  <Font name="Padauk Book Bold" size="13.0" />
-               </font>
-               <VBox.margin>
-                  <Insets left="50.0" right="50.0" top="50.0" />
-               </VBox.margin>
-            </Label>
-         </children>
-         <BorderPane.margin>
-            <Insets top="100.0" />
-         </BorderPane.margin>
-      </VBox>
-   </center>
-   <bottom>
-      <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#returnToMainMenu" prefHeight="40.0" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Return to Main Menu" textAlignment="CENTER" wrapText="true" BorderPane.alignment="CENTER">
-         <BorderPane.margin>
-            <Insets bottom="50.0" />
-         </BorderPane.margin>
-         <font>
-            <Font name="Noto Sans CJK JP Black" size="15.0" />
-         </font>
-      </JFXButton>
-   </bottom>
-</BorderPane>
+            </JFXButton>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
