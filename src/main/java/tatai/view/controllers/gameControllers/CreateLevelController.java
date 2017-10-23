@@ -177,7 +177,7 @@ public class CreateLevelController extends SceneController {
     @FXML
     @Override
     protected void returnToMainMenu() {
-        int reply = showAlert();
+        int reply = showAlert("Changes won't be saved.");
         if (reply == SceneController.NO) {
             return;
         }

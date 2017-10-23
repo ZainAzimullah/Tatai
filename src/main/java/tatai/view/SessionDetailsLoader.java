@@ -5,6 +5,11 @@ import tatai.score.Score;
 import tatai.view.controllers.SceneController;
 import tatai.view.controllers.gameControllers.SessionDetailsController;
 
+/**
+ * This class is used especially for the loading of the
+ * SessionDetails scene, since its controller needs to have special objects
+ * given to it, and, it needs to be able to be loaded from anywhere.
+ */
 public class SessionDetailsLoader extends SceneLoader {
 
     private Score _score;
@@ -14,6 +19,7 @@ public class SessionDetailsLoader extends SceneLoader {
         _score = score;
     }
 
+    // Pass the stage and score to the controller
     @Override
     protected void useController(SceneController controller) {
         if (controller instanceof SessionDetailsController) {

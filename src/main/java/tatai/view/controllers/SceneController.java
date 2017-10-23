@@ -14,8 +14,11 @@ import org.controlsfx.control.PopOver;
 import tatai.Game;
 import tatai.Practice;
 
-/*
- * This is the parent class of all controllers.
+/**
+ * SceneController is the parent class of all controllers.
+ * It holds methods that are useful to all controllers
+ * for triggering certain dialog boxes, and also allows for polymorphic
+ * type-checking when Controller objects are passed.
  */
 public abstract class SceneController {
 	
@@ -27,21 +30,27 @@ public abstract class SceneController {
 	// to get back to the main meu
 	protected abstract void returnToMainMenu();
 
-	// Show a confirmation dialog
+	// Show default alert message
 	protected int showAlert() {
+		return showAlert("Progress will be lost.");
+	}
+
+	// Show a confirmation dialog for when the user
+	// tries to exit a scene without saving.
+	protected int showAlert(String message) {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Notice");
 		alert.setHeaderText("Please Confirm");
-		alert.setContentText("Are you sure? Progress will be lost.");
+		alert.setContentText("Are you sure? " + message);
 
 		ButtonType yes = new ButtonType("Yes");
 		ButtonType no = new ButtonType("No");
-		
+
 		alert.getButtonTypes().setAll(yes, no);
 
 		Optional<ButtonType> result = alert.showAndWait();
 		if (result.get() == yes){
-		    return 1;
+			return 1;
 		} else {
 			return 0;
 		}
