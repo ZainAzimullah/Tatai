@@ -40,7 +40,7 @@
                   <Font size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="_return" buttonType="RAISED" onAction="#returnToMainMenu" style="-fx-background-color: grey; -fx-background-radius: 30; -fx-min-width: 200;" text="Return">
+            <JFXButton fx:id="_return" buttonType="RAISED" onAction="#returnToMainMenu" style="-fx-background-color: lightyellow; -fx-background-radius: 30; -fx-min-width: 200;" text="Return">
                <font>
                   <Font size="18.0" />
                </font>
