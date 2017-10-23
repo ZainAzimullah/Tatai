@@ -1,5 +1,6 @@
 package tatai.view.controllers.gameControllers;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import tatai.Game;
 import tatai.util.Difficulty;
@@ -7,6 +8,19 @@ import tatai.view.SceneLoader;
 import tatai.view.controllers.SceneController;
 
 public class SelectLevelController extends SceneController {
+
+    @FXML
+    private JFXButton _easy, _medium, _hard, _create, _load, _return;
+
+    @FXML
+    private void initialize() {
+        setPopOver(_easy, "Easy equations where the answer will be between 1 and 10.  4 attempts allowed.");
+        setPopOver(_medium, "Equations with 3 numbers, where the answer will be between 1 and 99.  4 attempts allowed.");
+        setPopOver(_hard, "Harder equations with 3 numbers, where the answer is between 1 and 99 and only 2 attempts allowed.");
+        setPopOver(_create, "Create your own level, with the settings you want.");
+        setPopOver(_load, "Load a previously created level.");
+        setPopOver(_return, "Return to the main menu.");
+    }
 
     @FXML
     private void easy() {

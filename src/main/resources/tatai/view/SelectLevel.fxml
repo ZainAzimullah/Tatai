@@ -15,32 +15,32 @@
                   <Font name="Noto Sans CJK TC Black" size="28.0" />
                </font>
             </Label>
-            <JFXButton buttonType="RAISED" onAction="#easy" style="-fx-background-color: lightblue; -fx-background-radius: 30; -fx-min-width: 200;" text="Easy">
+            <JFXButton fx:id="_easy" buttonType="RAISED" onAction="#easy" style="-fx-background-color: lightblue; -fx-background-radius: 30; -fx-min-width: 200;" text="Easy">
                <font>
                   <Font size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#medium" style="-fx-background-color: cyan; -fx-background-radius: 30; -fx-min-width: 200;" text="Medium">
+            <JFXButton fx:id="_medium" buttonType="RAISED" onAction="#medium" style="-fx-background-color: cyan; -fx-background-radius: 30; -fx-min-width: 200;" text="Medium">
                <font>
                   <Font size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#hard" style="-fx-background-color: cyan; -fx-background-radius: 30; -fx-min-width: 200;" text="Hard">
+            <JFXButton fx:id="_hard" buttonType="RAISED" onAction="#hard" style="-fx-background-color: cyan; -fx-background-radius: 30; -fx-min-width: 200;" text="Hard">
                <font>
                   <Font size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#create" style="-fx-background-color: orange; -fx-background-radius: 30; -fx-min-width: 200;" text="Create Level">
+            <JFXButton fx:id="_create" buttonType="RAISED" onAction="#create" style="-fx-background-color: orange; -fx-background-radius: 30; -fx-min-width: 200;" text="Create Level">
                <font>
                   <Font size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#useSaved" style="-fx-background-color: orange; -fx-background-radius: 30; -fx-min-width: 200;" text="Use Saved Level">
+            <JFXButton fx:id="_load" buttonType="RAISED" onAction="#useSaved" style="-fx-background-color: orange; -fx-background-radius: 30; -fx-min-width: 200;" text="Use Saved Level">
                <font>
                   <Font size="18.0" />
                </font>
             </JFXButton>
-            <JFXButton buttonType="RAISED" onAction="#returnToMainMenu" style="-fx-background-color: orange; -fx-background-radius: 30; -fx-min-width: 200;" text="Return">
+            <JFXButton fx:id="_return" buttonType="RAISED" onAction="#returnToMainMenu" style="-fx-background-color: orange; -fx-background-radius: 30; -fx-min-width: 200;" text="Return">
                <font>
                   <Font size="18.0" />
                </font>
