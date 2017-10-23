@@ -5,5 +5,5 @@ package tatai.util;
  */
 public enum PracticeLevel {
 	EASY,
-	HARD;
+	HARD
 }

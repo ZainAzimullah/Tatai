@@ -9,8 +9,15 @@ import tatai.score.Score;
 import java.io.*;
 import java.util.ArrayList;
 
+/**
+ * This class is responsible for
+ * getting all the saved custom levels
+ * the user has created in the past
+ */
 public class CustomLevelHistory {
 
+    // Get an observable list of custom levels as objects
+    // which have properties for binding with GUI
     public ObservableList<CustomLevelProperties> getObservableList() {
         ObservableList<CustomLevelProperties> out = FXCollections.observableArrayList();
         for (CustomLevelSettings level: getLevels()) {
@@ -20,6 +27,7 @@ public class CustomLevelHistory {
         return out;
     }
 
+    // Get the saved CustomLevelSettings objects in a list
     private ArrayList<CustomLevelSettings> getLevels() {
         File levelsFolder = new File(Main.QUESTIONS_FOLDER);
         File[] levels = levelsFolder.listFiles();

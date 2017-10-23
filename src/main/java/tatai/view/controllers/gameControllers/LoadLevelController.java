@@ -38,14 +38,18 @@ public class LoadLevelController extends SceneController {
 
     private CustomLevelProperties _levelSelected;
 
+
     @FXML
     private void initialize() {
+        // Prevent user from clicking play or delete when nothing selected
         _playButton.setDisable(true);
         _deleteButton.setDisable(true);
 
+        // Set up table
         _dateCreated.setCellValueFactory(data -> data.getValue().dateCreatedProperty());
         _name.setCellValueFactory(data -> data.getValue().nameProperty());
 
+        // Get saved custom levels
         CustomLevelHistory history = new CustomLevelHistory();
         _table.setItems(history.getObservableList());
         _table.getSelectionModel().selectedItemProperty().addListener(((observable, oldValue, newValue) -> {
@@ -65,15 +69,17 @@ public class LoadLevelController extends SceneController {
     private void delete() {
         File file = new File(_levelSelected.getSettings().getFilename());
 
+        // Confirm with user
         int reply = showAlert();
-
         if (reply == SceneController.NO) {
             return;
         }
 
+        // Delete the file
         file.delete();
         _table.getItems().remove(_levelSelected);
 
+        // If all the items have been deleted, disable play and delete
         if (_table.getItems().size() == 0) {
             _playButton.setDisable(true);
             _deleteButton.setDisable(true);

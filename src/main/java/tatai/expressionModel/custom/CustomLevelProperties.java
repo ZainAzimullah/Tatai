@@ -3,6 +3,12 @@ package tatai.expressionModel.custom;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
+/**
+ * This is a adapter/wrapper class which converts
+ * a CustomLevelSettings object into an equivalent object
+ * with StringProperties which can be used to build tables.
+ * This is needed because properties are not serializable.
+ */
 public class CustomLevelProperties {
     private StringProperty _dateCreated, _name;
     private CustomLevelSettings _settings;

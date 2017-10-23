@@ -7,11 +7,15 @@ import tatai.expression.Operator;
 import tatai.expressionModel.custom.CustomLevelSettings;
 import tatai.numberModel.MaoriNumber;
 
+/**
+ * Model of equations created when user has their own preferences
+ */
 public class CustomExpressionModel extends ExpressionModel {
 
     public CustomExpressionModel(CustomLevelSettings settings) {
         int i = 0;
 
+        // Populate model
         while (i < Game.NUM_OF_QUESTIONS) {
             Operator operator = generateRandomOperator(settings);
             MaoriNumber num1, num2;
@@ -32,7 +36,11 @@ public class CustomExpressionModel extends ExpressionModel {
         }
     }
 
+    // Given the settings the user has chosen, get a random operator
+    // that complies with these settings
     private Operator generateRandomOperator(CustomLevelSettings settings) {
+
+        // Keep attempting to find a valid operation until one is found
         while (true) {
             Operation operation = generateRandomOperation();
 

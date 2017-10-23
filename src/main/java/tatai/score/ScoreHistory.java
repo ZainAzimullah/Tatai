@@ -32,9 +32,11 @@ public class ScoreHistory {
         return getHighScore(null);
     }
 
+    // Get the highest score for a given difficulty
     public int getHighScore(Difficulty difficulty) {
         ArrayList<Score> scores;
 
+        // If difficulty not specified then just return overall highscore
         if (difficulty == null) {
             scores = getScores();
         } else {
@@ -92,6 +94,7 @@ public class ScoreHistory {
         return scoresList;
     }
 
+    // Get all the scores for a given level difficulty
     public ArrayList<Score> getScores(Difficulty difficulty) {
         File scoresFolder = new File(Main.SCORES_FOLDER);
         File[] scores = scoresFolder.listFiles();  // Get all Score files in the folder
@@ -133,29 +136,37 @@ public class ScoreHistory {
         return scoresList;
     }
 
+    // Get the overall mean
     public double getMean() {
         return getMean(null);
     }
 
+    // Get the mean for a given level difficulty
     public double getMean(Difficulty difficulty) {
         ArrayList<Score> scores;
 
+        // If no difficulty specified
         if (difficulty == null) {
             scores = getScores();
         } else {
             scores = getScores(difficulty);
         }
 
+        // Check for no scores
         if (scores.size() == 0) {
             return 0;
         }
 
+        // Sum up scores
         double sum = 0;
         for (Score score: getScores()) {
             sum += score.getTotal();
         }
 
+        // Divide to get mean
         sum /= scores.size();
+
+        // Round to 1dp
         sum *= 10;
         sum = Math.round(sum);
         sum /= 10;

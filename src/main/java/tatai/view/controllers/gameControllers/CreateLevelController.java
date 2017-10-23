@@ -3,12 +3,8 @@ package tatai.view.controllers.gameControllers;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
 import com.jfoenix.controls.JFXTextField;
-import javafx.beans.property.StringProperty;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
-import javafx.scene.control.Spinner;
-import javafx.scene.control.SpinnerValueFactory;
 import tatai.Game;
 import tatai.expressionModel.custom.CustomLevelSettings;
 import tatai.view.controllers.SceneController;
@@ -18,7 +14,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-
+/**
+ * Controller for creating a new custom level
+ */
 public class CreateLevelController extends SceneController {
 
     @FXML
@@ -31,11 +29,12 @@ public class CreateLevelController extends SceneController {
     private JFXTextField _name, _max;
 
     @FXML
-    private Label _valid, _operationValid;
+    private Label _maxValid, _operationValid;
 
     @FXML
     private void save() {
-
+        // Create a new CustomLevelSettings object to store the settings
+        // the user has chosen, for this level, and then save it.
         try {
             new CustomLevelSettings(_name.getText(),
                     Integer.parseInt(_max.getText()),
@@ -60,6 +59,8 @@ public class CreateLevelController extends SceneController {
         // Error handling for checkboxes
         _addition.setSelected(true);
 
+        // Check if the checkbox selection is valid anytime
+        // a checkbox is ticked.
         _addition.selectedProperty().addListener((observable, oldValue, newValue) -> {
             checkOperations();
         });
@@ -80,6 +81,7 @@ public class CreateLevelController extends SceneController {
         // Error handling for name
         final String defaultName = "Untitled";
 
+        // Set "Untitled" by default to the name but remove it when user clicks there
         _name.setText(defaultName);
         _name.focusedProperty().addListener((observable, oldValue, newValue) -> {
             if ((newValue) && (_name.getText().equals(defaultName))) {
@@ -93,6 +95,7 @@ public class CreateLevelController extends SceneController {
             enableSaveButton();
         });
 
+        // Disable save button if no input
         _name.textProperty().addListener((observable, oldValue, newValue) -> {
             if (_name.getText().equals("")) {
                 _save.setDisable(true);
@@ -105,25 +108,30 @@ public class CreateLevelController extends SceneController {
         // Error handling for max number
         final String maxMessage = "You must enter a number between 10 and 99";
 
-        _valid.setVisible(false);
+        _maxValid.setVisible(false);
         _max.setText("10");
 
+        // Listen the number the user is typing and then verifier it
         _max.textProperty().addListener((observable, oldValue, newValue) -> {
             String input = newValue.toString();
             Pattern pattern = Pattern.compile("\\d+");
             Matcher matcher = pattern.matcher(newValue.toString());
 
+            // Check if the max is legal
             if (maxOK()) {
-                _valid.setVisible(false);
+                _maxValid.setVisible(false);
                 enableSaveButton();
                 return;
             }
-            _valid.setVisible(true);
-            _valid.setText(maxMessage);
+
+            // show warning message
+            _maxValid.setVisible(true);
+            _maxValid.setText(maxMessage);
             _save.setDisable(true);
         });
     }
 
+    // Check if the user has selected valid checkboxes and then disable/enable buttons
     private void checkOperations() {
         if (checkBoxesOK()) {
             enableSaveButton();
@@ -141,6 +149,7 @@ public class CreateLevelController extends SceneController {
         }
     }
 
+    // Check if a valid name has been entered
     private boolean nameOK() {
         if (_name.getText().trim().equals("")) {
             return false;
@@ -149,6 +158,7 @@ public class CreateLevelController extends SceneController {
         return true;
     }
 
+    // Check if a valid max has been entered
     private boolean maxOK() {
         String input = _max.getText();
         Pattern pattern = Pattern.compile("\\d+");
@@ -164,6 +174,7 @@ public class CreateLevelController extends SceneController {
         return false;
     }
 
+    // Scan checkboxes to see if at least one has been selected
     private boolean checkBoxesOK() {
         if (_addition.isSelected()
                 || _subtraction.isSelected()

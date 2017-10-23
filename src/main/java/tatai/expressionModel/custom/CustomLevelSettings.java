@@ -8,6 +8,12 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * This class represents all the options
+ * the user has selected for a level they would
+ * like to randomly generate.  Objects of this
+ * class can be saved.
+ */
 public class CustomLevelSettings extends Saveable {
     private int _max;
     private String _dateCreated, _name;
