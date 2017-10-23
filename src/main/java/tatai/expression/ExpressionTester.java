@@ -20,11 +20,11 @@ public class ExpressionTester {
 		
 		operandSubstraction.addOperand(operandMutiply);
 		operandSubstraction.addOperand(num3);
-		
-		
+
+
 		try {
-		MaoriNumber result = operandSubstraction.getMaoriResult();
-		System.out.println(result.getDigits());
+			MaoriNumber result = operandSubstraction.getMaoriResult();
+			System.out.println(result.getDigits());
 		} catch (ResultInvalidException tataie) {
 			System.out.println("0, #>99 or #<0 detected");
 			System.exit(1);
