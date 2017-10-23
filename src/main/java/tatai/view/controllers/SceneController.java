@@ -30,12 +30,13 @@ public abstract class SceneController {
 	// to get back to the main meu
 	protected abstract void returnToMainMenu();
 
-	// Show a confirmation dialog for when the user
-	// tries to exit a scene without saving.
+	// Show default alert message
 	protected int showAlert() {
 		return showAlert("Progress will be lost.");
 	}
 
+	// Show a confirmation dialog for when the user
+	// tries to exit a scene without saving.
 	protected int showAlert(String message) {
 		Alert alert = new Alert(AlertType.CONFIRMATION);
 		alert.setTitle("Notice");
