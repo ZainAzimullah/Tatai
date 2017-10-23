@@ -4,6 +4,9 @@ import javafx.fxml.FXML;
 import tatai.view.MainMenuLoader;
 
 public class AboutController extends MainMenuController {
+
+	@FXML
+	private void initialize() {}
 	
 	@FXML
 	@Override
