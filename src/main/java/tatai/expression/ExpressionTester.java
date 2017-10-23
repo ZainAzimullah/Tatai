@@ -1,6 +1,6 @@
 package tatai.expression;
 
-import tatai.exceptions.ResultOutOfRangeException;
+import tatai.exceptions.ResultInvalidException;
 import tatai.numberModel.MaoriNumber;
 
 public class ExpressionTester {
@@ -25,7 +25,7 @@ public class ExpressionTester {
 		try {
 		MaoriNumber result = operandSubstraction.getMaoriResult();
 		System.out.println(result.getDigits());
-		} catch (ResultOutOfRangeException tataie) {
+		} catch (ResultInvalidException tataie) {
 			System.out.println("0, #>99 or #<0 detected");
 			System.exit(1);
 		}

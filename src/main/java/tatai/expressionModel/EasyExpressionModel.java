@@ -1,7 +1,6 @@
 package tatai.expressionModel;
 
-import tatai.exceptions.ResultOutOfRangeException;
-import tatai.expression.Operand;
+import tatai.exceptions.ResultInvalidException;
 import tatai.expression.Operator;
 import tatai.numberModel.MaoriNumber;
 
@@ -25,10 +24,10 @@ public class EasyExpressionModel extends ExpressionModel {
             try {
                 operator.getMaoriResult();
                 if (operator.getMaoriResult().getDigits() > 10) {
-                    throw new ResultOutOfRangeException();
+                    throw new ResultInvalidException();
                 }
                 i++;
-            } catch (ResultOutOfRangeException e) {
+            } catch (ResultInvalidException e) {
                 continue;
             }
 

@@ -1,6 +1,6 @@
 package tatai.expression;
 
-import tatai.exceptions.ResultOutOfRangeException;
+import tatai.exceptions.ResultInvalidException;
 import tatai.numberModel.MaoriNumber;
 
 import java.util.ArrayList;
@@ -27,7 +27,7 @@ public abstract class Operator extends Operand {
 	}
 
 	// Strategy pattern enforced here - every child must implement their own calculation strategy
-	protected abstract int calculate() throws ResultOutOfRangeException;
+	protected abstract int calculate() throws ResultInvalidException;
 
 	// Hook method for children to specify the string representation of their operand
 	protected abstract String operatorString();

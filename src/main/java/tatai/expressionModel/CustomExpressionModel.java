@@ -1,7 +1,7 @@
 package tatai.expressionModel;
 
 import tatai.Game;
-import tatai.exceptions.ResultOutOfRangeException;
+import tatai.exceptions.ResultInvalidException;
 import tatai.exceptions.TataiException;
 import tatai.expression.Operator;
 import tatai.expressionModel.custom.CustomLevelSettings;
@@ -28,7 +28,7 @@ public class CustomExpressionModel extends ExpressionModel {
             try {
                 operator.getMaoriResult();
                 i++;
-            } catch (ResultOutOfRangeException e) {
+            } catch (ResultInvalidException e) {
                 continue;
             }
 

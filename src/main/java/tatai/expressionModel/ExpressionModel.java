@@ -1,7 +1,7 @@
 package tatai.expressionModel;
 
 import tatai.exceptions.OutOfItemsException;
-import tatai.exceptions.ResultOutOfRangeException;
+import tatai.exceptions.ResultInvalidException;
 import tatai.exceptions.TataiException;
 import tatai.expression.Operand;
 import tatai.numberModel.MaoriNumber;
@@ -73,7 +73,7 @@ public abstract class ExpressionModel {
         for (Operand operand: _expressions) {
             try {
                 System.out.println(i + ": " + operand + " = " + operand.getMaoriResult().getDigits());
-            } catch (ResultOutOfRangeException e) {
+            } catch (ResultInvalidException e) {
                 e.printStackTrace();
             }
             i++;

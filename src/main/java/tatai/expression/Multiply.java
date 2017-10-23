@@ -1,6 +1,6 @@
 package tatai.expression;
 
-import tatai.exceptions.ResultOutOfRangeException;
+import tatai.exceptions.ResultInvalidException;
 
 /**
  * The Multiply class is an internal node which can
@@ -10,7 +10,7 @@ public class Multiply extends Operator {
 
 
 	@Override
-	protected int calculate() throws ResultOutOfRangeException {
+	protected int calculate() throws ResultInvalidException {
 		int product = 1;
 		
 		//Loop through operands and calculate product

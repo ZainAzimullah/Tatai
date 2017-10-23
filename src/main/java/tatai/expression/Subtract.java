@@ -1,6 +1,6 @@
 package tatai.expression;
 
-import tatai.exceptions.ResultOutOfRangeException;
+import tatai.exceptions.ResultInvalidException;
 
 /**
  * The Subtract class is an internal node which can
@@ -9,7 +9,7 @@ import tatai.exceptions.ResultOutOfRangeException;
 public class Subtract extends Operator {
 
 	@Override
-	protected int calculate() throws ResultOutOfRangeException {
+	protected int calculate() throws ResultInvalidException {
 		int sum = _operands.get(0).getResult();
 		boolean firstOperand = true;
 

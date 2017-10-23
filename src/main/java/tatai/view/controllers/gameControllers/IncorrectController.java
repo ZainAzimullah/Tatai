@@ -2,10 +2,9 @@ package tatai.view.controllers.gameControllers;
 
 import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import tatai.Game;
-import tatai.exceptions.ResultOutOfRangeException;
+import tatai.exceptions.ResultInvalidException;
 import tatai.util.Difficulty;
 import tatai.view.controllers.SceneController;
 
@@ -77,7 +76,7 @@ public class IncorrectController extends SceneController {
             _message.setText("The correct answer is:");
             try {
                 _question.setText(Game.getInstance().getCurrentQuestion().getMaoriResult().toString());
-            } catch (ResultOutOfRangeException e) {
+            } catch (ResultInvalidException e) {
                 e.printStackTrace();
             }
         }

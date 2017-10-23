@@ -1,6 +1,6 @@
 package tatai.expression;
 
-import tatai.exceptions.ResultOutOfRangeException;
+import tatai.exceptions.ResultInvalidException;
 import tatai.exceptions.TataiException;
 import tatai.numberModel.MaoriNumber;
 
@@ -16,7 +16,7 @@ public abstract class Operand {
 	// Recursively conduct calculate the result using a Depth-First Traversal
 	//	- Operators are internal nodes
 	// 	- MaoriNumbers are leaves
-	protected final int getResult() throws TataiException, ResultOutOfRangeException {
+	protected final int getResult() throws TataiException, ResultInvalidException {
 
 		if (this instanceof MaoriNumber) {
 			// Get digits if bottom of recursive call reached
@@ -31,14 +31,14 @@ public abstract class Operand {
 	}
 
 	// Same as getResult() except this method is visible to clients using the Operand interface.
-	public final MaoriNumber getMaoriResult() throws ResultOutOfRangeException {
+	public final MaoriNumber getMaoriResult() throws ResultInvalidException {
 		if (this instanceof MaoriNumber) {
 			return (MaoriNumber) this;
 		} else if (this instanceof Operator) {
 			try {
 				return new MaoriNumber(((Operator) this).calculate());
 			} catch (TataiException tataie) {
-				throw new ResultOutOfRangeException();
+				throw new ResultInvalidException();
 			}
 		} else {
 			throw new TataiException("Unexpected operand detected");

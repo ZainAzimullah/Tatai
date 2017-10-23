@@ -2,7 +2,7 @@ package tatai;
 
 import javafx.stage.Stage;
 import tatai.exceptions.OutOfItemsException;
-import tatai.exceptions.ResultOutOfRangeException;
+import tatai.exceptions.ResultInvalidException;
 import tatai.exceptions.TataiException;
 import tatai.expression.Operand;
 import tatai.expressionModel.CustomExpressionModel;
@@ -14,7 +14,6 @@ import tatai.score.FinalResult;
 import tatai.score.Score;
 import tatai.util.Difficulty;
 import tatai.util.Verifier;
-import tatai.util.VoiceRecogniser;
 import tatai.view.FactLoader;
 import tatai.view.MainMenuLoader;
 import tatai.view.SceneLoader;
@@ -143,7 +142,7 @@ public class Game {
                 _score.updateResult(_model.getCurrentQuestionNumber(), _result);
                 _loader.loadScene("Incorrect.fxml");
             }
-        } catch (ResultOutOfRangeException e) {
+        } catch (ResultInvalidException e) {
             e.printStackTrace();
         }
     }

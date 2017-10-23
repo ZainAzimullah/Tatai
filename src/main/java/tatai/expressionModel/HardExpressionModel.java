@@ -1,6 +1,6 @@
 package tatai.expressionModel;
 
-import tatai.exceptions.ResultOutOfRangeException;
+import tatai.exceptions.ResultInvalidException;
 import tatai.expression.Multiply;
 import tatai.expression.Operator;
 import tatai.numberModel.MaoriNumber;
@@ -31,7 +31,7 @@ public class HardExpressionModel extends ExpressionModel {
             try {
                 op2.getMaoriResult();
                 i++;
-            } catch (ResultOutOfRangeException e) {
+            } catch (ResultInvalidException e) {
                 continue;
             }
 

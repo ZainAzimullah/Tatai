@@ -1,6 +1,6 @@
 package tatai.expression;
 
-import tatai.exceptions.ResultOutOfRangeException;
+import tatai.exceptions.ResultInvalidException;
 
 /**
  * The Add class is an internal node which can
@@ -9,7 +9,7 @@ import tatai.exceptions.ResultOutOfRangeException;
 public class Add extends Operator {
 
 	@Override
-	protected int calculate() throws ResultOutOfRangeException {
+	protected int calculate() throws ResultInvalidException {
 
 		int sum = 0;
 		
