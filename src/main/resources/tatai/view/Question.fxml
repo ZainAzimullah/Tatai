@@ -64,19 +64,19 @@
             </AnchorPane>
             <HBox alignment="CENTER" prefHeight="50.0" prefWidth="600.0" spacing="55.0">
                <children>
-                  <JFXButton onAction="#skip" style="-fx-background-color: white; -fx-background-radius: 30; -fx-min-width: 100; -fx-min-height: 40;" text="Skip">
+                  <JFXButton fx:id="_skip" onAction="#skip" style="-fx-background-color: white; -fx-background-radius: 30; -fx-min-width: 100; -fx-min-height: 40;" text="Skip">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </JFXButton>
-                  <JFXButton fx:id="_button" buttonType="RAISED" onAction="#record" style="-fx-background-color: white; -fx-background-radius: 30; -fx-min-width: 100; -fx-min-height: 40;" text="Record">
+                  <JFXButton fx:id="_record" buttonType="RAISED" onAction="#record" style="-fx-background-color: white; -fx-background-radius: 30; -fx-min-width: 100; -fx-min-height: 40;" text="Record">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </JFXButton>
                </children>
             </HBox>
-            <JFXButton onAction="#returnToMainMenu" style="-fx-background-color: white; -fx-background-radius: 30;" text="Home">
+            <JFXButton fx:id="_home" onAction="#returnToMainMenu" style="-fx-background-color: white; -fx-background-radius: 30;" text="Home">
                <VBox.margin>
                   <Insets top="20.0" />
                </VBox.margin>

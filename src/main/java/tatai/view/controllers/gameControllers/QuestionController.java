@@ -23,13 +23,17 @@ public class QuestionController extends SceneController {
     private Label _recordMsg;
 
     @FXML
-    private JFXButton _button;
+    private JFXButton _record, _skip, _home;
 
     @FXML
     private Label _questionNumber;
 
     @FXML
     private void initialize() {
+        setPopOver(_record, "Click to record your voice for 2 seconds");
+        setPopOver(_skip, "Go to the next question");
+        setPopOver(_home, "Return to the main menu");
+
         String question = Game.getInstance().getCurrentQuestion().toString();
         _questionNumber.setText(Integer.toString(Game.getInstance().getCurrentQuestionNumber()));
 
@@ -45,8 +49,11 @@ public class QuestionController extends SceneController {
         countdown.start();
 
         // Change UI
-        _button.setText("RECORDING");
-        _button.setDisable(true);
+        disablePopOver(_record);
+        _record.setText("RECORDING");
+        _record.setDisable(true);
+        _skip.setDisable(true);
+        _home.setDisable(true);
 
         // Bind label to countdown messages
         _recordMsg.textProperty().bind(countdown.getMessageProperty());
