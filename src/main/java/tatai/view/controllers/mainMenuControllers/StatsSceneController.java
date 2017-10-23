@@ -1,10 +1,12 @@
 package tatai.view.controllers.mainMenuControllers;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXRadioButton;
 import javafx.fxml.FXML;
 import javafx.scene.chart.*;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.paint.Color;
 import tatai.score.Score;
 import tatai.score.ScoreHistory;
 import tatai.score.ScoreProperties;
@@ -24,7 +26,10 @@ public class StatsSceneController extends MainMenuController {
     @FXML
     private JFXRadioButton _all, _easy, _medium, _hard, _custom;
 
-
+    private void setRadioButtonColors(JFXRadioButton button) {
+        button.setUnSelectedColor(Color.WHITE);
+        button.setSelectedColor(Color.LIGHTGREEN);
+    }
 
     @FXML
     private void initialize() {
@@ -48,6 +53,13 @@ public class StatsSceneController extends MainMenuController {
         _hard.setToggleGroup(group);
         _custom.setToggleGroup(group);
         _all.setToggleGroup(group);
+
+        // Set colours
+        setRadioButtonColors(_all);
+        setRadioButtonColors(_easy);
+        setRadioButtonColors(_medium);
+        setRadioButtonColors(_hard);
+        setRadioButtonColors(_custom);
 
         _all.selectedProperty().addListener((observable, oldValue, newValue) -> {
             generateChart(history.getScores());

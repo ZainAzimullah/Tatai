@@ -30,10 +30,6 @@ public class QuestionController extends SceneController {
 
     @FXML
     private void initialize() {
-        setPopOver(_record, "Click to record your voice for 2 seconds");
-        setPopOver(_skip, "Go to the next question");
-        setPopOver(_home, "Return to the main menu");
-
         String question = Game.getInstance().getCurrentQuestion().toString();
         _questionNumber.setText(Integer.toString(Game.getInstance().getCurrentQuestionNumber()));
 

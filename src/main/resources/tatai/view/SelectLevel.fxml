@@ -8,9 +8,9 @@
 
 <AnchorPane prefHeight="422.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.gameControllers.SelectLevelController">
    <children>
-      <VBox alignment="CENTER" prefHeight="413.0" prefWidth="600.0" spacing="20.0" style="-fx-background-color: Lightgrey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="CENTER" prefHeight="413.0" prefWidth="600.0" spacing="20.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label style="-fx-text-fill: black;" text="Choose a Level">
+            <Label style="-fx-text-fill: white;" text="Choose a Level">
                <font>
                   <Font name="Noto Sans CJK TC Black" size="28.0" />
                </font>
