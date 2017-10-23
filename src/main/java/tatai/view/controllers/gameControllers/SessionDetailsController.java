@@ -16,7 +16,11 @@ import tatai.view.controllers.SceneController;
 
 import java.io.IOException;
 
-
+/**
+ * Controller for SessionDetails scene which shows
+ * results for each question the user has attempted
+ * in a given level.
+ */
 public class SessionDetailsController extends SceneController {
 
     @FXML
@@ -46,6 +50,7 @@ public class SessionDetailsController extends SceneController {
 
     @FXML
     private void initialize() {
+        // Set up table
         _questionNumber.setCellValueFactory(data -> data.getValue().questionNumberProperty());
         _expression.setCellValueFactory(data -> data.getValue().expressionProperty());
         _result.setCellValueFactory(data -> data.getValue().stateProperty());
@@ -54,6 +59,7 @@ public class SessionDetailsController extends SceneController {
 
     @FXML
     private void replay() {
+        // Warn user if they try to replay without saving
         if (!_saved) {
             int reply = showAlert();
 
@@ -62,6 +68,7 @@ public class SessionDetailsController extends SceneController {
             }
         }
 
+        // Reload a level (special code required for custom)
         if (Game.getInstance().getDifficulty().equals(Difficulty.CUSTOM)) {
             Game.getInstance().generateCustomLevel();
             Game.getInstance().newQuestion();

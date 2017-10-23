@@ -59,7 +59,7 @@
                   </Label>
                   <VBox alignment="CENTER">
                      <children>
-                        <Label text="Maximum Value">
+                        <Label prefHeight="98.0" prefWidth="169.0" text="Maximum Value of Operands:" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Noto Sans CJK JP Black" size="15.0" />
                            </font>
