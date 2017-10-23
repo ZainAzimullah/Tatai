@@ -1,5 +1,6 @@
 package tatai.view.controllers.gameControllers;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -19,7 +20,7 @@ public class FinishedRecordingController extends SceneController {
     private Label _message;
 
     @FXML
-    private Button _play;
+    private JFXButton _play;
 
     @FXML
     private void playback() {
