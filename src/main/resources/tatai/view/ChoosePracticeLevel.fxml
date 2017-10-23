@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<FlowPane alignment="TOP_CENTER" columnHalignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" vgap="15.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.practiceControllers.ChooseLevelController">
+<FlowPane alignment="TOP_CENTER" columnHalignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: Lightgrey;" vgap="15.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tatai.view.controllers.practiceControllers.ChooseLevelController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" text="Select your difficulty" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS">
          <font>
@@ -25,7 +25,7 @@
                         <Font name="Lato Heavy Italic" size="16.0" />
                      </font>
                   </Label>
-                  <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="28.0" layoutY="23.0" onAction="#chooseEasy" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Easy Mode" textFill="#51a42b" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="10.0">
+                  <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="28.0" layoutY="23.0" onAction="#chooseEasy" style="-fx-background-color: lightgreen; -fx-background-radius: 30;" text="Easy Mode" textFill="#33661c" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="10.0">
                      <font>
                         <Font name="Noto Sans CJK JP Black" size="22.0" />
                      </font>
@@ -42,7 +42,7 @@
                         <Font name="Lato Heavy Italic" size="16.0" />
                      </font>
                   </Label>
-                  <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="21.0" layoutY="9.0" onAction="#chooseHard" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Hard Mode" textFill="#ff0909" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="10.0">
+                  <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="21.0" layoutY="9.0" onAction="#chooseHard" style="-fx-background-color: pink; -fx-background-radius: 30;" text="Hard Mode" textFill="#ff0909" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="10.0">
                      <font>
                         <Font name="Noto Sans CJK JP Black" size="22.0" />
                      </font>
@@ -51,7 +51,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#returnToMainMenu" style="-fx-background-color: Lightgrey; -fx-background-radius: 30;" text="Return to Main Menu">
+      <JFXButton alignment="CENTER" buttonType="RAISED" onAction="#returnToMainMenu" style="-fx-background-color: darkgrey; -fx-background-radius: 30;" text="Return to Main Menu">
          <font>
             <Font name="Noto Sans CJK JP Black" size="16.0" />
          </font>
