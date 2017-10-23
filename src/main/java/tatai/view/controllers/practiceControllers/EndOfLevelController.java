@@ -54,10 +54,10 @@ public class EndOfLevelController extends SceneController {
 		// 8 to continue onto the second level.
 		if ((numAchieved >= THRESHHOLD) 
 				&& (Practice.getInstance().getLevel() == PracticeLevel.EASY)) {
-			_next.setText("Next PracticeLevel");
+			_next.setText("Next Practice Level");
 			_mustRetry = false;
 		} else {
-			_next.setText("Retry PracticeLevel");
+			_next.setText("Retry Practice Level");
 		}
 	}
 	
