@@ -10,28 +10,16 @@ import tatai.expressionModel.EasyExpressionModel;
 import tatai.score.Score;
 import tatai.view.controllers.gameControllers.FactController;
 
+/**
+ * Test class to test the loading of scenes
+ */
 public class TestLoader extends Application {
 
     private static final String FILENAME = "";
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(this.getClass().getResource("PracticeEndOfLevel.fxml"));
-        if (loader == null) {
-            System.out.println("loader is null");
-        }
-
-        Parent layout = loader.load();
-
-        FactController controller = loader.getController();
-        controller.setStage(primaryStage);
-
-        Scene scene = new Scene(layout);
-        primaryStage.setScene(scene);
-        primaryStage.setResizable(false);
-        primaryStage.setTitle("Reward");
-        primaryStage.show();
+        // Test code here
     }
 
     public static void main(String[] args) {

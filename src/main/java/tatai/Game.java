@@ -20,6 +20,10 @@ import tatai.view.MainMenuLoader;
 import tatai.view.SceneLoader;
 import tatai.view.SessionDetailsLoader;
 
+/**
+ * This class controls the game logic for the game and stores
+ * information about what the user is currently doing.
+ */
 public class Game {
     // Game settings
     public static final int NUM_OF_QUESTIONS = 10;
@@ -27,9 +31,7 @@ public class Game {
 
     // The Game singleton and its stage
     private static Game _game;
-
     private Stage _stage;
-
 
     // Game data
     private Difficulty _difficulty;
@@ -49,7 +51,6 @@ public class Game {
 
     // When the singleton is created for the first time, the stage
     // needs to be passed
-
     public static Game getInitialInstance(Stage stage) {
         if (_game == null) {
             _game = new Game(stage);
@@ -57,6 +58,7 @@ public class Game {
 
         return _game;
     }
+
     // Get the game singleton
     public static Game getInstance() {
         if (_game == null) {
@@ -74,18 +76,19 @@ public class Game {
 
     // Once the level is chosen, this method is called.  This
     // will then create an ExpressionModel and Score object accordingly.
-
     public void configureLevel(Difficulty difficulty) {
         _difficulty = difficulty;
         _model = ExpressionModelFactory.getExpressionModel(difficulty, NUM_OF_QUESTIONS);
         _score = new Score(_model, difficulty);
     }
 
+    // To set up a custom level, this method should be called.
     public void setCustomSettings(CustomLevelSettings settings) {
         _settings = settings;
         generateCustomLevel();
     }
 
+    // Creates a custom level based on stored settings.
     public void generateCustomLevel() {
         _model = new CustomExpressionModel(_settings);
         _difficulty = Difficulty.CUSTOM;
@@ -93,7 +96,6 @@ public class Game {
     }
 
     // Get the next question
-
     public void newQuestion() {
         _result = new Result();
 
@@ -106,6 +108,7 @@ public class Game {
             endOfLevel();
         }
     }
+
     // Load the recording scene
     public void record() {
         _loader.loadScene("Question.fxml");
@@ -113,13 +116,13 @@ public class Game {
 
     // Skip the current question, by notifying the result, updating the score and
     // getting the next question by calling newQuestion()
-
     public void skip() {
         _result.skip();
         _score.updateResult(_model.getCurrentQuestionNumber(), _result);
 
         newQuestion();
     }
+
     // Store what the user spoke into their microphone
     public void storeSpeech(String speech) {
         _speech = speech;
@@ -128,7 +131,9 @@ public class Game {
     // Check the correctness of the answer
     public void checkAnswer() {
         try {
+            // Create verifier object to check what the user said
             Verifier verifier = new Verifier(_speech, _currentQuestion.getMaoriResult().toString());
+
             if (verifier.isCorrect()) {
                 _result.addCorrect();
                 _score.updateResult(_model.getCurrentQuestionNumber(), _result);
@@ -193,23 +198,18 @@ public class Game {
     public Score getScore() {
         return _score;
     }
-
     public String getSpeech() {
         return _speech;
     }
-
     public Operand getCurrentQuestion() {
         return _currentQuestion;
     }
-
     public int getCurrentQuestionNumber() {
         return _currentQuestionNumber;
     }
-
     public int getErrorCount() {
         return _result.getErrorCount();
     }
-
     public Stage getStage() {
         return _stage;
     }

@@ -20,29 +20,6 @@ import java.util.Date;
  */
 public class TestAnything {
     public static void main(String[] args) throws IOException, InterruptedException {
-        Score score = new Score(new MediumExpressionModel(10), Difficulty.MEDIUM);
-        Result result = new Result();
-        result.addCorrect();
-        score.updateResult(1, result);
-        score.save();
-
-        score = new Score(new HardExpressionModel(10), Difficulty.HARD);
-        result = new Result();
-        result.addCorrect();
-        for (int i = 0; i < 7; i++) {
-            score.updateResult(i, result);
-        }
-
-        score.save();
-
-        Thread.sleep(3000);
-        score = new Score(new HardExpressionModel(10), Difficulty.HARD);
-        result = new Result();
-        result.addCorrect();
-        for (int i = 0; i < 7; i++) {
-            score.updateResult(i, result);
-        }
-
-        score.save();
+        // Test stuff here
     }
 }
