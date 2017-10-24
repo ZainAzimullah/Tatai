@@ -15,11 +15,14 @@ import tatai.view.controllers.gameControllers.FactController;
  */
 public class TestLoader extends Application {
 
-    private static final String FILENAME = "";
+    private static final String FILENAME = "Reward.fxml";
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        // Test code here
+        FactLoader loader = new FactLoader(primaryStage);
+        loader.loadScene(FILENAME);
+        primaryStage.show();
+        primaryStage.setResizable(false);
     }
 
     public static void main(String[] args) {

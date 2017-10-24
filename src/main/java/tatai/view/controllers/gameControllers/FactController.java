@@ -6,10 +6,7 @@ import javafx.fxml.FXML;
 import javafx.stage.Stage;
 import tatai.view.controllers.SceneController;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
 import java.net.URISyntaxException;
 import java.net.URL;
 
@@ -18,6 +15,8 @@ import java.net.URL;
  * if the user achieves a score of 8 or higher during the game session.
  */
 public class FactController extends SceneController {
+
+    private final int NUM_FACTS = 12;
 
     //the stage that the fact will be displayed on
     private Stage _stage;
@@ -33,29 +32,21 @@ public class FactController extends SceneController {
 
         //attempting to load the scene into the stage
         try {
-            URL folderURL = this.getClass().getResource("facts");
-            File folder = new File(folderURL.toURI());
-            File[] files = folder.listFiles();
+            int random = (int) (Math.random() * NUM_FACTS);
 
-            int random = (int) (Math.random() * files.length);
-
-            File fact = files[random];
-
-            FileReader fileReader = new FileReader(fact);
-            BufferedReader bufferedReader = new BufferedReader(fileReader);
+            InputStream inputStream = getClass().getResourceAsStream("facts/" + random + ".txt");
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 
             //loading the fact from a .txt file into the space to be displayed to the user
             String info = "";
             String line;
+
             while ((line = bufferedReader.readLine()) != null) {
                 info += line + "\n";
             }
 
             _text.setText(info);
-
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
-        } catch (java.io.IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
