@@ -30,7 +30,7 @@
                         </Label>
                      </children>
                   </VBox>
-                  <Label alignment="CENTER_RIGHT" text="Ths Tātai application was created by Zain Azimullah and Samuel Zheng for the purposes of the third 2017 Software Engineering 206 assignment" textAlignment="CENTER" wrapText="true">
+                  <Label alignment="CENTER_RIGHT" text="This Tātai application was created by Zain Azimullah and Samuel Zheng for the purposes of the 2017 SOFTENG 206 Project." textAlignment="CENTER" wrapText="true">
                      <font>
                         <Font name="Noto Sans CJK JP Bold" size="15.0" />
                      </font>
