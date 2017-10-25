@@ -4,7 +4,7 @@ import tatai.exceptions.ResultInvalidException;
 
 /**
  * The Add class is an internal node which can
- * recursively add other additions or MaoriNumbers
+ * recursively add other Operators or MaoriNumbers
  */
 public class Add extends Operator {
 

@@ -4,7 +4,7 @@ import tatai.exceptions.ResultInvalidException;
 
 /**
  * The Multiply class is an internal node which can
- * recursively multiply other multiplications or MaoriNumbers
+ * recursively multiply other Operators or MaoriNumbers
  */
 public class Multiply extends Operator {
 

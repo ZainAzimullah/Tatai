@@ -4,7 +4,7 @@ import tatai.exceptions.ResultInvalidException;
 
 /**
  * The Subtract class is an internal node which can
- * recursively subtract other subtractions or MaoriNumbers
+ * recursively subtract other Operators or MaoriNumbers
  */
 public class Subtract extends Operator {
 

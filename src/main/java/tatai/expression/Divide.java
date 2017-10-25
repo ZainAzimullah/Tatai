@@ -4,7 +4,7 @@ import tatai.exceptions.ResultInvalidException;
 
 /**
  * The Divide class is an internal node which can
- * recursively divide other Additions or MaoriNumbers
+ * recursively divide other Operators or MaoriNumbers
  */
 public class Divide extends Operator {
 
