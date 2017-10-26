@@ -70,7 +70,7 @@ public class LoadLevelController extends SceneController {
         File file = new File(_levelSelected.getSettings().getFilename());
 
         // Confirm with user
-        int reply = showAlert();
+        int reply = showAlert("Level will be deleted.");
         if (reply == SceneController.NO) {
             return;
         }
